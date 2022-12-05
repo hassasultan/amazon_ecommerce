@@ -87,5 +87,26 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('public/js/app.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="{{ asset('user_dashboard/js/sweetalert.js') }}"></script>
+
+<script src="{{ asset('user_dashboard/js/summernote.min.js') }}"></script>
+<script src="{{ asset('user_dashboard/js/custom.js') }}"></script>
+<script src="{{ asset('user_dashboard/js/jquery.dataTables.min.js') }}"></script>
+{{--<script src="{{ asset('user_dashboard/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('user_dashboard/js/dataTables.responsive.min.js') }}"></script>--}}
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script src="{{ asset('user_dashboard/js/responsive.bootstrap4.min.js') }}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
 </body>
 </html>

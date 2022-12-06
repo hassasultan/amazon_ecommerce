@@ -2,10 +2,11 @@
     <div>
         <div class="logo">
             <a href="/index.php">
-                <img src="https://vipon.s3.amazonaws.com/img/268511307d0d511cd3a1f4a168e28b9463e41218ea9a66.svg"
+                {{-- <img src="https://vipon.s3.amazonaws.com/img/268511307d0d511cd3a1f4a168e28b9463e41218ea9a66.svg"
                     alt="Amazon Coupons">
                 <img src="https://vipon.s3.amazonaws.com/img/559899da9aeaa49b417ca0d3a1e8c1c15b2ce424d83bba.svg"
-                    alt="Amazon Coupons">
+                    alt="Amazon Coupons"> --}}
+                    AE
             </a>
         </div>
         <div class="header-home">
@@ -152,7 +153,7 @@
             </ul>
         </div>
         <div class="header-right">
-            <div class="video">
+            {{-- <div class="video">
                 <button type="button" class="btn" class="dropdown-toggle" data-toggle="dropdown"
                     aria-expanded="true" title="Create a post" id="btn-post-add">
 
@@ -194,46 +195,7 @@
                             <img src="https://www.myvipon.com/images/flags/1/om.svg" alt="Amazon Coupons">
                         </a>
                     </li>
-                    {{-- <li data-domain="www.amazon.ca">
-                        <a href="javascript:;">
-                            <img src="/images/flags/1/ca.svg" alt="Amazon Coupons">
-                        </a>
-                    </li>
-                    <li data-domain="www.amazon.co.uk">
-                        <a href="javascript:;">
-                            <img src="/images/flags/1/uk.svg" alt="Amazon Coupons">
-                        </a>
-                    </li>
-                    <li data-domain="www.amazon.de">
-                        <a href="javascript:;">
-                            <img src="/images/flags/1/de.svg" alt="Amazon Coupons">
-                        </a>
-                    </li>
-                    <li data-domain="www.amazon.fr">
-                        <a href="javascript:;">
-                            <img src="/images/flags/1/fr.svg" alt="Amazon Coupons">
-                        </a>
-                    </li>
-                    <li data-domain="www.amazon.es">
-                        <a href="javascript:;">
-                            <img src="/images/flags/1/es.svg" alt="Amazon Coupons">
-                        </a>
-                    </li>
-                    <li data-domain="www.amazon.it">
-                        <a href="javascript:;">
-                            <img src="/images/flags/1/it.svg" alt="Amazon Coupons">
-                        </a>
-                    </li>
-                    <li data-domain="www.amazon.co.jp">
-                        <a href="javascript:;">
-                            <img src="/images/flags/1/jp.svg" alt="Amazon Coupons">
-                        </a>
-                    </li>
-                    <li data-domain="www.amazon.in">
-                        <a href="javascript:;">
-                            <img src="/images/flags/1/in.svg" alt="Amazon Coupons">
-                        </a>
-                    </li> --}}
+
                 </ul>
             </div>
             <div class="user">
@@ -246,7 +208,7 @@
             </div>
             <div class="seller">
                 <a href="https://seller.myvipon.com" target="_blank" class="btn">Seller Center</a>
-            </div>
+            </div> --}}
         </div>
     </div>
     <div class="flex">

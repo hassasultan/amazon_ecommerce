@@ -18,7 +18,8 @@ use App\Http\Controllers\BrandController;
 */
 
 Route::get('/', function () {
-    return redirect()->route('home');
+    // return redirect()->route('home');
+    return view('frontend.home');
 });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();

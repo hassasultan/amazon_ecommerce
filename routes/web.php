@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\SectionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,7 @@ Route::prefix('/admin')->group(function (){
         Route::resource('/subcategory',SubCategoryController::class);
         Route::resource('/brand',BrandController::class);
         Route::resource('/product',ProductController::class);
+        Route::resource('/section',SectionController::class);
         Route::get('/subcategory/by/category',[ProductController::class,'subcat'])->name('subcat.by.cat');
     });
 });

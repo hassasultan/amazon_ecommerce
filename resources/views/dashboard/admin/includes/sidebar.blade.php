@@ -14,6 +14,9 @@
     <li class="{{ Request::routeIs('brand.index') ? 'active active-item' : '' }}">
         <a href="{{route('brand.index')}}"><img src="{{ asset('user_dashboard/images/payment.png') }}" alt="" class="me-3"> Brand</a>
     </li>
+    <li class="{{ Request::routeIs('section.index') ? 'active active-item' : '' }}">
+        <a href="{{route('section.index')}}"><img src="{{ asset('user_dashboard/images/payment.png') }}" alt="" class="me-3"> Sections</a>
+    </li>
     {{-- <li @if (Route::is('admin.allcourses') || Route::is('admin.allcategories')  || Route::is('user.mycourses') ) class="accordion-item active active-item" @else class="accordion-item" @endif >
         <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"

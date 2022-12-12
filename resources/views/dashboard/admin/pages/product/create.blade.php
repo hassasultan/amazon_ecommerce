@@ -89,6 +89,10 @@
                                     <label for="validationTooltipnewprice">New Price</label>
                                     <input type="number" class="form-control"  value="{{ old('new_price') }}" name="new_price" id="validationTooltipnewprice" required>
                                 </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="validationTooltip0Link">Redirect Link</label>
+                                    <input type="url" class="form-control" name="link" id="validationTooltip0Link" required>
+                                </div>
                             </div>
                             <div class="text-right" style="margin-bottom : 2%">
                                 <button type="button" onclick="addedudetails()" class="btn btn-primary">+ Add Image(s)</button>

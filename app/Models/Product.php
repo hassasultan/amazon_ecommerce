@@ -20,6 +20,7 @@ class Product extends Model
         "old_price",
         "new_price",
         "discount",
+        "link",
         "status",
     ];
 }

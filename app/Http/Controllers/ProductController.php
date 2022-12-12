@@ -48,6 +48,7 @@ class ProductController extends Controller
             'new_price'     => 'required|numeric|lt:old_price',
             'fea_img'       => 'required|image|max:2048',
             'image'         => 'required',
+            'link'          => 'required',
         ]);
         $slug  = Str::slug($request->name);
         try
@@ -66,8 +67,9 @@ class ProductController extends Controller
             $product->old_price         = $request->old_price;
             $product->new_price         = $request->new_price;
             $product->discount          = (((int)$request->old_price - (int)$request->new_price)/(int)$request->new_price)*100;
-            $product->slug          = $slug;
-            $product->status        = 1;
+            $product->slug              = $slug;
+            $product->link              = $request->link;
+            $product->status            = 1;
             $product->created_by        = auth()->user()->id;
             $product->save();
 
@@ -93,6 +95,7 @@ class ProductController extends Controller
             'category_id'   => 'required|numeric|exists:category,id',
             'description'   => 'string',
             'icon'          => 'image|max:2048',
+            'link'          => 'required',
         ]);
         $slug  = Str::slug($request->name);
         try

@@ -39,6 +39,197 @@
                 <div id="myCarousel12" class="carousel slide">
 
                     <div class="carousel-inner">
+                        <div class="item active">
+                            {{-- <div class="more-featured">
+                                <img src="https://vipon.s3.amazonaws.com/img/911576c398497cb648c9e7a934f9234a6621a7f84d6b97.svg"
+                                    alt="">
+                                <a href="https://play.google.com/store/apps/details?id=com.vipon" target="_blank"
+                                    class="more-featured-google" rel="nofollow" onclick="app_click(15,4)">
+                                    <img src="https://vipon.s3.amazonaws.com/img/133576ae40c08c5f5a9a93bc409001e6d144fcc4480d40.svg"
+                                        alt="">
+                                </a>
+                                <a href="https://apps.apple.com/us/app/vipon-amazon-coupon/id1272023223" target="_blank"
+                                    class="more-featured-ios" rel="nofollow" onclick="app_click(14,1)">
+                                    <img src="https://vipon.s3.amazonaws.com/img/993101d30f027821748473e8291cfffed1296ca66d27c7.svg"
+                                        alt="">
+                                </a>
+                            </div> --}}
+                            @foreach ($featured as $row)
+                                <div class="box solid" style="display: inline-block;" id="product-6557202" data-id="6557202"
+                                    data-product-id="9816402" data-module="8">
+                                    <div class="box-img">
+                                        <img src="{{ asset('storage/' . $row->fea_img) }}" alt="Amazon Coupons">
+                                    </div>
+                                    <div class="favorites-get-code flex"><a href="account/login" onclick="stopClick()"
+                                            class="btn" target="_blank">GET COUPON</a>
+                                        <div class="favorites" id="product-9816402" data-id="9816402">
+                                            <a title="Save to my favorites" href="#" data-id="9816402">
+                                                <span class="favoritesed-icon"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="decoration">
+                                        <div class="line"></div>
+                                        <div class="ball">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                    <div class="content-text">
+                                        <div class="content-text-group">
+                                            <span class="content-activity-outer">
+                                                <span class="content-activity-img"
+                                                    style="background:url(/images/activity_lable_left.png)no-repeat center /100% 100%"></span>
+                                                {{-- <span class="content-activity-bg">Christmas</span> --}}
+                                                <span class="content-activity-img"
+                                                    style="background:url(/images/activity_lable_right.png)no-repeat center /100% 100%"></span>
+                                            </span>
+                                            <span class="name name-text">{{ $row->title }}</span>
+
+                                        </div>
+                                        {{-- <div class="content-text-group">
+                                            <div class="name name-fba">
+                                                <img class="" src="/images/flags/om.png" alt="Amazon Coupons">
+                                                <span class="fba">
+                                                    Fulfilled by Amazon</span>
+                                            </div>
+                                        </div> --}}
+                                        <div class="content-text-group">
+                                            <div class="content-text-group-price-discound"> <s
+                                                    class="price">${{ $row->old_price }}</s>
+                                                <div class="discound">-{{ $row->discount }}%</div>
+                                            </div>
+                                            <span class="discound-price">${{ $row->new_price }}</span>
+                                        </div>
+                                        {{-- <div class="content-text-group">
+                                            <div class="comment-group"> <span class="thumb-group-icon"></span>
+                                                <span class="comment-group-num">28</span>
+                                            </div>
+                                            <div class="comment-group"> <span class="comment-group-icon"></span>
+                                                <span class="comment-group-num">3</span>
+                                            </div>
+                                        </div> --}}
+                                    </div>
+
+                                    <div class="layer"
+                                        onclick="getDetail('/product/9816402-Christmas-Welcome-Sign-for-Front-Rustic-amazon-coupons?sl=','fd_web_detail')">
+                                        <div>View Details <span></span></div>
+                                    </div>
+                                </div>
+                            @endforeach
+                            {{-- <div class="box solid" style="display: inline-block;" id="product-6557202" data-id="6557202"
+                                data-product-id="9815898" data-module="8">
+                                <div class="box-img">
+                                    <img src="https://m.media-amazon.com/images/I/51jzTSPWZXL._AC_.jpg"
+                                        alt="Amazon Coupons">
+                                </div>
+                                <div class="favorites-get-code flex"><a href="account/login" onclick="stopClick()"
+                                        class="btn" target="_blank">GET COUPON</a>
+                                    <div class="favorites" id="product-9815898" data-id="9815898">
+                                        <a title="Save to my favorites" href="#" data-id="9815898">
+                                            <span class="favoritesed-icon"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="line"></div>
+                                    <div class="ball">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="content-text">
+                                    <div class="content-text-group">
+                                        <span class="name name-text">Bath Bombs Gift Set, 12 Organic Bath Bombs for Women
+                                            Girls Kids - Handmade Luxurious Colorful Bathbombs with Shea Butter Spa Shower
+                                            Moisturizing Gift for Birthday Valentine’s Day Christmas</span>
+
+                                    </div>
+                                    <div class="content-text-group">
+                                        <div class="name name-fba">
+                                            <img class="" src="/images/flags/om.png" alt="Amazon Coupons">
+                                            <span class="fba">
+                                                Fulfilled by Amazon</span>
+                                        </div>
+                                    </div>
+                                    <div class="content-text-group">
+                                        <div class="content-text-group-price-discound"> <s class="price">$27.99</s>
+                                            <div class="discound">-50%</div>
+                                        </div>
+                                        <span class="discound-price">$13.99</span>
+                                    </div>
+                                    <div class="content-text-group">
+                                        <div class="comment-group"> <span class="thumb-group-icon"></span>
+                                            <span class="comment-group-num">17</span>
+                                        </div>
+                                        <div class="comment-group"> <span class="comment-group-icon"></span>
+                                            <span class="comment-group-num">1</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layer"
+                                    onclick="getDetail('/product/9815898-Bath-Bombs-Gift-Organic-Bath-Bombs-amazon-coupons?sl=','fd_web_detail')">
+                                    <div>View Details <span></span></div>
+                                </div>
+                            </div>
+                            <div class="box solid" style="display: inline-block;" id="product-6557202" data-id="6557202"
+                                data-product-id="9816436" data-module="8">
+                                <div class="box-img">
+                                    <img src="https://m.media-amazon.com/images/I/41IBIvtxTqL._AC_.jpg"
+                                        alt="Amazon Coupons">
+                                </div>
+                                <div class="favorites-get-code flex"><a href="account/login" onclick="stopClick()"
+                                        class="btn" target="_blank">GET COUPON</a>
+                                    <div class="favorites" id="product-9816436" data-id="9816436">
+                                        <a title="Save to my favorites" href="#" data-id="9816436">
+                                            <span class="favoritesed-icon"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="decoration">
+                                    <div class="line"></div>
+                                    <div class="ball">
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="content-text">
+                                    <div class="content-text-group">
+                                        <span class="name name-text">WOZIFAN 10.1 Inch Digital Photo Frame, Smart WiFi
+                                            Digital Picture Frame with 16GB Memory, 1280 * 800 HD Screen, Share Photos and
+                                            Videos Instantly via Email or App, Auto-Rotate, Gifts for Dad - Black</span>
+
+                                    </div>
+                                    <div class="content-text-group">
+                                        <div class="name name-fba">
+                                            <img class="" src="/images/flags/om.png" alt="Amazon Coupons">
+                                            <span class="fba">
+                                                Fulfilled by Amazon</span>
+                                        </div>
+                                    </div>
+                                    <div class="content-text-group">
+                                        <div class="content-text-group-price-discound"> <s class="price">$119.99</s>
+                                            <div class="discound">-50%</div>
+                                        </div>
+                                        <span class="discound-price">$59.99</span>
+                                    </div>
+                                    <div class="content-text-group">
+                                        <div class="comment-group"> <span class="thumb-group-icon"></span>
+                                            <span class="comment-group-num">20</span>
+                                        </div>
+                                        <div class="comment-group"> <span class="comment-group-icon"></span>
+                                            <span class="comment-group-num">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="layer"
+                                    onclick="getDetail('/product/9816436-WOZIFAN-Inch-Digital-Photo-Smart-WiFi-amazon-coupons?sl=','fd_web_detail')">
+                                    <div>View Details <span></span></div>
+                                </div>
+                            </div> --}}
+                        </div>
                     </div>
 
                     <a class="carousel-control left" href="#myCarousel12" data-slide="prev"> <span
@@ -71,17 +262,63 @@
                     </ul>
                 </div>
                 <div class="trending-list height">
-                    <div style="display: flex;justify-content: center;align-items: center;height:100px;width: 100%;"><img
-                            style="width:30px;"
-                            src="https://vipon.s3.amazonaws.com/img/452004003c36249b5456fb551d846eb2095ff2e8230810.gif"
-                            alt="Amazon Coupons">
-                    </div>
+                    @foreach ($product as $row)
+                        <div class="box solid getpro" style="display: inline-block;" id="product-6557202" data-id="6557202"
+                            data-product-id="9807214" data-module="2">
+                            <div class="box-img">
+                                <img class="lazy" data-original="{{ asset('storage/'.$row->fea_img) }}"
+                                    src="{{ asset('storage/'.$row->fea_img) }}" alt=""
+                                    style="display: block;">
+                            </div>
+                            <div class="favorites-get-code flex"><a href="account/login" onclick="stopClick()"
+                                    class="btn" target="_blank">GET COUPON</a>
+                                <div class="favorites" id="product-9807214" data-id="9807214">
+                                    <a title="Save to my favorites" href="#" data-id="9807214">
+                                        <span class="favoritesed-icon"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="decoration">
+                                <div class="line"></div>
+                                <div class="ball">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="content-text">
+                                <div class="content-text-group">
+                                    <span class="name name-text">{{$row->title}}</span>
+
+                                </div>
+
+                                <div class="content-text-group">
+                                    <div class="content-text-group-price-discound"> <s class="price">${{ $row->old_price }}</s>
+                                        <div class="discound">-{{ $row->discount }}%</div>
+                                    </div>
+                                    <span class="discound-price">${{ $row->new_price }}</span>
+                                </div>
+                                {{-- <div class="content-text-group">
+                                    <div class="comment-group"> <span class="thumb-group-icon"></span>
+                                        <span class="comment-group-num">25</span>
+                                    </div>
+                                    <div class="comment-group"> <span class="comment-group-icon"></span>
+                                        <span class="comment-group-num">0</span>
+                                    </div>
+                                </div> --}}
+                            </div>
+
+                            <div class="layer"
+                                onclick="getDetail('/product/9807214-UQUI-Buffalo-Plaid-Blanket-Flannel-Fleece-amazon-coupons?sl=','hot_web_detail')">
+                                <div>View Details <span></span></div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="more">
                     <button class="btn see-more">See More <span class="caret"></span></button>
                 </div>
             </div>
-            <div class="personalized">
+            {{-- <div class="personalized">
                 <div class="h3-title">
                     <ul class="list-unstyled">
                         <li>PERSONALIZED<i style="bottom: -8px;"></i></li>
@@ -212,29 +449,77 @@
                 <div class="more">
                     <button class="btn see-more" onclick="clickRecord(5)">See More <span class="caret"></span></button>
                 </div>
-            </div>
-            <div class="latest">
-                <div class="h3-title">
-                    <ul class="list-unstyled">
-                        <li style="margin: 0"><i></i></li>
-                        <li>LATEST DEALS</li>
-                    </ul>
-                </div>
-                <div class="latest-list height">
-                    <div style="display: flex;justify-content: center;align-items: center;height:100px;width: 100%;"><img
-                            style="width:30px;"
-                            src="https://vipon.s3.amazonaws.com/img/452004003c36249b5456fb551d846eb2095ff2e8230810.gif"
-                            alt="Amazon Coupons">
+            </div> --}}
+            @foreach ($section as $item)
+                <div class="latest">
+                    <div class="h3-title">
+                        <ul class="list-unstyled">
+                            <li style="margin: 0"><i></i></li>
+                            <li>{{ strtoupper($item->name) }}</li>
+                        </ul>
+                    </div>
+                    <div class="latest-list height">
+                        @foreach ($item->products as $row)
+                        <div class="box solid getpro" style="display: inline-block;" id="product-6557202" data-id="6557202"
+                            data-product-id="9807214" data-module="2">
+                            <div class="box-img">
+                                <img class="lazy" data-original="{{ asset('storage/'.$row->fea_img) }}"
+                                    src="{{ asset('storage/'.$row->fea_img) }}" alt=""
+                                    style="display: block;">
+                            </div>
+                            <div class="favorites-get-code flex"><a href="account/login" onclick="stopClick()"
+                                    class="btn" target="_blank">GET COUPON</a>
+                                <div class="favorites" id="product-9807214" data-id="9807214">
+                                    <a title="Save to my favorites" href="#" data-id="9807214">
+                                        <span class="favoritesed-icon"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="decoration">
+                                <div class="line"></div>
+                                <div class="ball">
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div class="content-text">
+                                <div class="content-text-group">
+                                    <span class="name name-text">{{$row->title}}</span>
+
+                                </div>
+
+                                <div class="content-text-group">
+                                    <div class="content-text-group-price-discound"> <s class="price">${{ $row->old_price }}</s>
+                                        <div class="discound">-{{ $row->discount }}%</div>
+                                    </div>
+                                    <span class="discound-price">${{ $row->new_price }}</span>
+                                </div>
+                                {{-- <div class="content-text-group">
+                                    <div class="comment-group"> <span class="thumb-group-icon"></span>
+                                        <span class="comment-group-num">25</span>
+                                    </div>
+                                    <div class="comment-group"> <span class="comment-group-icon"></span>
+                                        <span class="comment-group-num">0</span>
+                                    </div>
+                                </div> --}}
+                            </div>
+
+                            <div class="layer"
+                                onclick="getDetail('/product/9807214-UQUI-Buffalo-Plaid-Blanket-Flannel-Fleece-amazon-coupons?sl=','hot_web_detail')">
+                                <div>View Details <span></span></div>
+                            </div>
+                        </div>
+                    @endforeach
+                    </div>
+                    <div class="more">
+                        <button class="btn see-more">See More <span class="caret"></span></button>
+                        <div class="close-more">
+                            <a href="/promotion/index?type=instant&sort=newest" target="_blank" class="btn">See More</a>
+                        </div>
                     </div>
                 </div>
-                <div class="more">
-                    <button class="btn see-more">See More <span class="caret"></span></button>
-                    <div class="close-more">
-                        <a href="/promotion/index?type=instant&sort=newest" target="_blank" class="btn">See More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="under">
+            @endforeach
+            {{-- <div class="under">
                 <div class="h3-title">
                     <ul class="list-unstyled">
                         <li style="margin: 0"><i></i></li>
@@ -288,7 +573,7 @@
                     <span>View All Deals</span>
                     <span class="more-icon"></span>
                 </a>
-            </div>
+            </div> --}}
         </div>
         {{-- <div class="container-right">
             <div id="activeDirector">

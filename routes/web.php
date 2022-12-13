@@ -8,6 +8,7 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\CoupenController;
 use App\Http\Controllers\AssignCoupenController;
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +21,7 @@ use App\Http\Controllers\AssignCoupenController;
 |
 */
 
-Route::get('/', function () {
-    // return redirect()->route('home');
-    return view('frontend.home');
-});
+Route::get('/',[FrontendController::class,'index'])->name('index');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 Route::prefix('/admin')->group(function (){

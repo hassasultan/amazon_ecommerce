@@ -22,6 +22,7 @@ use App\Http\Controllers\FrontendController;
 */
 
 Route::get('/',[FrontendController::class,'index'])->name('index');
+Route::get('/product/{slug}', [FrontendController::class, 'details'])->name('product.details');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 Route::prefix('/admin')->group(function (){

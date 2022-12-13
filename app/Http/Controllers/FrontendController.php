@@ -16,4 +16,8 @@ class FrontendController extends Controller
         $section = Section::with('products')->where('status',1)->get();
         return view('frontend.home',compact('product','section','featured'));
     }
+    public function details($slug)
+    {
+        return view('frontend.product-details');
+    }
 }

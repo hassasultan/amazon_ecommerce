@@ -111,9 +111,8 @@
                                         </div> --}}
                                     </div>
 
-                                    <div class="layer"
-                                        onclick="getDetail('/product/9816402-Christmas-Welcome-Sign-for-Front-Rustic-amazon-coupons?sl=','fd_web_detail')">
-                                        <div>View Details <span></span></div>
+                                    <div class="layer">
+                                        <div><a style="color:#FFF !important;" href="{{ route('product.details',$row->slug) }}">View Details</a><span></span></div>
                                     </div>
                                 </div>
                             @endforeach
@@ -309,7 +308,7 @@
 
                             <div class="layer"
                                 onclick="getDetail('/product/9807214-UQUI-Buffalo-Plaid-Blanket-Flannel-Fleece-amazon-coupons?sl=','hot_web_detail')">
-                                <div>View Details <span></span></div>
+                                <div><a style="color:#FFF !important;" href="{{ route('product.details',$row->slug) }}">View Details</a> <span></span></div>
                             </div>
                         </div>
                     @endforeach
@@ -506,7 +505,7 @@
 
                             <div class="layer"
                                 onclick="getDetail('/product/9807214-UQUI-Buffalo-Plaid-Blanket-Flannel-Fleece-amazon-coupons?sl=','hot_web_detail')">
-                                <div>View Details <span></span></div>
+                                <div><a style="color:#FFF !important;" href="{{ route('product.details',$row->slug) }}">View Details</a> <span></span></div>
                             </div>
                         </div>
                     @endforeach

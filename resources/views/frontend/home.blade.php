@@ -58,7 +58,7 @@
                                 <div class="box solid" style="display: inline-block;" id="product-6557202" data-id="6557202"
                                     data-product-id="9816402" data-module="8">
                                     <div class="box-img">
-                                        <img src="{{ asset('storage/' . $row->fea_img) }}" alt="Amazon Coupons">
+                                        <img src="{{ asset('public/storage/' . $row->fea_img) }}" alt="Amazon Coupons">
                                     </div>
                                     <div class="favorites-get-code flex"><a href="account/login" onclick="stopClick()"
                                             class="btn" target="_blank">GET COUPON</a>

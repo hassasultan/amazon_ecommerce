@@ -36,7 +36,7 @@
                             <td>{{ $row->title }}</td>
                             {{--<td>{{ $row->seller->brand_name }}</td>--}}
                             <td>
-                                <img src="{{ asset('storage/'.$row->fea_img) }}" style="width: 100px; height: 100px; border-radius: 50%;"/>
+                                <img src="{{ asset('public/storage/'.$row->fea_img) }}" style="width: 100px; height: 100px; border-radius: 50%;"/>
                             </td>
                             <td>
                                 @if($row->featured == 1)

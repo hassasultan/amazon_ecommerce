@@ -265,8 +265,8 @@
                         <div class="box solid getpro" style="display: inline-block;" id="product-6557202" data-id="6557202"
                             data-product-id="9807214" data-module="2">
                             <div class="box-img">
-                                <img class="lazy" data-original="{{ asset('storage/'.$row->fea_img) }}"
-                                    src="{{ asset('storage/'.$row->fea_img) }}" alt=""
+                                <img class="lazy" data-original="{{ asset('public/storage/'.$row->fea_img) }}"
+                                    src="{{ asset('public/storage/'.$row->fea_img) }}" alt=""
                                     style="display: block;">
                             </div>
                             <div class="favorites-get-code flex"><a href="account/login" onclick="stopClick()"
@@ -462,8 +462,8 @@
                         <div class="box solid getpro" style="display: inline-block;" id="product-6557202" data-id="6557202"
                             data-product-id="9807214" data-module="2">
                             <div class="box-img">
-                                <img class="lazy" data-original="{{ asset('storage/'.$row->fea_img) }}"
-                                    src="{{ asset('storage/'.$row->fea_img) }}" alt=""
+                                <img class="lazy" data-original="{{ asset('public/storage/'.$row->fea_img) }}"
+                                    src="{{ asset('public/storage/'.$row->fea_img) }}" alt=""
                                     style="display: block;">
                             </div>
                             <div class="favorites-get-code flex"><a href="account/login" onclick="stopClick()"

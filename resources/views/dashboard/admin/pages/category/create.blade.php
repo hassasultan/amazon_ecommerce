@@ -15,13 +15,18 @@
                             </p>
                         </div>
                     </div>
-                    <form class="needs-validation" method="post" action="{{ route('category.store') }}" novalidate>
+                    <form class="needs-validation" method="post" action="{{ route('category.store') }}" novalidate enctype="multipart/form-data">
                         @csrf
                         <div class="form-row">
                             <div class="col-md-4 mb-3">
                                 <label for="validationTooltip02">Title</label>
                                 <input type="text" class="form-control" name="name" id="validationTooltip02"
                                     placeholder="Title" required value="{{ old('name') }}">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationTooltip02">Icon</label>
+                                <input type="file" class="form-control" name="icon" id="validationTooltip02icon"
+                                    placeholder="Icon" required value="{{ old('icon') }}">
                             </div>
                             <div class="col-md-4 mb-3">
                                 <label for="validationTooltip02">Description</label>

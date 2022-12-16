@@ -1,378 +1,907 @@
-<div id="footer">
-    <div>
-        <div class="app">
-            <div>Apps</div>
-            <div>
-                <a href="https://itunes.apple.com/us/app/vipon-amazon-coupon/id1272023223?mt=8" onclick="app_click(1,1,0)"
-                    rel="nofollow" class="app-store" target="_blank">
-                    <img src="https://vipon.s3.amazonaws.com/img/86609914b6a74d4b07950b07b38343230a7376cc95e896.png"
-                        alt="">
-                </a>
-            </div>
-            <div>
-                <a href="https://play.google.com/store/apps/details?id=com.vipon" class="app-play" rel="nofollow"
-                    onclick="app_click(1,4,0)" target="_blank">
-                    <img src="https://vipon.s3.amazonaws.com/img/784580e6474d6cd450c158eb89838620fb11dd552874d3.png"
-                        alt="">
-                </a>
-            </div>
-        </div>
-        <div>
-            <div><a>About</a></div>
-            <div><a href="https://www.myvipon.com/amazon-coupons/about?ref=menu_aboutvipon" target="_blank">What is
-                    Vipon</a></div>
-            <div><a href="https://help.myvipon.com/category/70-faq-desktop" target="_blank"
-                    onclick="clickRecord(200)">FAQ</a></div>
+<div id="shopify-section-footer" class="shopify-section">
+    <footer class="footer-area" data-section-id="footer">
+        <div class="container">
+            <div class="footer-list-wrap">
+                <ul class="footer-list">
 
-            <div><a href="https://affiliate.blhltd.com/#/login?redirect=%2Fdashboard" target="_blank">Seller
-                    Affiliates</a></div>
-        </div>
-        <div>
-            <div><a>Vipon Seller</a></div>
-            <div><a href="https://seller.myvipon.com/" target="_blank">Seller Center</a></div>
-            <div><a href="https://seller.myvipon.com/main/index?from=advertising#firstAnchor"
-                    target="_blank">Advertising Opportunities</a></div>
-        </div>
-        <div>
-            <div><a>Contact Us</a></div>
-            <div><a>Shopper: <span class="__cf_email__"
-                        data-cfemail="5e2d2b2e2e312c2a1e332728372e3130703d3133">[email&#160;protected]</span></a></div>
-            <div><a>Seller: <span class="__cf_email__"
-                        data-cfemail="1e6d7b6c68777d7b5e736768776e7170307d7173">[email&#160;protected]</span></a></div>
-        </div>
-        <div>
-            <div><a>Newsletter</a></div>
-            <div><a href="https://www.myvipon.com/newsletter" target="_blank">Be the first to get the best Amazon
-                    deals</a></div>
-            <form
-                action="https://vipon.us10.list-manage.com/subscribe/post?u=6b9aae568164012e59e677c6a&amp;id=238794d600"
-                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-                target="_blank" novalidate>
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                    <input type="text" name="b_6b9aae568164012e59e677c6a_238794d600" tabindex="-1" value="">
-                </div>
-                <div class="send-email"><input type="email" value="" name="EMAIL" class="required email"
-                        id="mce-EMAIL" placeholder="Your Email Address…"><button type="submit"><img
-                            src="https://vipon.s3.amazonaws.com/img/1565592e19b5f03249448fb939da2165a59628644e34ba.png"
-                            alt=""></button></div>
-            </form>
-        </div>
-    </div>
-    <div class="other">
+                    <li class="ftlink-li logo-info text-start text-lg-start width-ac6a89ac-0ecd-4a2d-a253-57e64cccee17">
+                        <div class="footer-info">
 
-        <div><a href="https://www.facebook.com/groups/196767718347452" target="_blank" onclick="clickRecord(202)"><img
-                    src="https://vipon.s3.amazonaws.com/img/3642717de3a38f1369beb3b871a9ef592c550b8f97c187.png"
-                    alt=""></a></div>
-        <div><a href="https://twitter.com/ViponOfficial" target="_blank"><img
-                    src="https://vipon.s3.amazonaws.com/img/2591596818e9d7a8f2a143aacf0ed58ba735814ac6f454.png"
-                    alt=""></a></div>
-        <div><a href="https://www.instagram.com/vipon_deals/" target="_blank"><img
-                    src="https://vipon.s3.amazonaws.com/img/725886ef86997ad7088cb581387442974b1e215ead82f2.png"
-                    alt=""></a></div>
-        <div><a href="https://www.tiktok.com/@vipon_deals" target="_blank"><img
-                    src="https://vipon.s3.amazonaws.com/img/320679253fe43ea05e7ec8a68eff622e61a31cfb65b92d.png"
-                    alt="" width="30"></a></div>
-    </div>
-    <p>©Copyright 2022 Vipon All Right Reserved
-        <span>·</span>
-        <a href="https://www.myvipon.com/privacy-policy" target="_blank">Privacy Policy</a>
-        <span>·</span>
-        <a href="https://www.myvipon.com/terms-of-service" target="_blank">Terms of Service</a>
-        <span>·</span>
-        <a href="/info/personal-info" target="_blank">Do Not Sell My Personal Information</a>
-    </p>
-</div>
+                            <a href="https://electon6-store.myshopify.com" class="footer-logo">
+                                <img style="max-width: 145px;"
+                                    src="//cdn.shopify.com/s/files/1/0641/3431/6288/files/logo_1236eee3-f4c2-42e4-8f8c-2ed05bf5d6db.png?v=1650977792"
+                                    class="img-fluid" alt="electon6-store">
+                            </a>
+                            <style>
+                                a.footer-logo svg {
+                                    width: 100%;
+                                }
+                            </style>
 
-<div class="modal fade" id="feedBack" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Feedback</h4>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group">
-                        <label for="feedBackText"><span>*</span><span>Feedback</span></label>
-                        <textarea id="feedBackText"
-                            placeholder="Problem and Suggestion: Describe your issue using at least 10 characters so that we can help troubleshoot your issue more quickly. If you have any suggestions for this site, you can also let us know here."></textarea>
-                    </div>
-                    <div class="form-group">
-                        <div class="copy-label"><span></span><span>screenshots (Optional):</span></div>
-                        <div style="display: flex">
-                            <div class="imgs">
+                            <div class="rich-text store-info">
+                                <i class="ri-phone-line"></i>
+                                <p><a href="tel:(+63) 0123 456 789" title="tel:(+63) 0123 456 789">(+63) 0123 456
+                                        789</a></p>
                             </div>
-                            <div class="img-group">
-                                <label for="imgEx">
-                                    <img src="https://vipon.s3.amazonaws.com/img/3060483300cfc0ad8582dd0d8496c79e2601ea886ad30c.svg"
-                                        alt="">
-                                </label>
-                                <input type="file" accept=".jpg,.png" id="imgEx">
+
+
+                            <div class="rich-text store-info">
+                                <i class="ri-map-pin-line"></i>
+                                <p>20 Princess road, london, greater london NW1, UK</p>
                             </div>
+
+
+                            <div class="rich-text store-info">
+                                <i class="ri-mail-line"></i>
+                                <p><a href="mailto:demo@demo.com" title="mailto:demo@demo.com">demo@demo.com</a></p>
+                            </div>
+
+
+                            <div class="footer-social">
+                                <ul class="social-icon">
+
+                                    <li class="facebook">
+                                        <a style="color: #ffffff" href="https://www.facebook.com/">
+                                            <i class="ri-facebook-fill"></i>
+                                        </a>
+                                    </li>
+
+
+
+                                    <li class="twitter">
+                                        <a style="color: #ffffff" href="https://twitter.com/">
+                                            <i class="ri-twitter-fill"></i>
+                                        </a>
+                                    </li>
+
+
+
+                                    <li class="gplus">
+                                        <a style="color: #ffffff" href="https://in.pinterest.com/">
+                                            <i class="ri-pinterest-fill"></i>
+                                        </a>
+                                    </li>
+
+
+
+                                    <li class="pinterest">
+                                        <a style="color: #ffffff" href="https://www.instagram.com/">
+                                            <i class="ri-instagram-line"></i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <style>
+                                    /* social icon css */
+                                    ul.social-icon {
+
+                                        margin: -5px 0px 0px -10px;
+
+                                        line-height: 1;
+                                    }
+
+                                    ul.social-icon li {
+                                        display: inline-block;
+
+                                        margin: 5px 0px 0px 10px;
+
+                                    }
+
+                                    ul.social-icon li a {
+                                        display: block;
+                                        font-size: 16px;
+                                        line-height: 1;
+                                        width: 40px;
+                                        height: 40px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        border: 1px solid #515151;
+                                        border-radius: 100%;
+                                    }
+
+                                    ul.social-icon li a:hover {
+                                        border-color: var(--font-color-primary);
+                                        background-color: var(--font-color-primary);
+                                    }
+                                </style>
+                            </div>
+
                         </div>
-                    </div>
-                    <div class="form-group submit-back">
-                        <button class="submit-feed-back" disabled="disabled" data-no="0"><img
-                                src="../../../images/waiting-1.gif"
-                                style="width: 16px;margin-right: 3px;display: none" alt="">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+                        <style data-shopify>
+                            .footer-list-wrap ul.footer-list li.width-ac6a89ac-0ecd-4a2d-a253-57e64cccee17 {
+                                width: calc(25% - 30px);
+                            }
+                        </style>
+                    </li>
+                    <li class="ftlink-li link-list text-start text-lg-start width-20904045-e260-4468-8add-7527bb6b35e2">
 
-<div class="modal fade" id="change-domain" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true" data-backdrop="static">
-    <div class="modal-dialog"
-        style="top: 50%;margin-top: -170px;width: 660px;height: 360px;background: #F8F8F8;border-radius: 4px;">
-        <div class="modal-content">
-            <div class="modal-body" style="width: 660px;height: 360px;background: #F8F8F8;border-radius: 4px;">
-                <div style="text-align: center;margin-top: 30px;"><img style="width: 160px;height: 31px;"
-                        src="https://vipon.s3.amazonaws.com/img/268511307d0d511cd3a1f4a168e28b9463e41218ea9a66.svg">
-                </div>
-                <div style="text-align: center;margin-top: 40px;"><label
-                        style="width: 412px;height: 28px;font-size: 24px;font-family: Roboto-Bold, Roboto;font-weight: bold;color: #333333;line-height: 28px;">Vipon
-                        has been updated to a new site!</label></div>
-                <div style="text-align: center;margin-top: 20px;"><label
-                        style="width: 400px;height: 40px;font-size: 14px;font-family: Roboto-Regular, Roboto;font-weight: 400;color: #333333;line-height: 20px;">Our
-                        new website address is <a href="https://www.myvipon.com"
-                            style="color:#4DCAC1">www.myvipon.com</a><br>Please update your Favorites/Bookmark to add
-                        our new website.</label></div>
-                <div style="text-align: center;margin-top: 30px;"><button id="jump_to_new_domain"
-                        style="width: 100px;height: 32px;background: #4DCAC1;border-radius: 16px;color:white;border:none;">OK</button>
-                </div>
-                <div style="text-align: center;margin-top: 14px;"><label
-                        style="width: 306px;height: 20px;font-size: 12px;font-family: Roboto-Regular, Roboto;font-weight: 400;color: #999999;line-height: 20px;">You
-                        will be re-directed to www.myvipon.com in <label style="color: #4DCAC1"
-                            id="mes">5</label> seconds</label></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade " id="feedBackTiTitle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-body">
-                Thank you for your feedback
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="is_man" tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="like-categories">
-                <h4>What do you usually shop for?</h4>
-                <p>Find deals that will interest you by selecting at least 1 category.</p>
-                <div class="selection-categories-list clearfix ">
-                    <div class="form-group-modal" data-value="14" data-updata="14">
-                        <input type="checkbox" id="modal_14">
-                        <label for="modal_14"> Arts, Crafts &amp; Sewing </label>
-                    </div>
-                    <div class="form-group-modal" data-value="19" data-updata="19">
-                        <input type="checkbox" id="modal_19">
-                        <label for="modal_19"> Automotive &amp; Industrial </label>
-                    </div>
-                    <div class="form-group-modal" data-value="16" data-updata="16">
-                        <input type="checkbox" id="modal_16">
-                        <label for="modal_16"> Baby </label>
-                    </div>
-                    <div class="form-group-modal" data-value="5" data-updata="5">
-                        <input type="checkbox" id="modal_5">
-                        <label for="modal_5"> Beauty &amp; Personal Care </label>
-                    </div>
-                    <div class="form-group-modal" data-value="11" data-updata="11">
-                        <input type="checkbox" id="modal_11">
-                        <label for="modal_11"> Cell Phones &amp; Accessories </label>
-                    </div>
-                    <div class="form-group-modal" data-value="8" data-updata="8">
-                        <input type="checkbox" id="modal_8">
-                        <label for="modal_8"> Electronics </label>
-                    </div>
-                    <div class="form-group-modal" data-value="9" data-updata="9">
-                        <input type="checkbox" id="modal_9">
-                        <label for="modal_9"> Health &amp; Household </label>
-                    </div>
-                    <div class="form-group-modal" data-value="1" data-updata="1">
-                        <input type="checkbox" id="modal_1">
-                        <label for="modal_1"> Home &amp; Kitchen </label>
-                    </div>
-                    <div class="form-group-modal" data-value="4" data-updata="4">
-                        <input type="checkbox" id="modal_4">
-                        <label for="modal_4"> Jewelry </label>
-                    </div>
-                    <div class="form-group-modal" data-value="15" data-updata="15">
-                        <input type="checkbox" id="modal_15">
-                        <label for="modal_15"> Men Clothing, Shoes &amp; Accessories </label>
-                    </div>
-                    <div class="form-group-modal" data-value="18" data-updata="18">
-                        <input type="checkbox" id="modal_18">
-                        <label for="modal_18"> Office Products </label>
-                    </div>
-                    <div class="form-group-modal" data-value="13" data-updata="13">
-                        <input type="checkbox" id="modal_13">
-                        <label for="modal_13"> Patio, Lawn &amp; Garden </label>
-                    </div>
-                    <div class="form-group-modal" data-value="17" data-updata="17">
-                        <input type="checkbox" id="modal_17">
-                        <label for="modal_17"> Pet Supplies </label>
-                    </div>
-                    <div class="form-group-modal" data-value="12" data-updata="12">
-                        <input type="checkbox" id="modal_12">
-                        <label for="modal_12"> Sports &amp; Outdoors </label>
-                    </div>
-                    <div class="form-group-modal" data-value="7" data-updata="7">
-                        <input type="checkbox" id="modal_7">
-                        <label for="modal_7"> Tools &amp; Home Improvement </label>
-                    </div>
-                    <div class="form-group-modal" data-value="6" data-updata="6">
-                        <input type="checkbox" id="modal_6">
-                        <label for="modal_6"> Toys &amp; Games </label>
-                    </div>
-                    <div class="form-group-modal" data-value="3" data-updata="3">
-                        <input type="checkbox" id="modal_3">
-                        <label for="modal_3"> Watches </label>
-                    </div>
-                    <div class="form-group-modal" data-value="2" data-updata="2">
-                        <input type="checkbox" id="modal_2">
-                        <label for="modal_2"> Women Clothing, Shoes &amp; Accessories </label>
-                    </div>
-                </div>
-                <div class="text-deals-selection">Good Selection! Now Let's Find Your Deals</div>
-                <div class="btns">
-                    <button class="btn">Skip</button>
-                    <button class="btn shopping">Start Shopping</button>
-                </div>
-            </div>
-            <div class="first-guide">
-                <h3>How To Use Vipon</h3>
-                <div class="show-img">
-                    <div class="flex">
-                        <span class="font-weight" style="margin-right: 5px;">Step1</span>
-                        <span class="text">Request a coupon and click the Buy Now button</span>
-                    </div>
-                    <img src="https://vipon.s3.amazonaws.com/img/9579371aed1c3b793da221c5095ccb11353cb9ffe48385.png"
-                        alt="">
-                </div>
-                <div class="first-guide-footer flex">
-                    <div class="flex">
-                        <div class="ring active" data-num="0"></div>
-                        <div class="ring" data-num="1"></div>
-                    </div>
-                    <div class="flex">
-                        <button class="btn" data-dismiss="modal">Skip</button>
-                        <a class="next flex">
-                            <span>Next</span>
-                            <span class="ring-play">
-                                <img src="https://vipon.s3.amazonaws.com/img/1553234ac5db37522e17fc3f5c7e6c32be8d3c6776ff87.svg"
-                                    alt="">
-                            </span>
+                        <h2 class="ft-title md-d-none">Find categories</h2>
+                        <a data-bs-toggle="collapse" href="#collapse-find-categories" class="ft-title">
+                            <span>Find categories</span>
+                            <i class="ri-add-line"></i>
                         </a>
-                    </div>
-                </div>
-            </div>
-            <div class="first-guide">
-                <h3>How To Use Vipon</h3>
-                <div class="show-img">
-                    <div class="flex">
-                        <span class="font-weight" style="margin-right: 5px;">Step2</span>
-                        <span class="text">Go to Amazon to enter the coupon code</span>
-                    </div>
-                    <img src="https://vipon.s3.amazonaws.com/img/513008319b7fee7d906bd8e8231e7e35c7610306953d7c.png"
-                        alt="">
-                </div>
-                <div class="first-guide-footer flex">
-                    <div class="flex">
-                        <div class="ring" data-num="0"></div>
-                        <div class="ring active" data-num="1"></div>
-                        <div class="ring-text">Go to <a href="https://help.myvipon.com/category/70-faq-desktop"
-                                target="_blank">FAQ</a> for more details</div>
-                    </div>
-                    <div class="flex" style="justify-content: flex-end">
-                        <a class="next flex">
-                            <span>Start shopping</span>
-                            <span class="ring-play">
-                                <img src="https://vipon.s3.amazonaws.com/img/1553234ac5db37522e17fc3f5c7e6c32be8d3c6776ff87.svg"
-                                    alt="">
-                            </span>
+                        <ul class="collapse  footer-sublist link" id="collapse-find-categories">
+
+
+
+                            <li class="ftsublink-li">
+                                <a href="/collections/desktop" class="ft-sublink">Desktop</a>
+                            </li>
+
+
+
+                            <li class="ftsublink-li">
+                                <a href="/collections/laptops-notebooks" class="ft-sublink">Laptops & notebooks</a>
+                            </li>
+
+
+
+                            <li class="ftsublink-li">
+                                <a href="/collections/components" class="ft-sublink">Components</a>
+                            </li>
+
+
+
+                            <li class="ftsublink-li">
+                                <a href="/collections/tablets" class="ft-sublink">Tablets</a>
+                            </li>
+
+
+
+                            <li class="ftsublink-li">
+                                <a href="/collections/software" class="ft-sublink">Software</a>
+                            </li>
+
+
+
+                            <li class="ftsublink-li">
+                                <a href="/collections/phone-pdas" class="ft-sublink">Phone & PDAS</a>
+                            </li>
+
+
+                        </ul>
+
+                        <style data-shopify>
+                            .footer-list-wrap ul.footer-list li.width-20904045-e260-4468-8add-7527bb6b35e2 {
+                                width: calc(25% - 30px);
+                            }
+                        </style>
+                    </li>
+                    <li class="ftlink-li link-list text-start text-lg-start width-474709cb-2460-4831-8a76-4788b84bad17">
+
+                        <h2 class="ft-title md-d-none">Customer care</h2>
+                        <a data-bs-toggle="collapse" href="#collapse-customer-care" class="ft-title">
+                            <span>Customer care</span>
+                            <i class="ri-add-line"></i>
                         </a>
-                    </div>
-                </div>
+                        <ul class="collapse  footer-sublist link" id="collapse-customer-care">
+
+
+
+                            <li class="ftsublink-li">
+                                <a href="/pages/contact-us" class="ft-sublink">Contact us</a>
+                            </li>
+
+
+
+                            <li class="ftsublink-li">
+                                <a href="/pages/about-us" class="ft-sublink">About us</a>
+                            </li>
+
+
+
+                            <li class="ftsublink-li">
+                                <a href="/pages/faqs" class="ft-sublink">Faq's</a>
+                            </li>
+
+
+
+                            <li class="ftsublink-li">
+                                <a href="/pages/privacy-policy" class="ft-sublink">Privacy policy</a>
+                            </li>
+
+
+
+                            <li class="ftsublink-li">
+                                <a href="/pages/terms-condition" class="ft-sublink">Terms & condition</a>
+                            </li>
+
+
+
+                            <li class="ftsublink-li">
+                                <a href="/pages/wishlist" class="ft-sublink">Wishlist</a>
+                            </li>
+
+
+                        </ul>
+
+                        <style data-shopify>
+                            .footer-list-wrap ul.footer-list li.width-474709cb-2460-4831-8a76-4788b84bad17 {
+                                width: calc(25% - 30px);
+                            }
+                        </style>
+                    </li>
+                    <li
+                        class="ftlink-li newsletter text-start text-lg-start width-ce21c9f4-2317-48ae-9c1b-d8ff7c1987c1">
+                        <div class="news-content">
+
+                            <h2 class="ft-title">
+                                Join our newsletter
+                            </h2>
+
+
+                            <div class="rich-text">
+                                <p>Subscribe the newsletter for all the latest updates </p>
+                            </div>
+
+                            <form method="post" action="/contact#contact_form" id="contact_form"
+                                accept-charset="UTF-8" class="contact-form"><input type="hidden" name="form_type"
+                                    value="customer" /><input type="hidden" name="utf8" value="✓" />
+
+
+                                <div class="news-wrap">
+                                    <input type="hidden" name="contact[tags]" value="newsletter">
+                                    <input class="text-start text-lg-start" type="email" name="contact[email]"
+                                        class="email mail" id="E-mail" value=""
+                                        placeholder="email@example.com" autocapitalize="off" required>
+                                    <button type="submit" class="btn-style3" name="commit" id="Subscribe">
+                                        Subscribe
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <style data-shopify>
+                            .footer-list-wrap ul.footer-list li.width-ce21c9f4-2317-48ae-9c1b-d8ff7c1987c1 {
+                                width: calc(25% - 30px);
+                            }
+                        </style>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </footer>
+
+    <style>
+        :root {
+            --color-text: #999999;
+            --color-heading: #219ebc;
+        }
+
+        .footer-area {
+
+            background-color: #333333;
+        }
+
+        .footer-area {
+            position: relative;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        @media (max-width: 1199px) {
+            .footer-area {
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .footer-area {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+        }
+
+        .footer .container-col {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        @media(max-width: 1599px) {
+            .footer .container-col {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+
+        @media(max-width: 767px) {
+            .footer .container-col {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        .footer-list-wrap ul.footer-list {
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+
+            margin-left: -30px;
+
+            margin-top: -100px;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li {
+
+            margin-left: 30px;
+
+            margin-top: 100px;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li .ft-title {
+            color: var(--font-color-primary);
+            font-size: 18px;
+            line-height: 1;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding-bottom: 50px;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li a.ft-title {
+            display: none;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li .footer-sublist.collapse:not(.show) {
+            display: block;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li {
+            margin-top: 20px;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li:first-child {
+            margin-top: 0px;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li a {
+            color: var(--color-text);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li a:hover {
+            color: var(--font-color-primary);
+        }
+
+        /*logo info*/
+        .footer-list-wrap ul.footer-list li.ftlink-li.logo-info .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li.logo-info .footer-info .footer-social {
+            margin-top: 34px;
+        }
+
+        /*richtext*/
+        .footer-list-wrap .rich-text {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-list-wrap .rich-text.store-info {
+            margin-top: 12px;
+        }
+
+        .footer-list-wrap .rich-text a,
+        .footer-list-wrap .rich-text p {
+            color: var(--color-text);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 30px;
+        }
+
+        .footer-list-wrap .rich-text i {
+            color: var(--font-color-primary);
+            font-size: 22px;
+
+            margin-right: 10px;
+
+        }
+
+        .footer-list-wrap .rich-text a:hover {
+            color: var(--color-primary);
+        }
+
+        /* custom text */
+        .footer-list-wrap li.custom-text:last-of-type {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .footer-list-wrap li.custom-text:last-of-type .rich-text p {
+            font-size: 16px;
+        }
+
+        .footer-list-wrap .custom-text .custom-url {
+            padding-bottom: 15px;
+        }
+
+        /* newsletter */
+        .footer-list-wrap .news-content .rich-text p {
+            max-width: 75%;
+        }
+
+        .footer-list-wrap .news-content form {
+            width: 100%;
+            margin-top: 22px;
+        }
+
+        .footer-list-wrap .news-content .news-wrap {
+            position: relative;
+        }
+
+        .footer-list-wrap .news-content .news-wrap input {
+            font-size: 14px;
+            font-weight: 500;
+            width: 100%;
+            padding-bottom: 10px;
+            border: none;
+            background-color: #ffffff;
+            border-bottom: 1px solid rgba(0, 0, 0, 10%);
+        }
+
+        .footer-list-wrap .news-content .news-wrap button {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+
+        .footer-list-wrap .news-content .news-wrap button:hover {
+            color: var(--font-color-secondary);
+        }
+
+        /* isntagram */
+        .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: -15px;
+
+            margin-left: -15px;
+
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a {
+            width: calc(33.33% - 15px);
+            margin-top: 15px;
+
+            margin-left: 15px;
+
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: visible;
+            background-color: #027ac0;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:before {
+            content: "\ee66";
+            color: #fff;
+            font-size: 18px;
+            line-height: 1;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            font-family: viewsicon !important;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:hover:before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:hover:after {
+            opacity: .5;
+            visibility: visible;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:hover:before,
+        .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:before,
+        .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:after,
+        .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a:hover:after {
+            -webkit-transition: all .3s ease-in-out 0s;
+            -o-transition: all .3s ease-in-out 0s;
+            transition: all .3s ease-in-out 0s;
+        }
+
+        .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a img {
+            width: 100%;
+        }
+
+        @media (max-width: 1199px) {
+            .footer-list-wrap ul.footer-list {
+                margin-top: -60px;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li {
+                margin-top: 60px;
+            }
+
+            .footer-list-wrap .news-content .news-wrap button {
+                padding: 15px 35px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .footer-list-wrap ul.footer-list li.ftlink-li:not(:first-child) {
+                margin-top: 15px;
+            }
+
+            .footer-list-wrap ul.footer-list {
+
+                margin-left: 0px;
+
+                margin-top: 0px;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li {
+
+                margin-left: 0px;
+
+                margin-top: 0px;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li {
+                width: 100%;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li a.ft-title {
+                display: flex;
+                font-size: 13px;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 15px;
+                border-bottom: 1px solid rgb(184 159 123 / 20%);
+            }
+
+            .footer-list-wrap .rich-text p,
+            .footer-list-wrap .rich-text a,
+            .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li a,
+            .footer-list-wrap ul.footer-list li.ftlink-li a.ft-title i {
+                font-size: 13px;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li a.ft-title[aria-expanded="true"] i:before {
+                content: "\f1af";
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li:last-child {
+                padding-bottom: 15px;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li:first-child {
+                padding-top: 15px;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li ul.footer-sublist li.ftsublink-li {
+                margin-top: 10px;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li .footer-sublist.collapse:not(.show) {
+                display: none;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li .ft-title {
+                padding-bottom: 15px;
+                font-size: 13px;
+            }
+
+            .footer-list-wrap .rich-text p,
+            .footer-list-wrap .rich-text a {
+                line-height: 25px;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li.logo-info .footer-logo {
+                margin-bottom: 10px;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li.logo-info .footer-info .footer-social {
+                margin-top: 24px;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li .ft-title.md-d-none {
+                display: none;
+            }
+
+            .footer-list-wrap .news-content {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .footer-list-wrap .news-content .news-wrap input {
+                min-width: 100%;
+                font-size: 12px;
+                padding-bottom: 15px;
+            }
+
+            .footer-list-wrap .news-content .news-wrap input::placeholder {
+                font-size: 13px;
+            }
+
+            .footer-list-wrap .news-content .news-wrap button {
+                font-size: 14px;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li.logo-info .footer-logo {
+                margin-bottom: 15px;
+            }
+
+            .footer-list-wrap ul.footer-list li.ftlink-li.insta-wrap .insta-block a {
+                width: auto;
+            }
+        }
+    </style>
 </div>
+<div id="shopify-section-copy-right" class="shopify-section">
+    <footer class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul class="ft-bottom">
+                        <li class="copy-right">
+                            <div class="richtext">
+                                <p>Copyright © 2022 Ecommerce by <a href="https://electon6-store.myshopify.com/"
+                                        title="https://electon6-store.myshopify.com/">spacingtech</a></p>
+                            </div>
+                        </li>
+                        <li class="payment">
+                            <a href="javascript:void(0)" class="payment-icon">
 
-<div class="modal fade " id="favoritesTitle" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="thumb-title"></div>
-            </div>
-        </div>
-    </div>
-</div>
+
+                                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img"
+                                    width="38" height="24" aria-labelledby="pi-visa">
+                                    <title id="pi-visa">Visa</title>
+                                    <path opacity=".07"
+                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
+                                    <path fill="#fff"
+                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
+                                    <path
+                                        d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+                                        fill="#142688" />
+                                </svg>
+
+                                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38"
+                                    height="24" role="img" aria-labelledby="pi-paypal">
+                                    <title id="pi-paypal">PayPal</title>
+                                    <path opacity=".07"
+                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
+                                    <path fill="#fff"
+                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
+                                    <path fill="#003087"
+                                        d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z" />
+                                    <path fill="#3086C8"
+                                        d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z" />
+                                    <path fill="#012169"
+                                        d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z" />
+                                </svg>
+
+                                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img"
+                                    width="38" height="24" aria-labelledby="pi-master">
+                                    <title id="pi-master">Mastercard</title>
+                                    <path opacity=".07"
+                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
+                                    <path fill="#fff"
+                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
+                                    <circle fill="#EB001B" cx="15" cy="12" r="7" />
+                                    <circle fill="#F79E1B" cx="23" cy="12" r="7" />
+                                    <path fill="#FF5F00"
+                                        d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z" />
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24"
+                                    width="38" height="24" aria-labelledby="pi-american_express">
+                                    <title id="pi-american_express">American Express</title>
+                                    <g fill="none">
+                                        <path fill="#000"
+                                            d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z"
+                                            opacity=".07" />
+                                        <path fill="#006FCF"
+                                            d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1" />
+                                        <path fill="#FFF"
+                                            d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z" />
+                                    </g>
+                                </svg>
 
 
+                            </a>
+                            <style>
+                                .payment-icon {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                }
 
+                                .payment-icon svg {
+                                    width: 50px;
+                                    height: 32px;
 
+                                    margin-right: 5px;
 
-<div class="modal fade " id="fb" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-body">
-                <img class="header-img"
-                    src="https://vipon.s3.amazonaws.com/img/628707384ad98b7cd97b8853c976ddd3954d3a5b2cf830.png"
-                    alt="">
-                <button type="button" class="close flex" data-dismiss="modal" aria-hidden="true">
-                    <img src="https://vipon.s3.amazonaws.com/img/968782c1b133d4182601745ce8289afe36d8b00174538c.svg"
-                        alt="">
-                </button>
-                <h3 class="flex">
-                    <img src="https://vipon.s3.amazonaws.com/img/227265e09f98d4b8a7795f055a0331449ea116f77a83ae.svg"
-                        alt="">
-                    <span>Join our Facebook Group</span>
-                </h3>
-                <div class="top">
-                    <ul class="list-unstyled">
-                        <li>1. Exclusive Coupons</li>
-                        <li>2. Editor Selected Top Deals</li>
-                        <li>3. Monthly Giveaways</li>
+                                }
+
+                                .payment-icon svg:last-child {
+
+                                    margin-right: 0px;
+
+                                }
+                            </style>
+                        </li>
                     </ul>
-                    <div class="flex">
-                        <a href="https://www.facebook.com/groups/196767718347452" target="_blank" class="btn">Go
-                            to Facebook</a>
-                        <div>Only in Amazon Deals & Coupons - Vipon</div>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
+
+
+
+    <style>
+        .footer-bottom-area {
+            padding-top: 18px;
+            padding-bottom: 18px;
+            background-color: #333333;
+
+            border-top: 1px solid #515151;
+
+
+        }
+
+        .footer-bottom-area ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-bottom-area ul li.right-block {
+
+            text-align: right;
+
+        }
+
+        .footer-bottom-area .richtext p {
+            color: #757375;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .footer-bottom-area .richtext a {
+            color: var(--font-color-primary);
+            font-size: 16px;
+        }
+
+        .footer-bottom-area .richtext a:not(:first-child) {
+
+            margin-left: 15px;
+
+        }
+
+        @media (max-width: 991px) {
+            .footer-bottom-area {
+                padding-top: 18px;
+                padding-bottom: 18px;
+            }
+
+            .footer-bottom-area .richtext a,
+            .footer-bottom-area .richtext p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .footer-bottom-area ul {
+                flex-direction: column;
+            }
+
+            .footer-bottom-area ul li,
+            .footer-bottom-area ul li.right-block {
+                width: auto;
+                text-align: center;
+            }
+
+            .footer-bottom-area ul li.right-block {
+                padding-top: 10px;
+            }
+
+            .footer-bottom-area ul li.payment {
+                margin-top: 10px;
+            }
+        }
+    </style>
 </div>
+<a href="javascript:void(0)" id="top" class="scroll">
+    <span><i class="ri-arrow-up-line"></i></span>
+</a>
+<script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 600) {
+            $('#top').addClass('show');
+        } else {
+            $('#top').removeClass('show');
+        }
+    });
+    $('#top').click(function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+</script>
+<style>
+    a#top {
+        position: fixed;
+        bottom: 30px;
 
+        right: 30px;
 
-<div id="loginActivity-minor"></div>
+        z-index: 2;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0s ease-in-out 0s;
+        -o-transition: all 0s ease-in-out 0s;
+        transition: all 0s ease-in-out 0s;
+    }
 
-<div class="modal fade" id="loginActivitySucceed" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-    data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="bg-img">
-            <img src="/images/activity/minclose.png" alt="">
-            <div class="conent-out">
-                <h2>Tips:</h2>
-                <p>1. 3 winners will be selected RANDOMLY by our system for amazing free deals every day.<br />2. The
-                    list of winners will be announced on our Facebook the next weekday.Go to our Facebook to check if
-                    you won <span>Our Facebook: Vipon</span><br />3. Prizes are featured deals from our platform
-                    (normally worth from $9 to $30), and will be changed periodically.<br />4. If you are found trying
-                    to cheat the system, you will be disqualified from the sweepstakes. (Registering a large number of
-                    invalid email accounts, etc).<br />5. Only for users based in the USA.</p>
-                <div class="but-out">
-                    <div class="but">OK</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    a#top.show {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    a.scroll span {
+        color: #ffffff;
+        font-size: 16px;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--font-color-primary);
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    }
+
+    a.scroll span i {
+        display: block;
+        line-height: 0;
+    }
+
+    a.scroll:hover span {
+        color: var(--font-color-primary);
+        background-color: #FFFFFF;
+    }
+
+    a.scroll span,
+    a.scroll:hover span {
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    @media (max-width : 767px) {
+        a#top {
+            bottom: 15px;
+
+            right: 15px;
+
+        }
+    }
+</style>

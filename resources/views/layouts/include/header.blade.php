@@ -1,361 +1,2299 @@
-<div id="header">
-    <div>
-        <div class="logo">
-            <a href="/index.php">
-                {{-- <img src="https://vipon.s3.amazonaws.com/img/268511307d0d511cd3a1f4a168e28b9463e41218ea9a66.svg"
-                    alt="Amazon Coupons">
-                <img src="https://vipon.s3.amazonaws.com/img/559899da9aeaa49b417ca0d3a1e8c1c15b2ce424d83bba.svg"
-                    alt="Amazon Coupons"> --}}
-                    AE
-            </a>
-        </div>
-        <div class="header-home">
-            <span class="categories-more-icon"></span>
-            <span class="text">CATEGORIES </span>
-            <ul class="list-unstyled">
-                <li><a href="/promotion/coupons?group=art_crafts_sewing&ref=menu_category" class="category">Arts, Crafts
-                        &amp; Sewing</a></li>
-                <li><a href="/promotion/coupons?group=automotive_industrial&ref=menu_category"
-                        class="category">Automotive & Industrial</a></li>-->
-                <li><a href="/promotion/coupons?group=baby&ref=menu_category" class="category">Baby</a></li>
-                <li><a href="/promotion/coupons?group=beauty&ref=menu_category" class="category">Beauty</a></li>
-                <li><a href="/promotion/coupons?group=cell_phone-accessories&ref=menu_category" class="category">Cell
-                        Phones & Accessories</a></li>
-                <li><a href="/promotion/coupons?group=electronics&ref=menu_category" class="category">Electronics</a>
-                </li>
-                <li><a href="/promotion/coupons?group=health_personal_care&ref=menu_category" class="category">Health &
-                        Personal Care</a></li>-->
-                <li><a href="/promotion/coupons?group=home_kitchen&ref=menu_category" class="category">Home &
-                        Kitchen</a></li>
-                <li><a href="/promotion/coupons?group=home_improvement&ref=menu_category" class="category">Home
-                        Improvement</a></li>
-                <li><a href="/promotion/coupons?group=jewelry&ref=menu_category" class="category">Jewelry</a></li>
-                <li><a href="/promotion/coupons?group=man_clothe&ref=menu_category" class="category">Men’s Clothing</a>
-                </li>
-                <li><a href="/promotion/coupons?group=man_shoes&ref=menu_category" class="category">Men’s Shoes</a></li>
-                <li><a href="/promotion/coupons?group=office_products&ref=menu_category" class="category">Office
-                        Products</a></li>
-                <li><a href="/promotion/coupons?group=pet_supplies&ref=menu_category" class="category">Pet Supplies</a>
-                </li>
-                <li><a href="/promotion/coupons?group=patio_lawn_garden&ref=menu_category" class="category">Patio, Lawn
-                        & Garden</a></li>
-                <li><a href="/promotion/coupons?group=sports_outdoors&ref=menu_category" class="category">Sports &
-                        Outdoors</a></li>
-                <li><a href="/promotion/coupons?group=toys_games&ref=menu_category" class="category">Toys & Games</a>
-                </li>
-                <li><a href="/promotion/coupons?group=woman_clothe&ref=menu_category" class="category">Women’s
-                        Clothing</a></li>
-                <li><a href="/promotion/coupons?group=woman_shoes&ref=menu_category" class="category">Women’s Shoes</a>
-                </li>
-                <li><a href="/promotion/coupons?group=watches&ref=menu_category" class="category">Watches</a></li>
-                <li><a href="/promotion/coupons?group=adult_products&ref=menu_category" class="category">Adult
-                        Products</a></li>
-                <li><a href="/promotion/coupons?group=others&ref=menu_category" class="category">Others</a></li>
-            </ul>
-        </div>
-        <div class="head-search">
-            <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
-                <span>
-                    <span class="text-category">CATEGORIES</span>
-                    <span class="caret"></span>
-                </span>
-            </button>
-            <div class="search-input">
-                <input type="text" placeholder="Search Coupons & Deals" value="" />
-                <ul class="list-unstyled" style="z-index:999">
-                </ul>
-                <div class="recommend-lists" style="position: absolute;top:50px;width:100%;height:20px;">
-
-                    <div id="hot_list"
-                        style="width:100%;color: rgb(153, 153, 153);text-decoration: none;display: flex;"></div>
-                </div>
-            </div>
-            <button type="button" class="btn btn-search"><span class="search-icon"></span></button>
-            <ul class="dropdown-menu" role="menu">
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group="" class="active"
-                        data-value="">All</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=14 data-value=14>Arts, Crafts &
-                        Sewing</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=19 data-value=19>Automotive &
-                        Industrial</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=16 data-value=16>Baby</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=5 data-value=5>Beauty & Personal
-                        Care</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=11 data-value=11>Cell Phones &
-                        Accessories</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=8 data-value=8>Electronics</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=9 data-value=9>Health &
-                        Household</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=1 data-value=1>Home &
-                        Kitchen</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=4 data-value=4>Jewelry</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=15 data-value=15>Men Clothing,
-                        Shoes & Accessories</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=18 data-value=18>Office
-                        Products</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=13 data-value=13>Patio, Lawn &
-                        Garden</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=17 data-value=17>Pet
-                        Supplies</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=12 data-value=12>Sports &
-                        Outdoors</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=7 data-value=7>Tools & Home
-                        Improvement</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=6 data-value=6>Toys & Games</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=3 data-value=3>Watches</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=2 data-value=2>Women Clothing,
-                        Shoes & Accessories</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=20 data-value=20>Others</a>
-                </li>
-                <li role="presentation">
-                    <a role="menuitem" tabindex="-1" href="javascript:;" data-group=10 data-value=10>Adult
-                        Products</a>
-                </li>
-            </ul>
-        </div>
-        <div class="header-right">
-            {{-- <div class="video">
-                <button type="button" class="btn" class="dropdown-toggle" data-toggle="dropdown"
-                    aria-expanded="true" title="Create a post" id="btn-post-add">
-
-                    + Post
-                </button>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="btn-post-add">
-                    <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="/login?sc=" onclick="clickRecord(103)">Deal</a>
-                    </li>
-                    <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="/login?sc=" onclick="clickRecord(104)">Video</a>
-                    </li>
-                    <li role="presentation">
-                        <a role="menuitem" tabindex="-1" href="/login?sc=" onclick="clickRecord(105)">Article</a>
-                    </li>
-                </ul>
-                <div class="guide">
-                    <img src="https://vipon.s3.amazonaws.com/img/347332bd14cd6baa1e551c530a0879577446d9f4486189.png"
-                        alt="">
-                    <p>New Feature. You can post a deal now, try to post your first deal to help others save money. </p>
-                    <a href="#">OK</a>
-                </div>
-                <div class="guide-modal"></div>
-            </div>
-            <div class="dropdown message">
-                <a href="/login?sc=">
-                    <span class="icon-msg"></span>
-                </a>
-            </div>
-            <div class="flag">
-                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"
-                    id="dropdownMenu2">
-                    <img class="active_flag" id="active_flag" src="https://www.myvipon.com/images/flags/1/om.svg" alt="Amazon Coupons">
-                    <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-                    <li data-domain="www.amazon.com">
-                        <a href="javascript:;">
-                            <img src="https://www.myvipon.com/images/flags/1/om.svg" alt="Amazon Coupons">
+    <!-- header-area start -->
+    <section class="header-kaj">
+        <div class="header-area">
+            <div class="header-main-area">
+                <div class="header-main">
+                    <div class="header-element logo"><a href="https://electon6-store.myshopify.com" class="theme-logo">
+                            <img style="max-width: 80px;"
+                                src="{{ asset('assets/images/Fainal_.png') }}"
+                                class="img-fluid" alt="electon6-store">
+                        </a><a href="https://electon6-store.myshopify.com" class="other-logo">
+                            <img style="max-width: 80px;"
+                                src="{{ asset('assets/images/Fainal_.png') }}"
+                                alt="electon6-store">
                         </a>
-                    </li>
+                        <style>
+                            a.shop-name span {
+                                color: var(--font-color-header);
+                                font-size: 24px;
+                                font-weight: 600;
+                            }
 
-                </ul>
-            </div>
-            <div class="user">
+                            a.theme-logo svg {
+                                width: 100%;
+                            }
 
-                <a href="/login?sc=">Log
-                    in </a>
+                            .is-sticky a.theme-logo {
+                                display: none;
+                            }
 
-                <a class="sign-up" style="" href="/signup?sc=" onclick="clickRecord(100)">Sign
-                    Up</a>
-            </div>
-            <div class="seller">
-                <a href="https://seller.myvipon.com" target="_blank" class="btn">Seller Center</a>
-            </div> --}}
-        </div>
-    </div>
-    <div class="flex">
-        <div class="header-home" style="display: none">
-            <span class="categories-more-icon"></span>
-            <span class="text">CATEGORIES</span>
-            <ul class="list-unstyled">
-                <li><a href="/promotion/index?group=handmade&amp;ref=menu_category" class="category">Arts, Crafts
-                        &amp;
-                        Sewing</a></li>
-                <li><a href="/promotion/index?group=automotive&amp;ref=menu_category" class="category">Automotive
-                        &amp;
-                        Industrial</a></li>
-                <li><a href="/promotion/index?group=beauty&amp;ref=menu_category" class="category">Beauty &amp;
-                        Grooming</a></li>
-                <li><a href="/promotion/index?group=phone-accessories&amp;ref=menu_category" class="category">Cell
-                        Phones &amp; Accessories</a></li>
-                <li><a href="/promotion/index?group=electronics&amp;ref=menu_category" class="category">Electronics
-                        &amp; Office</a></li>
-                <li><a href="/promotion/index?group=health&amp;ref=menu_category" class="category">Health &amp;
-                        Household</a></li>
-                <li><a href="/promotion/index?group=home&amp;ref=menu_category" class="category">Home &amp; Garden</a>
-                </li>
-                <li><a href="/promotion/index?group=jewelry&amp;ref=menu_category" class="category">Jewelry</a></li>
-                <li><a href="/promotion/index?group=kitchen&amp;ref=menu_category" class="category">Kitchen &amp;
-                        Dining</a></li>
-                <li><a href="/promotion/index?group=men-clothing&amp;ref=menu_category" class="category">Men's
-                        Clothing
-                        &amp; Shoes</a></li>
-                <li><a href="/promotion/index?group=pet&amp;ref=menu_category" class="category">Pet Supplies</a></li>
-                <li><a href="/promotion/index?group=sports-outdoors&amp;ref=menu_category" class="category">Sports
-                        &amp;
-                        Outdoors</a></li>
-                <li><a href="/promotion/index?group=toys-kids&amp;ref=menu_category" class="category">Toys, Kids &amp;
-                        Baby</a></li>
-                <li><a href="/promotion/index?group=watches&amp;ref=menu_category" class="category">Watches</a></li>
-                <li><a href="/promotion/index?group=women-clothing&amp;ref=menu_category" class="category">Women's
-                        Clothing &amp; Shoes</a></li>
-                <li><a href="/promotion/index?group=other&amp;ref=menu_category" class="category">Other</a></li>
-                <li><a href="/promotion/index?group=adult-products&amp;ref=menu_category" class="category"
-                        onclick="clickRecord(31)">Adult Products</a></li>
-            </ul>
-        </div>
-        <div class="clearfix">
-            <div class="pull-left pull-CATEGORIES" style=" padding-left: 40px;margin-left:0;">
-                <span class="categories-more-icon"></span>
-                <a href="javascript:" class="header-text CATEGORIES">CATEGORIES</a>
-                <ul class="list-unstyled">
+                            a.other-logo {
+                                display: none;
+                            }
 
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=14&amp;ref=menu_category">Arts,
-                            Crafts &amp; Sewing</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=19&amp;ref=menu_category">Automotive
-                            &amp; Industrial</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=16&amp;ref=menu_category">Baby</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=5&amp;ref=menu_category">Beauty &amp;
-                            Personal Care</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=11&amp;ref=menu_category">Cell Phones
-                            &amp; Accessories</a>
-                    </li>
-                    <li>
-                        <a class="category"
-                            href="/promotion/coupons?category_id=8&amp;ref=menu_category">Electronics</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=9&amp;ref=menu_category">Health &amp;
-                            Household</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=1&amp;ref=menu_category">Home &amp;
-                            Kitchen</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=4&amp;ref=menu_category">Jewelry</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=15&amp;ref=menu_category">Men
-                            Clothing, Shoes &amp; Accessories</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=18&amp;ref=menu_category">Office
-                            Products</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=13&amp;ref=menu_category">Patio, Lawn
-                            &amp; Garden</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=17&amp;ref=menu_category">Pet
-                            Supplies</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=12&amp;ref=menu_category">Sports
-                            &amp; Outdoors</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=7&amp;ref=menu_category">Tools &amp;
-                            Home Improvement</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=6&amp;ref=menu_category">Toys &amp;
-                            Games</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=3&amp;ref=menu_category">Watches</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=2&amp;ref=menu_category">Women
-                            Clothing, Shoes &amp; Accessories</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=20&amp;ref=menu_category">Others</a>
-                    </li>
-                    <li>
-                        <a class="category" href="/promotion/coupons?category_id=10&amp;ref=menu_category">Adult
-                            Products</a>
-                    </li>
+                            .is-sticky a.other-logo {
+                                display: block;
+                            }
+                        </style>
+                    </div>
+                    <div class="header-element menu-wrap">
+                        <div class="megamenu-content">
+                            <a href="#main-collapse" class="browse-cat" data-bs-toggle="collapse" aria-expanded="true">
+                                <span class="menu-icon"><i class="ri-menu-line"></i></span>
+                                <span class="menu-title">Menu</span>
+                                <span class="menu-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                            </a>
+                            <div class="mainwrap collapse show" id="main-collapse">
+                                <ul class="main-menu">
 
-                </ul>
-            </div>
-            <div class="pull-left"><a href="/promotion/coupons?type=coupons" class="header-text "
-                    onclick="clickRecord(106)">AMAZON COUPONS</a></div>
-            <div class="pull-left"><a href="/sale/index" class="header-text " onclick="clickRecord(106)">DAILY
-                    COUPONS</a></div>
 
-            <div class="pull-left pull_COMMUNITY">
-                <a href="javascript:" class="header-text COMMUNITY">COMMUNITY<span class="caret"
-                        style="    margin-left: 8px;"></span></a>
-                <div class="COMMUNITY_select">
-                    <div class="pull-left"><a href="/deal" class="header-text " onclick="clickRecord(107)">Other
-                            Deals</a></div>
-                    <div class="pull-left"><a href="javascript:void(0);" class="header-text " id="btn-vshow">V
-                            Show</a></div>
+
+
+
+                                    <li class="menu-link parant">
+                                        <a aria-current="page" href="/" class="link-title active">
+                                            <span class="sp-link-title">Home</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                        <a href="#main-collapse-home" data-bs-toggle="collapse"
+                                            class="link-title link-title-lg">
+                                            <span class="sp-link-title">Home</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                        <ul class="dropdown-submenu collapse" id="main-collapse-home">
+                                            <div class="container p-0 ul">
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="https://electon-store.myshopify.com/"
+                                                        class="sublink-title">
+                                                        <span class="sp-link-title">Home 01</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="https://electon1-store.myshopify.com/"
+                                                        class="sublink-title">
+                                                        <span class="sp-link-title">Home 02</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="https://electon2-store.myshopify.com/"
+                                                        class="sublink-title">
+                                                        <span class="sp-link-title">Home 03</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="https://electon3-store.myshopify.com/"
+                                                        class="sublink-title">
+                                                        <span class="sp-link-title">Home 04</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="https://electon4-store.myshopify.com/"
+                                                        class="sublink-title">
+                                                        <span class="sp-link-title">Home 05</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="https://electon5-store.myshopify.com/"
+                                                        class="sublink-title">
+                                                        <span class="sp-link-title">Home 06</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="https://electon6-store.myshopify.com/"
+                                                        class="sublink-title">
+                                                        <span class="sp-link-title">Home 07</span>
+                                                    </a>
+                                                </li>
+
+
+
+                                            </div>
+                                        </ul>
+                                    </li>
+
+                                    <script>
+                                        $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
+                                        $('.banner-wrap').parent('.container').parent('ul').addClass('bottom-banner');
+                                        $('.menu-banner').parent('.container').parent('ul').addClass('banner-menu');
+                                        $('.submenu-li').parent('.container').parent('ul').addClass('sub-menu');
+                                    </script>
+
+
+
+
+
+                                    <li class="menu-link parant">
+                                        <a href="/collections/all" class="link-title ">
+                                            <span class="sp-link-title">Shop</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                        <a href="#main-collapse-shop" data-bs-toggle="collapse"
+                                            class="link-title link-title-lg">
+                                            <span class="sp-link-title">Shop</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                        <ul class="dropdown-submenu collapse" id="main-collapse-shop">
+                                            <div class="container p-0 ul">
+
+
+
+                                                <li class="megamenu-li parant">
+                                                    <h2 class="sublink-title">Earphone</h2>
+                                                    <a href="/collections/earphone" class="sublink-title">
+                                                        <span class="sp-link-title">Earphone</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <a data-bs-toggle="collapse" href="#main-collapse-earphone"
+                                                        class="sublink-title sublink-title-lg">
+                                                        <span class="spb-link-title">Earphone</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <ul class="dropdown-supmenu collapse" id="main-collapse-earphone">
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/5g-smart-phone" class="suplink-title">
+                                                                <span class="spbp-link-title">5G smart phone</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/bluetooth-speakers"
+                                                                class="suplink-title">
+                                                                <span class="spbp-link-title">Bluetooth speakers</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/dell-computer" class="suplink-title">
+                                                                <span class="spbp-link-title">Dell computer</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/hp-laptop-i5" class="suplink-title">
+                                                                <span class="spbp-link-title">HP laptop I5</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/portable-camera" class="suplink-title">
+                                                                <span class="spbp-link-title">Portable camera</span>
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+
+
+
+
+
+                                                <li class="megamenu-li parant">
+                                                    <h2 class="sublink-title">Projector</h2>
+                                                    <a href="/collections/projector" class="sublink-title">
+                                                        <span class="sp-link-title">Projector</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <a data-bs-toggle="collapse" href="#main-collapse-projector"
+                                                        class="sublink-title sublink-title-lg">
+                                                        <span class="spb-link-title">Projector</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <ul class="dropdown-supmenu collapse"
+                                                        id="main-collapse-projector">
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/smart-watch" class="suplink-title">
+                                                                <span class="spbp-link-title">Smart watch</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/racing-wheel" class="suplink-title">
+                                                                <span class="spbp-link-title">Racing wheel</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/portable-camera" class="suplink-title">
+                                                                <span class="spbp-link-title">Portable camera</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/hp-laptop-i5" class="suplink-title">
+                                                                <span class="spbp-link-title">HP laptop I5</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/game-controller" class="suplink-title">
+                                                                <span class="spbp-link-title">Game controller</span>
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+
+
+
+
+
+                                                <li class="megamenu-li parant">
+                                                    <h2 class="sublink-title">Smart TV</h2>
+                                                    <a href="/collections/smart-tv" class="sublink-title">
+                                                        <span class="sp-link-title">Smart TV</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <a data-bs-toggle="collapse" href="#main-collapse-smart-tv"
+                                                        class="sublink-title sublink-title-lg">
+                                                        <span class="spb-link-title">Smart TV</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <ul class="dropdown-supmenu collapse" id="main-collapse-smart-tv">
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/bluetooth-speakers"
+                                                                class="suplink-title">
+                                                                <span class="spbp-link-title">Bluetooth speakers</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/5g-smart-tablet" class="suplink-title">
+                                                                <span class="spbp-link-title">5G smart tablet</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/bluetooth-speakers"
+                                                                class="suplink-title">
+                                                                <span class="spbp-link-title">Bluetooth speakers</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/dell-computer" class="suplink-title">
+                                                                <span class="spbp-link-title">Dell computer</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/game-controller" class="suplink-title">
+                                                                <span class="spbp-link-title">Game controller</span>
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+
+
+
+
+
+                                                <li class="megamenu-li parant">
+                                                    <h2 class="sublink-title">Smartphone</h2>
+                                                    <a href="/collections/smartphone" class="sublink-title">
+                                                        <span class="sp-link-title">Smartphone</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <a data-bs-toggle="collapse" href="#main-collapse-smartphone"
+                                                        class="sublink-title sublink-title-lg">
+                                                        <span class="spb-link-title">Smartphone</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <ul class="dropdown-supmenu collapse"
+                                                        id="main-collapse-smartphone">
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/portable-camera" class="suplink-title">
+                                                                <span class="spbp-link-title">Portable camera</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/drone-camera" class="suplink-title">
+                                                                <span class="spbp-link-title">Drone camera</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/racing-wheel" class="suplink-title">
+                                                                <span class="spbp-link-title">Racing wheel</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/bluetooth-speakers"
+                                                                class="suplink-title">
+                                                                <span class="spbp-link-title">Bluetooth speakers</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="supmenu-li">
+                                                            <a href="/products/wireless-headphones"
+                                                                class="suplink-title">
+                                                                <span class="spbp-link-title">Wireless
+                                                                    headphones</span>
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </li>
+
+
+
+                                            </div>
+                                        </ul>
+                                    </li>
+
+                                    <script>
+                                        $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
+                                        $('.banner-wrap').parent('.container').parent('ul').addClass('bottom-banner');
+                                        $('.menu-banner').parent('.container').parent('ul').addClass('banner-menu');
+                                        $('.submenu-li').parent('.container').parent('ul').addClass('sub-menu');
+                                    </script>
+
+
+
+
+
+                                    <li class="menu-link parant">
+                                        <a href="/collections" class="link-title ">
+                                            <span class="sp-link-title">Collection</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                        <a href="#main-collapse-collection" data-bs-toggle="collapse"
+                                            class="link-title link-title-lg">
+                                            <span class="sp-link-title">Collection</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                        <ul class="dropdown-submenu collapse" id="main-collapse-collection">
+                                            <div class="container p-0 ul">
+
+
+
+
+
+
+
+                                                <li class="menu-banner banner-hover">
+                                                    <a href="/collections/laptops-notebooks" class="banner-img">
+                                                        <img src="//cdn.shopify.com/s/files/1/0641/3431/6288/collections/electon-electronics-menu-banner-01.jpg?v=1650973553"
+                                                            class="img-fluid" alt="Laptops & notebooks">
+                                                    </a>
+                                                    <a href="/collections/laptops-notebooks"
+                                                        class="menu-banner-title">
+                                                        <span>Laptop</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+
+
+
+                                                <li class="menu-banner banner-hover">
+                                                    <a href="/collections/desktop" class="banner-img">
+                                                        <img src="//cdn.shopify.com/s/files/1/0641/3431/6288/collections/electon-electronics-menu-banner-03.jpg?v=1650973535"
+                                                            class="img-fluid" alt="Desktop">
+                                                    </a>
+                                                    <a href="/collections/desktop" class="menu-banner-title">
+                                                        <span>Desktop</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+
+
+
+                                                <li class="menu-banner banner-hover">
+                                                    <a href="/collections/camera" class="banner-img">
+                                                        <img src="//cdn.shopify.com/s/files/1/0641/3431/6288/collections/electon-electronics-menu-banner-02.jpg?v=1650973358"
+                                                            class="img-fluid" alt="Camera">
+                                                    </a>
+                                                    <a href="/collections/camera" class="menu-banner-title">
+                                                        <span>Camera</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+                                            </div>
+                                        </ul>
+                                    </li>
+
+                                    <script>
+                                        $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
+                                        $('.banner-wrap').parent('.container').parent('ul').addClass('bottom-banner');
+                                        $('.menu-banner').parent('.container').parent('ul').addClass('banner-menu');
+                                        $('.submenu-li').parent('.container').parent('ul').addClass('sub-menu');
+                                    </script>
+
+
+
+
+
+                                    <li class="menu-link">
+                                        <a href="/blogs/news" class="link-title " href="/blogs/news">
+                                            <span class="sp-link-title">Blog</span>
+                                        </a>
+                                        <a href="/blogs/news" class="link-title link-title-lg">
+                                            <span class="sp-link-title">Blog</span>
+                                        </a>
+                                    </li>
+
+                                    <script>
+                                        $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
+                                        $('.banner-wrap').parent('.container').parent('ul').addClass('bottom-banner');
+                                        $('.menu-banner').parent('.container').parent('ul').addClass('banner-menu');
+                                        $('.submenu-li').parent('.container').parent('ul').addClass('sub-menu');
+                                    </script>
+
+
+
+
+
+                                    <li class="menu-link parant">
+                                        <a href="#" class="link-title ">
+                                            <span class="sp-link-title">Pages</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                        <a href="#main-collapse-pages" data-bs-toggle="collapse"
+                                            class="link-title link-title-lg">
+                                            <span class="sp-link-title">Pages</span>
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                        <ul class="dropdown-submenu collapse" id="main-collapse-pages">
+                                            <div class="container p-0 ul">
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="/pages/about-us" class="sublink-title">
+                                                        <span class="sp-link-title">About us</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="/pages/contact-us" class="sublink-title">
+                                                        <span class="sp-link-title">Contact us</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="/pages/faqs" class="sublink-title">
+                                                        <span class="sp-link-title">Faq's</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="https://electon6-store.myshopify.com/page/404"
+                                                        class="sublink-title">
+                                                        <span class="sp-link-title">Page 404</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="/pages/privacy-policy" class="sublink-title">
+                                                        <span class="sp-link-title">Privacy policy</span>
+                                                    </a>
+                                                </li>
+
+
+
+
+
+
+
+
+                                                <li class="submenu-li parant">
+                                                    <a href="/pages/terms-condition" class="sublink-title">
+                                                        <span class="sp-link-title">Terms & condition</span>
+                                                    </a>
+                                                </li>
+
+
+
+                                            </div>
+                                        </ul>
+                                    </li>
+
+                                    <script>
+                                        $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
+                                        $('.banner-wrap').parent('.container').parent('ul').addClass('bottom-banner');
+                                        $('.menu-banner').parent('.container').parent('ul').addClass('banner-menu');
+                                        $('.submenu-li').parent('.container').parent('ul').addClass('sub-menu');
+                                    </script>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-element right-block-box">
+                        <ul class="shop-element">
+                            <li class="side-wrap search">
+                                <!-- /snippets/search-bar.liquid -->
+
+                                <div class="search-rap">
+                                    <form action="/search" method="get" class="search-bar" role="search">
+                                        <div class="form-search">
+                                            <input type="hidden" name="type" value="product">
+                                            <input type="hidden" name="options[unavailable_products]"
+                                                value="show">
+                                            <input type="hidden" name="options[prefix]" value="last">
+                                            <input type="search" name="q" value=""
+                                                placeholder="Find your search" id="search" class="input-text"
+                                                aria-label="Search our store" required>
+                                            <button class="search-btn" type="submit"><i
+                                                    class="ri-search-line"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+
+
+                                <style>
+                                    .search-rap a.search-crap {
+                                        display: block;
+                                        font-size: 16px;
+                                        line-height: 0;
+                                    }
+
+                                    .search-rap a.search-crap[aria-expanded="false"] {
+                                        color: var(--font-color-header);
+                                    }
+
+                                    .search-rap a.search-crap:hover,
+                                    .search-rap a.search-crap[aria-expanded="true"] {
+                                        color: var(--font-color-primary);
+                                    }
+
+                                    .search-rap a.search-crap[aria-expanded="true"] i::before {
+                                        content: "\f5af"
+                                    }
+
+                                    .search-rap .form-search {
+                                        position: relative;
+                                        display: flex;
+                                    }
+
+                                    .search-rap .form-search input.input-text {
+                                        width: 100%;
+                                        padding: 16px 30px;
+                                        border: none;
+                                        color: #929292;
+                                        background-color: #f5f5f5;
+                                    }
+
+                                    .search-rap .form-search input.input-text::placeholder {
+                                        color: #929292;
+                                        font-size: 16px;
+                                    }
+
+                                    .search-rap .form-search button {
+                                        color: #929292;
+                                        position: absolute;
+                                        font-size: 22px;
+
+                                        right: 15px;
+
+                                        bottom: 50%;
+                                        transform: translateY(50%);
+                                    }
+
+                                    .is-sticky .search-rap .form-search button,
+                                    .is-sticky .search-rap .form-search input.input-text::placeholder,
+                                    .is-sticky .search-rap .form-search input.input-text {
+                                        color: #757375;
+                                    }
+
+                                    .search-rap .form-search button:hover {
+                                        color: var(--font-color-primary);
+                                    }
+
+                                    @media(max-width: 1199px) {
+                                        .search-rap {
+                                            display: none;
+                                        }
+                                    }
+                                </style>
+                                <!-- Button trigger modal -->
+                                <a class="search-popup" data-bs-toggle="modal" href="#seachmodal">
+                                    <i class="ri-search-line"></i>
+                                    <span class="search-title"></span>
+                                </a>
+                                <style>
+                                    a.search-popup {
+                                        color: #929292;
+                                        font-size: 18px;
+                                        display: none;
+                                        align-items: center;
+                                    }
+
+                                    .is-sticky a.search-popup {
+                                        color: #757375;
+                                    }
+
+                                    .is-sticky a.search-popup:hover {
+                                        color: var(--font-color-primary);
+                                    }
+
+                                    a.search-popup .search-title {
+                                        font-size: 15px;
+                                        text-transform: uppercase;
+
+                                        padding-left: 10px;
+
+                                    }
+
+                                    a.search-popup i {
+                                        line-height: 1;
+                                    }
+
+                                    @media(max-width: 1199px) {
+                                        a.search-popup {
+                                            display: flex;
+                                            font-size: 18px;
+                                        }
+
+                                        a.search-popup .search-title {
+                                            display: none;
+                                        }
+                                    }
+                                </style>
+                            </li>
+                            <li class="side-wrap toggle-wrap">
+                                <button class="navbar-toggler" type="button">
+                                    <i class="ri-menu-line"></i>
+                                </button>
+                            </li>
+                            <li class="side-wrap user-wrap">
+                                <div class="acc-link">
+                                    <a class="acc-link-wrap" href="/account/login">
+
+                                        <span class="acc-title">Account</span>
+                                        <span class="acc-icon"><i class="ri-user-3-line"></i></span>
+
+                                    </a>
+                                </div>
+                                <div class="acc-link acc-link-lg">
+                                    <div class="acc-link-wrap">
+                                        <a class="acc-link-wrap" href="/account/login">
+                                            <span class="acc-icon"><i class="ri-user-line"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <style>
+                                    .acc-link .acc-link-wrap {
+                                        color: #929292;
+                                        display: flex;
+                                        align-items: center;
+                                        font-size: 22px;
+                                        font-weight: 500;
+                                        text-transform: uppercase;
+                                    }
+
+                                    .is-sticky .acc-link .acc-link-wrap {
+                                        color: #757375;
+                                    }
+
+                                    .acc-link .acc-link-wrap:hover {
+                                        color: var(--font-color-primary);
+                                    }
+
+                                    .acc-link .acc-link-wrap span.acc-icon i {
+                                        display: block;
+                                        line-height: 1;
+                                    }
+
+                                    .acc-link .acc-link-wrap .acc-title {
+                                        display: none;
+
+                                        margin-right: 10px;
+
+                                    }
+
+                                    .acc-link.acc-link-lg {
+                                        display: none;
+                                    }
+
+                                    @media (max-width: 1199px) {
+                                        .acc-link .acc-link-wrap {
+                                            font-size: 18px;
+                                        }
+
+                                        .acc-link.acc-link-lg .acc-link-wrap a {
+                                            display: block;
+                                            line-height: 0;
+                                        }
+
+                                        .acc-link.acc-link-lg .acc-link-wrap a i {
+                                            display: block;
+                                            line-height: 1;
+                                        }
+                                    }
+                                </style>
+                            </li>
+                            <li class="side-wrap wishlist-wrap"><a class="header-wishlist-btn" href="/pages/wishlist"
+                                    title="Wishlist">
+                                    <span class="wishlist-title">Wishlist</span>
+                                    <span class="wishlist-icon"><i class="ri-heart-line"></i></span>
+                                    <span class="wishlist-counter">0</span>
+                                </a>
+                                <style>
+                                    a.header-wishlist-btn {
+                                        color: #929292;
+                                        display: flex;
+                                        align-items: center;
+                                        font-size: 22px;
+                                        font-weight: 500;
+                                        text-transform: uppercase
+                                    }
+
+                                    .is-sticky a.header-wishlist-btn {
+                                        color: #757375;
+                                    }
+
+                                    a.header-wishlist-btn:hover {
+                                        color: var(--font-color-primary);
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-icon i {
+                                        display: block;
+                                        line-height: 1;
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-title {
+                                        display: none;
+
+                                        margin-right: 10px;
+
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-counter {
+                                        position: relative;
+                                        font-size: 16px;
+                                        padding: 0px 7px;
+                                        line-height: 1;
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-counter:after {
+                                        font-size: 16px;
+                                        content: '(';
+                                        position: absolute;
+                                        bottom: 50%;
+                                        transform: translateY(50%);
+                                        left: 0px;
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-counter:before {
+                                        font-size: 16px;
+                                        content: ')';
+                                        position: absolute;
+                                        bottom: 50%;
+                                        transform: translateY(50%);
+                                        right: 0px;
+                                    }
+
+                                    @media (max-width: 1599px) {
+                                        a.header-wishlist-btn span.wishlist-title {
+                                            font-size: 14px;
+                                        }
+                                    }
+
+                                    @media (max-width: 1199px) {
+                                        a.header-wishlist-btn {
+                                            font-size: 18px;
+                                        }
+
+                                        a.header-wishlist-btn span.wishlist-counter {
+                                            display: flex;
+                                        }
+
+                                        a.header-wishlist-btn span.wishlist-counter {
+                                            font-size: 14px;
+                                        }
+
+                                        a.header-wishlist-btn span.wishlist-counter:after {
+                                            font-size: 14px;
+                                        }
+
+                                        a.header-wishlist-btn span.wishlist-counter:before {
+                                            font-size: 14px;
+                                        }
+
+                                        a.header-wishlist-btn span.wishlist-title {
+                                            display: none;
+                                        }
+                                    }
+
+                                    @media (max-width: 479px) {
+                                        a.header-wishlist-btn span.wishlist-counter {
+                                            display: none;
+                                        }
+                                    }
+                                </style>
+                            </li>
+                            <li class="side-wrap cart-wrap">
+
+
+
+                                <div class="shopping-widget">
+                                    <div class="shopping-cart">
+                                        <a href="javascript:void(0)" class="cart-count">
+                                            <div class="cart-title">Bag</div>
+                                            <span class="cart-icon">
+                                                <i class="ri-shopping-bag-3-line"></i>
+                                            </span>
+                                            <span id="cart-total" class="bigcounter">0</span>
+                                            <span id="cart-total" class="subtotal-price">$0.00</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <script>
+                                    $(document).ready(function() {
+                                        $(".shopping-cart a.cart-count").click(function() {
+                                            $(".mini-cart").addClass("show");
+                                            $(".mm-fullscreen-bg").addClass("active");
+                                        });
+                                        $(".shopping-cart-close i").click(function() {
+                                            $(".mini-cart").removeClass("show");
+                                            $(".mm-fullscreen-bg").removeClass("active");
+                                        });
+                                        $(".mm-fullscreen-bg").click(function() {
+                                            $(".mini-cart").removeClass("show");
+                                            $(".mm-fullscreen-bg").removeClass("active");
+                                        });
+                                    });
+                                </script>
+                                <style>
+                                    /* mini cart css */
+                                    .shopping-widget .shopping-cart {
+                                        position: relative;
+                                    }
+
+                                    .shopping-widget .shopping-cart a.cart-count {
+                                        color: #929292;
+                                        position: relative;
+                                        font-size: 22px;
+                                        font-weight: 500;
+                                        display: flex;
+                                        align-items: center;
+                                        text-transform: uppercase;
+                                    }
+
+                                    .is-sticky .shopping-widget .shopping-cart a.cart-count {
+                                        color: #757375;
+                                    }
+
+                                    .shopping-widget .shopping-cart a.cart-count:hover {
+                                        color: var(--font-color-primary);
+                                    }
+
+                                    .shopping-widget .shopping-cart a.cart-count span.cart-icon i {
+                                        display: block;
+                                        line-height: 1;
+                                    }
+
+                                    .shopping-widget .shopping-cart a.cart-count .cart-title {
+                                        display: none;
+                                        font-size: 14px;
+
+                                        margin-right: 10px;
+
+                                    }
+
+                                    .shopping-widget .shopping-cart a.cart-count .cart-title span {
+
+                                        padding-left: 2px;
+
+                                    }
+
+                                    .shopping-widget .shopping-cart a.cart-count span.bigcounter {
+                                        position: relative;
+                                        font-size: 16px;
+                                        padding: 0px 7px;
+                                        line-height: 1;
+                                    }
+
+                                    .shopping-widget .shopping-cart a.cart-count span.bigcounter::after {
+                                        font-size: 16px;
+                                        content: '(';
+                                        position: absolute;
+                                        bottom: 50%;
+                                        transform: translateY(50%);
+                                        left: 0px;
+                                    }
+
+                                    .shopping-widget .shopping-cart a.cart-count span.bigcounter::before {
+                                        font-size: 16px;
+                                        content: ')';
+                                        position: absolute;
+                                        bottom: 50%;
+                                        transform: translateY(50%);
+                                        right: 0px;
+                                    }
+
+                                    .shopping-widget .shopping-cart a.cart-count span.subtotal-price {
+                                        display: none;
+                                    }
+
+                                    .shopping-widget .shopping-cart a.cart-count span.cart-detail {
+                                        color: var(--font-color-header);
+                                        font-size: 13px;
+
+                                        margin-left: 10px;
+
+                                    }
+
+                                    .shopping-widget .shopping-cart a.cart-count span.cart-detail cart-title {
+                                        display: block;
+                                        text-transform: capitalize;
+                                    }
+
+                                    .shopping-widget .shopping-cart a.cart-count span.cart-detail span.subtotal-price {
+                                        display: block;
+                                    }
+
+                                    @media (max-width: 1599px) {
+                                        .shopping-widget .shopping-cart a.cart-count .cart-title span {
+                                            font-size: 14px;
+                                        }
+                                    }
+
+                                    @media (max-width: 1199px) {
+                                        .shopping-widget .shopping-cart a.cart-count {
+                                            font-size: 18px;
+                                            width: auto;
+                                            height: auto;
+                                            background-color: transparent;
+                                        }
+
+                                        .shopping-widget .shopping-cart a.cart-count span.bigcounter {
+                                            font-size: 14px;
+                                        }
+
+                                        .shopping-widget .shopping-cart a.cart-count span.bigcounter::after {
+                                            font-size: 14px;
+                                        }
+
+                                        .shopping-widget .shopping-cart a.cart-count span.bigcounter::before {
+                                            font-size: 14px;
+                                        }
+
+                                        .shopping-widget .shopping-cart a.cart-count .cart-title {
+                                            display: none;
+                                        }
+
+                                        .shopping-widget .shopping-cart a.cart-count span.cart-detail {
+                                            display: none;
+                                        }
+                                    }
+
+                                    @media (max-width: 479px) {
+                                        .shopping-widget .shopping-cart a.cart-count span.bigcounter {
+                                            display: none;
+                                        }
+                                    }
+                                </style>
+
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="pull-left new_blog">
-                <a href="https://blog.myvipon.com/" class="header-text" target="_blank">BLOG</a>
-            </div>
-
         </div>
-    </div>
-</div>
+
+
+
+        <div class="shopping-widget">
+            <div class="shopping-cart">
+                <div class="mini-cart" id="cart">
+                    <a href="javascript:void(0)" class="shopping-cart-close"><i class="ri-close-line"></i></a>
+                    <div class="cart-empty-title" style="display:block;">
+                        <p>No products in the cart.</p>
+                        <ul class="cart-item-loop-empty">
+                            <li class="cart-item-empty">
+                                <span><i class="ri-shopping-bag-2-line"></i></span>
+                                <a href="/collections/all" class="btn btn-style2">Continue shopping</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="cart-item-title" style="display:none;">
+                        <p>
+                            <span class="cart-count-desc">There are</span>
+                            <span id="cart-total" class="cart-count-item bigcounter">0</span>
+                            <span class="cart-count-desc">products</span>
+                        </p>
+                    </div>
+                    <ul class="cart-item-loop cart-item-wrap" style="display:none;">
+
+                    </ul>
+                    <ul class="subtotal-title-area" style="display:none;">
+                        <li class="subtotal-info">
+                            <div class="subtotal-titles">
+                                <h6>Sub Total:</h6>
+                                <span id="cart-total" class="subtotal-price">$0.00</span>
+                            </div>
+                        </li>
+                        <li class="mini-cart-btns">
+                            <div class="read-agree">
+                                <label>
+                                    <span class="agree-text">I have read and agree with the <a
+                                            href="/pages/terms-condition">terms & condition.</a></span>
+                                    <input type="checkbox" class="cust-checkbox">
+                                    <span class="cust-check"></span>
+                                </label>
+                            </div>
+                            <div class="cart-btns">
+                                <a href="/cart" class="btn btn-style3">View cart</a>
+                                <a href="/checkout" class="btn btn-style3 checkout" disabled="disabled">Checkout</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $(".shopping-cart a.cart-count").click(function() {
+                    $(".mini-cart").addClass("show");
+                    $(".mm-fullscreen-bg").addClass("active");
+                });
+                $(".shopping-cart-close").click(function() {
+                    $(".mini-cart").removeClass("show");
+                    $(".mm-fullscreen-bg").removeClass("active");
+                });
+                $(".mm-fullscreen-bg").click(function() {
+                    $(".mini-cart").removeClass("show");
+                    $(".mm-fullscreen-bg").removeClass("active");
+                });
+
+                // read & agree
+                $('.read-agree').on('click', function() {
+                    if ($('.cust-checkbox').is(':checked')) {
+                        $('.checkout').removeAttr('disabled');
+                    } else {
+                        $('.checkout').attr('disabled', 'disabled');
+                    }
+                });
+            });
+        </script>
+        <style>
+            /* minicart item css */
+            .shopping-cart .mini-cart {
+                position: fixed;
+
+                right: calc(0% - 320px);
+
+                top: 0;
+                height: 100%;
+                width: 320px;
+                background-color: #ffffff;
+                z-index: 5;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .shopping-cart .mini-cart.show {
+
+                right: 0%;
+
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .shopping-cart .mini-cart,
+            .shopping-cart .mini-cart.show {
+                -webkit-transition: all 0.3s ease-in-out 0s;
+                -o-transition: all 0.3s ease-in-out 0s;
+                transition: all 0.3s ease-in-out 0s;
+            }
+
+            .shopping-cart .mini-cart a.shopping-cart-close {
+                display: block;
+                font-size: 24px;
+                position: absolute;
+                top: 9px;
+
+                right: 10px;
+
+                line-height: 1;
+            }
+
+            .shopping-cart .mini-cart a.shopping-cart-close {
+                display: block;
+                line-height: 1;
+            }
+
+            .cart-empty-title {
+                display: none;
+            }
+
+            .shopping-cart .mini-cart .cart-empty-title p,
+            .shopping-cart .mini-cart .cart-item-title p {
+                padding: 0 15px;
+                margin: 10px 0;
+                line-height: normal;
+            }
+
+            .shopping-cart .mini-cart .cart-item-title p span.cart-count-item {
+                color: var(--font-color-primary);
+                font-weight: 600;
+            }
+
+            /* minicart empty css */
+            .mini-cart .cart-empty-title ul.cart-item-loop-empty {
+                text-align: center;
+                border-top: 1px solid #e2e2e2;
+            }
+
+            .mini-cart .cart-empty-title ul.cart-item-loop-empty li.cart-item-empty {
+                padding: 30px 15px;
+                position: absolute;
+                bottom: 50%;
+                transform: translateY(50%);
+                width: 100%;
+            }
+
+            .mini-cart .cart-empty-title ul.cart-item-loop-empty li.cart-item-empty span {
+                display: block;
+                font-size: 60px;
+                opacity: 0.65;
+            }
+
+            .mini-cart .cart-empty-title ul.cart-item-loop-empty li.cart-item-empty span i {
+                display: block;
+                line-height: 1;
+            }
+
+            .mini-cart .cart-empty-title ul.cart-item-loop-empty li.cart-item-empty a {
+                margin-top: 30px;
+            }
+
+            .mini-cart .cart-empty-title ul.cart-item-loop-empty li.mini-cart-payment {
+                padding: 15px;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                border-top: 1px solid #e2e2e2;
+            }
+
+            .mini-cart .cart-empty-title ul.cart-item-loop-empty li.mini-cart-payment .cart-payment-icon .payment-icon {
+                justify-content: center;
+            }
+
+            /* minicart item css */
+            .mini-cart ul.cart-item-loop {
+                max-height: calc(100% - 318px);
+                overflow-y: auto;
+                border-top: 1px solid #e2e2e2;
+            }
+
+            .mini-cart ul.cart-item-loop li.cart-item {
+                display: flex;
+                padding: 15px;
+                border-top: 1px solid #e2e2e2;
+            }
+
+            .mini-cart ul.cart-item-loop li.cart-item:first-child {
+                border-top: none;
+            }
+
+            .mini-cart ul.cart-item-loop li.cart-item .cart-image {
+                width: 65px;
+            }
+
+            .mini-cart ul.cart-item-loop li.cart-item .cart-image a img {
+                backface-visibility: hidden;
+            }
+
+            .mini-cart ul.cart-item-loop li.cart-item .cart-title {
+                width: calc(100% - 80px);
+
+                margin-left: 15px;
+
+            }
+
+            .mini-cart ul.cart-item-loop li.cart-item .cart-title a {
+                display: block;
+                font-weight: 500;
+            }
+
+            .mini-cart ul.cart-item-loop li.cart-item .cart-title .cart-pro-info {
+                margin-top: 5px;
+            }
+
+            .mini-cart ul.cart-item-loop li.cart-item .cart-title .product-quantity-action {
+                margin-top: 10px;
+            }
+
+            .mini-cart ul.cart-item-loop li.cart-item .cart-title .cart-pro-info .delete-item-cart {
+                padding-top: 5px;
+            }
+
+            .mini-cart ul.cart-item-loop li.cart-item .cart-title .cart-pro-info .delete-item-cart a {
+                font-size: 12px;
+            }
+
+            .mini-cart ul.cart-item-loop li.cart-item .cart-title .cart-pro-info .price-box .new-price {
+                font-size: 14px;
+            }
+
+            /* minicart subtotal css */
+            .mini-cart ul.subtotal-title-area {
+                position: absolute;
+                bottom: 0;
+
+                left: 0;
+
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: #fff;
+            }
+
+            .mini-cart ul.subtotal-title-area li {
+                padding: 10px 15px 15px;
+                border-top: 1px solid #e2e2e2;
+            }
+
+            .mini-cart ul.subtotal-title-area li.subtotal-info {
+                padding: 10px 15px;
+            }
+
+            .mini-cart ul.subtotal-title-area li .subtotal-titles {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .mini-cart ul.subtotal-title-area li .subtotal-titles h6 {
+                font-size: 14px;
+            }
+
+            .mini-cart ul.subtotal-title-area li .subtotal-titles .subtotal-price {
+                color: var(--font-color-primary);
+                font-weight: 600;
+            }
+
+            /* minicart checkbox css */
+            .mini-cart ul.subtotal-title-area li .read-agree label {
+                position: relative;
+
+                padding-left: 25px;
+
+                margin-bottom: 0;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            .mini-cart ul.subtotal-title-area li .read-agree label span.agree-text {
+                font-size: 13px;
+            }
+
+            .mini-cart ul.subtotal-title-area li .read-agree label span.agree-text a {
+                color: var(--font-color-primary);
+            }
+
+            .mini-cart ul.subtotal-title-area li .read-agree label span.agree-text a:hover {
+                text-decoration: underline;
+            }
+
+            .mini-cart ul.subtotal-title-area li .read-agree label input.cust-checkbox {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+            .mini-cart ul.subtotal-title-area li .read-agree label span.cust-check {
+                position: absolute;
+                top: 2px;
+
+                left: 0;
+
+                width: 17px;
+                height: 17px;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #e2e2e2;
+
+                overflow: hidden;
+            }
+
+            .mini-cart ul.subtotal-title-area li .read-agree:hover label span.cust-check,
+            .mini-cart ul.subtotal-title-area li .read-agree label input.cust-checkbox:checked~span.cust-check {
+                box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.15);
+            }
+
+            .mini-cart ul.subtotal-title-area li .read-agree label span.cust-check::after {
+                display: none;
+                content: "\eb7b";
+                font-family: viewsicon !important;
+                color: var(--font-color-body);
+                font-size: 16px;
+            }
+
+            /* Show the checkmark when checked */
+            .mini-cart ul.subtotal-title-area li .read-agree label input.cust-checkbox:checked~span.cust-check::after {
+                display: block;
+            }
+
+            /* minicart button css */
+            .mini-cart ul.subtotal-title-area li .cart-btns {
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                flex-direction: column;
+
+                margin-left: -15px;
+
+            }
+
+            .mini-cart ul.subtotal-title-area li .cart-btns a {
+                width: calc(100% - 15px);
+                margin-top: 15px;
+
+                margin-left: 15px;
+
+            }
+
+            .mini-cart ul.subtotal-title-area li .cart-btns a:first-child {
+                margin-top: 9px;
+            }
+
+            /* minicart payment img css */
+        </style>
+
+        <!-- Modal -->
+        <div class="modal fade" id="seachmodal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="crap-search">
+                                        <button type="button" class="pop-close" data-bs-dismiss="modal"
+                                            aria-label="Close"><i class="ri-close-line"></i></button>
+                                        <form action="/search" method="get" class="search-bar" role="search">
+                                            <div class="form-search">
+                                                <input type="hidden" name="type" value="product">
+                                                <input type="hidden" name="options[unavailable_products]"
+                                                    value="show">
+                                                <input type="hidden" name="options[prefix]" value="last">
+                                                <input type="search" name="q" value=""
+                                                    placeholder="Find your search" id="search" class="input-text"
+                                                    aria-label="Search our store" required>
+                                                <button class="search-btn" type="submit"><i
+                                                        class="ri-search-line"></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            #seachmodal .modal-dialog {
+                margin: 0px;
+                padding: 15px 0px;
+                max-width: 100%;
+                background-color: #FFFFFF;
+            }
+
+            #seachmodal .modal-content {
+                border: none;
+            }
+
+            #seachmodal .modal-body {
+                padding: 0px;
+            }
+
+            #seachmodal .crap-search {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #seachmodal button.pop-close {
+                color: var(--font-color-header);
+                font-size: 17px;
+
+                text-align: right;
+
+                line-height: 1;
+            }
+
+            #seachmodal button.pop-close:hover {
+                color: var(--font-color-primary);
+            }
+
+            #seachmodal .crap-search .search-bar {
+                margin: 0px;
+            }
+
+            #seachmodal .crap-search .form-search {
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin-top: 15px;
+            }
+
+            #seachmodal .crap-search .form-search input.input-text {
+                padding: 10px 0px;
+                width: 100%;
+                border: none;
+                border-radius: 0;
+                border-bottom: 1px solid #e2e2e2;
+            }
+
+            #seachmodal .crap-search .form-search button {
+                color: var(--font-color-header);
+                font-size: 16px;
+                position: absolute;
+
+                right: 0px;
+
+            }
+
+            #seachmodal .crap-search .form-search button:hover {
+                color: var(--font-color-primary);
+            }
+
+            #seachmodal .crap-search .form-search button i {
+                display: block;
+                line-height: 0;
+            }
+        </style>
+        <div class="header-bottom-area">
+            <div class="container header-bottom-container">
+                <div class="row header-bottom-container">
+                    <div class="col header-bottom-container">
+                        <div class="main-menu-area">
+                            <nav class="main-navigation navbar-expand-xl">
+                                <div class="box-header">
+                                    <button class="close-box" type="button"><i class="ri-close-line"></i></button>
+                                </div>
+                                <div class="navbar-collapse" id="navbarContent">
+                                    <div class="megamenu-content">
+                                        <a href="#main-collapse" class="browse-cat" data-bs-toggle="collapse"
+                                            aria-expanded="true">
+                                            <span class="menu-icon"><i class="ri-menu-line"></i></span>
+                                            <span class="menu-title">Menu</span>
+                                            <span class="menu-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                                        </a>
+                                        <div class="mainwrap collapse show" id="main-collapse">
+                                            <ul class="main-menu">
+
+
+
+
+
+                                                <li class="menu-link parant">
+                                                    <a aria-current="page" href="/" class="link-title active">
+                                                        <span class="sp-link-title">Home</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <a href="#main-collapse-home" data-bs-toggle="collapse"
+                                                        class="link-title link-title-lg">
+                                                        <span class="sp-link-title">Home</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <ul class="dropdown-submenu collapse" id="main-collapse-home">
+                                                        <div class="container p-0 ul">
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="https://electon-store.myshopify.com/"
+                                                                    class="sublink-title">
+                                                                    <span class="sp-link-title">Home 01</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="https://electon1-store.myshopify.com/"
+                                                                    class="sublink-title">
+                                                                    <span class="sp-link-title">Home 02</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="https://electon2-store.myshopify.com/"
+                                                                    class="sublink-title">
+                                                                    <span class="sp-link-title">Home 03</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="https://electon3-store.myshopify.com/"
+                                                                    class="sublink-title">
+                                                                    <span class="sp-link-title">Home 04</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="https://electon4-store.myshopify.com/"
+                                                                    class="sublink-title">
+                                                                    <span class="sp-link-title">Home 05</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="https://electon5-store.myshopify.com/"
+                                                                    class="sublink-title">
+                                                                    <span class="sp-link-title">Home 06</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="https://electon6-store.myshopify.com/"
+                                                                    class="sublink-title">
+                                                                    <span class="sp-link-title">Home 07</span>
+                                                                </a>
+                                                            </li>
+
+
+
+                                                        </div>
+                                                    </ul>
+                                                </li>
+
+                                                <script>
+                                                    $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
+                                                    $('.banner-wrap').parent('.container').parent('ul').addClass('bottom-banner');
+                                                    $('.menu-banner').parent('.container').parent('ul').addClass('banner-menu');
+                                                    $('.submenu-li').parent('.container').parent('ul').addClass('sub-menu');
+                                                </script>
+
+
+
+
+
+                                                <li class="menu-link parant">
+                                                    <a href="/collections/all" class="link-title ">
+                                                        <span class="sp-link-title">Shop</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <a href="#main-collapse-shop" data-bs-toggle="collapse"
+                                                        class="link-title link-title-lg">
+                                                        <span class="sp-link-title">Shop</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <ul class="dropdown-submenu collapse" id="main-collapse-shop">
+                                                        <div class="container p-0 ul">
+
+
+
+                                                            <li class="megamenu-li parant">
+                                                                <h2 class="sublink-title">Earphone</h2>
+                                                                <a href="/collections/earphone" class="sublink-title">
+                                                                    <span class="sp-link-title">Earphone</span>
+                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                </a>
+                                                                <a data-bs-toggle="collapse"
+                                                                    href="#main-collapse-earphone"
+                                                                    class="sublink-title sublink-title-lg">
+                                                                    <span class="spb-link-title">Earphone</span>
+                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                </a>
+                                                                <ul class="dropdown-supmenu collapse"
+                                                                    id="main-collapse-earphone">
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/5g-smart-phone"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">5G smart
+                                                                                phone</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/bluetooth-speakers"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Bluetooth
+                                                                                speakers</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/dell-computer"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Dell
+                                                                                computer</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/hp-laptop-i5"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">HP laptop
+                                                                                I5</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/portable-camera"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Portable
+                                                                                camera</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                </ul>
+                                                            </li>
+
+
+
+
+
+                                                            <li class="megamenu-li parant">
+                                                                <h2 class="sublink-title">Projector</h2>
+                                                                <a href="/collections/projector"
+                                                                    class="sublink-title">
+                                                                    <span class="sp-link-title">Projector</span>
+                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                </a>
+                                                                <a data-bs-toggle="collapse"
+                                                                    href="#main-collapse-projector"
+                                                                    class="sublink-title sublink-title-lg">
+                                                                    <span class="spb-link-title">Projector</span>
+                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                </a>
+                                                                <ul class="dropdown-supmenu collapse"
+                                                                    id="main-collapse-projector">
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/smart-watch"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Smart
+                                                                                watch</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/racing-wheel"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Racing
+                                                                                wheel</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/portable-camera"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Portable
+                                                                                camera</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/hp-laptop-i5"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">HP laptop
+                                                                                I5</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/game-controller"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Game
+                                                                                controller</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                </ul>
+                                                            </li>
+
+
+
+
+
+                                                            <li class="megamenu-li parant">
+                                                                <h2 class="sublink-title">Smart TV</h2>
+                                                                <a href="/collections/smart-tv" class="sublink-title">
+                                                                    <span class="sp-link-title">Smart TV</span>
+                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                </a>
+                                                                <a data-bs-toggle="collapse"
+                                                                    href="#main-collapse-smart-tv"
+                                                                    class="sublink-title sublink-title-lg">
+                                                                    <span class="spb-link-title">Smart TV</span>
+                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                </a>
+                                                                <ul class="dropdown-supmenu collapse"
+                                                                    id="main-collapse-smart-tv">
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/bluetooth-speakers"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Bluetooth
+                                                                                speakers</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/5g-smart-tablet"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">5G smart
+                                                                                tablet</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/bluetooth-speakers"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Bluetooth
+                                                                                speakers</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/dell-computer"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Dell
+                                                                                computer</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/game-controller"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Game
+                                                                                controller</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                </ul>
+                                                            </li>
+
+
+
+
+
+                                                            <li class="megamenu-li parant">
+                                                                <h2 class="sublink-title">Smartphone</h2>
+                                                                <a href="/collections/smartphone"
+                                                                    class="sublink-title">
+                                                                    <span class="sp-link-title">Smartphone</span>
+                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                </a>
+                                                                <a data-bs-toggle="collapse"
+                                                                    href="#main-collapse-smartphone"
+                                                                    class="sublink-title sublink-title-lg">
+                                                                    <span class="spb-link-title">Smartphone</span>
+                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                </a>
+                                                                <ul class="dropdown-supmenu collapse"
+                                                                    id="main-collapse-smartphone">
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/portable-camera"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Portable
+                                                                                camera</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/drone-camera"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Drone
+                                                                                camera</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/racing-wheel"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Racing
+                                                                                wheel</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/bluetooth-speakers"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Bluetooth
+                                                                                speakers</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                    <li class="supmenu-li">
+                                                                        <a href="/products/wireless-headphones"
+                                                                            class="suplink-title">
+                                                                            <span class="spbp-link-title">Wireless
+                                                                                headphones</span>
+                                                                        </a>
+                                                                    </li>
+
+                                                                </ul>
+                                                            </li>
+
+
+
+                                                        </div>
+                                                    </ul>
+                                                </li>
+
+                                                <script>
+                                                    $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
+                                                    $('.banner-wrap').parent('.container').parent('ul').addClass('bottom-banner');
+                                                    $('.menu-banner').parent('.container').parent('ul').addClass('banner-menu');
+                                                    $('.submenu-li').parent('.container').parent('ul').addClass('sub-menu');
+                                                </script>
+
+
+
+
+
+                                                <li class="menu-link parant">
+                                                    <a href="/collections" class="link-title ">
+                                                        <span class="sp-link-title">Collection</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <a href="#main-collapse-collection" data-bs-toggle="collapse"
+                                                        class="link-title link-title-lg">
+                                                        <span class="sp-link-title">Collection</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <ul class="dropdown-submenu collapse"
+                                                        id="main-collapse-collection">
+                                                        <div class="container p-0 ul">
+
+
+
+
+
+
+
+                                                            <li class="menu-banner banner-hover">
+                                                                <a href="/collections/laptops-notebooks"
+                                                                    class="banner-img">
+                                                                    <img src="//cdn.shopify.com/s/files/1/0641/3431/6288/collections/electon-electronics-menu-banner-01.jpg?v=1650973553"
+                                                                        class="img-fluid" alt="Laptops & notebooks">
+                                                                </a>
+                                                                <a href="/collections/laptops-notebooks"
+                                                                    class="menu-banner-title">
+                                                                    <span>Laptop</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+
+
+
+                                                            <li class="menu-banner banner-hover">
+                                                                <a href="/collections/desktop" class="banner-img">
+                                                                    <img src="//cdn.shopify.com/s/files/1/0641/3431/6288/collections/electon-electronics-menu-banner-03.jpg?v=1650973535"
+                                                                        class="img-fluid" alt="Desktop">
+                                                                </a>
+                                                                <a href="/collections/desktop"
+                                                                    class="menu-banner-title">
+                                                                    <span>Desktop</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+
+
+
+                                                            <li class="menu-banner banner-hover">
+                                                                <a href="/collections/camera" class="banner-img">
+                                                                    <img src="//cdn.shopify.com/s/files/1/0641/3431/6288/collections/electon-electronics-menu-banner-02.jpg?v=1650973358"
+                                                                        class="img-fluid" alt="Camera">
+                                                                </a>
+                                                                <a href="/collections/camera"
+                                                                    class="menu-banner-title">
+                                                                    <span>Camera</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+                                                        </div>
+                                                    </ul>
+                                                </li>
+
+                                                <script>
+                                                    $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
+                                                    $('.banner-wrap').parent('.container').parent('ul').addClass('bottom-banner');
+                                                    $('.menu-banner').parent('.container').parent('ul').addClass('banner-menu');
+                                                    $('.submenu-li').parent('.container').parent('ul').addClass('sub-menu');
+                                                </script>
+
+
+
+
+
+                                                <li class="menu-link">
+                                                    <a href="/blogs/news" class="link-title " href="/blogs/news">
+                                                        <span class="sp-link-title">Blog</span>
+                                                    </a>
+                                                    <a href="/blogs/news" class="link-title link-title-lg">
+                                                        <span class="sp-link-title">Blog</span>
+                                                    </a>
+                                                </li>
+
+                                                <script>
+                                                    $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
+                                                    $('.banner-wrap').parent('.container').parent('ul').addClass('bottom-banner');
+                                                    $('.menu-banner').parent('.container').parent('ul').addClass('banner-menu');
+                                                    $('.submenu-li').parent('.container').parent('ul').addClass('sub-menu');
+                                                </script>
+
+
+
+
+
+                                                <li class="menu-link parant">
+                                                    <a href="#" class="link-title ">
+                                                        <span class="sp-link-title">Pages</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <a href="#main-collapse-pages" data-bs-toggle="collapse"
+                                                        class="link-title link-title-lg">
+                                                        <span class="sp-link-title">Pages</span>
+                                                        <i class="ri-arrow-down-s-line"></i>
+                                                    </a>
+                                                    <ul class="dropdown-submenu collapse" id="main-collapse-pages">
+                                                        <div class="container p-0 ul">
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="/pages/about-us" class="sublink-title">
+                                                                    <span class="sp-link-title">About us</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="/pages/contact-us" class="sublink-title">
+                                                                    <span class="sp-link-title">Contact us</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="/pages/faqs" class="sublink-title">
+                                                                    <span class="sp-link-title">Faq's</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="https://electon6-store.myshopify.com/page/404"
+                                                                    class="sublink-title">
+                                                                    <span class="sp-link-title">Page 404</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="/pages/privacy-policy" class="sublink-title">
+                                                                    <span class="sp-link-title">Privacy policy</span>
+                                                                </a>
+                                                            </li>
+
+
+
+
+
+
+
+
+                                                            <li class="submenu-li parant">
+                                                                <a href="/pages/terms-condition"
+                                                                    class="sublink-title">
+                                                                    <span class="sp-link-title">Terms &
+                                                                        condition</span>
+                                                                </a>
+                                                            </li>
+
+
+
+                                                        </div>
+                                                    </ul>
+                                                </li>
+
+                                                <script>
+                                                    $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
+                                                    $('.banner-wrap').parent('.container').parent('ul').addClass('bottom-banner');
+                                                    $('.menu-banner').parent('.container').parent('ul').addClass('banner-menu');
+                                                    $('.submenu-li').parent('.container').parent('ul').addClass('sub-menu');
+                                                </script>
+
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- header-area end -->
+    <script>
+        $(window).scroll(function() {
+            var sticky = $('.header-area'),
+                scroll = $(window).scrollTop();
+            if (scroll >= 150) {
+                sticky.addClass('is-sticky');
+            } else {
+                sticky.removeClass('is-sticky');
+            }
+        });
+    </script>
+
+    <style>
+        .header-kaj .header-area {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @media(max-width: 1199px) {
+            .header-kaj .header-area {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
+
+        .header-area {}
+
+
+
+        /* sticky menu css */
+        .is-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-area.is-sticky {
+            animation: smoothScroll 1s forwards;
+            border-bottom: none;
+        }
+
+        @keyframes smoothScroll {
+            0% {
+                transform: translateY(-200px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+
+
+
+        button.navbar-toggler {
+            color: #929292;
+        }
+    </style>

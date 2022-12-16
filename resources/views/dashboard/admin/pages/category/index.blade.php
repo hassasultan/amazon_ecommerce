@@ -58,6 +58,7 @@
                                 <tr>
                                     <th style="width: 10px">#</th>
                                     <th>Title</th>
+                                    <th>Icon</th>
                                     <th>Description</th>
                                     <th>Action</th>
                                 </tr>
@@ -68,6 +69,7 @@
                                 <tr>
                                     <td>{{ ++$key }}. </td>
                                     <td>{{ $row->name }}</td>
+                                    <td><img src="{{ asset('public/storage/'.$row->icon) }}" style="width: 100px; height: 100px; border-radius: 50%;"/></td>
                                     <td>{{ $row->description }}</td>
 
                                     <td style="width: 11rem">

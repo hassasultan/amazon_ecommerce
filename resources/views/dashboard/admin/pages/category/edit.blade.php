@@ -27,6 +27,11 @@
                                     placeholder="Title" required>
                             </div>
                             <div class="col-md-4 mb-3">
+                                <label for="validationTooltip02">Icon</label>
+                                <input type="file" class="form-control" name="icon" id="validationTooltip02icon"
+                                    placeholder="Icon" value="{{ old('icon') }}">
+                            </div>
+                            <div class="col-md-4 mb-3">
                                 <label for="validationTooltip02">Description</label>
                                 <textarea class="form-control" name="description" id="exampleFormControlTextarea1" placeholder="Description" rows="3">{{ old('description',$category->description) }}</textarea>
                             </div>

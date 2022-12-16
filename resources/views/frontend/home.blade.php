@@ -377,7 +377,7 @@
                                         <div class="swiper-slide">
                                             <div class="category-wrap">
                                                 <a href="/collections/earphone">
-                                                    <img src="{{ asset('storage/'.$row->icon) }}"
+                                                    <img src="{{ asset('public/storage/'.$row->icon) }}"
                                                         class="img-fluid" alt="">
                                                     <span class="cat-title">{{ $row->name }}</span>
                                                 </a>
@@ -4862,11 +4862,11 @@
                                                 <div class="product-image">
                                                     <a class="pro-img" href="/products/drone-camera">
                                                         <img class="img-fluid img1"
-                                                            src="{{ asset('storage/'.$row->fea_img) }}"
+                                                            src="{{ asset('public/storage/'.$row->fea_img) }}"
                                                             alt="Drone camera">
 
                                                         <img class="img-fluid img2"
-                                                            src="{{ asset('storage/'.$row->fea_img) }}"
+                                                            src="{{ asset('public/storage/'.$row->fea_img) }}"
                                                             alt="Drone camera">
 
                                                     </a>

@@ -9,6 +9,7 @@ use App\Http\Controllers\SectionController;
 use App\Http\Controllers\CoupenController;
 use App\Http\Controllers\AssignCoupenController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\GoogleSocialiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,9 @@ use App\Http\Controllers\FrontendController;
 Route::get('/',[FrontendController::class,'index'])->name('index');
 Route::get('/product/{slug}', [FrontendController::class, 'details'])->name('product.details');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']);
+Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback']);
+
 Auth::routes();
 Route::prefix('/admin')->group(function (){
     Route::middleware(['checkadmin'])->group(function () {

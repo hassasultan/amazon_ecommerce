@@ -4871,25 +4871,19 @@
 
                                                     </a>
                                                     <div class="product-label">
-
-
-
                                                         <span class="percent-count">-16%</span>
-
-
-
                                                     </div>
                                                     <div class="product-add-cart">
-
                                                         <a href="javascript:void(0);"
                                                             onclick="Shopify.addItem(42671430041856, 1); return false;"
                                                             class="add-to-cart ajax-spin-cart">
-                                                            <span class="cart-title">+Add to cart</span>
+                                                            {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
+                                                            {{-- <span class="cart-title">+Add to cart</span>
                                                             <span class="cart-loading load-anim"><i
                                                                     class="ri-loader-4-line"></i></span>
                                                             <span class="cart-added"><i class="ri-check-line"></i></span>
                                                             <span class="cart-unavailable"><i
-                                                                    class="ri-alert-line"></i></span>
+                                                                    class="ri-alert-line"></i></span> --}}
                                                         </a>
 
                                                     </div>
@@ -4910,8 +4904,7 @@
                                                             onclick="Shopify.addItem(42671430041856, 1); return false;"
                                                             class="add-to-cart ajax-spin-cart">
                                                             <span>
-                                                                <span class="cart-title"><i
-                                                                        class="ri-shopping-bag-3-line"></i></span>
+                                                                <span class="cart-title"><i class="fas fa-shopping-cart"></i></span>
                                                                 <span class="cart-loading load-anim"><i
                                                                         class="ri-loader-4-line"></i></span>
                                                                 <span class="cart-added"><i
@@ -4926,13 +4919,12 @@
                                                 <div class="product-content">
                                                     <div class="product-info">
                                                         <div class="pro-title">
-                                                            <a href="/products/drone-camera" title="Drone camera">Drone
-                                                                camera</a>
+                                                            <a href="/products/drone-camera" title="Drone camera">{{$row->title}}</a>
                                                         </div>
                                                         <div class="price-box">
                                                             <span class="new-price new-price-compare"
-                                                                id="ProductPrice">$80,000.00</span><span class="old-price"
-                                                                id="ComparePrice">$95,599.00</span>
+                                                                id="ProductPrice">${{ $row->old_price }}</span><span class="old-price"
+                                                                id="ComparePrice">${{ $row->old_price }}</span>
                                                         </div>
 
                                                         <div class="product-ratting">

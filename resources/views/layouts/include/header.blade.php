@@ -3,7 +3,7 @@
         <div class="header-area">
             <div class="header-main-area">
                 <div class="header-main">
-                    <div class="header-element logo"><a href="https://electon6-store.myshopify.com" class="theme-logo">
+                    <div class="header-element logo"><a href="{{ route('index') }}" class="theme-logo">
                             <img style="max-width: 80px;"
                                 src="{{ asset('assets/images/Fainal_.png') }}"
                                 class="img-fluid" alt="electon6-store">
@@ -53,12 +53,12 @@
                                     <li class="menu-link parant">
                                         <a aria-current="page" href="/" class="link-title active">
                                             <span class="sp-link-title">Home</span>
-                                            <i class="ri-arrow-down-s-line"></i>
+                                            <i class="far fa-home"></i>
                                         </a>
                                         <a href="#main-collapse-home" data-bs-toggle="collapse"
                                             class="link-title link-title-lg">
                                             <span class="sp-link-title">Home</span>
-                                            <i class="ri-arrow-down-s-line"></i>
+                                            <i class="far fa-home"></i>
                                         </a>
                                         <ul class="dropdown-submenu collapse" id="main-collapse-home">
                                             <div class="container p-0 ul">
@@ -768,12 +768,20 @@
                             </li>
                             <li class="side-wrap user-wrap">
                                 <div class="acc-link">
-                                    <a class="acc-link-wrap" href="/account/login">
+                                    @if (!auth()->check())
+                                        <a class="acc-link-wrap" href="{{ route('login') }}">
 
-                                        <span class="acc-title">Account</span>
-                                        <span class="acc-icon"><i class="ri-user-3-line"></i></span>
+                                            <span class="acc-title">Account</span>
+                                            <span class="acc-icon"><i class="far fa-user-circle"></i></span>
 
-                                    </a>
+                                        </a>
+                                    @else
+                                        <a class="acc-link-wrap" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            <span class="acc-icon"><i class="fas fa-sign-out-alt"></i></span></a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    @endif
                                 </div>
                                 <div class="acc-link acc-link-lg">
                                     <div class="acc-link-wrap">
@@ -834,9 +842,9 @@
                                 </style>
                             </li>
                             <li class="side-wrap wishlist-wrap"><a class="header-wishlist-btn" href="/pages/wishlist"
-                                    title="Wishlist">
-                                    <span class="wishlist-title">Wishlist</span>
-                                    <span class="wishlist-icon"><i class="ri-heart-line"></i></span>
+                                    title="Likes">
+                                    <span class="wishlist-title">Likes</span>
+                                    <span class="wishlist-icon"><i class="far fa-thumbs-up"></i></span>
                                     <span class="wishlist-counter">0</span>
                                 </a>
                                 <style>
@@ -933,7 +941,7 @@
                                     }
                                 </style>
                             </li>
-                            <li class="side-wrap cart-wrap">
+                            {{-- <li class="side-wrap cart-wrap">
 
 
 
@@ -1096,7 +1104,7 @@
                                     }
                                 </style>
 
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </div>

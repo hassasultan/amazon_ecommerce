@@ -27,6 +27,10 @@ class HomeController extends Controller
         {
             return redirect()->route('admin.home');
         }
+        else
+        {
+            return redirect()->route('index');
+        }
     }
     public function dashboard()
     {

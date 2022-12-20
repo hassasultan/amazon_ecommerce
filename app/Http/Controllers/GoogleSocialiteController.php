@@ -44,7 +44,7 @@ class GoogleSocialiteController extends Controller
                     'name' => $user->name,
                     'email' => $user->email,
                     'social_id'=> $user->id,
-                    'password' => encrypt('12345678'),
+                    'password' => Hash::make('12345678'),
                     'role'     => 1,
                 ]);
 

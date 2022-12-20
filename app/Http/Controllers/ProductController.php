@@ -53,6 +53,7 @@ class ProductController extends Controller
         $slug  = Str::slug($request->name);
         try
         {
+            // dd(((int)($request->old_price - $request->new_price)/(int)$request->new_price)*100);
             DB::beginTransaction();
             $product = new Product;
             $product->category_id  = $request->category_id;
@@ -66,12 +67,22 @@ class ProductController extends Controller
             }
             $product->old_price         = $request->old_price;
             $product->new_price         = $request->new_price;
-            $product->discount          = (((int)$request->old_price - (int)$request->new_price)/(int)$request->new_price)*100;
+            $product->discount          = ((int)($request->old_price - $request->new_price)/(int)$request->new_price)*100;
             $product->slug              = $slug;
             $product->link              = $request->link;
             $product->status            = 1;
             $product->created_by        = auth()->user()->id;
             $product->save();
+            if($request->has('image'))
+            {
+                foreach($request->image as $row)
+                {
+                    $img = new ProductImage();
+                    $img->product_id = $product->id;
+                    $img->image = $this->ProductImage($row);
+                    $img->save();
+                }
+            }
 
             DB::commit();
 

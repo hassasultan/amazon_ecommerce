@@ -4,12 +4,10 @@
             <div class="header-main-area">
                 <div class="header-main">
                     <div class="header-element logo"><a href="{{ route('index') }}" class="theme-logo">
-                            <img style="max-width: 80px;"
-                                src="{{ asset('assets/images/Fainal_.png') }}"
-                                class="img-fluid" alt="electon6-store">
+                            <img style="max-width: 80px;" src="{{ asset('assets/images/Fainal_.png') }}" class="img-fluid"
+                                alt="electon6-store">
                         </a><a href="https://electon6-store.myshopify.com" class="other-logo">
-                            <img style="max-width: 80px;"
-                                src="{{ asset('assets/images/Fainal_.png') }}"
+                            <img style="max-width: 80px;" src="{{ asset('assets/images/Fainal_.png') }}"
                                 alt="electon6-store">
                         </a>
                         <style>
@@ -41,7 +39,7 @@
                             <a href="#main-collapse" class="browse-cat" data-bs-toggle="collapse" aria-expanded="true">
                                 <span class="menu-icon"><i class="ri-menu-line"></i></span>
                                 <span class="menu-title">Menu</span>
-                                <span class="menu-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                                <span class="menu-arrow"><i class="fas fa-chevron-circle-down"></i></span>
                             </a>
                             <div class="mainwrap collapse show" id="main-collapse">
                                 <ul class="main-menu">
@@ -179,12 +177,12 @@
                                     <li class="menu-link parant">
                                         <a href="/collections/all" class="link-title ">
                                             <span class="sp-link-title">Shop</span>
-                                            <i class="ri-arrow-down-s-line"></i>
+                                            <i class="fas fa-chevron-circle-down"></i>
                                         </a>
                                         <a href="#main-collapse-shop" data-bs-toggle="collapse"
                                             class="link-title link-title-lg">
                                             <span class="sp-link-title">Shop</span>
-                                            <i class="ri-arrow-down-s-line"></i>
+                                            <i class="fas fa-chevron-circle-down"></i>
                                         </a>
                                         <ul class="dropdown-submenu collapse" id="main-collapse-shop">
                                             <div class="container p-0 ul">
@@ -195,12 +193,12 @@
                                                     <h2 class="sublink-title">Earphone</h2>
                                                     <a href="/collections/earphone" class="sublink-title">
                                                         <span class="sp-link-title">Earphone</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <a data-bs-toggle="collapse" href="#main-collapse-earphone"
                                                         class="sublink-title sublink-title-lg">
                                                         <span class="spb-link-title">Earphone</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <ul class="dropdown-supmenu collapse" id="main-collapse-earphone">
 
@@ -246,12 +244,12 @@
                                                     <h2 class="sublink-title">Projector</h2>
                                                     <a href="/collections/projector" class="sublink-title">
                                                         <span class="sp-link-title">Projector</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <a data-bs-toggle="collapse" href="#main-collapse-projector"
                                                         class="sublink-title sublink-title-lg">
                                                         <span class="spb-link-title">Projector</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <ul class="dropdown-supmenu collapse"
                                                         id="main-collapse-projector">
@@ -297,12 +295,12 @@
                                                     <h2 class="sublink-title">Smart TV</h2>
                                                     <a href="/collections/smart-tv" class="sublink-title">
                                                         <span class="sp-link-title">Smart TV</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <a data-bs-toggle="collapse" href="#main-collapse-smart-tv"
                                                         class="sublink-title sublink-title-lg">
                                                         <span class="spb-link-title">Smart TV</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <ul class="dropdown-supmenu collapse" id="main-collapse-smart-tv">
 
@@ -349,12 +347,12 @@
                                                     <h2 class="sublink-title">Smartphone</h2>
                                                     <a href="/collections/smartphone" class="sublink-title">
                                                         <span class="sp-link-title">Smartphone</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <a data-bs-toggle="collapse" href="#main-collapse-smartphone"
                                                         class="sublink-title sublink-title-lg">
                                                         <span class="spb-link-title">Smartphone</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <ul class="dropdown-supmenu collapse"
                                                         id="main-collapse-smartphone">
@@ -415,12 +413,12 @@
                                     <li class="menu-link parant">
                                         <a href="/collections" class="link-title ">
                                             <span class="sp-link-title">Collection</span>
-                                            <i class="ri-arrow-down-s-line"></i>
+                                            <i class="fas fa-chevron-circle-down"></i>
                                         </a>
                                         <a href="#main-collapse-collection" data-bs-toggle="collapse"
                                             class="link-title link-title-lg">
                                             <span class="sp-link-title">Collection</span>
-                                            <i class="ri-arrow-down-s-line"></i>
+                                            <i class="fas fa-chevron-circle-down"></i>
                                         </a>
                                         <ul class="dropdown-submenu collapse" id="main-collapse-collection">
                                             <div class="container p-0 ul">
@@ -524,12 +522,12 @@
                                     <li class="menu-link parant">
                                         <a href="#" class="link-title ">
                                             <span class="sp-link-title">Pages</span>
-                                            <i class="ri-arrow-down-s-line"></i>
+                                            <i class="fas fa-chevron-circle-down"></i>
                                         </a>
                                         <a href="#main-collapse-pages" data-bs-toggle="collapse"
                                             class="link-title link-title-lg">
                                             <span class="sp-link-title">Pages</span>
-                                            <i class="ri-arrow-down-s-line"></i>
+                                            <i class="fas fa-chevron-circle-down"></i>
                                         </a>
                                         <ul class="dropdown-submenu collapse" id="main-collapse-pages">
                                             <div class="container p-0 ul">
@@ -644,8 +642,7 @@
                                             <input type="search" name="q" value=""
                                                 placeholder="Find your search" id="search" class="input-text"
                                                 aria-label="Search our store" required>
-                                            <button class="search-btn" type="submit"><i
-                                                    class="ri-search-line"></i></button>
+                                            <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
                                         </div>
                                     </form>
                                 </div>
@@ -766,22 +763,36 @@
                                     <i class="ri-menu-line"></i>
                                 </button>
                             </li>
+                            @if (auth()->check())
+
                             <li class="side-wrap user-wrap">
                                 <div class="acc-link">
-                                    @if (!auth()->check())
-                                        <a class="acc-link-wrap" href="{{ route('login') }}">
+                                    <div class="dropdown">
+                                        <button class="dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span class="acc-icon fs-5"><i class="far fa-user-circle"></i></span>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                                            <li><a class="dropdown-item active" href="{{ route('user.profile') }}"><i class="fas fa-user me-2"></i>Profile</a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="acc-link-wrap dropdown-item" href="{{ route('logout') }}"
+                                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="font-size: 1.0rem;">
+                                                logout<i class="fas fa-sign-out-alt"></i></a>
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                    class="d-none">
+                                                    @csrf
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                        {{-- <a class="acc-link-wrap" href="{{ route('login') }}">
 
                                             <span class="acc-title">Account</span>
-                                            <span class="acc-icon"><i class="far fa-user-circle"></i></span>
 
-                                        </a>
-                                    @else
-                                        <a class="acc-link-wrap" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            <span class="acc-icon"><i class="fas fa-sign-out-alt"></i></span></a>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
-                                    @endif
+                                        </a> --}}
+
+
+
                                 </div>
                                 <div class="acc-link acc-link-lg">
                                     <div class="acc-link-wrap">
@@ -841,119 +852,21 @@
                                     }
                                 </style>
                             </li>
-                            <li class="side-wrap wishlist-wrap"><a class="header-wishlist-btn" href="/pages/wishlist"
-                                    title="Likes">
-                                    <span class="wishlist-title">Likes</span>
-                                    <span class="wishlist-icon"><i class="far fa-thumbs-up"></i></span>
-                                    <span class="wishlist-counter">0</span>
-                                </a>
-                                <style>
-                                    a.header-wishlist-btn {
-                                        color: #929292;
-                                        display: flex;
-                                        align-items: center;
-                                        font-size: 22px;
-                                        font-weight: 500;
-                                        text-transform: uppercase
-                                    }
+                            @else
 
-                                    .is-sticky a.header-wishlist-btn {
-                                        color: #757375;
-                                    }
-
-                                    a.header-wishlist-btn:hover {
-                                        color: var(--font-color-primary);
-                                    }
-
-                                    a.header-wishlist-btn span.wishlist-icon i {
-                                        display: block;
-                                        line-height: 1;
-                                    }
-
-                                    a.header-wishlist-btn span.wishlist-title {
-                                        display: none;
-
-                                        margin-right: 10px;
-
-                                    }
-
-                                    a.header-wishlist-btn span.wishlist-counter {
-                                        position: relative;
-                                        font-size: 16px;
-                                        padding: 0px 7px;
-                                        line-height: 1;
-                                    }
-
-                                    a.header-wishlist-btn span.wishlist-counter:after {
-                                        font-size: 16px;
-                                        content: '(';
-                                        position: absolute;
-                                        bottom: 50%;
-                                        transform: translateY(50%);
-                                        left: 0px;
-                                    }
-
-                                    a.header-wishlist-btn span.wishlist-counter:before {
-                                        font-size: 16px;
-                                        content: ')';
-                                        position: absolute;
-                                        bottom: 50%;
-                                        transform: translateY(50%);
-                                        right: 0px;
-                                    }
-
-                                    @media (max-width: 1599px) {
-                                        a.header-wishlist-btn span.wishlist-title {
-                                            font-size: 14px;
-                                        }
-                                    }
-
-                                    @media (max-width: 1199px) {
-                                        a.header-wishlist-btn {
-                                            font-size: 18px;
-                                        }
-
-                                        a.header-wishlist-btn span.wishlist-counter {
-                                            display: flex;
-                                        }
-
-                                        a.header-wishlist-btn span.wishlist-counter {
-                                            font-size: 14px;
-                                        }
-
-                                        a.header-wishlist-btn span.wishlist-counter:after {
-                                            font-size: 14px;
-                                        }
-
-                                        a.header-wishlist-btn span.wishlist-counter:before {
-                                            font-size: 14px;
-                                        }
-
-                                        a.header-wishlist-btn span.wishlist-title {
-                                            display: none;
-                                        }
-                                    }
-
-                                    @media (max-width: 479px) {
-                                        a.header-wishlist-btn span.wishlist-counter {
-                                            display: none;
-                                        }
-                                    }
-                                </style>
-                            </li>
-                            {{-- <li class="side-wrap cart-wrap">
+                            <li class="side-wrap cart-wrap">
 
 
 
                                 <div class="shopping-widget">
                                     <div class="shopping-cart">
-                                        <a href="javascript:void(0)" class="cart-count">
-                                            <div class="cart-title">Bag</div>
-                                            <span class="cart-icon">
-                                                <i class="ri-shopping-bag-3-line"></i>
-                                            </span>
+                                        <a href="{{ route('login') }}" class="btn btn-outline-danger">
+                                            <i class="fas fa-sign-in-alt"></i>
+
+                                            {{-- <div class="cart-title">Bag</div>
+
                                             <span id="cart-total" class="bigcounter">0</span>
-                                            <span id="cart-total" class="subtotal-price">$0.00</span>
+                                            <span id="cart-total" class="subtotal-price">$0.00</span> --}}
                                         </a>
                                     </div>
                                 </div>
@@ -1104,7 +1017,109 @@
                                     }
                                 </style>
 
-                            </li> --}}
+                            </li>
+                            @endif
+
+                            <li class="side-wrap wishlist-wrap"><a class="header-wishlist-btn" href="/pages/wishlist"
+                                    title="Likes">
+                                    <span class="wishlist-title">Likes</span>
+                                    <span class="wishlist-icon"><i class="far fa-thumbs-up"></i></span>
+                                    <span class="wishlist-counter">0</span>
+                                </a>
+                                <style>
+                                    a.header-wishlist-btn {
+                                        color: #929292;
+                                        display: flex;
+                                        align-items: center;
+                                        font-size: 22px;
+                                        font-weight: 500;
+                                        text-transform: uppercase
+                                    }
+
+                                    .is-sticky a.header-wishlist-btn {
+                                        color: #757375;
+                                    }
+
+                                    a.header-wishlist-btn:hover {
+                                        color: var(--font-color-primary);
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-icon i {
+                                        display: block;
+                                        line-height: 1;
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-title {
+                                        display: none;
+
+                                        margin-right: 10px;
+
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-counter {
+                                        position: relative;
+                                        font-size: 16px;
+                                        padding: 0px 7px;
+                                        line-height: 1;
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-counter:after {
+                                        font-size: 16px;
+                                        content: '(';
+                                        position: absolute;
+                                        bottom: 50%;
+                                        transform: translateY(50%);
+                                        left: 0px;
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-counter:before {
+                                        font-size: 16px;
+                                        content: ')';
+                                        position: absolute;
+                                        bottom: 50%;
+                                        transform: translateY(50%);
+                                        right: 0px;
+                                    }
+
+                                    @media (max-width: 1599px) {
+                                        a.header-wishlist-btn span.wishlist-title {
+                                            font-size: 14px;
+                                        }
+                                    }
+
+                                    @media (max-width: 1199px) {
+                                        a.header-wishlist-btn {
+                                            font-size: 18px;
+                                        }
+
+                                        a.header-wishlist-btn span.wishlist-counter {
+                                            display: flex;
+                                        }
+
+                                        a.header-wishlist-btn span.wishlist-counter {
+                                            font-size: 14px;
+                                        }
+
+                                        a.header-wishlist-btn span.wishlist-counter:after {
+                                            font-size: 14px;
+                                        }
+
+                                        a.header-wishlist-btn span.wishlist-counter:before {
+                                            font-size: 14px;
+                                        }
+
+                                        a.header-wishlist-btn span.wishlist-title {
+                                            display: none;
+                                        }
+                                    }
+
+                                    @media (max-width: 479px) {
+                                        a.header-wishlist-btn span.wishlist-counter {
+                                            display: none;
+                                        }
+                                    }
+                                </style>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1599,7 +1614,7 @@
                                             aria-expanded="true">
                                             <span class="menu-icon"><i class="ri-menu-line"></i></span>
                                             <span class="menu-title">Menu</span>
-                                            <span class="menu-arrow"><i class="ri-arrow-down-s-line"></i></span>
+                                            <span class="menu-arrow"><i class="fas fa-chevron-circle-down"></i></span>
                                         </a>
                                         <div class="mainwrap collapse show" id="main-collapse">
                                             <ul class="main-menu">
@@ -1611,12 +1626,12 @@
                                                 <li class="menu-link parant">
                                                     <a aria-current="page" href="/" class="link-title active">
                                                         <span class="sp-link-title">Home</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <a href="#main-collapse-home" data-bs-toggle="collapse"
                                                         class="link-title link-title-lg">
                                                         <span class="sp-link-title">Home</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <ul class="dropdown-submenu collapse" id="main-collapse-home">
                                                         <div class="container p-0 ul">
@@ -1737,12 +1752,12 @@
                                                 <li class="menu-link parant">
                                                     <a href="/collections/all" class="link-title ">
                                                         <span class="sp-link-title">Shop</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <a href="#main-collapse-shop" data-bs-toggle="collapse"
                                                         class="link-title link-title-lg">
                                                         <span class="sp-link-title">Shop</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <ul class="dropdown-submenu collapse" id="main-collapse-shop">
                                                         <div class="container p-0 ul">
@@ -1753,13 +1768,13 @@
                                                                 <h2 class="sublink-title">Earphone</h2>
                                                                 <a href="/collections/earphone" class="sublink-title">
                                                                     <span class="sp-link-title">Earphone</span>
-                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                    <i class="fas fa-chevron-circle-down"></i>
                                                                 </a>
                                                                 <a data-bs-toggle="collapse"
                                                                     href="#main-collapse-earphone"
                                                                     class="sublink-title sublink-title-lg">
                                                                     <span class="spb-link-title">Earphone</span>
-                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                    <i class="fas fa-chevron-circle-down"></i>
                                                                 </a>
                                                                 <ul class="dropdown-supmenu collapse"
                                                                     id="main-collapse-earphone">
@@ -1816,13 +1831,13 @@
                                                                 <a href="/collections/projector"
                                                                     class="sublink-title">
                                                                     <span class="sp-link-title">Projector</span>
-                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                    <i class="fas fa-chevron-circle-down"></i>
                                                                 </a>
                                                                 <a data-bs-toggle="collapse"
                                                                     href="#main-collapse-projector"
                                                                     class="sublink-title sublink-title-lg">
                                                                     <span class="spb-link-title">Projector</span>
-                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                    <i class="fas fa-chevron-circle-down"></i>
                                                                 </a>
                                                                 <ul class="dropdown-supmenu collapse"
                                                                     id="main-collapse-projector">
@@ -1878,13 +1893,13 @@
                                                                 <h2 class="sublink-title">Smart TV</h2>
                                                                 <a href="/collections/smart-tv" class="sublink-title">
                                                                     <span class="sp-link-title">Smart TV</span>
-                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                    <i class="fas fa-chevron-circle-down"></i>
                                                                 </a>
                                                                 <a data-bs-toggle="collapse"
                                                                     href="#main-collapse-smart-tv"
                                                                     class="sublink-title sublink-title-lg">
                                                                     <span class="spb-link-title">Smart TV</span>
-                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                    <i class="fas fa-chevron-circle-down"></i>
                                                                 </a>
                                                                 <ul class="dropdown-supmenu collapse"
                                                                     id="main-collapse-smart-tv">
@@ -1941,13 +1956,13 @@
                                                                 <a href="/collections/smartphone"
                                                                     class="sublink-title">
                                                                     <span class="sp-link-title">Smartphone</span>
-                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                    <i class="fas fa-chevron-circle-down"></i>
                                                                 </a>
                                                                 <a data-bs-toggle="collapse"
                                                                     href="#main-collapse-smartphone"
                                                                     class="sublink-title sublink-title-lg">
                                                                     <span class="spb-link-title">Smartphone</span>
-                                                                    <i class="ri-arrow-down-s-line"></i>
+                                                                    <i class="fas fa-chevron-circle-down"></i>
                                                                 </a>
                                                                 <ul class="dropdown-supmenu collapse"
                                                                     id="main-collapse-smartphone">
@@ -2015,12 +2030,12 @@
                                                 <li class="menu-link parant">
                                                     <a href="/collections" class="link-title ">
                                                         <span class="sp-link-title">Collection</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <a href="#main-collapse-collection" data-bs-toggle="collapse"
                                                         class="link-title link-title-lg">
                                                         <span class="sp-link-title">Collection</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <ul class="dropdown-submenu collapse"
                                                         id="main-collapse-collection">
@@ -2128,12 +2143,12 @@
                                                 <li class="menu-link parant">
                                                     <a href="#" class="link-title ">
                                                         <span class="sp-link-title">Pages</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <a href="#main-collapse-pages" data-bs-toggle="collapse"
                                                         class="link-title link-title-lg">
                                                         <span class="sp-link-title">Pages</span>
-                                                        <i class="ri-arrow-down-s-line"></i>
+                                                        <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <ul class="dropdown-submenu collapse" id="main-collapse-pages">
                                                         <div class="container p-0 ul">

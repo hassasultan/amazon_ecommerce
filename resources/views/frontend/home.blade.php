@@ -4860,7 +4860,7 @@
                                         <div class="swiper-slide">
                                             <div class="single-product-wrap">
                                                 <div class="product-image">
-                                                    <a class="pro-img" href="/products/drone-camera">
+                                                    <a class="pro-img" href="{{ route('product.details', $row->slug) }}">
                                                         <img class="img-fluid img1"
                                                             src="{{ asset('public/storage/'.$row->fea_img) }}"
                                                             alt="Drone camera">
@@ -4871,13 +4871,14 @@
 
                                                     </a>
                                                     <div class="product-label">
-                                                        <span class="percent-count">-16%</span>
+                                                        <span class="percent-count">-{{ $row->discount }}%</span>
                                                     </div>
                                                     <div class="product-add-cart">
+                                                        {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
+
                                                         <a href="javascript:void(0);"
                                                             onclick="Shopify.addItem(42671430041856, 1); return false;"
                                                             class="add-to-cart ajax-spin-cart">
-                                                            {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
                                                             {{-- <span class="cart-title">+Add to cart</span>
                                                             <span class="cart-loading load-anim"><i
                                                                     class="ri-loader-4-line"></i></span>
@@ -4887,7 +4888,10 @@
                                                         </a>
 
                                                     </div>
-                                                    <div class="product-action"><a href="javascript:void(0)"
+                                                    <div class="product-action">
+                                                        {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
+
+                                                        <a href="javascript:void(0)"
                                                             class="action-wishlist tile-actions--btn wishlist-btn wishlist"
                                                             data-product-handle="drone-camera">
                                                             <span class="add-wishlist"><i class="ri-heart-line"></i></span>
@@ -4919,12 +4923,12 @@
                                                 <div class="product-content">
                                                     <div class="product-info">
                                                         <div class="pro-title">
-                                                            <a href="/products/drone-camera" title="Drone camera">{{$row->title}}</a>
+                                                            <a href="{{route('product.details', $row->slug)}}" title="Drone camera">{{$row->title}}</a>
                                                         </div>
                                                         <div class="price-box">
                                                             <span class="new-price new-price-compare"
-                                                                id="ProductPrice">${{ $row->old_price }}</span><span class="old-price"
-                                                                id="ComparePrice">${{ $row->old_price }}</span>
+                                                                id="ProductPrice2">${{ $row->old_price }}</span><span class="old-price"
+                                                                id="ComparePrice2">${{ $row->new_price }}</span>
                                                         </div>
 
                                                         <div class="product-ratting">

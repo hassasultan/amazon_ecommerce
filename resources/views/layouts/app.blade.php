@@ -14,6 +14,8 @@
     {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" inte
         grity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
     <link href="{{ asset('assets/css/animate.min.css') }}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{ asset('assets/css/slick.css') }}" rel="stylesheet" type="text/css" media="all" />
@@ -89,12 +91,12 @@
         }
     </style>
     <!-- JS -->
+
     <script src="{{ asset('assets/js/modernizr-2.8.3.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery-1.12.0.min.js') }}"></script>
     <script src="{{ asset('assets/js/popper.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script> --}}
     <script src="{{ asset('assets/js/plugins.js') }}"></script>
-    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets/js/swiper.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.vticker-min.js') }}"></script>
@@ -110,8 +112,7 @@
     <script src="{{ asset('assets/js/jquery.countTo.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
     <script src="{{ asset('assets/js/shopify_common-8ea6ac3faf357236a97f5de749df4da6e8436ca107bc3a4ee805cbf08bc47392.js') }}"
-        type="text/javascript"></script>
-
+    type="text/javascript"></script>
 
 </head>
 
@@ -237,7 +238,14 @@
     {{-- <script src="{{ asset('assets/public/js/app.js') }}"></script> --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+        {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> --}}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script>
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function (toastEl) {
+          return new bootstrap.Toast(toastEl)
+        });
+        </script>
     {{-- <script src="{{ asset('assets/user_dashboard/js/sweetalert.js') }}"></script> --}}
 
     {{-- <script src="{{ asset('assets/user_dashboard/js/summernote.min.js') }}"></script> --}}
@@ -252,6 +260,490 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.full.min.js"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('.slider-big').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '0px',
+                    asNavFor: '.slider-small',
+
+
+                    adaptiveHeight: true,
+
+
+                });
+                $('.slider-small').slick({
+
+                    slidesToShow: 3,
+
+                    slidesToScroll: 1,
+                    arrows: true,
+                    prevArrow: '<button class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
+                    nextArrow: '<button class="slick-next"><i class="fas fa-arrow-right"></i></button>',
+                    dots: false,
+
+                    centerMode: true,
+                    centerPadding: '0px',
+                    focusOnSelect: true,
+                    asNavFor: '.slider-big',
+
+                    responsive: [{
+                        breakpoint: 480,
+                        settings: {
+
+                            slidesToShow: 3
+                        }
+                    }]
+                });
+                $(window).resize(function() {
+                    $('.slider-big')[0].slick.refresh();
+                    $('.slider-small')[0].slick.refresh();
+                });
+            });
+
+            var selectCallback = function(variant, selector) {
+                timber.productPage({
+                    {{-- money_format: "${{ amount }}", --}}
+                    variant: variant,
+                    selector: selector
+                });
+                if (variant) {
+                    // Current variant select+
+                    var form = jQuery('#' + selector.domIdPrefix).closest('form');
+                    for (var i = 0, size = variant.options.size; i < size; i++) {
+                        var val = variant.options[i].replace(/'/g, "&#039;");
+                        var radioButton = form.find(".swatch[data-option-index='" + i + "'] :radio[value='" + val + "']");
+                        if (radioButton.size()) {
+                            radioButton.get(0).checked = true;
+                        }
+                    }
+                }
+            };
+
+            jQuery(function($) {
+                new Shopify.OptionSelectors('productSelect', {
+                    product: {
+                        "id": 7704599331072,
+                        "title": "Drone camera",
+                        "handle": "drone-camera",
+                        "description": "\u003cdiv class=\"more-description\"\u003e\n\u003ch6\u003eMore Detail\u003c\/h6\u003e\n\u003cul\u003e\n\u003cli\u003eLorem Ipsum is simply dummy text of the printing and typesetting industry\u003c\/li\u003e\n\u003cli\u003eLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book\u003c\/li\u003e\n\u003cli\u003eIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged\u003c\/li\u003e\n\u003cli\u003eIt was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum\u003c\/li\u003e\n\u003cli\u003eContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"more-description\"\u003e\n\u003ch6\u003eKey Specification\u003c\/h6\u003e\n\u003cul\u003e\n\u003cli\u003eIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout\u003c\/li\u003e\n\u003cli\u003eThe point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy\u003c\/li\u003e\n\u003cli\u003eVarious versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)\u003c\/li\u003e\n\u003cli\u003eThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable\u003c\/li\u003e\n\u003cli\u003eIf you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/div\u003e",
+                        "published_at": "2022-04-22T16:16:05+05:30",
+                        "created_at": "2022-04-22T16:16:09+05:30",
+                        "vendor": "Electron",
+                        "type": "Laptops",
+                        "tags": ["Vaano"],
+                        "price": 6800000,
+                        "price_min": 6800000,
+                        "price_max": 8700000,
+                        "available": true,
+                        "price_varies": true,
+                        "compare_at_price": 9000000,
+                        "compare_at_price_min": 9000000,
+                        "compare_at_price_max": 9559900,
+                        "compare_at_price_varies": true,
+                        "variants": [{
+                            "id": 42671430041856,
+                            "title": "DarkCyan \/ Nitrile",
+                            "option1": "DarkCyan",
+                            "option2": "Nitrile",
+                            "option3": null,
+                            "sku": "abccd-16",
+                            "requires_shipping": true,
+                            "taxable": true,
+                            "featured_image": {
+                                "id": 36926860689664,
+                                "product_id": 7704599331072,
+                                "position": 1,
+                                "created_at": "2022-04-26T09:52:50+05:30",
+                                "updated_at": "2022-04-26T09:52:51+05:30",
+                                "alt": null,
+                                "width": 630,
+                                "height": 548,
+                                "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-a.jpg?v=1650946971",
+                                "variant_ids": [42671430041856, 42671430107392, 42671430172928]
+                            },
+                            "available": true,
+                            "name": "Drone camera - DarkCyan \/ Nitrile",
+                            "public_title": "DarkCyan \/ Nitrile",
+                            "options": ["DarkCyan", "Nitrile"],
+                            "price": 8000000,
+                            "weight": 0,
+                            "compare_at_price": 9559900,
+                            "inventory_management": "shopify",
+                            "barcode": "",
+                            "featured_media": {
+                                "alt": null,
+                                "id": 29489371087104,
+                                "position": 1,
+                                "preview_image": {
+                                    "aspect_ratio": 1.15,
+                                    "height": 548,
+                                    "width": 630,
+                                    "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-a.jpg?v=1650946971"
+                                }
+                            }
+                        }, {
+                            "id": 42671430074624,
+                            "title": "DarkCyan \/ Latex",
+                            "option1": "DarkCyan",
+                            "option2": "Latex",
+                            "option3": null,
+                            "sku": "abccd-12",
+                            "requires_shipping": true,
+                            "taxable": true,
+                            "featured_image": {
+                                "id": 36926860591360,
+                                "product_id": 7704599331072,
+                                "position": 4,
+                                "created_at": "2022-04-26T09:52:50+05:30",
+                                "updated_at": "2022-04-26T09:52:50+05:30",
+                                "alt": null,
+                                "width": 630,
+                                "height": 548,
+                                "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05.jpg?v=1650946970",
+                                "variant_ids": [42671430074624, 42671430140160, 42671430205696]
+                            },
+                            "available": true,
+                            "name": "Drone camera - DarkCyan \/ Latex",
+                            "public_title": "DarkCyan \/ Latex",
+                            "options": ["DarkCyan", "Latex"],
+                            "price": 7500000,
+                            "weight": 0,
+                            "compare_at_price": 9000000,
+                            "inventory_management": "shopify",
+                            "barcode": "",
+                            "featured_media": {
+                                "alt": null,
+                                "id": 29489371185408,
+                                "position": 4,
+                                "preview_image": {
+                                    "aspect_ratio": 1.15,
+                                    "height": 548,
+                                    "width": 630,
+                                    "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05.jpg?v=1650946970"
+                                }
+                            }
+                        }, {
+                            "id": 42671430107392,
+                            "title": "DarkGoldenRod \/ Nitrile",
+                            "option1": "DarkGoldenRod",
+                            "option2": "Nitrile",
+                            "option3": null,
+                            "sku": "abccd-17",
+                            "requires_shipping": true,
+                            "taxable": true,
+                            "featured_image": {
+                                "id": 36926860689664,
+                                "product_id": 7704599331072,
+                                "position": 1,
+                                "created_at": "2022-04-26T09:52:50+05:30",
+                                "updated_at": "2022-04-26T09:52:51+05:30",
+                                "alt": null,
+                                "width": 630,
+                                "height": 548,
+                                "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-a.jpg?v=1650946971",
+                                "variant_ids": [42671430041856, 42671430107392, 42671430172928]
+                            },
+                            "available": false,
+                            "name": "Drone camera - DarkGoldenRod \/ Nitrile",
+                            "public_title": "DarkGoldenRod \/ Nitrile",
+                            "options": ["DarkGoldenRod", "Nitrile"],
+                            "price": 8600000,
+                            "weight": 0,
+                            "compare_at_price": 9000000,
+                            "inventory_management": "shopify",
+                            "barcode": "",
+                            "featured_media": {
+                                "alt": null,
+                                "id": 29489371087104,
+                                "position": 1,
+                                "preview_image": {
+                                    "aspect_ratio": 1.15,
+                                    "height": 548,
+                                    "width": 630,
+                                    "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-a.jpg?v=1650946971"
+                                }
+                            }
+                        }, {
+                            "id": 42671430140160,
+                            "title": "DarkGoldenRod \/ Latex",
+                            "option1": "DarkGoldenRod",
+                            "option2": "Latex",
+                            "option3": null,
+                            "sku": "abccd-18",
+                            "requires_shipping": true,
+                            "taxable": true,
+                            "featured_image": {
+                                "id": 36926860591360,
+                                "product_id": 7704599331072,
+                                "position": 4,
+                                "created_at": "2022-04-26T09:52:50+05:30",
+                                "updated_at": "2022-04-26T09:52:50+05:30",
+                                "alt": null,
+                                "width": 630,
+                                "height": 548,
+                                "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05.jpg?v=1650946970",
+                                "variant_ids": [42671430074624, 42671430140160, 42671430205696]
+                            },
+                            "available": true,
+                            "name": "Drone camera - DarkGoldenRod \/ Latex",
+                            "public_title": "DarkGoldenRod \/ Latex",
+                            "options": ["DarkGoldenRod", "Latex"],
+                            "price": 6800000,
+                            "weight": 0,
+                            "compare_at_price": 9000000,
+                            "inventory_management": "shopify",
+                            "barcode": "",
+                            "featured_media": {
+                                "alt": null,
+                                "id": 29489371185408,
+                                "position": 4,
+                                "preview_image": {
+                                    "aspect_ratio": 1.15,
+                                    "height": 548,
+                                    "width": 630,
+                                    "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05.jpg?v=1650946970"
+                                }
+                            }
+                        }, {
+                            "id": 42671430172928,
+                            "title": "DarkKhaki \/ Nitrile",
+                            "option1": "DarkKhaki",
+                            "option2": "Nitrile",
+                            "option3": null,
+                            "sku": "abccd-14",
+                            "requires_shipping": true,
+                            "taxable": true,
+                            "featured_image": {
+                                "id": 36926860689664,
+                                "product_id": 7704599331072,
+                                "position": 1,
+                                "created_at": "2022-04-26T09:52:50+05:30",
+                                "updated_at": "2022-04-26T09:52:51+05:30",
+                                "alt": null,
+                                "width": 630,
+                                "height": 548,
+                                "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-a.jpg?v=1650946971",
+                                "variant_ids": [42671430041856, 42671430107392, 42671430172928]
+                            },
+                            "available": true,
+                            "name": "Drone camera - DarkKhaki \/ Nitrile",
+                            "public_title": "DarkKhaki \/ Nitrile",
+                            "options": ["DarkKhaki", "Nitrile"],
+                            "price": 8700000,
+                            "weight": 0,
+                            "compare_at_price": 9000000,
+                            "inventory_management": "shopify",
+                            "barcode": "",
+                            "featured_media": {
+                                "alt": null,
+                                "id": 29489371087104,
+                                "position": 1,
+                                "preview_image": {
+                                    "aspect_ratio": 1.15,
+                                    "height": 548,
+                                    "width": 630,
+                                    "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-a.jpg?v=1650946971"
+                                }
+                            }
+                        }, {
+                            "id": 42671430205696,
+                            "title": "DarkKhaki \/ Latex",
+                            "option1": "DarkKhaki",
+                            "option2": "Latex",
+                            "option3": null,
+                            "sku": "abccd-11",
+                            "requires_shipping": true,
+                            "taxable": true,
+                            "featured_image": {
+                                "id": 36926860591360,
+                                "product_id": 7704599331072,
+                                "position": 4,
+                                "created_at": "2022-04-26T09:52:50+05:30",
+                                "updated_at": "2022-04-26T09:52:50+05:30",
+                                "alt": null,
+                                "width": 630,
+                                "height": 548,
+                                "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05.jpg?v=1650946970",
+                                "variant_ids": [42671430074624, 42671430140160, 42671430205696]
+                            },
+                            "available": true,
+                            "name": "Drone camera - DarkKhaki \/ Latex",
+                            "public_title": "DarkKhaki \/ Latex",
+                            "options": ["DarkKhaki", "Latex"],
+                            "price": 7900000,
+                            "weight": 0,
+                            "compare_at_price": 9000000,
+                            "inventory_management": "shopify",
+                            "barcode": "",
+                            "featured_media": {
+                                "alt": null,
+                                "id": 29489371185408,
+                                "position": 4,
+                                "preview_image": {
+                                    "aspect_ratio": 1.15,
+                                    "height": 548,
+                                    "width": 630,
+                                    "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05.jpg?v=1650946970"
+                                }
+                            }
+                        }],
+                        "images": [
+                            "\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-a.jpg?v=1650946971",
+                            "\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-b.jpg?v=1650946971",
+                            "\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-c.jpg?v=1650946971",
+                            "\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05.jpg?v=1650946970"
+                        ],
+                        "featured_image": "\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-a.jpg?v=1650946971",
+                        "options": ["Color", "Material"],
+                        "media": [{
+                            "alt": null,
+                            "id": 29489371087104,
+                            "position": 1,
+                            "preview_image": {
+                                "aspect_ratio": 1.15,
+                                "height": 548,
+                                "width": 630,
+                                "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-a.jpg?v=1650946971"
+                            },
+                            "aspect_ratio": 1.15,
+                            "height": 548,
+                            "media_type": "image",
+                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-a.jpg?v=1650946971",
+                            "width": 630
+                        }, {
+                            "alt": null,
+                            "id": 29489371119872,
+                            "position": 2,
+                            "preview_image": {
+                                "aspect_ratio": 1.15,
+                                "height": 548,
+                                "width": 630,
+                                "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-b.jpg?v=1650946971"
+                            },
+                            "aspect_ratio": 1.15,
+                            "height": 548,
+                            "media_type": "image",
+                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-b.jpg?v=1650946971",
+                            "width": 630
+                        }, {
+                            "alt": null,
+                            "id": 29489371152640,
+                            "position": 3,
+                            "preview_image": {
+                                "aspect_ratio": 1.15,
+                                "height": 548,
+                                "width": 630,
+                                "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-c.jpg?v=1650946971"
+                            },
+                            "aspect_ratio": 1.15,
+                            "height": 548,
+                            "media_type": "image",
+                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05-c.jpg?v=1650946971",
+                            "width": 630
+                        }, {
+                            "alt": null,
+                            "id": 29489371185408,
+                            "position": 4,
+                            "preview_image": {
+                                "aspect_ratio": 1.15,
+                                "height": 548,
+                                "width": 630,
+                                "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05.jpg?v=1650946970"
+                            },
+                            "aspect_ratio": 1.15,
+                            "height": 548,
+                            "media_type": "image",
+                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0641\/3431\/6288\/products\/electon-electronics-product-05.jpg?v=1650946970",
+                            "width": 630
+                        }],
+                        "content": "\u003cdiv class=\"more-description\"\u003e\n\u003ch6\u003eMore Detail\u003c\/h6\u003e\n\u003cul\u003e\n\u003cli\u003eLorem Ipsum is simply dummy text of the printing and typesetting industry\u003c\/li\u003e\n\u003cli\u003eLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book\u003c\/li\u003e\n\u003cli\u003eIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged\u003c\/li\u003e\n\u003cli\u003eIt was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum\u003c\/li\u003e\n\u003cli\u003eContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/div\u003e\n\u003cdiv class=\"more-description\"\u003e\n\u003ch6\u003eKey Specification\u003c\/h6\u003e\n\u003cul\u003e\n\u003cli\u003eIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout\u003c\/li\u003e\n\u003cli\u003eThe point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy\u003c\/li\u003e\n\u003cli\u003eVarious versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)\u003c\/li\u003e\n\u003cli\u003eThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable\u003c\/li\u003e\n\u003cli\u003eIf you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003c\/div\u003e"
+                    },
+                    onVariantSelected: selectCallback,
+                    enableHistoryState: true
+                });
+
+                // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
+
+
+                // Hide selectors if we only have 1 variant and its title contains 'Default'.
+
+
+                // Auto-select first available variant on page load. Otherwise the product looks sold out.
+
+
+
+
+
+                $('.single-option-selector:eq(0)').val("DarkCyan").trigger('change');
+
+                $('.single-option-selector:eq(1)').val("Nitrile").trigger('change');
+
+
+
+
+
+
+
+
+
+
+
+
+
+                $('.product-single .single-option-selector').wrap('<div class="selector-arrow">');
+            });
+
+
+            // product zoom
+            function zoom(e) {
+                var zoomer = e.currentTarget;
+                e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+                e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+                x = offsetX / zoomer.offsetWidth * 100
+                y = offsetY / zoomer.offsetHeight * 100
+                zoomer.style.backgroundPosition = x + '% ' + y + '%';
+            }
+
+
+            // product timer js
+            $('.counter-event-7704599331072').countdown($('.counter-event-7704599331072').attr("data-enddate")).on(
+                'update.countdown',
+                function(event) {
+                    var $this = $(this).html(event.strftime('' +
+                        '<ul class="contdown_row"><li class="countdown_section"><span id="days" class="countdown_timer">%-D</span><span class="countdown_title">Day</span></li>' +
+                        '<li class="countdown_section"><span id="hours" class="countdown_timer">%H</span><span class="countdown_title">Hour</span></li>' +
+                        '<li class="countdown_section"><span id="minutes" class="countdown_timer">%M</span><span class="countdown_title">Min</span></li>' +
+                        '<li class="countdown_section"><span id="seconds" class="countdown_timer">%S</span><span class="countdown_title">Sec</span></li></ul>'
+                        ))
+                });
+
+            $(document).ready(function() {
+                $(".pro-detail-button button.add-to-cart").on('click', function() {
+                    window.setTimeout(function() {
+                        $("#cart.mini-cart").addClass("show");
+                        $(".mm-fullscreen-bg").addClass("active");
+                        $("body").addClass("hidden");
+                    }, 1000);
+                });
+                $(".shopping-cart-close i").on('click', function() {
+                    if ($('#cart.mini-cart').hasClass('show')) {
+                        $('#cart.mini-cart').removeClass('show');
+                    }
+                    $(".mm-fullscreen-bg").removeClass("active");
+                    $("body").removeClass("hidden");
+                });
+                $(".mm-fullscreen-bg").on('click', function() {
+                    $("#cart.mini-cart").removeClass("show");
+                    $(".mm-fullscreen-bg").removeClass("active");
+                });
+            });
+        </script>
 
 </body>
 

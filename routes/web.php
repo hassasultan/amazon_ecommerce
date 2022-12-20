@@ -43,3 +43,8 @@ Route::prefix('/admin')->group(function (){
         Route::get('/subcategory/by/category',[ProductController::class,'subcat'])->name('subcat.by.cat');
     });
 });
+Route::middleware(['checkuser'])->group(function () {
+    Route::get('/user/profile',[FrontendController::class,'profile'])->name('user.profile');
+    Route::post('/user/profile/update',[FrontendController::class,'updatePassword'])->name('user.profile.update');
+});
+

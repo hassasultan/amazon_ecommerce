@@ -4871,7 +4871,7 @@
 
                                                     </a>
                                                     <div class="product-label">
-                                                        <span class="percent-count">-{{ $row->discount }}%</span>
+                                                        <span class="percent-count">-{{ number_format($row->discount, 1) }}%</span>
                                                     </div>
                                                     <div class="product-add-cart">
                                                         {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}

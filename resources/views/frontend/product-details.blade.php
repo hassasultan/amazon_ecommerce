@@ -150,7 +150,7 @@
                                             <div class="price-box">
                                                 <span class="new-price" id="ProductPrice1">${{ $product->new_price }}</span><span
                                                     class="old-price" id="ComparePrice1">${{ $product->old_price }}</span>
-                                                <span class="percent-count" id="ProductDiscount1">{{ $product->discount }}</span>
+                                                <span class="percent-count" id="ProductDiscount1">{{ number_format($product->discount,1) }}</span>
 
                                             </div>
                                         </div>

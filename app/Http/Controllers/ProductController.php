@@ -67,7 +67,7 @@ class ProductController extends Controller
             }
             $product->old_price         = $request->old_price;
             $product->new_price         = $request->new_price;
-            $product->discount          = ((int)($request->old_price - $request->new_price)/(int)$request->new_price)*100;
+            $product->discount          = ((int)($request->old_price - $request->new_price)/(int)$request->old_price)*100;
             $product->slug              = $slug;
             $product->link              = $request->link;
             $product->status            = 1;

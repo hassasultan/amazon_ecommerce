@@ -3069,7 +3069,7 @@
                                                     <a class="pro-img"
                                                         href="{{ route('product.details', $row->slug) }}">
                                                         <img class="img-fluid img1"
-                                                            src="{{ asset('storage/' . $row->fea_img) }}"
+                                                            src="{{ asset('public/storage/' . $row->fea_img) }}"
                                                             alt="Drone camera">
 
                                                         <img class="img-fluid img2"

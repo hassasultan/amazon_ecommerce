@@ -186,15 +186,14 @@
                                                                         <div class="product-content">
                                                                             <div class="product-info">
                                                                                 <div class="pro-title">
-                                                                                    <a href="/collections/all/products/5g-smart-phone"
-                                                                                        title="5G smart phone">5G smart
-                                                                                        phone</a>
+                                                                                    <a href="{{ route('product.details', $row->slug) }}"
+                                                                                        title="5G smart phone">{{$row->title}}</a>
                                                                                 </div>
                                                                                 <div class="price-box">
                                                                                     <span class="new-price new-price-compare"
-                                                                                        id="ProductPrice">$23,600.00</span><span
+                                                                                        id="ProductPrice">${{$row->new_price}}</span><span
                                                                                         class="old-price"
-                                                                                        id="ComparePrice">$59,600.00</span>
+                                                                                        id="ComparePrice">${{$row->old_price}}</span>
                                                                                 </div>
 
                                                                                 <div class="product-ratting">

@@ -303,7 +303,7 @@
                             {
                                 html_collect += '<li class="menu-banner banner-hover">';
                                 html_collect += '    <a href="/collection/'+val['slug']+'" class="banner-img">';
-                                html_collect += '        <img src="{{ asset("storage/'+val['icon']+'") }}"';
+                                html_collect += '        <img src="{{ asset("storage/"'+val['icon']+') }}"';
                                 html_collect += '            class="img-fluid" alt="Laptops & notebooks">';
                                 html_collect += '    </a>';
                                 html_collect += '    <a href="/collection/'+val['slug']+'"';

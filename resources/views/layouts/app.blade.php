@@ -271,49 +271,49 @@
                     success: function (data) {
                         console.log(data);
                         $("#main-collapse-shop").html("");
-                        var your_html = '<div class="container p-0 ul">';
+                        var your_html = "<div class='container p-0 ul'>";
                             $.each(data, function (key, val) {
-                                your_html += '<li class="megamenu-li parant"><h2 class="sublink-title">'+val['name']+'</h2>';
-                                your_html +=  '<a href="/collection/'+val['slug']+'" class="sublink-title">';
-                                your_html +=        '<span class="sp-link-title">'+val['name']+'</span>';
-                                your_html +=        '<i class="fas fa-chevron-circle-down"></i>';
-                                your_html +=    '</a>';
-                                your_html +=    '<a data-bs-toggle="collapse" href="#main-collapse-'+val['slug']+'"';
-                                your_html +=        'class="sublink-title sublink-title-lg">';
-                                your_html +=        '<span class="spb-link-title">'+val['name']+'</span>';
-                                your_html +=        '<i class="fas fa-chevron-circle-down"></i>';
-                                your_html +=    '</a> <ul class="dropdown-supmenu collapse" id="main-collapse-'+val['slug']+'">';
+                                your_html += "<li class='megamenu-li parant'><h2 class='sublink-title'>"+val['name']+"</h2>";
+                                your_html +=  "<a href='/collection/"+val['slug']+"' class='sublink-title'>";
+                                your_html +=        "<span class='sp-link-title'>"+val['name']+"</span>";
+                                your_html +=        "<i class='fas fa-chevron-circle-down'></i>";
+                                your_html +=    "</a>";
+                                your_html +=    "<a data-bs-toggle='collapse' href='#main-collapse-"+val['slug']+"'";
+                                your_html +=        "class='sublink-title sublink-title-lg'>'";
+                                your_html +=        "<span class='spb-link-title'>"+val['name']+"</span>'";
+                                your_html +=        "<i class='fas fa-chevron-circle-down'></i>'";
+                                your_html +=    "</a> <ul class='dropdown-supmenu collapse' id='main-collapse-"+val['slug']+"'>";
                                 $.each(val['products'], function (index, item) {
-                                    your_html += '<li class="supmenu-li">';
-                                    your_html += '<a href="/product/'+item['slug']+'" class="suplink-title">';
-                                    your_html += '<span class="spbp-link-title">'+item['title']+'</span>';
-                                    your_html += '</a>';
-                                    your_html += '</li>';
+                                    your_html += "<li class='supmenu-li'>";
+                                    your_html += "<a href='/product/"+item['slug']+"' class='suplink-title'>";
+                                    your_html += "<span class='spbp-link-title'>"+item['title']+"</span>";
+                                    your_html += "</a>";
+                                    your_html += "</li>";
                                 });
-                                your_html += '</ul>';
-                                your_html += '</li>';
+                                your_html += "</ul>";
+                                your_html += "</li>";
                             });
                             your_html += '</div>';
                         $("#main-collapse-shop").append(your_html); //// For Append
                         //collection
                         $("#main-collapse-collection").html("");
-                        var html_collect = '<div class="container p-0 ul">';
+                        var html_collect = "<div class='container p-0 ul'>";
                         $.each(data, function (key, val) {
                             if(key < 3)
                             {
-                                html_collect += '<li class="menu-banner banner-hover">';
-                                html_collect += '    <a href="/collection/'+val['slug']+'" class="banner-img">';
-                                html_collect += '        <img src="{{ asset("storage/"'+val["icon"]+') }}"';
-                                html_collect += '            class="img-fluid" alt="Laptops & notebooks">';
-                                html_collect += '    </a>';
-                                html_collect += '    <a href="/collection/'+val['slug']+'"';
-                                html_collect += '        class="menu-banner-title">';
-                                html_collect += '        <span>'+val['name']+'</span>';
-                                html_collect += '    </a>';
-                                html_collect += '</li>';
+                                html_collect += "<li class='menu-banner banner-hover'>";
+                                html_collect += "    <a href='/collection/"+val['slug']+"' class='banner-img'>";
+                                html_collect += "        <img src='{{ asset('public/storage/')}}/"+val['icon']+"'";
+                                html_collect += "            class='img-fluid' alt='"+val['name']+"'>";
+                                html_collect += "    </a>";
+                                html_collect += "    <a href='/collection/"+val['slug']+"'";
+                                html_collect += "        class='menu-banner-title'>";
+                                html_collect += "        <span>"+val['name']+"</span>";
+                                html_collect += "    </a>";
+                                html_collect += "</li>";
                             }
                         });
-                        html_collect += '</div>';
+                        html_collect += "</div>";
                         $("#main-collapse-collection").append(html_collect); //// For Append
 
                     },

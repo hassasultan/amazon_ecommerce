@@ -3073,7 +3073,7 @@
                                                             alt="Drone camera">
 
                                                         <img class="img-fluid img2"
-                                                            src="@if ($row->singleImage != null) {{ asset('storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
+                                                            src="@if ($row->singleImage != null) {{ asset('public/storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
                                                             alt="Drone camera">
 
                                                     </a>

@@ -1,4 +1,4 @@
-<section class="top-notification-bar" >
+{{-- <section class="top-notification-bar" >
     <div class="container-fluid">
       <div class="row">
         <div class="col">
@@ -144,4 +144,4 @@
         display: contents;
       }
     }
-  </style>
+  </style> --}}

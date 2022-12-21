@@ -58,7 +58,7 @@
                                             <span class="sp-link-title">Home</span>
                                             <i class="far fa-home"></i>
                                         </a>
-                                        <ul class="dropdown-submenu collapse" id="main-collapse-home">
+                                        {{-- <ul class="dropdown-submenu collapse" id="main-collapse-home">
                                             <div class="container p-0 ul">
 
 
@@ -160,7 +160,7 @@
 
 
                                             </div>
-                                        </ul>
+                                        </ul> --}}
                                     </li>
 
                                     <script>
@@ -175,7 +175,7 @@
 
 
                                     <li class="menu-link parant">
-                                        <a href="/collections/all" class="link-title ">
+                                        <a href="{{ route('collection.all','all') }}" class="link-title ">
                                             <span class="sp-link-title">Shop</span>
                                             <i class="fas fa-chevron-circle-down"></i>
                                         </a>
@@ -411,7 +411,7 @@
 
 
                                     <li class="menu-link parant">
-                                        <a href="/collections" class="link-title ">
+                                        <a href="{{ route('collection.view') }}" class="link-title ">
                                             <span class="sp-link-title">Collection</span>
                                             <i class="fas fa-chevron-circle-down"></i>
                                         </a>
@@ -422,12 +422,6 @@
                                         </a>
                                         <ul class="dropdown-submenu collapse" id="main-collapse-collection">
                                             <div class="container p-0 ul">
-
-
-
-
-
-
 
                                                 <li class="menu-banner banner-hover">
                                                     <a href="/collections/laptops-notebooks" class="banner-img">
@@ -499,14 +493,14 @@
 
 
 
-                                    <li class="menu-link">
+                                    {{-- <li class="menu-link">
                                         <a href="/blogs/news" class="link-title " href="/blogs/news">
                                             <span class="sp-link-title">Blog</span>
                                         </a>
                                         <a href="/blogs/news" class="link-title link-title-lg">
                                             <span class="sp-link-title">Blog</span>
                                         </a>
-                                    </li>
+                                    </li> --}}
 
                                     <script>
                                         $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
@@ -519,7 +513,7 @@
 
 
 
-                                    <li class="menu-link parant">
+                                    {{-- <li class="menu-link parant">
                                         <a href="#" class="link-title ">
                                             <span class="sp-link-title">Pages</span>
                                             <i class="fas fa-chevron-circle-down"></i>
@@ -613,7 +607,7 @@
 
                                             </div>
                                         </ul>
-                                    </li>
+                                    </li> --}}
 
                                     <script>
                                         $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
@@ -2032,13 +2026,13 @@
                                                         <span class="sp-link-title">Collection</span>
                                                         <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
-                                                    <a href="#main-collapse-collection" data-bs-toggle="collapse"
+                                                    <a href="#main-collapse-collection2" data-bs-toggle="collapse"
                                                         class="link-title link-title-lg">
                                                         <span class="sp-link-title">Collection</span>
                                                         <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
                                                     <ul class="dropdown-submenu collapse"
-                                                        id="main-collapse-collection">
+                                                        id="main-collapse-collection2">
                                                         <div class="container p-0 ul">
 
 

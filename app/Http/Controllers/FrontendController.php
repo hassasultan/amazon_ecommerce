@@ -27,7 +27,6 @@ class FrontendController extends Controller
     public function details($slug)
     {
         $product = Product::with('images')->where('slug',$slug)->first();
-        // dd($product->toArray());
         return view('frontend.product-details',compact('product'));
     }
     public function profile()
@@ -56,8 +55,35 @@ class FrontendController extends Controller
         }
         else
         {
-            // dd($valid->errors());
             return redirect()->back()->with('error', $valid->errors());
         }
+    }
+    public function collection($slug)
+    {
+        $category = Category::with('products')->get();
+        $products = Product::with('singleImage')->where('status',1);
+        if($slug == "all")
+        {
+            $products = $products->get();
+        }
+        else
+        {
+            $find = Category::where('slug',$slug)->first();
+            $products = $products->where('category_id',$find->id)->get();
+        }
+
+        return view('frontend.collection',compact('category','products','slug'));
+    }
+    public function  collectionview()
+    {
+        $category = Category::with('products')->get();
+        return view('frontend.collection-view',compact('category'));
+    }
+    public function topCategory()
+    {
+        $category = Category::with(['products'=>function($query) {
+            return $query->limit(5);
+        }])->take(4)->get();
+        return $category;
     }
 }

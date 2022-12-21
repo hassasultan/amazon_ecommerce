@@ -16,4 +16,12 @@ class Category extends Model
         "icon",
         "status",
     ];
+    public function products()
+    {
+        return $this->hasMany(Product::class,'category_id','id');
+    }
+    public function subCategory()
+    {
+        return $this->hasMany(SubCategory::class,'category_id','id');
+    }
 }

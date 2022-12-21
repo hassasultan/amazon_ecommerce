@@ -27,6 +27,10 @@ Route::get('/product/{slug}', [FrontendController::class, 'details'])->name('pro
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('auth/google', [GoogleSocialiteController::class, 'redirectToGoogle']);
 Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback']);
+Route::get('/collection/{slug}',[FrontendController::class,'collection'])->name('collection.all');
+Route::get('/collections',[FrontendController::class,'collectionview'])->name('collection.view');
+Route::get('/all/Category',[FrontendController::class,'topCategory'])->name('category.all');
+
 
 Auth::routes();
 Route::prefix('/admin')->group(function (){

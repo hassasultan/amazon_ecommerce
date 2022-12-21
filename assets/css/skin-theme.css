@@ -532,6 +532,12 @@ button[disabled] {
     background-color: #6b9553
 }
 
+.deal-section .product-content .product-label span.sale,
+.single-product-wrap .product-label span.sale {
+    color: #fff;
+    background-color: #ee433f;
+}
+
 .single-product-wrap .product-label span.soldout-title {
     color: #fff;
     background-color: #ee433f;
@@ -552,6 +558,11 @@ button[disabled] {
 
 .deal-section .product-content .product-label span.percent-count,
 .single-product-wrap .product-label span.percent-count {
+    left: 15px
+}
+
+.deal-section .product-content .product-label span.sale,
+.single-product-wrap .product-label span.sale {
     right: 15px
 }
 
@@ -561,12 +572,28 @@ button[disabled] {
     visibility: visible
 }
 
+.deal-section .product-content:hover .product-label span.sale,
+.single-product-wrap:hover .product-image .product-label span.sale {
+    opacity: 0;
+    visibility: visible
+}
 .single-product-wrap .product-image .product-label span.new-sale-title,
 .single-product-wrap .product-image .product-label span.percent-count,
 .single-product-wrap:hover .product-image .product-label span.new-title,
 .single-product-wrap:hover .product-image .product-label span.sale-title,
 .deal-section .product-content .product-label span.percent-count,
 .single-product-wrap:hover .product-image .product-label span.percent-count {
+    -webkit-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s
+}
+
+.single-product-wrap .product-image .product-label span.new-sale-title,
+.single-product-wrap .product-image .product-label span.sale,
+.single-product-wrap:hover .product-image .product-label span.new-title,
+.single-product-wrap:hover .product-image .product-label span.sale-title,
+.deal-section .product-content .product-label span.sale,
+.single-product-wrap:hover .product-image .product-label span.sale {
     -webkit-transition: all .3s ease-in-out 0s;
     -o-transition: all .3s ease-in-out 0s;
     transition: all .3s ease-in-out 0s

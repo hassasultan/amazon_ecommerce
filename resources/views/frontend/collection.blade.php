@@ -129,7 +129,7 @@
 
 
 
-                                                                                <span class="percent-count">-{{ $row->discount }}%</span>
+                                                                                <span class="percent-count">-{{ number_format($row->discount,1) }}%</span>
                                                                                 <span class="sale">SALE</span>
 
 

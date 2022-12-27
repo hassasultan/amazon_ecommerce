@@ -441,7 +441,7 @@
                                                                     </div>
                                                                     <div class="col-10 p-0">
                                                                         <a href="{{ route('product.details', $row->slug) }}"
-                                                                            title="Drone camera">{{ $row->title }}</a>
+                                                                            title="Drone camera">{{ \Illuminate\Support\Str::limit($row->title, 15, $end='...') }}</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -3150,7 +3150,7 @@
                                                     <div class="product-info">
                                                         <div class="pro-title">
                                                             <a href="{{ route('product.details', $row->slug) }}"
-                                                                title="Drone camera">{{ $row->title }}</a>
+                                                                title="Drone camera">{{ \Illuminate\Support\Str::limit($row->title, 15, $end='...') }}</a>
                                                         </div>
                                                         <div class="price-box">
                                                             <span class="new-price new-price-compare"

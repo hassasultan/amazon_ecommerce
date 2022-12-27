@@ -265,7 +265,8 @@
         <script>
             function liked(id)
             {
-                var url = "/add-to-like/"+id;
+                var url = "{{ URL('/') }}";
+                    url = url+"/add-to-like/"+id;
                 $.ajax({
                     url: url,
                     type: 'GET',

@@ -263,6 +263,34 @@
     <script src="{{ asset('assets/js/slick.min.js') }}"></script>
 
         <script>
+            function liked(id)
+            {
+                var url = "/add-to-like/"+id;
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    dataType: 'json', // added data type
+                    success: function(res) {
+                        console.log(res);
+                        if(res['message'] == "like")
+                        {
+                            $("#thumb-icon-"+id).removeClass("far");
+                            $("#thumb-icon-"+id).addClass("fas");
+                            $("#thumb-icon-"+id).css("color","#ed1c24");
+                            $("#like-count").html("("+res['count']+")");
+                        }
+                        if(res['message'] == "unlike")
+                        {
+                            $("#thumb-icon-"+id).removeClass("fas");
+                            $("#thumb-icon-"+id).addClass("far");
+                            $("#thumb-icon-"+id).css("color","inherit");
+                            $("#like-count").html("("+res['count']+")");
+
+                        }
+
+                    }
+                });
+            }
             $(document).ready(function() {
                 $.ajax({
                     type: "get",

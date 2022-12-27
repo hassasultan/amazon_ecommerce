@@ -1018,7 +1018,14 @@
                                     title="Likes">
                                     <span class="wishlist-title">Likes</span>
                                     <span class="wishlist-icon"><i class="far fa-thumbs-up"></i></span>
-                                    <span class="wishlist-counter">0</span>
+                                    {{-- {{ dd(count(auth()->user()->wishlistCount->toArray())) }} --}}
+                                    <span class="wishlist-counter1" id="like-count">
+                                        @if (auth()->check())
+                                            ({{ count(auth()->user()->wishlistCount->toArray()) }})
+                                        @else
+                                            (0)
+                                        @endif
+                                    </span>
                                 </a>
                                 <style>
                                     a.header-wishlist-btn {

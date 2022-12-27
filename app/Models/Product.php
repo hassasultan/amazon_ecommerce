@@ -31,5 +31,10 @@ class Product extends Model
     {
         return $this->belongsTo(ProductImage::class,'id','product_id');
     }
+    public function wishlist()
+    {
+        return $this->belongsTo(WishList::class,'id','product_id')->where('user_id',auth()->user()->id);
+    }
+
 
 }

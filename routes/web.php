@@ -10,6 +10,7 @@ use App\Http\Controllers\CoupenController;
 use App\Http\Controllers\AssignCoupenController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GoogleSocialiteController;
+use App\Http\Controllers\WishListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,5 +51,6 @@ Route::prefix('/admin')->group(function (){
 Route::middleware(['checkuser'])->group(function () {
     Route::get('/user/profile',[FrontendController::class,'profile'])->name('user.profile');
     Route::post('/user/profile/update',[FrontendController::class,'updatePassword'])->name('user.profile.update');
+    Route::get('/add-to-like/{id}',[WishListController::class,'add'])->name('add.to.like');
 });
 

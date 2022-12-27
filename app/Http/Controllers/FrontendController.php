@@ -18,6 +18,7 @@ class FrontendController extends Controller
     //
     public function index()
     {
+        // dd(count(auth()->user()->wishlistCount->toArray()));
         $featured = Product::where('status',1)->where('IsFeature',1)->get();
         $product = Product::where('status',1)->where('IsFeature',0)->get();
         $category = Category::where('status',1)->get();

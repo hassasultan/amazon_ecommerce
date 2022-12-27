@@ -41,4 +41,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function wishlistCount()
+    {
+        return $this->hasMany(WishList::class,'user_id','id');
+    }
 }

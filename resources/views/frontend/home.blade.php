@@ -3149,8 +3149,23 @@
                                                 <div class="product-content">
                                                     <div class="product-info">
                                                         <div class="pro-title">
-                                                            <a href="{{ route('product.details', $row->slug) }}"
-                                                                title="Drone camera">{{ \Illuminate\Support\Str::limit($row->title, 15, $end='...') }}</a>
+                                                            <div class="row">
+                                                                <div class="col-1">
+                                                                    @if (auth()->check())
+                                                                        @if ($row->wishlist == null)
+                                                                            <a href="javascript:void(0)" class="text-start ms-2" onclick="liked({{ $row->id }})" alt="like"><i class="far fa-thumbs-up  fs-5" id="thumb-icon-{{ $row->id }}"></i></a>
+                                                                        @else
+                                                                            <a href="javascript:void(0)" class="text-start ms-2" onclick="liked({{ $row->id }})" alt="Unlike"><i class="fas fa-thumbs-up  fs-5"  id="thumb-icon-{{ $row->id }}" style="color: #ed1c24;"></i></a>
+                                                                        @endif
+                                                                    @else
+                                                                        <a href="{{ route('login') }}" class="text-start ms-2"><i class="far fa-thumbs-up  fs-5"></i></a>
+                                                                    @endif
+                                                                </div>
+                                                                <div class="col-10 p-0">
+                                                                    <a href="{{ route('product.details', $row->slug) }}"
+                                                                        title="Drone camera">{{ \Illuminate\Support\Str::limit($row->title, 15, $end='...') }}</a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="price-box">
                                                             <span class="new-price new-price-compare"

@@ -37,7 +37,7 @@ class SectionController extends Controller
             'product_id'         => 'required',
             'description'   => 'string',
         ]);
-        $slug  = Str::slug($request->title);
+        $slug  = Str::slug($request->name);
         try
         {
             DB::beginTransaction();
@@ -91,6 +91,8 @@ class SectionController extends Controller
             {
                 $section->description = $request->description;
             }
+            $section->slug = $slug;
+
             $section->save();
             if($request->has('product_id'))
             {

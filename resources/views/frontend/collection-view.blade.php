@@ -43,7 +43,7 @@
                                             <div class="content">
                                                 <h6>{{ $row->name }}</h6>
                                             </div>
-                                            <a href="{{ route('collection.all',$row->slug) }}">Shop now</a>
+                                            <a href="{{ route('collection.all',['type'=>'section','slug'=>$row->slug]) }}">Shop now</a>
                                         </div>
                                     </li>
                                 @endforeach

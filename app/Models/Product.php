@@ -35,6 +35,14 @@ class Product extends Model
     {
         return $this->belongsTo(WishList::class,'id','product_id')->where('user_id',auth()->user()->id);
     }
-
+    public function section()
+    {
+        return $this->belongsToMany(
+            Section::class,
+            PivotSectionProduct::class,
+            'product_id',
+            'section_id',
+        );
+    }
 
 }

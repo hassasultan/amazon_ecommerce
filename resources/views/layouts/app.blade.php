@@ -301,9 +301,9 @@
                         console.log(data);
                         $("#main-collapse-shop").html("");
                         var your_html = "<div class='container p-0 ul'>";
-                            $.each(data, function (key, val) {
+                            $.each(data['section'], function (key, val) {
                                 your_html += "<li class='megamenu-li parant'><h2 class='sublink-title'>"+val['name']+"</h2>";
-                                your_html +=  "<a href='/collection/"+val['slug']+"' class='sublink-title'>";
+                                your_html +=  "<a href='/collection/section/"+val['slug']+"' class='sublink-title'>";
                                 your_html +=        "<span class='sp-link-title'>"+val['name']+"</span>";
                                 your_html +=        "<i class='fas fa-chevron-circle-down'></i>";
                                 your_html +=    "</a>";
@@ -327,15 +327,15 @@
                         //collection
                         $("#main-collapse-collection").html("");
                         var html_collect = "<div class='container p-0 ul'>";
-                        $.each(data, function (key, val) {
+                        $.each(data['category'], function (key, val) {
                             if(key < 3)
                             {
                                 html_collect += "<li class='menu-banner banner-hover'>";
-                                html_collect += "    <a href='/collection/"+val['slug']+"' class='banner-img'>";
+                                html_collect += "    <a href='/collection/category/"+val['slug']+"' class='banner-img'>";
                                 html_collect += "        <img src='{{ asset('public/storage/')}}/"+val['icon']+"'";
                                 html_collect += "            class='img-fluid' alt='"+val['name']+"'>";
                                 html_collect += "    </a>";
-                                html_collect += "    <a href='/collection/"+val['slug']+"'";
+                                html_collect += "    <a href='/collection/category/"+val['slug']+"'";
                                 html_collect += "        class='menu-banner-title'>";
                                 html_collect += "        <span>"+val['name']+"</span>";
                                 html_collect += "    </a>";

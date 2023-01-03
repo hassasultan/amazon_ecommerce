@@ -59,21 +59,30 @@ class FrontendController extends Controller
             return redirect()->back()->with('error', $valid->errors());
         }
     }
-    public function collection($slug)
+    public function collection($type,$slug)
     {
         $category = Category::with('products')->get();
         $products = Product::with('singleImage')->where('status',1);
-        if($slug == "all")
+        $section = Section::with('products')->where('status',1)->get();
+        if($type == "products" && $slug == "all")
         {
             $products = $products->get();
         }
-        else
+        elseif($type == "category")
         {
             $find = Category::where('slug',$slug)->first();
             $products = $products->where('category_id',$find->id)->get();
         }
+        elseif($type == "section")
+        {
+            $find = Section::where('slug',$slug)->first();
+            $products = $products->with('section')->whereHas('section',function($query)use($slug){
+                $query->where('slug',$slug);
+            })->get();
+            // dd($products->toArray());
+        }
 
-        return view('frontend.collection',compact('category','products','slug'));
+        return view('frontend.collection',compact('category','products','slug','section'));
     }
     public function  collectionview()
     {
@@ -82,9 +91,12 @@ class FrontendController extends Controller
     }
     public function topCategory()
     {
-        $category = Category::with(['products'=>function($query) {
+        $data['category'] = Category::with(['products'=>function($query) {
             return $query->limit(5);
         }])->take(4)->get();
-        return $category;
+        $data['section'] = Section::with(['products'=>function($query) {
+            return $query->where('status',1)->limit(5);
+        }])->take(4)->get();
+        return $data;
     }
 }

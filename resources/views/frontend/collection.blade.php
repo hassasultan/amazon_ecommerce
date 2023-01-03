@@ -41,7 +41,8 @@
                                         <p>
                                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                             Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                            unknown printer took a galley of type and scrambled it to make a type specimen book
+                                            unknown printer took a galley of type and scrambled it to make a type specimen
+                                            book
                                         </p>
 
                                     </div>
@@ -117,19 +118,20 @@
                                                                             <a class="pro-img"
                                                                                 href="{{ route('product.details', $row->slug) }}">
                                                                                 <img class="img-fluid img1"
-                                                                                    src="{{ asset('public/storage/'.$row->fea_img) }}"
-                                                                                    alt="{{ $row->title }}">
+                                                                                    src="{{ asset('public/storage/' . $row->fea_img) }}"
+                                                                                    alt="{{ $row->title }}" width="297px" height="297px">
 
                                                                                 <img class="img-fluid img2"
-                                                                                    src="@if($row->singleImage != NULL){{ asset('public/storage/'.$row->singleImage->image) }} @else {{ asset('public/storage/'.$row->fea_img) }} @endif"
-                                                                                    alt="{{ $row->title }}">
+                                                                                    src="@if ($row->singleImage != null) {{ asset('public/storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
+                                                                                    alt="{{ $row->title }}" width="297px" height="297px">
 
                                                                             </a>
                                                                             <div class="product-label">
 
 
 
-                                                                                <span class="percent-count">-{{ number_format($row->discount,1) }}%</span>
+                                                                                <span
+                                                                                    class="percent-count">-{{ number_format($row->discount, 1) }}%</span>
                                                                                 <span class="sale">SALE</span>
 
 
@@ -140,7 +142,8 @@
                                                                                 <a href="javascript:void(0);"
                                                                                     onclick="Shopify.addItem(42671428763904, 1); return false;"
                                                                                     class="add-to-cart ajax-spin-cart">
-                                                                                    <span class="cart-title">+Add to cart</span>
+                                                                                    <span class="cart-title">+Add to
+                                                                                        cart</span>
                                                                                     <span class="cart-loading load-anim"><i
                                                                                             class="ri-loader-4-line"></i></span>
                                                                                     <span class="cart-added"><i
@@ -156,7 +159,8 @@
                                                                                     data-product-handle="5g-smart-phone">
                                                                                     <span class="add-wishlist"><i
                                                                                             class="ri-heart-line"></i></span>
-                                                                                    <span class="loading-wishlist load-anim"><i
+                                                                                    <span
+                                                                                        class="loading-wishlist load-anim"><i
                                                                                             class="ri-loader-4-line"></i></span>
                                                                                     <span class="remove-wishlist"><i
                                                                                             class="ri-heart-fill"></i></span>
@@ -172,7 +176,8 @@
                                                                                     <span>
                                                                                         <span class="cart-title"><i
                                                                                                 class="ri-shopping-bag-3-line"></i></span>
-                                                                                        <span class="cart-loading load-anim"><i
+                                                                                        <span
+                                                                                            class="cart-loading load-anim"><i
                                                                                                 class="ri-loader-4-line"></i></span>
                                                                                         <span class="cart-added"><i
                                                                                                 class="ri-check-line"></i></span>
@@ -187,13 +192,14 @@
                                                                             <div class="product-info">
                                                                                 <div class="pro-title">
                                                                                     <a href="{{ route('product.details', $row->slug) }}"
-                                                                                        title="5G smart phone">{{$row->title}}</a>
+                                                                                        title="5G smart phone">{{ $row->title }}</a>
                                                                                 </div>
                                                                                 <div class="price-box">
-                                                                                    <span class="new-price new-price-compare"
-                                                                                        id="ProductPrice">${{$row->new_price}}</span><span
+                                                                                    <span
+                                                                                        class="new-price new-price-compare"
+                                                                                        id="ProductPrice">${{ $row->new_price }}</span><span
                                                                                         class="old-price"
-                                                                                        id="ComparePrice">${{$row->old_price}}</span>
+                                                                                        id="ComparePrice">${{ $row->old_price }}</span>
                                                                                 </div>
 
                                                                                 <div class="product-ratting">
@@ -218,7 +224,8 @@
                                                                                 </div>
 
                                                                                 <p class="product-description">Lorem ipsum
-                                                                                    dolor sit amet, consectetur adipiscing elit.
+                                                                                    dolor sit amet, consectetur adipiscing
+                                                                                    elit.
                                                                                     Nulla luctus metus nec ipsum sagittis
                                                                                     dapibus. Suspendisse e...</p>
                                                                             </div>
@@ -242,7 +249,8 @@
                                                                                     data-product-handle="5g-smart-phone">
                                                                                     <span class="add-wishlist"><i
                                                                                             class="ri-heart-line"></i></span>
-                                                                                    <span class="loading-wishlist load-anim"><i
+                                                                                    <span
+                                                                                        class="loading-wishlist load-anim"><i
                                                                                             class="ri-loader-4-line"></i></span>
                                                                                     <span class="remove-wishlist"><i
                                                                                             class="ri-heart-fill"></i></span>
@@ -281,662 +289,55 @@
                                                 <ul class="scrollbar">
                                                     @foreach ($category as $row)
                                                         <li><input type="checkbox" class="cust-checkbox"
-                                                                name="{{ $row->name }}" @if($row->slug == $slug) checked @endif><a
-                                                                href="{{ route('collection.all',$row->slug) }}"
+                                                                name="{{ $row->name }}"
+                                                                @if ($row->slug == $slug) checked @endif><a
+                                                                href="{{ route('collection.all', ['type'=>'category','slug'=>$row->slug]) }}"
                                                                 class="cust-checkbox-label" title="{{ $row->name }}">
                                                                 <span class="filter-name">{{ $row->name }}</span>
-                                                                <span class="count-check">({{ count($row->products) }})</span>
-                                                                <span class="cust-check @if($row->slug == $slug) cust-check2 @endif"></span>
+                                                                <span
+                                                                    class="count-check">({{ count($row->products) }})</span>
+                                                                <span
+                                                                    class="cust-check @if ($row->slug == $slug) cust-check2 @endif"></span>
                                                             </a>
                                                         </li>
                                                     @endforeach
                                                 </ul>
                                             </div>
                                         </div>
-                                        {{-- <facet-filters-form class="facets">
-                                            <form id="FacetFiltersForm" class="facets__form">
-                                                <div id="FacetsWrapperDesktop" class="facets__wrapper">
-                                                    <div class="shop-sidebar sidebar-filter">
-                                                        <h6 class="title">Filter</h6>
-
-                                                        <div class="facets-header">
-                                                            <span id="ProductCount" class="product-count-text">11
-                                                                products
-                                                            </span>
-                                                            <span class="loading-spinner">
-                                                                <svg aria-hidden="true" focusable="false"
-                                                                    role="presentation" class="spinner"
-                                                                    viewBox="0 0 66 66"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <circle class="path" fill="none"
-                                                                        stroke-width="6" cx="33" cy="33"
-                                                                        r="30"></circle>
-                                                                </svg>
-                                                            </span>
-                                                        </div>
-                                                        <div class="active-filter active-facets-desktop">
-                                                            <ul>
-                                                                <li>
-
-
-
-
-
-
-                                                                    <facet-remove>
-                                                                        <a href="/collections/all"
-                                                                            class="clear-all">Clear all</a>
-                                                                    </facet-remove>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="shop-sidebar sidebar-wedget disclosure-has-popup facets__disclosure js-filter availability"
-                                                        data-index="1">
-                                                        <h6 class="title">Availability</h6>
-                                                        <a class="title" data-bs-toggle="collapse"
-                                                            href="#collapse-1">Availability</a>
-                                                        <div class="facets-header">
-                                                            <span class="facets__selected no-js-hidden">0 selected</span>
-                                                            <facet-remove>
-                                                                <a href="/collections/all"
-                                                                    class="facets__reset">Reset</a>
-                                                            </facet-remove>
-                                                        </div>
-                                                        <div class="collapse filter-element" id="collapse-1">
-                                                            <ul class="multiple-filters scrollbar">
-                                                                <li class="availability">
-                                                                    <label for="Filter-Availability-1"
-                                                                        class="cust-checkbox-label availability in-stock"
-                                                                        title="In stock">
-                                                                        <input type="checkbox"
-                                                                            id="Filter-Availability-1"
-                                                                            name="filter.v.availability" value="1"
-                                                                            class="cust-checkbox">
-                                                                        <span class="filter-name">In stock</span>
-                                                                        <span class="count-check">(11)</span>
-                                                                        <span class="cust-check"></span>
-                                                                    </label>
-                                                                </li>
-                                                                <li class="availability">
-                                                                    <label for="Filter-Availability-2"
-                                                                        class="cust-checkbox-label availability out-of-stock"
-                                                                        title="Out of stock">
-                                                                        <input type="checkbox"
-                                                                            id="Filter-Availability-2"
-                                                                            name="filter.v.availability" value="0"
-                                                                            class="cust-checkbox">
-                                                                        <span class="filter-name">Out of stock</span>
-                                                                        <span class="count-check">(4)</span>
-                                                                        <span class="cust-check"></span>
-                                                                    </label>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-
-
-
-
-                                                    <div class="shop-sidebar sidebar-wedget disclosure-has-popup facets__disclosure js-filter"
-                                                        data-index="2">
-                                                        <h6 class="title">Price</h6>
-                                                        <a class="title" data-bs-toggle="collapse"
-                                                            href="#collapse-2">Price</a>
-                                                        <div class="facets-header"><span
-                                                                class="facets__selected no-js-hidden">The highest price is
-                                                                $87,000.00</span>
-                                                            <facet-remove>
-                                                                <a href="/collections/all"
-                                                                    class="facets__reset">Reset</a>
-                                                            </facet-remove>
-                                                        </div>
-                                                        <div class="collapse filter-element" id="collapse-2">
-                                                            <price-range class="price-range">
-
-                                                                <div class="price-range-group group-range"
-                                                                    style="--range-min: 0.0%; --range-max: 100.0%">
-                                                                    <input type="range" aria-label="From"
-                                                                        class="range" min="0" max="87000"
-                                                                        value="0">
-                                                                    <input type="range" aria-label="To"
-                                                                        class="range" min="0" max="87000"
-                                                                        value="87000">
-                                                                </div>
-                                                                <div class="price-input-group group-input">
-                                                                    <div class="price-range-input input-prefix">
-                                                                        <label class="input-prefix-label">From</label>
-                                                                        <span class="input-prefix-value">$</span>
-                                                                        <input aria-label="From"
-                                                                            class="input-prefix-field" type="number"
-                                                                            inputmode="numeric"
-                                                                            name="filter.v.price.gte" min="0"
-                                                                            max="87000" placeholder="0">
-                                                                    </div>
-                                                                    <span class="price-range-delimeter">-</span>
-                                                                    <div class="price-range-input input-prefix">
-                                                                        <label class="input-prefix-label">To</label>
-                                                                        <span class="input-prefix-value">$</span>
-                                                                        <input aria-label="To"
-                                                                            class="input-prefix-field" type="number"
-                                                                            inputmode="numeric"
-                                                                            name="filter.v.price.lte" min="0"
-                                                                            max="87000" placeholder="87000">
-                                                                    </div>
-                                                                </div>
-                                                            </price-range>
-                                                        </div>
-
-
-
-                                                        <div class="shop-sidebar sidebar-wedget disclosure-has-popup facets__disclosure js-filter product type"
-                                                            data-index="3">
-                                                            <h6 class="title">Product type</h6>
-                                                            <a class="title" data-bs-toggle="collapse"
-                                                                href="#collapse-3">Product type</a>
-                                                            <div class="facets-header">
-                                                                <span class="facets__selected no-js-hidden">0
-                                                                    selected</span>
-                                                                <facet-remove>
-                                                                    <a href="/collections/all"
-                                                                        class="facets__reset">Reset</a>
-                                                                </facet-remove>
-                                                            </div>
-                                                            <div class="collapse filter-element" id="collapse-3">
-                                                                <ul class="multiple-filters scrollbar">
-                                                                    <li class="product type">
-                                                                        <label for="Filter-Product type-1"
-                                                                            class="cust-checkbox-label product type cameras"
-                                                                            title="Cameras">
-                                                                            <input type="checkbox"
-                                                                                id="Filter-Product type-1"
-                                                                                name="filter.p.product_type"
-                                                                                value="Cameras" class="cust-checkbox">
-                                                                            <span class="filter-name">Cameras</span>
-                                                                            <span class="count-check">(6)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="product type">
-                                                                        <label for="Filter-Product type-2"
-                                                                            class="cust-checkbox-label product type laptops"
-                                                                            title="Laptops">
-                                                                            <input type="checkbox"
-                                                                                id="Filter-Product type-2"
-                                                                                name="filter.p.product_type"
-                                                                                value="Laptops" class="cust-checkbox">
-                                                                            <span class="filter-name">Laptops</span>
-                                                                            <span class="count-check">(4)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="product type">
-                                                                        <label for="Filter-Product type-3"
-                                                                            class="cust-checkbox-label product type saris-&amp;-lehengas"
-                                                                            title="Saris &amp; Lehengas">
-                                                                            <input type="checkbox"
-                                                                                id="Filter-Product type-3"
-                                                                                name="filter.p.product_type"
-                                                                                value="Saris &amp; Lehengas"
-                                                                                class="cust-checkbox">
-                                                                            <span class="filter-name">Saris &amp;
-                                                                                Lehengas</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-
-
-
-                                                        <div class="shop-sidebar sidebar-wedget disclosure-has-popup facets__disclosure js-filter brand"
-                                                            data-index="4">
-                                                            <h6 class="title">Brand</h6>
-                                                            <a class="title" data-bs-toggle="collapse"
-                                                                href="#collapse-4">Brand</a>
-                                                            <div class="facets-header">
-                                                                <span class="facets__selected no-js-hidden">0
-                                                                    selected</span>
-                                                                <facet-remove>
-                                                                    <a href="/collections/all"
-                                                                        class="facets__reset">Reset</a>
-                                                                </facet-remove>
-                                                            </div>
-                                                            <div class="collapse filter-element" id="collapse-4">
-                                                                <ul class="multiple-filters scrollbar">
-                                                                    <li class="brand">
-                                                                        <label for="Filter-Brand-1"
-                                                                            class="cust-checkbox-label brand electron"
-                                                                            title="Electron">
-                                                                            <input type="checkbox" id="Filter-Brand-1"
-                                                                                name="filter.p.vendor" value="Electron"
-                                                                                class="cust-checkbox">
-                                                                            <span class="filter-name">Electron</span>
-                                                                            <span class="count-check">(11)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-
-
-
-                                                        <div class="shop-sidebar sidebar-wedget disclosure-has-popup facets__disclosure js-filter color"
-                                                            data-index="5">
-                                                            <h6 class="title">Color</h6>
-                                                            <a class="title" data-bs-toggle="collapse"
-                                                                href="#collapse-5">Color</a>
-                                                            <div class="facets-header">
-                                                                <span class="facets__selected no-js-hidden">0
-                                                                    selected</span>
-                                                                <facet-remove>
-                                                                    <a href="/collections/all"
-                                                                        class="facets__reset">Reset</a>
-                                                                </facet-remove>
-                                                            </div>
-                                                            <div class="collapse filter-element" id="collapse-5">
-                                                                <ul class="multiple-filters scrollbar">
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-1"
-                                                                            class="cust-checkbox-label color darkcyan"
-                                                                            title="DarkCyan">
-                                                                            <input type="checkbox" id="Filter-Color-1"
-                                                                                name="filter.v.option.color"
-                                                                                value="DarkCyan" class="cust-checkbox">
-                                                                            <span class="filter-name">DarkCyan</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-2"
-                                                                            class="cust-checkbox-label color darkgoldenrod"
-                                                                            title="DarkGoldenRod">
-                                                                            <input type="checkbox" id="Filter-Color-2"
-                                                                                name="filter.v.option.color"
-                                                                                value="DarkGoldenRod"
-                                                                                class="cust-checkbox">
-                                                                            <span class="filter-name">DarkGoldenRod</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-3"
-                                                                            class="cust-checkbox-label color darkkhaki"
-                                                                            title="DarkKhaki">
-                                                                            <input type="checkbox" id="Filter-Color-3"
-                                                                                name="filter.v.option.color"
-                                                                                value="DarkKhaki" class="cust-checkbox">
-                                                                            <span class="filter-name">DarkKhaki</span>
-                                                                            <span class="count-check">(2)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-4"
-                                                                            class="cust-checkbox-label color indianred"
-                                                                            title="IndianRed">
-                                                                            <input type="checkbox" id="Filter-Color-4"
-                                                                                name="filter.v.option.color"
-                                                                                value="IndianRed" class="cust-checkbox">
-                                                                            <span class="filter-name">IndianRed</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-5"
-                                                                            class="cust-checkbox-label color khaki"
-                                                                            title="Khaki">
-                                                                            <input type="checkbox" id="Filter-Color-5"
-                                                                                name="filter.v.option.color"
-                                                                                value="Khaki" class="cust-checkbox">
-                                                                            <span class="filter-name">Khaki</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-6"
-                                                                            class="cust-checkbox-label color lightcoral"
-                                                                            title="LightCoral">
-                                                                            <input type="checkbox" id="Filter-Color-6"
-                                                                                name="filter.v.option.color"
-                                                                                value="LightCoral"
-                                                                                class="cust-checkbox">
-                                                                            <span class="filter-name">LightCoral</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-7"
-                                                                            class="cust-checkbox-label color lightpink"
-                                                                            title="LightPink">
-                                                                            <input type="checkbox" id="Filter-Color-7"
-                                                                                name="filter.v.option.color"
-                                                                                value="LightPink" class="cust-checkbox">
-                                                                            <span class="filter-name">LightPink</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-8"
-                                                                            class="cust-checkbox-label color lightsalmon"
-                                                                            title="LightSalmon">
-                                                                            <input type="checkbox" id="Filter-Color-8"
-                                                                                name="filter.v.option.color"
-                                                                                value="LightSalmon"
-                                                                                class="cust-checkbox">
-                                                                            <span class="filter-name">LightSalmon</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-9"
-                                                                            class="cust-checkbox-label color lightseagreen"
-                                                                            title="LightSeaGreen">
-                                                                            <input type="checkbox" id="Filter-Color-9"
-                                                                                name="filter.v.option.color"
-                                                                                value="LightSeaGreen"
-                                                                                class="cust-checkbox">
-                                                                            <span class="filter-name">LightSeaGreen</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-10"
-                                                                            class="cust-checkbox-label color lightskyblue"
-                                                                            title="LightSkyBlue">
-                                                                            <input type="checkbox" id="Filter-Color-10"
-                                                                                name="filter.v.option.color"
-                                                                                value="LightSkyBlue"
-                                                                                class="cust-checkbox">
-                                                                            <span class="filter-name">LightSkyBlue</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-11"
-                                                                            class="cust-checkbox-label color lightslategray"
-                                                                            title="LightSlateGray">
-                                                                            <input type="checkbox" id="Filter-Color-11"
-                                                                                name="filter.v.option.color"
-                                                                                value="LightSlateGray"
-                                                                                class="cust-checkbox">
-                                                                            <span
-                                                                                class="filter-name">LightSlateGray</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-12"
-                                                                            class="cust-checkbox-label color navajowhite"
-                                                                            title="NavajoWhite">
-                                                                            <input type="checkbox" id="Filter-Color-12"
-                                                                                name="filter.v.option.color"
-                                                                                value="NavajoWhite"
-                                                                                class="cust-checkbox">
-                                                                            <span class="filter-name">NavajoWhite</span>
-                                                                            <span class="count-check">(2)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-13"
-                                                                            class="cust-checkbox-label color oldlace"
-                                                                            title="OldLace">
-                                                                            <input type="checkbox" id="Filter-Color-13"
-                                                                                name="filter.v.option.color"
-                                                                                value="OldLace" class="cust-checkbox">
-                                                                            <span class="filter-name">OldLace</span>
-                                                                            <span class="count-check">(2)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-14"
-                                                                            class="cust-checkbox-label color palegoldenrod"
-                                                                            title="PaleGoldenRod">
-                                                                            <input type="checkbox" id="Filter-Color-14"
-                                                                                name="filter.v.option.color"
-                                                                                value="PaleGoldenRod"
-                                                                                class="cust-checkbox">
-                                                                            <span class="filter-name">PaleGoldenRod</span>
-                                                                            <span class="count-check">(3)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-15"
-                                                                            class="cust-checkbox-label color palevioletred"
-                                                                            title="PaleVioletRed">
-                                                                            <input type="checkbox" id="Filter-Color-15"
-                                                                                name="filter.v.option.color"
-                                                                                value="PaleVioletRed"
-                                                                                class="cust-checkbox">
-                                                                            <span class="filter-name">PaleVioletRed</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-16"
-                                                                            class="cust-checkbox-label color peachpuff"
-                                                                            title="PeachPuff">
-                                                                            <input type="checkbox" id="Filter-Color-16"
-                                                                                name="filter.v.option.color"
-                                                                                value="PeachPuff" class="cust-checkbox">
-                                                                            <span class="filter-name">PeachPuff</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-17"
-                                                                            class="cust-checkbox-label color salmon"
-                                                                            title="Salmon">
-                                                                            <input type="checkbox" id="Filter-Color-17"
-                                                                                name="filter.v.option.color"
-                                                                                value="Salmon" class="cust-checkbox">
-                                                                            <span class="filter-name">Salmon</span>
-                                                                            <span class="count-check">(4)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-18"
-                                                                            class="cust-checkbox-label color seashell"
-                                                                            title="SeaShell">
-                                                                            <input type="checkbox" id="Filter-Color-18"
-                                                                                name="filter.v.option.color"
-                                                                                value="SeaShell" class="cust-checkbox">
-                                                                            <span class="filter-name">SeaShell</span>
-                                                                            <span class="count-check">(4)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-19"
-                                                                            class="cust-checkbox-label color silver"
-                                                                            title="Silver">
-                                                                            <input type="checkbox" id="Filter-Color-19"
-                                                                                name="filter.v.option.color"
-                                                                                value="Silver" class="cust-checkbox">
-                                                                            <span class="filter-name">Silver</span>
-                                                                            <span class="count-check">(3)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="color">
-                                                                        <label for="Filter-Color-20"
-                                                                            class="cust-checkbox-label color silver"
-                                                                            title="silver">
-                                                                            <input type="checkbox" id="Filter-Color-20"
-                                                                                name="filter.v.option.color"
-                                                                                value="silver" class="cust-checkbox">
-                                                                            <span class="filter-name">silver</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-
-
-
-                                                        <div class="shop-sidebar sidebar-wedget disclosure-has-popup facets__disclosure js-filter material"
-                                                            data-index="6">
-                                                            <h6 class="title">Material</h6>
-                                                            <a class="title" data-bs-toggle="collapse"
-                                                                href="#collapse-6">Material</a>
-                                                            <div class="facets-header">
-                                                                <span class="facets__selected no-js-hidden">0
-                                                                    selected</span>
-                                                                <facet-remove>
-                                                                    <a href="/collections/all"
-                                                                        class="facets__reset">Reset</a>
-                                                                </facet-remove>
-                                                            </div>
-                                                            <div class="collapse filter-element" id="collapse-6">
-                                                                <ul class="multiple-filters scrollbar">
-                                                                    <li class="material">
-                                                                        <label for="Filter-Material-1"
-                                                                            class="cust-checkbox-label material denim"
-                                                                            title="Denim">
-                                                                            <input type="checkbox"
-                                                                                id="Filter-Material-1"
-                                                                                name="filter.v.option.material"
-                                                                                value="Denim" class="cust-checkbox">
-                                                                            <span class="filter-name">Denim</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="material">
-                                                                        <label for="Filter-Material-2"
-                                                                            class="cust-checkbox-label material latex"
-                                                                            title="Latex">
-                                                                            <input type="checkbox"
-                                                                                id="Filter-Material-2"
-                                                                                name="filter.v.option.material"
-                                                                                value="Latex" class="cust-checkbox">
-                                                                            <span class="filter-name">Latex</span>
-                                                                            <span class="count-check">(2)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="material">
-                                                                        <label for="Filter-Material-3"
-                                                                            class="cust-checkbox-label material metal"
-                                                                            title="Metal">
-                                                                            <input type="checkbox"
-                                                                                id="Filter-Material-3"
-                                                                                name="filter.v.option.material"
-                                                                                value="Metal" class="cust-checkbox">
-                                                                            <span class="filter-name">Metal</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="material">
-                                                                        <label for="Filter-Material-4"
-                                                                            class="cust-checkbox-label material nitrile"
-                                                                            title="Nitrile">
-                                                                            <input type="checkbox"
-                                                                                id="Filter-Material-4"
-                                                                                name="filter.v.option.material"
-                                                                                value="Nitrile" class="cust-checkbox">
-                                                                            <span class="filter-name">Nitrile</span>
-                                                                            <span class="count-check">(2)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="material">
-                                                                        <label for="Filter-Material-5"
-                                                                            class="cust-checkbox-label material paper-towel"
-                                                                            title="Paper towel">
-                                                                            <input type="checkbox"
-                                                                                id="Filter-Material-5"
-                                                                                name="filter.v.option.material"
-                                                                                value="Paper towel"
-                                                                                class="cust-checkbox">
-                                                                            <span class="filter-name">Paper towel</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="material">
-                                                                        <label for="Filter-Material-6"
-                                                                            class="cust-checkbox-label material rubber"
-                                                                            title="Rubber">
-                                                                            <input type="checkbox"
-                                                                                id="Filter-Material-6"
-                                                                                name="filter.v.option.material"
-                                                                                value="Rubber" class="cust-checkbox">
-                                                                            <span class="filter-name">Rubber</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="material">
-                                                                        <label for="Filter-Material-7"
-                                                                            class="cust-checkbox-label material silicone"
-                                                                            title="Silicone">
-                                                                            <input type="checkbox"
-                                                                                id="Filter-Material-7"
-                                                                                name="filter.v.option.material"
-                                                                                value="Silicone" class="cust-checkbox">
-                                                                            <span class="filter-name">Silicone</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                    <li class="material">
-                                                                        <label for="Filter-Material-8"
-                                                                            class="cust-checkbox-label material stainless-steel"
-                                                                            title="Stainless steel">
-                                                                            <input type="checkbox"
-                                                                                id="Filter-Material-8"
-                                                                                name="filter.v.option.material"
-                                                                                value="Stainless steel"
-                                                                                class="cust-checkbox">
-                                                                            <span class="filter-name">Stainless
-                                                                                steel</span>
-                                                                            <span class="count-check">(1)</span>
-                                                                            <span class="cust-check"></span>
-                                                                        </label>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </facet-filters-form> --}}
+                                        <div class="shop-sidebar sidebar-wedget shop-collection">
+                                            <h6 class="title">Collections</h6>
+                                            <a class="title" data-bs-toggle="collapse"
+                                                href="#collapse-Categories">Collections</a>
+                                            <div class="collapse filter-element" id="collapse-Categories">
+                                                <ul class="scrollbar">
+                                                    @foreach ($section as $row)
+                                                        <li><input type="checkbox" class="cust-checkbox"
+                                                                name="{{ $row->name }}"
+                                                                @if ($row->slug == $slug) checked @endif><a
+                                                                href="{{ route('collection.all', ['type'=>'section','slug'=>$row->slug]) }}"
+                                                                class="cust-checkbox-label" title="{{ $row->name }}">
+                                                                <span class="filter-name">{{ $row->name }}</span>
+                                                                <span
+                                                                    class="count-check">({{ count($row->products) }})</span>
+                                                                <span
+                                                                    class="cust-check @if ($row->slug == $slug) cust-check2 @endif"></span>
+                                                            </a>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <script
-                                    src="//cdn.shopify.com/s/files/1/0641/3431/6288/t/2/assets/collection-sidebar.js?v=172590729733297730601650619279"
-                                    defer="defer"></script>
                             </div>
+                            <script
+                                src="//cdn.shopify.com/s/files/1/0641/3431/6288/t/2/assets/collection-sidebar.js?v=172590729733297730601650619279"
+                                defer="defer"></script>
                         </div>
                     </div>
                 </div>
-            </section>
+        </div>
+        </section>
         </div>
     </main>
     <script>

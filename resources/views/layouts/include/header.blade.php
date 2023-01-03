@@ -175,7 +175,7 @@
 
 
                                     <li class="menu-link parant">
-                                        <a href="{{ route('collection.all','all') }}" class="link-title ">
+                                        <a href="{{ route('collection.all',['type'=> "products",'slug'=>'all']) }}" class="link-title ">
                                             <span class="sp-link-title">Shop</span>
                                             <i class="fas fa-chevron-circle-down"></i>
                                         </a>

@@ -119,11 +119,11 @@
                                                                                 href="{{ route('product.details', $row->slug) }}">
                                                                                 <img class="img-fluid img1"
                                                                                     src="{{ asset('public/storage/' . $row->fea_img) }}"
-                                                                                    alt="{{ $row->title }}" width="297px" height="297px">
+                                                                                    alt="{{ $row->title }}" width="297px" height="297px" style="width: 297px; height: 297px;">
 
                                                                                 <img class="img-fluid img2"
                                                                                     src="@if ($row->singleImage != null) {{ asset('public/storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
-                                                                                    alt="{{ $row->title }}" width="297px" height="297px">
+                                                                                    alt="{{ $row->title }}" width="297px" height="297px" style="width: 297px; height: 297px;">
 
                                                                             </a>
                                                                             <div class="product-label">

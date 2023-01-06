@@ -23,6 +23,15 @@ class Product extends Model
         "link",
         "status",
     ];
+    public function coupon()
+    {
+        return $this->belongsToMany(
+            Coupen::class,
+            PivotProductCoupen::class,
+            'product_id',
+            'coupen_id',
+        );
+    }
     public function images()
     {
         return $this->hasMany(ProductImage::class,'product_id','id');

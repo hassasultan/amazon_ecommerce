@@ -27,7 +27,8 @@ class FrontendController extends Controller
     }
     public function details($slug)
     {
-        $product = Product::with('images')->where('slug',$slug)->first();
+        $product = Product::with('images','coupon')->where('slug',$slug)->first();
+        // dd($product->toArray());
         return view('frontend.product-details',compact('product'));
     }
     public function profile()

@@ -1,6 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+    .modalCopiedbtn{
+        background-color: var(--font-color-primary);
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 18px 30px;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+    .modalCopiedbtn:hover
+    {
+        background-color: #fff;
+        color: var(--font-color-primary);
+        border: 1px solid var(--font-color-primary);
+    }
+</style>
     <main role="main">
         <div id="shopify-section-template--15924305166592__product-template" class="shopify-section">
             <section class="product-details-page">
@@ -22,13 +39,14 @@
                                     <button class="full-view"><i class="fas fa-expand"></i></button>
                                     <div class="slider-big">
                                         <div class="slick-slide"
-                                            data-image="{{ asset('public/storage/'.$product->fea_img) }}"
+                                            data-image="{{ asset('public/storage/' . $product->fea_img) }}"
                                             data-image-id="image-fea-{{ $product->id }}">
-                                            <a href="{{ asset('public/storage/'.$product->fea_img) }}"
-                                                class="product-single__thumbnail" data-image-id="image-fea-{{ $product->id }}">
+                                            <a href="{{ asset('public/storage/' . $product->fea_img) }}"
+                                                class="product-single__thumbnail"
+                                                data-image-id="image-fea-{{ $product->id }}">
                                                 <figure class="zoom" onmousemove="zoom(event)"
-                                                    style="background-image: url({{ asset('public/storage/'.$product->fea_img) }})">
-                                                    <img src="{{ asset('public/storage/'.$product->fea_img) }}"
+                                                    style="background-image: url({{ asset('public/storage/' . $product->fea_img) }})">
+                                                    <img src="{{ asset('public/storage/' . $product->fea_img) }}"
                                                         class="img-fluid product-featured-media" id=""
                                                         alt="Drone camera">
                                                 </figure>
@@ -36,13 +54,14 @@
                                         </div>
                                         @foreach ($product->images as $row)
                                             <div class="slick-slide"
-                                                data-image="{{ asset('public/storage/'.$row->image) }}"
+                                                data-image="{{ asset('public/storage/' . $row->image) }}"
                                                 data-image-id="image-{{ $row->id }}">
-                                                <a href="{{ asset('public/storage/'.$row->image) }}"
-                                                    class="product-single__thumbnail" data-image-id="image-{{ $row->id }}">
+                                                <a href="{{ asset('public/storage/' . $row->image) }}"
+                                                    class="product-single__thumbnail"
+                                                    data-image-id="image-{{ $row->id }}">
                                                     <figure class="zoom" onmousemove="zoom(event)"
-                                                        style="background-image: url({{ asset('public/storage/'.$row->image) }})">
-                                                        <img src="{{ asset('public/storage/'.$row->image) }}"
+                                                        style="background-image: url({{ asset('public/storage/' . $row->image) }})">
+                                                        <img src="{{ asset('public/storage/' . $row->image) }}"
                                                             class="img-fluid product-featured-media" id=""
                                                             alt="Drone camera">
                                                     </figure>
@@ -116,18 +135,18 @@
                                 <div class="pro-slider">
                                     <div class="slider-small pro-detail-slider" id="pro-detail-slider">
                                         <div class="slick-slide"
-                                            data-image="{{ asset('public/storage/'.$product->fea_img) }}"
+                                            data-image="{{ asset('public/storage/' . $product->fea_img) }}"
                                             data-image-id="image-fea-{{ $product->id }}">
                                             <a href="javascript:void(0)" class="product-single__thumbnail">
-                                                <img src="{{ asset('public/storage/'.$product->fea_img) }}"
+                                                <img src="{{ asset('public/storage/' . $product->fea_img) }}"
                                                     class="img-fluid" alt="Drone camera"></a>
                                         </div>
                                         @foreach ($product->images as $row)
                                             <div class="slick-slide"
-                                                data-image="{{ asset('public/storage/'.$row->image) }}"
+                                                data-image="{{ asset('public/storage/' . $row->image) }}"
                                                 data-image-id="image-{{ $row->id }}">
                                                 <a href="javascript:void(0)" class="product-single__thumbnail">
-                                                    <img src="{{ asset('public/storage/'.$row->image) }}"
+                                                    <img src="{{ asset('public/storage/' . $row->image) }}"
                                                         class="img-fluid" alt="Drone camera"></a>
                                             </div>
                                         @endforeach
@@ -148,9 +167,11 @@
                                     <div class="product-info">
                                         <div class="pro-prlb pro-sale">
                                             <div class="price-box">
-                                                <span class="new-price" id="ProductPrice1">${{ $product->new_price }}</span><span
+                                                <span class="new-price"
+                                                    id="ProductPrice1">${{ $product->new_price }}</span><span
                                                     class="old-price" id="ComparePrice1">${{ $product->old_price }}</span>
-                                                <span class="percent-count" id="ProductDiscount1">{{ number_format($product->discount,1) }}</span>
+                                                <span class="percent-count"
+                                                    id="ProductDiscount1">{{ number_format($product->discount, 1) }}</span>
 
                                             </div>
                                         </div>
@@ -159,6 +180,7 @@
                                         <div class="product-ratting pro-sale">
                                             <span class="shopify-product-reviews-badge" data-id="7704599331072"></span>
                                         </div>
+
                                     </div>
                                     {{-- <div class="product-info">
                                         <div class="product-inventory" id="variant-inventory">
@@ -548,9 +570,6 @@
                                     <div class="product-info">
                                         <div class="share-icons">
                                             <h6>Share:</h6>
-
-
-
                                             <ul class="pro_social_link">
                                                 <li>
                                                     <a target="_blank"
@@ -574,12 +593,11 @@
 
                                             </ul>
 
-
                                         </div>
                                     </div>
                                     <div class="product-info">
                                         <div class="product-payment-image">
-                                            <a href="javascript:void(0)" class="payment-icon">
+                                            {{-- <a href="javascript:void(0)" class="payment-icon">
 
 
                                                 <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"
@@ -643,7 +661,12 @@
                                                 </svg>
 
 
-                                            </a>
+                                            </a> --}}
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdrop">
+                                                Get Coupon
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -753,11 +776,6 @@
             </section>
         </div>
         <div id="shopify-section-template--15924305166592__related-product" class="shopify-section">
-
-
-
-
-
             <section class="related-product">
                 <div class="container">
                     <div class="row">
@@ -1399,7 +1417,6 @@
                     </div>
                 </div>
             </section>
-
             <script>
                 var swiper = new Swiper('#related-slider-template--15924305166592__related-product', {
                     slidesPerColumn: 1,
@@ -1439,11 +1456,40 @@
                     }
                 });
             </script>
-
-
-
-
-
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-center">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center" id="staticBackdropLabel">Fullfilled by Amazon</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-12 text-center">
+                            <i class="fas fa-check-circle" style="font-size:5.9rem; color:#ed1c24;"></i>
+                            <h4 class="mt-2"  style="color:#ed1c24;">You've saved ${{ $product->old_price - $product->new_price }}</h4>
+                            <p>Coupon may expire at anytime. Use it now!</p>
+                            {{-- <b>{{ $product->coupon[0]->code }}</b> --}}
+                            <input id="para" disabled value="{{ $product->coupon[0]->code }}" style="text-align:center;border: none; font-weight:bold; font-size:1.5rem; color:#000; padding:0;"/>
+                        </div>
+                        <div class="col-12 mt-3 mb-3">
+                            <a class="modalCopiedbtn" href="javascript:void(0);" onclick="copyToClipboard('para')">
+                                Copy and Go to Amazon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+    <script>
+        function copyToClipboard(elementId)
+        {
+            $( "#para" ).select();
+            document.execCommand("Copy");
+            window.open( "{{ $product->link }}");
+        }
+    </script>
 @endsection

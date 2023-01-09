@@ -268,7 +268,7 @@
                                                                 </li>
                                                             @endforeach
                                                         </ul>
-                                                        <div class="d-flex justify-content-center pt-5">
+                                                        <div class="d-flex justify-content-center pt-5 pagination">
                                                             {{ $products->links() }}
                                                         </div>
                                                     </div>

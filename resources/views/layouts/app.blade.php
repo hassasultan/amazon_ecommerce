@@ -326,7 +326,9 @@
                         $("#main-collapse-shop").append(your_html); //// For Append
                         //collection
                         $("#main-collapse-collection").html("");
+                        $("#collapse-find-categories").html("");
                         var html_collect = "<div class='container p-0 ul'>";
+                        var footer_html = "";
                         $.each(data['category'], function (key, val) {
                             if(key < 3)
                             {
@@ -341,9 +343,12 @@
                                 html_collect += "    </a>";
                                 html_collect += "</li>";
                             }
+
+                            footer_html += "<li class='ftsublink-li'> <a href='/collection/category/"+val['slug']+"' class='ft-sublink'>"+val['name']+"</a></li>";
                         });
                         html_collect += "</div>";
                         $("#main-collapse-collection").append(html_collect); //// For Append
+                        $("#collapse-find-categories").append(footer_html); //// For Append
 
                     },
                     error: function() {

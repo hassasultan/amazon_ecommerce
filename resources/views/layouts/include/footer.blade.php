@@ -9,7 +9,7 @@
 
                             <a href="https://electon6-store.myshopify.com" class="footer-logo">
                                 <img style="max-width: 145px;"
-                                    src="//cdn.shopify.com/s/files/1/0641/3431/6288/files/logo_1236eee3-f4c2-42e4-8f8c-2ed05bf5d6db.png?v=1650977792"
+                                    src="{{ asset('assets/images/Fainal_.png') }}"
                                     class="img-fluid" alt="electon6-store">
                             </a>
                             <style>
@@ -137,7 +137,7 @@
 
 
 
-                            <li class="ftsublink-li">
+                            {{-- <li class="ftsublink-li">
                                 <a href="/collections/desktop" class="ft-sublink">Desktop</a>
                             </li>
 
@@ -169,7 +169,7 @@
 
                             <li class="ftsublink-li">
                                 <a href="/collections/phone-pdas" class="ft-sublink">Phone & PDAS</a>
-                            </li>
+                            </li> --}}
 
 
                         </ul>
@@ -671,8 +671,7 @@
                     <ul class="ft-bottom">
                         <li class="copy-right">
                             <div class="richtext">
-                                <p>Copyright © 2022 Ecommerce by <a href="https://electon6-store.myshopify.com/"
-                                        title="https://electon6-store.myshopify.com/">spacingtech</a></p>
+                                <p>Copyright © 2023 -2030  by <a href="{{route('index')}}">Koupon Deals</a></p>
                             </div>
                         </li>
                         <li class="payment">

@@ -41,7 +41,7 @@
                                 <ul class="social-icon">
 
                                     <li class="facebook">
-                                        <a style="color: #ffffff" href="https://www.facebook.com/">
+                                        <a style="color: #ffffff" href="https://www.facebook.com/profile.php?id=100089285282894">
                                             <i class="ri-facebook-fill"></i>
                                         </a>
                                     </li>
@@ -49,7 +49,7 @@
 
 
                                     <li class="twitter">
-                                        <a style="color: #ffffff" href="https://twitter.com/">
+                                        <a style="color: #ffffff" href="https://twitter.com/Koupons_Deals">
                                             <i class="ri-twitter-fill"></i>
                                         </a>
                                     </li>
@@ -57,7 +57,7 @@
 
 
                                     <li class="gplus">
-                                        <a style="color: #ffffff" href="https://in.pinterest.com/">
+                                        <a style="color: #ffffff" href="https://www.pinterest.com/koupondeals/">
                                             <i class="ri-pinterest-fill"></i>
                                         </a>
                                     </li>
@@ -65,10 +65,22 @@
 
 
                                     <li class="pinterest">
-                                        <a style="color: #ffffff" href="https://www.instagram.com/">
+                                        <a style="color: #ffffff" href="https://www.instagram.com/koupondeals">
                                             <i class="ri-instagram-line"></i>
                                         </a>
                                     </li>
+
+                                    <li class="pinterest">
+                                        <a style="color: #ffffff" href="https://youtube.com/@koupondeals">
+                                            <i class="ri-youtube-line"></i>
+                                        </a>
+                                    </li>
+
+                                    {{-- <li class="pinterest">
+                                        <a style="color: #ffffff" href="https://www.tiktok.com/@koupondeals">
+                                            <i class="ri-tiktok-line"></i>
+                                        </a>
+                                    </li> --}}
 
                                 </ul>
                                 <style>

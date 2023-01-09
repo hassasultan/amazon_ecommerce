@@ -67,19 +67,19 @@ class FrontendController extends Controller
         $section = Section::with('products')->where('status',1)->get();
         if($type == "products" && $slug == "all")
         {
-            $products = $products->paginate(10);
+            $products = $products->paginate(9);
         }
         elseif($type == "category")
         {
             $find = Category::where('slug',$slug)->first();
-            $products = $products->where('category_id',$find->id)->paginate(10);
+            $products = $products->where('category_id',$find->id)->paginate(9);
         }
         elseif($type == "section")
         {
             $find = Section::where('slug',$slug)->first();
             $products = $products->with('section')->whereHas('section',function($query)use($slug){
                 $query->where('slug',$slug);
-            })->paginate(10);
+            })->paginate(9);
             // dd($products->toArray());
         }
 

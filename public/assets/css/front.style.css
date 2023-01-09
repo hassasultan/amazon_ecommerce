@@ -5974,4 +5974,22 @@ ul.grid li .collection-content a:hover {
         visibility: visible;
     }
 }
+.flat-social #social-links
+{
+    margin: 0;
+}
+.flat-social #social-links>ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+.flat-social #social-links>ul>li>a
+{
+    padding: 7px;
+}
+.flat-social #social-links>ul>li>a>span
+{
+    font-size: 1.25rem !important;
+}
 /*# sourceMappingURL=/s/files/1/0641/3431/6288/t/2/assets/style.css.map?v=101277586707833005891650976613 */

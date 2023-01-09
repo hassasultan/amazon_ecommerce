@@ -192,7 +192,7 @@
                                                                             <div class="product-info">
                                                                                 <div class="pro-title">
                                                                                     <a href="{{ route('product.details', $row->slug) }}"
-                                                                                        title="5G smart phone">{{ $row->title }}</a>
+                                                                                        title="5G smart phone">{{ \Illuminate\Support\Str::limit($row->title, 15, $end = '...') }}</a>
                                                                                 </div>
                                                                                 <div class="price-box">
                                                                                     <span
@@ -229,43 +229,48 @@
                                                                                     Nulla luctus metus nec ipsum sagittis
                                                                                     dapibus. Suspendisse e...</p>
                                                                             </div>
-                                                                            <div class="product-action">
+                                                                            <div class="product-info mt-3">
+                                                                                <div class="row">
+                                                                                    <div class="col-4 text-start ps-4">
+                                                                                        @if (auth()->check())
+                                                                                            @if ($row->wishlist == null)
+                                                                                                <a href="javascript:void(0)"
+                                                                                                    class="text-start ms-2"
+                                                                                                    onclick="liked({{ $row->id }})"
+                                                                                                    alt="like" style="padding: 8px;"><i
+                                                                                                        class="far fa-thumbs-up  fs-5"
+                                                                                                        id="thumb-icon-{{ $row->id }}"></i></a>
+                                                                                            @else
+                                                                                                <a href="javascript:void(0)"
+                                                                                                    class="text-start ms-2"
+                                                                                                    onclick="liked({{ $row->id }})"
+                                                                                                    alt="Unlike"  style="padding: 8px;"><i
+                                                                                                        class="fas fa-thumbs-up  fs-5"
+                                                                                                        id="thumb-icon-{{ $row->id }}"
+                                                                                                        style="color: #ed1c24;"></i></a>
+                                                                                            @endif
+                                                                                        @else
+                                                                                            <a href="{{ route('login') }}"
+                                                                                                class="text-start ms-2"  style="padding: 8px;"><i
+                                                                                                    class="far fa-thumbs-up  fs-5"></i></a>
+                                                                                        @endif
+                                                                                    </div>
+                                                                                    {{-- <div class="col-6 p-0">
+                                                                                    </div> --}}
+                                                                                    <div class="col-8 flat-social text-end">
+                                                                                        {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
 
-                                                                                <a href="javascript:void(0);"
-                                                                                    onclick="Shopify.addItem(42671428763904, 1); return false;"
-                                                                                    class="add-to-cart ajax-spin-cart">
-                                                                                    <span class="cart-title"><i
-                                                                                            class="ri-shopping-cart-line"></i></span>
-                                                                                    <span class="cart-loading load-anim"><i
-                                                                                            class="ri-loader-4-line"></i></span>
-                                                                                    <span class="cart-added"><i
-                                                                                            class="ri-check-line"></i></span>
-                                                                                    <span class="cart-unavailable"><i
-                                                                                            class="ri-alert-line"></i></span>
-                                                                                </a>
-
-                                                                                <a href="javascript:void(0)"
-                                                                                    class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                                                    data-product-handle="5g-smart-phone">
-                                                                                    <span class="add-wishlist"><i
-                                                                                            class="ri-heart-line"></i></span>
-                                                                                    <span
-                                                                                        class="loading-wishlist load-anim"><i
-                                                                                            class="ri-loader-4-line"></i></span>
-                                                                                    <span class="remove-wishlist"><i
-                                                                                            class="ri-heart-fill"></i></span>
-                                                                                </a>
-                                                                                <a href="javascript:void(0);"
-                                                                                    onclick="quiqview('5g-smart-phone')"
-                                                                                    class="quick-view">
-                                                                                    <i class="ri-eye-line"></i>
-                                                                                </a>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </li>
                                                             @endforeach
                                                         </ul>
+                                                        <div class="d-flex justify-content-center pt-5">
+                                                            {{ $products->links() }}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

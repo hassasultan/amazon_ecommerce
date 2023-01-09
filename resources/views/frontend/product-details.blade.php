@@ -570,7 +570,11 @@
                                     <div class="product-info">
                                         <div class="share-icons">
                                             <h6>Share:</h6>
-                                            <ul class="pro_social_link">
+                                            <div class="col-8 flat-social text-end">
+                                                {!! Share::page(route('product.details', $product->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
+
+                                            </div>
+                                            {{-- <ul class="pro_social_link">
                                                 <li>
                                                     <a target="_blank"
                                                         href="//www.facebook.com/sharer.php?u=https://electon6-store.myshopify.com/products/drone-camera"
@@ -591,7 +595,7 @@
                                                             class="ri-pinterest-fill"></i></a>
                                                 </li>
 
-                                            </ul>
+                                            </ul> --}}
 
                                         </div>
                                     </div>

@@ -346,9 +346,6 @@
                         </div>
 
                         <div class="tab-content tabs">
-
-
-
                             <div class="tab-pane fade active show" id="tab-5da1d9d0-c890-4438-87bc-6819abcbcf2a"
                                 role="tabpanel">
                                 <div class="feture_pro_tab swiper-container"
@@ -362,88 +359,34 @@
                                                             href="{{ route('product.details', $row->slug) }}">
                                                             <img class="img-fluid img1"
                                                                 src="{{ asset('public/storage/' . $row->fea_img) }}"
-                                                                alt="Drone camera" width="297px" height="297px" style="width: 297px; height: 297px;">
+                                                                alt="Drone camera" width="297px" height="297px"
+                                                                style="width: 297px; height: 297px;">
 
                                                             <img class="img-fluid img2"
                                                                 src="@if ($row->singleImage != null) {{ asset('public/storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
-                                                                alt="Drone camera" width="297px" height="297px" style="width: 297px; height: 297px;">
+                                                                alt="Drone camera" width="297px" height="297px"
+                                                                style="width: 297px; height: 297px;">
 
                                                         </a>
                                                         <div class="product-label">
                                                             <span
                                                                 class="percent-count">-{{ number_format($row->discount, 1) }}%</span>
-                                                        <span class="sale">SALE</span>
+                                                            <span class="sale">SALE</span>
 
                                                         </div>
-                                                        <div class="product-add-cart">
+                                                        {{-- <div class="product-add-cart">
                                                             {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
-
-                                                            <a href="javascript:void(0);"
-                                                                onclick="Shopify.addItem(42671430041856, 1); return false;"
-                                                                class="add-to-cart ajax-spin-cart">
-                                                                {{-- <span class="cart-title">+Add to cart</span>
-                                                            <span class="cart-loading load-anim"><i
-                                                                    class="ri-loader-4-line"></i></span>
-                                                            <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                            <span class="cart-unavailable"><i
-                                                                    class="ri-alert-line"></i></span> --}}
-                                                            </a>
-
                                                         </div>
                                                         <div class="product-action">
                                                             {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
 
-                                                            <a href="javascript:void(0)"
-                                                                class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                                data-product-handle="drone-camera">
-                                                                <span class="add-wishlist"><i
-                                                                        class="ri-heart-line"></i></span>
-                                                                <span class="loading-wishlist load-anim"><i
-                                                                        class="ri-loader-4-line"></i></span>
-                                                                <span class="remove-wishlist"><i
-                                                                        class="ri-heart-fill"></i></span>
-                                                            </a>
-                                                            <a href="javascript:void(0);"
-                                                                onclick="quiqview('drone-camera')" class="quick-view">
-                                                                <i class="ri-eye-line"></i>
-                                                            </a>
-                                                            <a href="javascript:void(0);"
-                                                                onclick="Shopify.addItem(42671430041856, 1); return false;"
-                                                                class="add-to-cart ajax-spin-cart">
-                                                                <span>
-                                                                    <span class="cart-title"><i
-                                                                            class="fas fa-shopping-cart"></i></span>
-                                                                    <span class="cart-loading load-anim"><i
-                                                                            class="ri-loader-4-line"></i></span>
-                                                                    <span class="cart-added"><i
-                                                                            class="ri-check-line"></i></span>
-                                                                    <span class="cart-unavailable"><i
-                                                                            class="ri-alert-line"></i></span>
-                                                                </span>
-                                                            </a>
-
-                                                        </div>
+                                                        </div> --}}
                                                     </div>
                                                     <div class="product-content">
                                                         <div class="product-info">
                                                             <div class="pro-title">
-                                                                <div class="row">
-                                                                    <div class="col-1">
-                                                                        @if (auth()->check())
-                                                                            @if ($row->wishlist == null)
-                                                                                <a href="javascript:void(0)" class="text-start ms-2" onclick="liked({{ $row->id }})" alt="like"><i class="far fa-thumbs-up  fs-5" id="thumb-icon-{{ $row->id }}"></i></a>
-                                                                            @else
-                                                                                <a href="javascript:void(0)" class="text-start ms-2" onclick="liked({{ $row->id }})" alt="Unlike"><i class="fas fa-thumbs-up  fs-5"  id="thumb-icon-{{ $row->id }}" style="color: #ed1c24;"></i></a>
-                                                                            @endif
-                                                                        @else
-                                                                            <a href="{{ route('login') }}" class="text-start ms-2"><i class="far fa-thumbs-up  fs-5"></i></a>
-                                                                        @endif
-                                                                    </div>
-                                                                    <div class="col-10 p-0">
-                                                                        <a href="{{ route('product.details', $row->slug) }}"
-                                                                            title="Drone camera">{{ \Illuminate\Support\Str::limit($row->title, 15, $end='...') }}</a>
-                                                                    </div>
-                                                                </div>
+                                                                <a href="{{ route('product.details', $row->slug) }}"
+                                                                    title="Drone camera">{{ \Illuminate\Support\Str::limit($row->title, 15, $end = '...') }}</a>
                                                             </div>
                                                             <div class="price-box">
 
@@ -453,46 +396,40 @@
                                                                     id="ComparePrice2">${{ $row->old_price }}</span>
                                                             </div>
 
-                                                            <div class="product-ratting">
-                                                                <span class="shopify-product-reviews-badge"
-                                                                    data-id="7704599331072"></span>
-                                                            </div>
-
-                                                            <p class="product-description">Lorem ipsum dolor sit amet,
-                                                                consectetur
-                                                                adipiscing elit. Nulla luctus metus nec ipsum sagittis
-                                                                dapibus.
-                                                                Suspendisse e...</p>
                                                         </div>
-                                                        <div class="product-action">
+                                                        <div class="product-info mt-3">
+                                                            <div class="row">
+                                                                <div class="col-4 text-start ps-4">
+                                                                    @if (auth()->check())
+                                                                        @if ($row->wishlist == null)
+                                                                            <a href="javascript:void(0)"
+                                                                                class="text-start ms-2"
+                                                                                onclick="liked({{ $row->id }})"
+                                                                                alt="like" style="padding: 8px;"><i
+                                                                                    class="far fa-thumbs-up  fs-5"
+                                                                                    id="thumb-icon-{{ $row->id }}"></i></a>
+                                                                        @else
+                                                                            <a href="javascript:void(0)"
+                                                                                class="text-start ms-2"
+                                                                                onclick="liked({{ $row->id }})"
+                                                                                alt="Unlike"  style="padding: 8px;"><i
+                                                                                    class="fas fa-thumbs-up  fs-5"
+                                                                                    id="thumb-icon-{{ $row->id }}"
+                                                                                    style="color: #ed1c24;"></i></a>
+                                                                        @endif
+                                                                    @else
+                                                                        <a href="{{ route('login') }}"
+                                                                            class="text-start ms-2"  style="padding: 8px;"><i
+                                                                                class="far fa-thumbs-up  fs-5"></i></a>
+                                                                    @endif
+                                                                </div>
+                                                                {{-- <div class="col-6 p-0">
+                                                                </div> --}}
+                                                                <div class="col-8 flat-social text-end">
+                                                                    {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
 
-                                                            <a href="javascript:void(0);"
-                                                                onclick="Shopify.addItem(42671430041856, 1); return false;"
-                                                                class="add-to-cart ajax-spin-cart">
-                                                                <span class="cart-title"><i
-                                                                        class="ri-shopping-cart-line"></i></span>
-                                                                <span class="cart-loading load-anim"><i
-                                                                        class="ri-loader-4-line"></i></span>
-                                                                <span class="cart-added"><i
-                                                                        class="ri-check-line"></i></span>
-                                                                <span class="cart-unavailable"><i
-                                                                        class="ri-alert-line"></i></span>
-                                                            </a>
-
-                                                            <a href="javascript:void(0)"
-                                                                class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                                data-product-handle="drone-camera">
-                                                                <span class="add-wishlist"><i
-                                                                        class="ri-heart-line"></i></span>
-                                                                <span class="loading-wishlist load-anim"><i
-                                                                        class="ri-loader-4-line"></i></span>
-                                                                <span class="remove-wishlist"><i
-                                                                        class="ri-heart-fill"></i></span>
-                                                            </a>
-                                                            <a href="javascript:void(0);"
-                                                                onclick="quiqview('drone-camera')" class="quick-view">
-                                                                <i class="ri-eye-line"></i>
-                                                            </a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3080,143 +3017,89 @@
                                 <div class="swiper-wrapper">
                                     @foreach ($featured as $row)
                                         <div class="swiper-slide">
-                                            <div class="single-product-wrap">
-                                                <div class="product-image">
-                                                    <a class="pro-img"
-                                                        href="{{ route('product.details', $row->slug) }}">
-                                                        <img class="img-fluid img1"
-                                                            src="{{ asset('public/storage/' . $row->fea_img) }}"
-                                                            alt="Drone camera" width="297px" height="297px" style="width: 297px; height: 297px;">
+                                            <div class="swiper-slide">
+                                                <div class="single-product-wrap">
+                                                    <div class="product-image">
+                                                        <a class="pro-img"
+                                                            href="{{ route('product.details', $row->slug) }}">
+                                                            <img class="img-fluid img1"
+                                                                src="{{ asset('public/storage/' . $row->fea_img) }}"
+                                                                alt="Drone camera" width="297px" height="297px"
+                                                                style="width: 297px; height: 297px;">
 
-                                                        <img class="img-fluid img2"
-                                                            src="@if ($row->singleImage != null) {{ asset('public/storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
-                                                            alt="Drone camera" width="297px" height="297px" style="width: 297px; height: 297px;">
+                                                            <img class="img-fluid img2"
+                                                                src="@if ($row->singleImage != null) {{ asset('public/storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
+                                                                alt="Drone camera" width="297px" height="297px"
+                                                                style="width: 297px; height: 297px;">
 
-                                                    </a>
-                                                    <div class="product-label">
-                                                        <span class="percent-count">-{{ number_format($row->discount, 1) }}%</span>
-                                                        <span class="sale">SALE</span>
+                                                        </a>
+                                                        <div class="product-label">
+                                                            <span
+                                                                class="percent-count">-{{ number_format($row->discount, 1) }}%</span>
+                                                            <span class="sale">SALE</span>
+
+                                                        </div>
+                                                        {{-- <div class="product-add-cart">
+                                                            {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
+                                                        </div>
+                                                        <div class="product-action">
+                                                            {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
+
+                                                        </div> --}}
                                                     </div>
-                                                    <div class="product-add-cart">
-                                                        {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
+                                                    <div class="product-content">
+                                                        <div class="product-info">
+                                                            <div class="pro-title">
+                                                                <a href="{{ route('product.details', $row->slug) }}"
+                                                                    title="Drone camera">{{ \Illuminate\Support\Str::limit($row->title, 15, $end = '...') }}</a>
+                                                            </div>
+                                                            <div class="price-box">
 
-                                                        <a href="javascript:void(0);"
-                                                            onclick="Shopify.addItem(42671430041856, 1); return false;"
-                                                            class="add-to-cart ajax-spin-cart">
-                                                            {{-- <span class="cart-title">+Add to cart</span>
-                                                            <span class="cart-loading load-anim"><i
-                                                                    class="ri-loader-4-line"></i></span>
-                                                            <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                            <span class="cart-unavailable"><i
-                                                                    class="ri-alert-line"></i></span> --}}
-                                                        </a>
+                                                                <span class="new-price new-price-compare"
+                                                                    id="ProductPrice2">${{ $row->new_price }}</span><span
+                                                                    class="old-price"
+                                                                    id="ComparePrice2">${{ $row->old_price }}</span>
+                                                            </div>
 
-                                                    </div>
-                                                    <div class="product-action">
-                                                        {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
-
-                                                        <a href="javascript:void(0)"
-                                                            class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                            data-product-handle="drone-camera">
-                                                            <span class="add-wishlist"><i
-                                                                    class="ri-heart-line"></i></span>
-                                                            <span class="loading-wishlist load-anim"><i
-                                                                    class="ri-loader-4-line"></i></span>
-                                                            <span class="remove-wishlist"><i
-                                                                    class="ri-heart-fill"></i></span>
-                                                        </a>
-                                                        <a href="javascript:void(0);" onclick="quiqview('drone-camera')"
-                                                            class="quick-view">
-                                                            <i class="ri-eye-line"></i>
-                                                        </a>
-                                                        <a href="javascript:void(0);"
-                                                            onclick="Shopify.addItem(42671430041856, 1); return false;"
-                                                            class="add-to-cart ajax-spin-cart">
-                                                            <span>
-                                                                <span class="cart-title"><i
-                                                                        class="fas fa-shopping-cart"></i></span>
-                                                                <span class="cart-loading load-anim"><i
-                                                                        class="ri-loader-4-line"></i></span>
-                                                                <span class="cart-added"><i
-                                                                        class="ri-check-line"></i></span>
-                                                                <span class="cart-unavailable"><i
-                                                                        class="ri-alert-line"></i></span>
-                                                            </span>
-                                                        </a>
-
-                                                    </div>
-                                                </div>
-                                                <div class="product-content">
-                                                    <div class="product-info">
-                                                        <div class="pro-title">
+                                                        </div>
+                                                        <div class="product-info mt-3">
                                                             <div class="row">
-                                                                <div class="col-1">
+                                                                <div class="col-4 text-start ps-4">
                                                                     @if (auth()->check())
                                                                         @if ($row->wishlist == null)
-                                                                            <a href="javascript:void(0)" class="text-start ms-2" onclick="liked({{ $row->id }})" alt="like"><i class="far fa-thumbs-up  fs-5" id="thumb-icon-{{ $row->id }}"></i></a>
+                                                                            <a href="javascript:void(0)"
+                                                                                class="text-start ms-2"
+                                                                                onclick="liked({{ $row->id }})"
+                                                                                alt="like" style="padding: 8px;"><i
+                                                                                    class="far fa-thumbs-up  fs-5"
+                                                                                    id="thumb-icon-{{ $row->id }}"></i></a>
                                                                         @else
-                                                                            <a href="javascript:void(0)" class="text-start ms-2" onclick="liked({{ $row->id }})" alt="Unlike"><i class="fas fa-thumbs-up  fs-5"  id="thumb-icon-{{ $row->id }}" style="color: #ed1c24;"></i></a>
+                                                                            <a href="javascript:void(0)"
+                                                                                class="text-start ms-2"
+                                                                                onclick="liked({{ $row->id }})"
+                                                                                alt="Unlike"  style="padding: 8px;"><i
+                                                                                    class="fas fa-thumbs-up  fs-5"
+                                                                                    id="thumb-icon-{{ $row->id }}"
+                                                                                    style="color: #ed1c24;"></i></a>
                                                                         @endif
                                                                     @else
-                                                                        <a href="{{ route('login') }}" class="text-start ms-2"><i class="far fa-thumbs-up  fs-5"></i></a>
+                                                                        <a href="{{ route('login') }}"
+                                                                            class="text-start ms-2"  style="padding: 8px;"><i
+                                                                                class="far fa-thumbs-up  fs-5"></i></a>
                                                                     @endif
                                                                 </div>
-                                                                <div class="col-10 p-0">
-                                                                    <a href="{{ route('product.details', $row->slug) }}"
-                                                                        title="Drone camera">{{ \Illuminate\Support\Str::limit($row->title, 15, $end='...') }}</a>
+                                                                {{-- <div class="col-6 p-0">
+                                                                </div> --}}
+                                                                <div class="col-8 flat-social text-end">
+                                                                    {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
+
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="price-box">
-                                                            <span class="new-price new-price-compare"
-                                                                id="ProductPrice2">${{ $row->new_price }}</span><span
-                                                                class="old-price"
-                                                                id="ComparePrice2">${{ $row->old_price }}</span>
-                                                        </div>
-
-                                                        <div class="product-ratting">
-                                                            <span class="shopify-product-reviews-badge"
-                                                                data-id="7704599331072"></span>
-                                                        </div>
-
-                                                        <p class="product-description">Lorem ipsum dolor sit amet,
-                                                            consectetur
-                                                            adipiscing elit. Nulla luctus metus nec ipsum sagittis dapibus.
-                                                            Suspendisse e...</p>
-                                                    </div>
-                                                    <div class="product-action">
-
-                                                        <a href="javascript:void(0);"
-                                                            onclick="Shopify.addItem(42671430041856, 1); return false;"
-                                                            class="add-to-cart ajax-spin-cart">
-                                                            <span class="cart-title"><i
-                                                                    class="ri-shopping-cart-line"></i></span>
-                                                            <span class="cart-loading load-anim"><i
-                                                                    class="ri-loader-4-line"></i></span>
-                                                            <span class="cart-added"><i
-                                                                    class="ri-check-line"></i></span>
-                                                            <span class="cart-unavailable"><i
-                                                                    class="ri-alert-line"></i></span>
-                                                        </a>
-
-                                                        <a href="javascript:void(0)"
-                                                            class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                            data-product-handle="drone-camera">
-                                                            <span class="add-wishlist"><i
-                                                                    class="ri-heart-line"></i></span>
-                                                            <span class="loading-wishlist load-anim"><i
-                                                                    class="ri-loader-4-line"></i></span>
-                                                            <span class="remove-wishlist"><i
-                                                                    class="ri-heart-fill"></i></span>
-                                                        </a>
-                                                        <a href="javascript:void(0);" onclick="quiqview('drone-camera')"
-                                                            class="quick-view">
-                                                            <i class="ri-eye-line"></i>
-                                                        </a>
                                                     </div>
                                                 </div>
-                                            </div>
 
+                                            </div>
                                         </div>
                                     @endforeach
                                 </div>

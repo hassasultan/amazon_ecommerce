@@ -23,7 +23,7 @@
     <link href="{{ asset('assets/css/owl.theme.default.min.css') }}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{ asset('assets/css/swiper.min.css') }}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{ asset('assets/css/plugins.css') }}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{ asset('assets/css/viewsicon.css') }}" rel="stylesheet" type="text/css" media="all" />
+    {{-- <link href="{{ asset('assets/css/viewsicon.css') }}" rel="stylesheet" type="text/css" media="all" /> --}}
 
     <link href="{{ asset('assets/css/collection-template.css') }}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{ asset('assets/css/theme-custom.css') }}" rel="stylesheet" type="text/css" media="all" />
@@ -100,8 +100,8 @@
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets/js/swiper.min.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.vticker-min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.lazyload.min.js') }}"></script>
-    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/jquery.lazyload.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script> --}}
     <script src="{{ asset('assets/js/jquery.isotope.min.js') }}"></script>
     <!-- Ajax Cart js -->
     <script src="{{ asset('assets/js/option_selection-9f517843f664ad329c689020fb1e45d03cac979f64b9eb1651ea32858b0ff452.js') }}">
@@ -117,12 +117,12 @@
 </head>
 
 <body id="electon6-store" class="template-index">
-    <div class="preloader"></div>
-    <script>
+    {{-- <div class="preloader"></div> --}}
+    {{-- <script>
         $(window).on('load', function() {
             $('.preloader').fadeOut('slow');
         });
-    </script>
+    </script> --}}
     <style>
         .preloader {
             position: fixed;
@@ -799,38 +799,38 @@
             }
 
 
-            // product timer js
-            $('.counter-event-7704599331072').countdown($('.counter-event-7704599331072').attr("data-enddate")).on(
-                'update.countdown',
-                function(event) {
-                    var $this = $(this).html(event.strftime('' +
-                        '<ul class="contdown_row"><li class="countdown_section"><span id="days" class="countdown_timer">%-D</span><span class="countdown_title">Day</span></li>' +
-                        '<li class="countdown_section"><span id="hours" class="countdown_timer">%H</span><span class="countdown_title">Hour</span></li>' +
-                        '<li class="countdown_section"><span id="minutes" class="countdown_timer">%M</span><span class="countdown_title">Min</span></li>' +
-                        '<li class="countdown_section"><span id="seconds" class="countdown_timer">%S</span><span class="countdown_title">Sec</span></li></ul>'
-                        ))
-                });
+            // // product timer js
+            // $('.counter-event-7704599331072').countdown($('.counter-event-7704599331072').attr("data-enddate")).on(
+            //     'update.countdown',
+            //     function(event) {
+            //         var $this = $(this).html(event.strftime('' +
+            //             '<ul class="contdown_row"><li class="countdown_section"><span id="days" class="countdown_timer">%-D</span><span class="countdown_title">Day</span></li>' +
+            //             '<li class="countdown_section"><span id="hours" class="countdown_timer">%H</span><span class="countdown_title">Hour</span></li>' +
+            //             '<li class="countdown_section"><span id="minutes" class="countdown_timer">%M</span><span class="countdown_title">Min</span></li>' +
+            //             '<li class="countdown_section"><span id="seconds" class="countdown_timer">%S</span><span class="countdown_title">Sec</span></li></ul>'
+            //             ))
+            //     });
 
-            $(document).ready(function() {
-                $(".pro-detail-button button.add-to-cart").on('click', function() {
-                    window.setTimeout(function() {
-                        $("#cart.mini-cart").addClass("show");
-                        $(".mm-fullscreen-bg").addClass("active");
-                        $("body").addClass("hidden");
-                    }, 1000);
-                });
-                $(".shopping-cart-close i").on('click', function() {
-                    if ($('#cart.mini-cart').hasClass('show')) {
-                        $('#cart.mini-cart').removeClass('show');
-                    }
-                    $(".mm-fullscreen-bg").removeClass("active");
-                    $("body").removeClass("hidden");
-                });
-                $(".mm-fullscreen-bg").on('click', function() {
-                    $("#cart.mini-cart").removeClass("show");
-                    $(".mm-fullscreen-bg").removeClass("active");
-                });
-            });
+            // $(document).ready(function() {
+            //     $(".pro-detail-button button.add-to-cart").on('click', function() {
+            //         window.setTimeout(function() {
+            //             $("#cart.mini-cart").addClass("show");
+            //             $(".mm-fullscreen-bg").addClass("active");
+            //             $("body").addClass("hidden");
+            //         }, 1000);
+            //     });
+            //     $(".shopping-cart-close i").on('click', function() {
+            //         if ($('#cart.mini-cart').hasClass('show')) {
+            //             $('#cart.mini-cart').removeClass('show');
+            //         }
+            //         $(".mm-fullscreen-bg").removeClass("active");
+            //         $("body").removeClass("hidden");
+            //     });
+            //     $(".mm-fullscreen-bg").on('click', function() {
+            //         $("#cart.mini-cart").removeClass("show");
+            //         $(".mm-fullscreen-bg").removeClass("active");
+            //     });
+            // });
         </script>
 
 </body>

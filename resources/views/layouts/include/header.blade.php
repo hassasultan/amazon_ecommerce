@@ -1014,7 +1014,7 @@
                             </li>
                             @endif
 
-                            <li class="side-wrap wishlist-wrap"><a class="header-wishlist-btn" href="/pages/wishlist"
+                            <li class="side-wrap wishlist-wrap"><a class="header-wishlist-btn" href="{{ route('wishlist') }}"
                                     title="Likes">
                                     <span class="wishlist-title">Likes</span>
                                     <span class="wishlist-icon"><i class="far fa-thumbs-up"></i></span>

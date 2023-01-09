@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\User;
 use App\Models\Section;
 use App\Models\Category;
+use App\Models\WishList;
 use Exception;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -28,8 +29,10 @@ class FrontendController extends Controller
     public function details($slug)
     {
         $product = Product::with('images','coupon')->where('slug',$slug)->first();
+        $related = Product::with('singleImage')->where('category_id',$product->category_id)->where('status',1)->get();
+
         // dd($product->toArray());
-        return view('frontend.product-details',compact('product'));
+        return view('frontend.product-details',compact('product','related'));
     }
     public function profile()
     {
@@ -99,5 +102,10 @@ class FrontendController extends Controller
             return $query->where('status',1)->limit(5);
         }])->take(4)->get();
         return $data;
+    }
+    public function wishlist()
+    {
+        $wishlist = WishList::with('product')->where('user_id',auth()->user()->id)->get();
+        return view('frontend.wishlist',compact('wishlist'));
     }
 }

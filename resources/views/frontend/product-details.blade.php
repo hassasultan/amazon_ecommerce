@@ -1,23 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<style>
-    .modalCopiedbtn{
-        background-color: var(--font-color-primary);
-        color: #fff;
-        font-size: 16px;
-        font-weight: 500;
-        padding: 18px 30px;
-        line-height: 1;
-        text-transform: uppercase;
-    }
-    .modalCopiedbtn:hover
-    {
-        background-color: #fff;
-        color: var(--font-color-primary);
-        border: 1px solid var(--font-color-primary);
-    }
-</style>
+    <style>
+        .modalCopiedbtn {
+            background-color: var(--font-color-primary);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 18px 30px;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .modalCopiedbtn:hover {
+            background-color: #fff;
+            color: var(--font-color-primary);
+            border: 1px solid var(--font-color-primary);
+        }
+    </style>
     <main role="main">
         <div id="shopify-section-template--15924305166592__product-template" class="shopify-section">
             <section class="product-details-page">
@@ -599,80 +599,90 @@
 
                                         </div>
                                     </div>
-                                    <div class="product-info">
-                                        <div class="product-payment-image">
-                                            {{-- <a href="javascript:void(0)" class="payment-icon">
+                                    @if ($product->coupon != "[]")
+                                        <div class="product-info">
+                                            <div class="product-payment-image">
+                                                {{-- <a href="javascript:void(0)" class="payment-icon">
 
 
-                                                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"
-                                                    role="img" width="38" height="24"
-                                                    aria-labelledby="pi-visa">
-                                                    <title id="pi-visa">Visa</title>
-                                                    <path opacity=".07"
-                                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
-                                                    <path fill="#fff"
-                                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
-                                                    <path
-                                                        d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
-                                                        fill="#142688" />
-                                                </svg>
+                                                    <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"
+                                                        role="img" width="38" height="24"
+                                                        aria-labelledby="pi-visa">
+                                                        <title id="pi-visa">Visa</title>
+                                                        <path opacity=".07"
+                                                            d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
+                                                        <path fill="#fff"
+                                                            d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
+                                                        <path
+                                                            d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+                                                            fill="#142688" />
+                                                    </svg>
 
-                                                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"
-                                                    width="38" height="24" role="img"
-                                                    aria-labelledby="pi-paypal">
-                                                    <title id="pi-paypal">PayPal</title>
-                                                    <path opacity=".07"
-                                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
-                                                    <path fill="#fff"
-                                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
-                                                    <path fill="#003087"
-                                                        d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z" />
-                                                    <path fill="#3086C8"
-                                                        d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z" />
-                                                    <path fill="#012169"
-                                                        d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z" />
-                                                </svg>
+                                                    <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"
+                                                        width="38" height="24" role="img"
+                                                        aria-labelledby="pi-paypal">
+                                                        <title id="pi-paypal">PayPal</title>
+                                                        <path opacity=".07"
+                                                            d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
+                                                        <path fill="#fff"
+                                                            d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
+                                                        <path fill="#003087"
+                                                            d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z" />
+                                                        <path fill="#3086C8"
+                                                            d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z" />
+                                                        <path fill="#012169"
+                                                            d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z" />
+                                                    </svg>
 
-                                                <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"
-                                                    role="img" width="38" height="24"
-                                                    aria-labelledby="pi-master">
-                                                    <title id="pi-master">Mastercard</title>
-                                                    <path opacity=".07"
-                                                        d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
-                                                    <path fill="#fff"
-                                                        d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
-                                                    <circle fill="#EB001B" cx="15" cy="12"
-                                                        r="7" />
-                                                    <circle fill="#F79E1B" cx="23" cy="12"
-                                                        r="7" />
-                                                    <path fill="#FF5F00"
-                                                        d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z" />
-                                                </svg>
+                                                    <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg"
+                                                        role="img" width="38" height="24"
+                                                        aria-labelledby="pi-master">
+                                                        <title id="pi-master">Mastercard</title>
+                                                        <path opacity=".07"
+                                                            d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z" />
+                                                        <path fill="#fff"
+                                                            d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32" />
+                                                        <circle fill="#EB001B" cx="15" cy="12"
+                                                            r="7" />
+                                                        <circle fill="#F79E1B" cx="23" cy="12"
+                                                            r="7" />
+                                                        <path fill="#FF5F00"
+                                                            d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z" />
+                                                    </svg>
 
-                                                <svg xmlns="http://www.w3.org/2000/svg" role="img"
-                                                    viewBox="0 0 38 24" width="38" height="24"
-                                                    aria-labelledby="pi-american_express">
-                                                    <title id="pi-american_express">American Express</title>
-                                                    <g fill="none">
-                                                        <path fill="#000"
-                                                            d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z"
-                                                            opacity=".07" />
-                                                        <path fill="#006FCF"
-                                                            d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1" />
-                                                        <path fill="#FFF"
-                                                            d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z" />
-                                                    </g>
-                                                </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                                        viewBox="0 0 38 24" width="38" height="24"
+                                                        aria-labelledby="pi-american_express">
+                                                        <title id="pi-american_express">American Express</title>
+                                                        <g fill="none">
+                                                            <path fill="#000"
+                                                                d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z"
+                                                                opacity=".07" />
+                                                            <path fill="#006FCF"
+                                                                d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1" />
+                                                            <path fill="#FFF"
+                                                                d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z" />
+                                                        </g>
+                                                    </svg>
 
 
-                                            </a> --}}
-                                            <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
-                                                data-bs-target="#staticBackdrop">
-                                                Get Coupon
-                                            </button>
+                                                </a> --}}
+                                                <!-- Button trigger modal -->
+                                                @if (auth()->check())
+                                                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                        Get Coupon
+                                                    </button>
+                                                @else
+                                                    <a href="{{ route('login') }}" class="btn btn-outline-dark" data-bs-toggle="modal"
+                                                        data-bs-target="#staticBackdrop">
+                                                        Get Coupon
+                                                    </a>
+                                                @endif
+                                            </div>
                                         </div>
-                                    </div>
+
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -798,623 +808,94 @@
                             </div>
                             <div class="swiper-container" id="related-slider-template--15924305166592__related-product">
                                 <div class="swiper-wrapper">
+                                    @foreach ($related as $row)
+                                        <div class="swiper-slide">
+                                            <div class="swiper-slide">
+                                                <div class="single-product-wrap">
+                                                    <div class="product-image">
+                                                        <a class="pro-img"
+                                                            href="{{ route('product.details', $row->slug) }}">
+                                                            <img class="img-fluid img1"
+                                                                src="{{ asset('public/storage/' . $row->fea_img) }}"
+                                                                alt="Drone camera" width="297px" height="297px"
+                                                                style="width: 297px; height: 297px;">
 
+                                                            <img class="img-fluid img2"
+                                                                src="@if ($row->singleImage != null) {{ asset('public/storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
+                                                                alt="Drone camera" width="297px" height="297px"
+                                                                style="width: 297px; height: 297px;">
 
+                                                        </a>
+                                                        <div class="product-label">
+                                                            <span
+                                                                class="percent-count">-{{ number_format($row->discount, 1) }}%</span>
+                                                            <span class="sale">SALE</span>
 
-
-
-                                    <div class="swiper-slide">
-                                        <div class="single-product-wrap">
-                                            <div class="product-image">
-                                                <a class="pro-img"
-                                                    href="/collections/bluetooth-speakers/products/racing-wheel">
-                                                    <img class="img-fluid img1"
-                                                        src="//cdn.shopify.com/s/files/1/0641/3431/6288/products/electon-electronics-product-09-b_530X480_crop_center.jpg?v=1650947726"
-                                                        alt="Racing wheel">
-
-                                                    <img class="img-fluid img2"
-                                                        src="//cdn.shopify.com/s/files/1/0641/3431/6288/products/electon-electronics-product-09-c_530X480_crop_center.jpg?v=1650947726"
-                                                        alt="Racing wheel">
-
-                                                </a>
-                                                <div class="product-label">
-
-
-
-                                                    <span class="percent-count">-29%</span>
-
-
-
-                                                </div>
-                                                <div class="product-add-cart">
-
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671433351424, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span class="cart-title">+Add to cart</span>
-                                                        <span class="cart-loading load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                        <span class="cart-unavailable"><i
-                                                                class="ri-alert-line"></i></span>
-                                                    </a>
-
-                                                </div>
-                                                <div class="product-action"><a href="javascript:void(0)"
-                                                        class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                        data-product-handle="racing-wheel">
-                                                        <span class="add-wishlist"><i class="ri-heart-line"></i></span>
-                                                        <span class="loading-wishlist load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="remove-wishlist"><i class="ri-heart-fill"></i></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" onclick="quiqview('racing-wheel')"
-                                                        class="quick-view">
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671433351424, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span>
-                                                            <span class="cart-title"><i
-                                                                    class="ri-shopping-bag-3-line"></i></span>
-                                                            <span class="cart-loading load-anim"><i
-                                                                    class="ri-loader-4-line"></i></span>
-                                                            <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                            <span class="cart-unavailable"><i
-                                                                    class="ri-alert-line"></i></span>
-                                                        </span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="product-info">
-                                                    <div class="pro-title">
-                                                        <a href="/collections/bluetooth-speakers/products/racing-wheel"
-                                                            title="Racing wheel">Racing wheel</a>
+                                                        </div>
+                                                        {{-- <div class="product-add-cart">
+                                                        {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
                                                     </div>
-                                                    <div class="price-box">
-                                                        <span class="new-price new-price-compare"
-                                                            id="ProductPrice">$2,500.00</span><span class="old-price"
-                                                            id="ComparePrice">$3,500.00</span>
+                                                    <div class="product-action">
+                                                        {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
+
+                                                    </div> --}}
                                                     </div>
+                                                    <div class="product-content">
+                                                        <div class="product-info">
+                                                            <div class="pro-title">
+                                                                <a href="{{ route('product.details', $row->slug) }}"
+                                                                    title="Drone camera">{{ \Illuminate\Support\Str::limit($row->title, 15, $end = '...') }}</a>
+                                                            </div>
+                                                            <div class="price-box">
 
-                                                    <div class="product-ratting">
-                                                        <span class="shopify-product-reviews-badge"
-                                                            data-id="7704600084736"></span>
+                                                                <span class="new-price new-price-compare"
+                                                                    id="ProductPrice2">${{ $row->new_price }}</span><span
+                                                                    class="old-price"
+                                                                    id="ComparePrice2">${{ $row->old_price }}</span>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="product-info mt-3">
+                                                            <div class="row">
+                                                                <div class="col-4 text-start ps-4">
+                                                                    @if (auth()->check())
+                                                                        @if ($row->wishlist == null)
+                                                                            <a href="javascript:void(0)"
+                                                                                class="text-start ms-2"
+                                                                                onclick="liked({{ $row->id }})"
+                                                                                alt="like" style="padding: 8px;"><i
+                                                                                    class="far fa-thumbs-up  fs-5"
+                                                                                    id="thumb-icon-{{ $row->id }}"></i></a>
+                                                                        @else
+                                                                            <a href="javascript:void(0)"
+                                                                                class="text-start ms-2"
+                                                                                onclick="liked({{ $row->id }})"
+                                                                                alt="Unlike" style="padding: 8px;"><i
+                                                                                    class="fas fa-thumbs-up  fs-5"
+                                                                                    id="thumb-icon-{{ $row->id }}"
+                                                                                    style="color: #ed1c24;"></i></a>
+                                                                        @endif
+                                                                    @else
+                                                                        <a href="{{ route('login') }}"
+                                                                            class="text-start ms-2"
+                                                                            style="padding: 8px;"><i
+                                                                                class="far fa-thumbs-up  fs-5"></i></a>
+                                                                    @endif
+                                                                </div>
+                                                                {{-- <div class="col-6 p-0">
+                                                            </div> --}}
+                                                                <div class="col-8 flat-social text-end">
+                                                                    {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
-
-                                                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur
-                                                        adipiscing elit. Nulla luctus metus nec ipsum sagittis dapibus.
-                                                        Suspendisse e...</p>
                                                 </div>
-                                                <div class="product-action">
 
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671433351424, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span class="cart-title"><i
-                                                                class="ri-shopping-cart-line"></i></span>
-                                                        <span class="cart-loading load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                        <span class="cart-unavailable"><i
-                                                                class="ri-alert-line"></i></span>
-                                                    </a>
-
-                                                    <a href="javascript:void(0)"
-                                                        class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                        data-product-handle="racing-wheel">
-                                                        <span class="add-wishlist"><i class="ri-heart-line"></i></span>
-                                                        <span class="loading-wishlist load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="remove-wishlist"><i class="ri-heart-fill"></i></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" onclick="quiqview('racing-wheel')"
-                                                        class="quick-view">
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-                                                </div>
                                             </div>
                                         </div>
-
-                                    </div>
-
-
-
-
-
-                                    <div class="swiper-slide">
-                                        <div class="single-product-wrap">
-                                            <div class="product-image">
-                                                <a class="pro-img"
-                                                    href="/collections/bluetooth-speakers/products/smart-watch">
-                                                    <img class="img-fluid img1"
-                                                        src="//cdn.shopify.com/s/files/1/0641/3431/6288/products/electon-electronics-product-04_530X480_crop_center.jpg?v=1650946552"
-                                                        alt="Smart watch">
-
-                                                    <img class="img-fluid img2"
-                                                        src="//cdn.shopify.com/s/files/1/0641/3431/6288/products/electon-electronics-product-04-a_530X480_crop_center.jpg?v=1650946552"
-                                                        alt="Smart watch">
-
-                                                </a>
-                                                <div class="product-label">
-
-
-
-                                                    <span class="percent-count">-33%</span>
-
-
-
-                                                </div>
-                                                <div class="product-add-cart">
-
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671432204544, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span class="cart-title">+Add to cart</span>
-                                                        <span class="cart-loading load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                        <span class="cart-unavailable"><i
-                                                                class="ri-alert-line"></i></span>
-                                                    </a>
-
-                                                </div>
-                                                <div class="product-action"><a href="javascript:void(0)"
-                                                        class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                        data-product-handle="smart-watch">
-                                                        <span class="add-wishlist"><i class="ri-heart-line"></i></span>
-                                                        <span class="loading-wishlist load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="remove-wishlist"><i class="ri-heart-fill"></i></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" onclick="quiqview('smart-watch')"
-                                                        class="quick-view">
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671432204544, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span>
-                                                            <span class="cart-title"><i
-                                                                    class="ri-shopping-bag-3-line"></i></span>
-                                                            <span class="cart-loading load-anim"><i
-                                                                    class="ri-loader-4-line"></i></span>
-                                                            <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                            <span class="cart-unavailable"><i
-                                                                    class="ri-alert-line"></i></span>
-                                                        </span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="product-info">
-                                                    <div class="pro-title">
-                                                        <a href="/collections/bluetooth-speakers/products/smart-watch"
-                                                            title="Smart watch">Smart watch</a>
-                                                    </div>
-                                                    <div class="price-box">
-                                                        <span class="new-price new-price-compare"
-                                                            id="ProductPrice">$1,022.00</span><span class="old-price"
-                                                            id="ComparePrice">$1,520.00</span>
-                                                    </div>
-
-                                                    <div class="product-ratting">
-                                                        <span class="shopify-product-reviews-badge"
-                                                            data-id="7704599757056"></span>
-                                                    </div>
-
-                                                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur
-                                                        adipiscing elit. Nulla luctus metus nec ipsum sagittis dapibus.
-                                                        Suspendisse e...</p>
-                                                </div>
-                                                <div class="product-action">
-
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671432204544, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span class="cart-title"><i
-                                                                class="ri-shopping-cart-line"></i></span>
-                                                        <span class="cart-loading load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                        <span class="cart-unavailable"><i
-                                                                class="ri-alert-line"></i></span>
-                                                    </a>
-
-                                                    <a href="javascript:void(0)"
-                                                        class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                        data-product-handle="smart-watch">
-                                                        <span class="add-wishlist"><i class="ri-heart-line"></i></span>
-                                                        <span class="loading-wishlist load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="remove-wishlist"><i class="ri-heart-fill"></i></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" onclick="quiqview('smart-watch')"
-                                                        class="quick-view">
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-
-
-
-
-
-
-
-                                    <div class="swiper-slide">
-                                        <div class="single-product-wrap">
-                                            <div class="product-image">
-                                                <a class="pro-img"
-                                                    href="/collections/bluetooth-speakers/products/5g-smart-tablet">
-                                                    <img class="img-fluid img1"
-                                                        src="//cdn.shopify.com/s/files/1/0641/3431/6288/products/electon-electronics-product-07-b_530X480_crop_center.jpg?v=1650977830"
-                                                        alt="5G smart tablet">
-
-                                                    <img class="img-fluid img2"
-                                                        src="//cdn.shopify.com/s/files/1/0641/3431/6288/products/electon-electronics-product-07-c_530X480_crop_center.jpg?v=1650977830"
-                                                        alt="5G smart tablet">
-
-                                                </a>
-                                                <div class="product-label">
-
-
-
-                                                    <span class="percent-count">-28%</span>
-
-
-
-                                                </div>
-                                                <div class="product-add-cart">
-
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671429517568, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span class="cart-title">+Add to cart</span>
-                                                        <span class="cart-loading load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                        <span class="cart-unavailable"><i
-                                                                class="ri-alert-line"></i></span>
-                                                    </a>
-
-                                                </div>
-                                                <div class="product-action"><a href="javascript:void(0)"
-                                                        class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                        data-product-handle="5g-smart-tablet">
-                                                        <span class="add-wishlist"><i class="ri-heart-line"></i></span>
-                                                        <span class="loading-wishlist load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="remove-wishlist"><i class="ri-heart-fill"></i></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" onclick="quiqview('5g-smart-tablet')"
-                                                        class="quick-view">
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671429517568, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span>
-                                                            <span class="cart-title"><i
-                                                                    class="ri-shopping-bag-3-line"></i></span>
-                                                            <span class="cart-loading load-anim"><i
-                                                                    class="ri-loader-4-line"></i></span>
-                                                            <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                            <span class="cart-unavailable"><i
-                                                                    class="ri-alert-line"></i></span>
-                                                        </span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="product-info">
-                                                    <div class="pro-title">
-                                                        <a href="/collections/bluetooth-speakers/products/5g-smart-tablet"
-                                                            title="5G smart tablet">5G smart tablet</a>
-                                                    </div>
-                                                    <div class="price-box">
-                                                        <span class="new-price new-price-compare"
-                                                            id="ProductPrice">$5,600.00</span><span class="old-price"
-                                                            id="ComparePrice">$7,800.00</span>
-                                                    </div>
-
-                                                    <div class="product-ratting">
-                                                        <span class="shopify-product-reviews-badge"
-                                                            data-id="7704599232768"></span>
-                                                    </div>
-
-                                                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur
-                                                        adipiscing elit. Nulla luctus metus nec ipsum sagittis dapibus.
-                                                        Suspendisse e...</p>
-                                                </div>
-                                                <div class="product-action">
-
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671429517568, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span class="cart-title"><i
-                                                                class="ri-shopping-cart-line"></i></span>
-                                                        <span class="cart-loading load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                        <span class="cart-unavailable"><i
-                                                                class="ri-alert-line"></i></span>
-                                                    </a>
-
-                                                    <a href="javascript:void(0)"
-                                                        class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                        data-product-handle="5g-smart-tablet">
-                                                        <span class="add-wishlist"><i class="ri-heart-line"></i></span>
-                                                        <span class="loading-wishlist load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="remove-wishlist"><i class="ri-heart-fill"></i></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" onclick="quiqview('5g-smart-tablet')"
-                                                        class="quick-view">
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-
-
-
-                                    <div class="swiper-slide">
-                                        <div class="single-product-wrap">
-                                            <div class="product-image">
-                                                <a class="pro-img"
-                                                    href="/collections/bluetooth-speakers/products/portable-camera">
-                                                    <img class="img-fluid img1"
-                                                        src="//cdn.shopify.com/s/files/1/0641/3431/6288/products/electon-electronics-product-06_530X480_crop_center.jpg?v=1650947206"
-                                                        alt="Portable camera">
-
-                                                    <img class="img-fluid img2"
-                                                        src="//cdn.shopify.com/s/files/1/0641/3431/6288/products/electon-electronics-product-06-a_530X480_crop_center.jpg?v=1650947207"
-                                                        alt="Portable camera">
-
-                                                </a>
-                                                <div class="product-label">
-
-
-
-                                                    <span class="percent-count">-31%</span>
-
-
-
-                                                </div>
-                                                <div class="product-add-cart">
-
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671429222656, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span class="cart-title">+Add to cart</span>
-                                                        <span class="cart-loading load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                        <span class="cart-unavailable"><i
-                                                                class="ri-alert-line"></i></span>
-                                                    </a>
-
-                                                </div>
-                                                <div class="product-action"><a href="javascript:void(0)"
-                                                        class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                        data-product-handle="portable-camera">
-                                                        <span class="add-wishlist"><i class="ri-heart-line"></i></span>
-                                                        <span class="loading-wishlist load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="remove-wishlist"><i class="ri-heart-fill"></i></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" onclick="quiqview('portable-camera')"
-                                                        class="quick-view">
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671429222656, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span>
-                                                            <span class="cart-title"><i
-                                                                    class="ri-shopping-bag-3-line"></i></span>
-                                                            <span class="cart-loading load-anim"><i
-                                                                    class="ri-loader-4-line"></i></span>
-                                                            <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                            <span class="cart-unavailable"><i
-                                                                    class="ri-alert-line"></i></span>
-                                                        </span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="product-info">
-                                                    <div class="pro-title">
-                                                        <a href="/collections/bluetooth-speakers/products/portable-camera"
-                                                            title="Portable camera">Portable camera</a>
-                                                    </div>
-                                                    <div class="price-box">
-                                                        <span class="new-price new-price-compare"
-                                                            id="ProductPrice">$8,600.00</span><span class="old-price"
-                                                            id="ComparePrice">$12,500.00</span>
-                                                    </div>
-
-                                                    <div class="product-ratting">
-                                                        <span class="shopify-product-reviews-badge"
-                                                            data-id="7704599068928"></span>
-                                                    </div>
-
-                                                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur
-                                                        adipiscing elit. Nulla luctus metus nec ipsum sagittis dapibus.
-                                                        Suspendisse e...</p>
-                                                </div>
-                                                <div class="product-action">
-
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671429222656, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span class="cart-title"><i
-                                                                class="ri-shopping-cart-line"></i></span>
-                                                        <span class="cart-loading load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                        <span class="cart-unavailable"><i
-                                                                class="ri-alert-line"></i></span>
-                                                    </a>
-
-                                                    <a href="javascript:void(0)"
-                                                        class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                        data-product-handle="portable-camera">
-                                                        <span class="add-wishlist"><i class="ri-heart-line"></i></span>
-                                                        <span class="loading-wishlist load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="remove-wishlist"><i class="ri-heart-fill"></i></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" onclick="quiqview('portable-camera')"
-                                                        class="quick-view">
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-
-
-
-                                    <div class="swiper-slide">
-                                        <div class="single-product-wrap">
-                                            <div class="product-image">
-                                                <a class="pro-img"
-                                                    href="/collections/bluetooth-speakers/products/5g-smart-phone">
-                                                    <img class="img-fluid img1"
-                                                        src="//cdn.shopify.com/s/files/1/0641/3431/6288/products/electon-electronics-product-12-a_530X480_crop_center.jpg?v=1650977818"
-                                                        alt="5G smart phone">
-
-                                                    <img class="img-fluid img2"
-                                                        src="//cdn.shopify.com/s/files/1/0641/3431/6288/products/electon-electronics-product-12-c_530X480_crop_center.jpg?v=1650977818"
-                                                        alt="5G smart phone">
-
-                                                </a>
-                                                <div class="product-label">
-
-
-
-                                                    <span class="percent-count">-60%</span>
-
-
-
-                                                </div>
-                                                <div class="product-add-cart">
-
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671428763904, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span class="cart-title">+Add to cart</span>
-                                                        <span class="cart-loading load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                        <span class="cart-unavailable"><i
-                                                                class="ri-alert-line"></i></span>
-                                                    </a>
-
-                                                </div>
-                                                <div class="product-action"><a href="javascript:void(0)"
-                                                        class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                        data-product-handle="5g-smart-phone">
-                                                        <span class="add-wishlist"><i class="ri-heart-line"></i></span>
-                                                        <span class="loading-wishlist load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="remove-wishlist"><i class="ri-heart-fill"></i></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" onclick="quiqview('5g-smart-phone')"
-                                                        class="quick-view">
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671428763904, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span>
-                                                            <span class="cart-title"><i
-                                                                    class="ri-shopping-bag-3-line"></i></span>
-                                                            <span class="cart-loading load-anim"><i
-                                                                    class="ri-loader-4-line"></i></span>
-                                                            <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                            <span class="cart-unavailable"><i
-                                                                    class="ri-alert-line"></i></span>
-                                                        </span>
-                                                    </a>
-
-                                                </div>
-                                            </div>
-                                            <div class="product-content">
-                                                <div class="product-info">
-                                                    <div class="pro-title">
-                                                        <a href="/collections/bluetooth-speakers/products/5g-smart-phone"
-                                                            title="5G smart phone">5G smart phone</a>
-                                                    </div>
-                                                    <div class="price-box">
-                                                        <span class="new-price new-price-compare"
-                                                            id="ProductPrice">$23,600.00</span><span class="old-price"
-                                                            id="ComparePrice">$59,600.00</span>
-                                                    </div>
-
-                                                    <div class="product-ratting">
-                                                        <span class="shopify-product-reviews-badge"
-                                                            data-id="7704598905088"></span>
-                                                    </div>
-
-                                                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur
-                                                        adipiscing elit. Nulla luctus metus nec ipsum sagittis dapibus.
-                                                        Suspendisse e...</p>
-                                                </div>
-                                                <div class="product-action">
-
-                                                    <a href="javascript:void(0);"
-                                                        onclick="Shopify.addItem(42671428763904, 1); return false;"
-                                                        class="add-to-cart ajax-spin-cart">
-                                                        <span class="cart-title"><i
-                                                                class="ri-shopping-cart-line"></i></span>
-                                                        <span class="cart-loading load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="cart-added"><i class="ri-check-line"></i></span>
-                                                        <span class="cart-unavailable"><i
-                                                                class="ri-alert-line"></i></span>
-                                                    </a>
-
-                                                    <a href="javascript:void(0)"
-                                                        class="action-wishlist tile-actions--btn wishlist-btn wishlist"
-                                                        data-product-handle="5g-smart-phone">
-                                                        <span class="add-wishlist"><i class="ri-heart-line"></i></span>
-                                                        <span class="loading-wishlist load-anim"><i
-                                                                class="ri-loader-4-line"></i></span>
-                                                        <span class="remove-wishlist"><i class="ri-heart-fill"></i></span>
-                                                    </a>
-                                                    <a href="javascript:void(0);" onclick="quiqview('5g-smart-phone')"
-                                                        class="quick-view">
-                                                        <i class="ri-eye-line"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -1462,38 +943,42 @@
             </script>
         </div>
         <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content text-center">
-                    <div class="modal-header">
-                        <h5 class="modal-title text-center" id="staticBackdropLabel">Fullfilled by Amazon</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="col-12 text-center">
-                            <i class="fas fa-check-circle" style="font-size:5.9rem; color:#ed1c24;"></i>
-                            <h4 class="mt-2"  style="color:#ed1c24;">You've saved ${{ $product->old_price - $product->new_price }}</h4>
-                            <p>Coupon may expire at anytime. Use it now!</p>
-                            {{-- <b>{{ $product->coupon[0]->code }}</b> --}}
-                            <input id="para" disabled value="{{ $product->coupon[0]->code }}" style="text-align:center;border: none; font-weight:bold; font-size:1.5rem; color:#000; padding:0;"/>
+        @if ($product->coupon != "[]")
+
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content text-center">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-center" id="staticBackdropLabel">Fullfilled by Amazon</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="col-12 mt-3 mb-3">
-                            <a class="modalCopiedbtn" href="javascript:void(0);" onclick="copyToClipboard('para')">
-                                Copy and Go to Amazon
-                            </a>
+                        <div class="modal-body">
+                            <div class="col-12 text-center">
+                                <i class="fas fa-check-circle" style="font-size:5.9rem; color:#ed1c24;"></i>
+                                <h4 class="mt-2" style="color:#ed1c24;">You've saved
+                                    ${{ $product->old_price - $product->new_price }}</h4>
+                                <p>Coupon may expire at anytime. Use it now!</p>
+                                {{-- <b>{{ $product->coupon[0]->code }}</b> --}}
+                                <input id="para" disabled value="{{ $product->coupon[0]->code }}"
+                                    style="text-align:center;border: none; font-weight:bold; font-size:1.5rem; color:#000; padding:0;" />
+                            </div>
+                            <div class="col-12 mt-3 mb-3">
+                                <a class="modalCopiedbtn" href="javascript:void(0);" onclick="copyToClipboard('para')">
+                                    Copy and Go to Amazon
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        @endif
     </main>
     <script>
-        function copyToClipboard(elementId)
-        {
-            $( "#para" ).select();
+        function copyToClipboard(elementId) {
+            $("#para").select();
             document.execCommand("Copy");
-            window.open( "{{ $product->link }}");
+            window.open("{{ $product->link }}");
         }
     </script>
 @endsection

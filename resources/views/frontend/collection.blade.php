@@ -269,7 +269,7 @@
                                                             @endforeach
                                                         </ul>
                                                         <div class="d-flex justify-content-center pt-5 pagination">
-                                                            {{ $products->links() }}
+                                                            {!! $products->links() !!}
                                                         </div>
                                                     </div>
                                                 </div>

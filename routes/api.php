@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontendApiController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/category-listing',[FrontendApiController::class,'category']);
+Route::get('/category-details',[FrontendApiController::class,'categoryDetail']);
+Route::get('/subcategory-listing',[FrontendApiController::class,'subcategory']);
+Route::get('/section-listing',[FrontendApiController::class,'sections']);
+Route::get('/section-details',[FrontendApiController::class,'sectionDetail']);
+Route::get('/products-listing',[FrontendApiController::class,'products']);
+Route::get('/products-details',[FrontendApiController::class,'details']);

@@ -23,7 +23,7 @@
     <link href="{{ asset('assets/css/owl.theme.default.min.css') }}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{ asset('assets/css/swiper.min.css') }}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{ asset('assets/css/plugins.css') }}" rel="stylesheet" type="text/css" media="all" />
-    {{-- <link href="{{ asset('assets/css/viewsicon.css') }}" rel="stylesheet" type="text/css" media="all" /> --}}
+    <link href="{{ asset('assets/css/viewsicon.css') }}" rel="stylesheet" type="text/css" media="all" />
 
     <link href="{{ asset('assets/css/collection-template.css') }}" rel="stylesheet" type="text/css" media="all" />
     <link href="{{ asset('assets/css/theme-custom.css') }}" rel="stylesheet" type="text/css" media="all" />

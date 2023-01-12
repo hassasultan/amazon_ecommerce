@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Section;
 use App\Models\Category;
 use App\Models\WishList;
+use Carbon\Carbon;
 use Exception;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -20,10 +21,20 @@ class FrontendController extends Controller
     public function index()
     {
         // dd(count(auth()->user()->wishlistCount->toArray()));
-        $featured = Product::where('status',1)->where('IsFeature',1)->get();
-        $product = Product::where('status',1)->where('IsFeature',0)->get();
+        $featured = Product::with('coupon')->whereHas('coupon',function($query){
+            $query->where('expiry', '>=', Carbon::today());
+        })->where('status',1)->where('IsFeature',1)->get();
+        $product = Product::with('coupon')->whereHas('coupon',function($query){
+            $query->where('expiry', '>=', Carbon::today());
+        })->where('status',1)->where('IsFeature',0)->get();
+        // dd($product->toArray());
         $category = Category::where('status',1)->get();
-        $section = Section::with('products')->where('status',1)->get();
+        $section = Section::with('products','products.coupon')->whereHas('products',function($query){
+            $query->where('status', 1);
+        })->whereHas('products.coupon',function($query){
+            $query->where('expiry', '>=', Carbon::today());
+        })->where('status',1)->get();
+        // dd($section->toArray());
         return view('frontend.home',compact('product','section','featured','category'));
     }
     public function details($slug)
@@ -66,7 +77,9 @@ class FrontendController extends Controller
     public function collection($type,$slug)
     {
         $category = Category::with('products')->get();
-        $products = Product::with('singleImage')->where('status',1);
+        $products = Product::with('singleImage','coupon')->whereHas('coupon',function($query){
+            $query->where('expiry', '>=', Carbon::today());
+        })->where('status',1);
         $section = Section::with('products')->where('status',1)->get();
         if($type == "products" && $slug == "all")
         {

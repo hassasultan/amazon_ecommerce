@@ -37,6 +37,14 @@
                                     @endforeach
                                 </select>
                             </div>
+
+                            <div class="col-md-4 mb-3">
+                                <label for="validationTooltip02">Status</label>
+                                <select class="form-control" multiple name="status">
+                                    <option value="1" @if ($section->status == 1) selected @endif></option>
+                                    <option value="0" @if ($section->status == 0) selected @endif></option>
+                                </select>
+                            </div>
                         </div>
                         <button class="btn btn-primary" type="submit">Submit form</button>
                     </form>

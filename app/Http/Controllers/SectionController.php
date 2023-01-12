@@ -76,6 +76,7 @@ class SectionController extends Controller
         $valid = $this->validate($request,[
             'name'         => 'required|string|unique:sections,name,'.$id,
             'product_id'         => 'required',
+            'status'         => 'required|in:0,1',
             'description'   => 'string',
         ]);
         $slug  = Str::slug($request->name);
@@ -92,7 +93,7 @@ class SectionController extends Controller
                 $section->description = $request->description;
             }
             $section->slug = $slug;
-
+            $section->status =  $request->status;
             $section->save();
             if($request->has('product_id'))
             {

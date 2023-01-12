@@ -40,7 +40,7 @@
 
                             <div class="col-md-4 mb-3">
                                 <label for="validationTooltip02">Status</label>
-                                <select class="form-control" multiple name="status">
+                                <select class="form-control" name="status">
                                     <option value="1" @if ($section->status == 1) selected @endif>Active</option>
                                     <option value="0" @if ($section->status == 0) selected @endif>De-Active</option>
                                 </select>

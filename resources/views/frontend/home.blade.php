@@ -145,7 +145,7 @@
                                             <div class="category-wrap">
                                                 <a href="/collections/earphone">
                                                     <img src="{{ asset('public/storage/' . $row->icon) }}" class="img-fluid"
-                                                        alt="" width="249px" height="187px">
+                                                        alt="" width="249px" height="187px" style="width: 249px; height: 187px;">
                                                     <span class="cat-title">{{ $row->name }}</span>
                                                 </a>
                                             </div>

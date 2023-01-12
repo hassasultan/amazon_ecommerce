@@ -10,7 +10,7 @@
                             <div class="slide-image">
                                 <a href="{{ $row->link }}" class="slider-image w-100">
                                     <img class="img-fluid desk-img w-100"
-                                        src="{{ asset('storage/'.$row->banner) }}">
+                                        src="{{ asset('public/storage/'.$row->banner) }}">
 
                                 </a>
                                 <div class="container">

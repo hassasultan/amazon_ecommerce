@@ -84,6 +84,7 @@ class CoupenController extends Controller
             }
             $coupen->code = $request->code;
             $coupen->expiry = $request->expiry;
+            $coupen->save();
             DB::commit();
 
             return redirect()->route('coupen.index')->with('success', 'Record created successfully.');

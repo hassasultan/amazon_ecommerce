@@ -39,13 +39,18 @@
                                 <img src="{{ asset('public/storage/'.$row->fea_img) }}" style="width: 100px; height: 100px; border-radius: 50%;"/>
                             </td>
                             <td>
-                                @if($row->featured == 1)
+                                @if($row->IsFeature == 1)
                                 YES
                                 @else
                                 NO
                                 @endif
                             </td>
                             <td class="text-center">
+                                @if($row->status == 1)
+                                Active
+                                @else
+                                De-Active
+                                @endif
                                 {{-- @if($row->status != 2)
                                     @if($row->status == 1)
                                         <p><span class="bg-success">Accepted</span></p>

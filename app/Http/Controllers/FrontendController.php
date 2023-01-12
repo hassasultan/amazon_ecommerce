@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Section;
 use App\Models\Category;
 use App\Models\WishList;
+use App\Models\Banner;
 use Carbon\Carbon;
 use Exception;
 use Illuminate\Support\Facades\Hash;
@@ -34,8 +35,10 @@ class FrontendController extends Controller
         })->whereHas('products.coupon',function($query){
             $query->where('expiry', '>=', Carbon::today());
         })->where('status',1)->get();
+        $banner = Banner::where('status',1)->get();
+
         // dd($section->toArray());
-        return view('frontend.home',compact('product','section','featured','category'));
+        return view('frontend.home',compact('product','section','featured','category','banner'));
     }
     public function details($slug)
     {

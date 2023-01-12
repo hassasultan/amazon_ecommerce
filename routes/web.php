@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubCategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\CoupenController;
 use App\Http\Controllers\AssignCoupenController;
@@ -40,6 +41,7 @@ Route::prefix('/admin')->group(function (){
         Route::resource('/category',CategoryController::class);
         Route::resource('/subcategory',SubCategoryController::class);
         Route::resource('/brand',BrandController::class);
+        Route::resource('/banner',BannerController::class);
         Route::resource('/product',ProductController::class);
         Route::resource('/section',SectionController::class);
         Route::resource('/coupen',CoupenController::class);

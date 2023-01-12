@@ -2,6 +2,9 @@
     <li class="nav-item {{ Route::is('home') ? 'active active-item' : '' }}">
         <a href="{{route('home')}}"><img src="{{ asset('user_dashboard/images/dashboard.png') }}" alt="" class="me-3">Admin Dashboard</a>
     </li>
+    <li class="{{ Request::routeIs('banner.index') ? 'active active-item' : '' }}">
+        <a href="{{route('banner.index')}}"><img src="{{ asset('user_dashboard/images/payment.png') }}" alt="" class="me-3"> Banner</a>
+    </li>
     <li class="{{ Request::routeIs('category.index') ? 'active active-item' : '' }}">
         <a href="{{route('category.index')}}"><img src="{{ asset('user_dashboard/images/payment.png') }}" alt="" class="me-3"> Category</a>
     </li>
@@ -20,6 +23,7 @@
     <li class="{{ Request::routeIs('coupen.index') ? 'active active-item' : '' }}">
         <a href="{{route('coupen.index')}}"><img src="{{ asset('user_dashboard/images/payment.png') }}" alt="" class="me-3"> Coupens</a>
     </li>
+
     {{-- <li @if (Route::is('admin.allcourses') || Route::is('admin.allcategories')  || Route::is('user.mycourses') ) class="accordion-item active active-item" @else class="accordion-item" @endif >
         <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"

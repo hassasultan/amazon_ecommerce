@@ -24,6 +24,20 @@ trait SaveImage
         $filename       = $img->move(public_path('storage/image'.'/'.'category/'),$filenamenew);
         return $filenamepath;
     }
+
+    public function BannerImage($image)
+    {
+        // $this->attributes['slug'] = Str::slug($image, config('roles.separator'));
+        $img = $image;
+        $number = rand(1,999);
+        $numb = $number / 7 ;
+        $extension      = $img->extension();
+        $filenamenew    = date('Y-m-d')."_.".$numb."_.".$extension;
+        $filenamepath   = 'image'.'/'.'banner/'.$filenamenew;
+        $filename       = $img->move(public_path('storage/image'.'/'.'banner/'),$filenamenew);
+        return $filenamepath;
+    }
+
     public function ProductFeaturedImage($image)
     {
         $img = $image;

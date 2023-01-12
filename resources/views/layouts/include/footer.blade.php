@@ -122,7 +122,7 @@
                         </div>
                         <style data-shopify>
                             .footer-list-wrap ul.footer-list li.width-ac6a89ac-0ecd-4a2d-a253-57e64cccee17 {
-                                width: calc(25% - 30px);
+                                width: calc(40% - 30px);
                             }
                         </style>
                     </li>
@@ -137,39 +137,7 @@
 
 
 
-                            {{-- <li class="ftsublink-li">
-                                <a href="/collections/desktop" class="ft-sublink">Desktop</a>
-                            </li>
 
-
-
-                            <li class="ftsublink-li">
-                                <a href="/collections/laptops-notebooks" class="ft-sublink">Laptops & notebooks</a>
-                            </li>
-
-
-
-                            <li class="ftsublink-li">
-                                <a href="/collections/components" class="ft-sublink">Components</a>
-                            </li>
-
-
-
-                            <li class="ftsublink-li">
-                                <a href="/collections/tablets" class="ft-sublink">Tablets</a>
-                            </li>
-
-
-
-                            <li class="ftsublink-li">
-                                <a href="/collections/software" class="ft-sublink">Software</a>
-                            </li>
-
-
-
-                            <li class="ftsublink-li">
-                                <a href="/collections/phone-pdas" class="ft-sublink">Phone & PDAS</a>
-                            </li> --}}
 
 
                         </ul>
@@ -180,7 +148,7 @@
                             }
                         </style>
                     </li>
-                    <li class="ftlink-li link-list text-start text-lg-start width-474709cb-2460-4831-8a76-4788b84bad17">
+                    {{-- <li class="ftlink-li link-list text-start text-lg-start width-474709cb-2460-4831-8a76-4788b84bad17">
 
                         <h2 class="ft-title md-d-none">Customer care</h2>
                         <a data-bs-toggle="collapse" href="#collapse-customer-care" class="ft-title">
@@ -233,7 +201,7 @@
                                 width: calc(25% - 30px);
                             }
                         </style>
-                    </li>
+                    </li> --}}
                     <li
                         class="ftlink-li newsletter text-start text-lg-start width-ce21c9f4-2317-48ae-9c1b-d8ff7c1987c1">
                         <div class="news-content">
@@ -674,7 +642,7 @@
                                 <p>Copyright © 2023 -2030  by <a href="{{route('index')}}">Koupon Deals</a></p>
                             </div>
                         </li>
-                        <li class="payment">
+                        {{-- <li class="payment">
                             <a href="javascript:void(0)" class="payment-icon">
 
 
@@ -754,7 +722,7 @@
 
                                 }
                             </style>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>

@@ -5,92 +5,47 @@
         <section class="slider-content">
             <div class="home-slider swiper-container" id="home-slider">
                 <div class="swiper-wrapper">
+                    @foreach ($banner as $row)
+                        <div class="swiper-slide slider-item-4f5c2dd7-3445-494c-9535-36efc312feda{{ $row->id }}">
+                            <div class="slide-image">
+                                <a href="{{ $row->link }}" class="slider-image w-100">
+                                    <img class="img-fluid desk-img w-100"
+                                        src="{{ asset('storage/'.$row->banner) }}">
 
-                    <div class="swiper-slide slider-item-4f5c2dd7-3445-494c-9535-36efc312feda">
-                        <div class="slide-image">
-                            <a href="/collections/earphone" class="slider-image">
-                                <img class="img-fluid desk-img"
-                                    src="//cdn.shopify.com/s/files/1/0641/3431/6288/files/slider-1.jpg?v=1650691565">
+                                </a>
+                                <div class="container">
+                                    <div class="silder-content">
+                                        <div class="slider-text-info">
 
-                            </a>
-                            <div class="container">
-                                <div class="silder-content">
-                                    <div class="slider-text-info">
-
-                                        <span class="sub-title" style="color: #ffffff;">
-                                            <span>* Starting price</span>
-                                            <span class="color-text">$120.00</span>
-                                        </span>
-
-
-                                        <h1 style="color:#ffffff;">
-                                            <span>Portable</span>
-
-                                            <span>wireless</span>
-
-                                        </h1>
+                                            <span class="sub-title" style="color: #ffffff;">
+                                                <span>* {{ $row->price_desc }}</span>
+                                                {{-- <span class="color-text">$120.00</span> --}}
+                                            </span>
 
 
-                                        <a class="slider-btn" href="/collections/earphone">
-                                            Shop collection
-                                        </a>
+                                            <h1 style="color:#ffffff;">
+                                                <span>{{ $row->title }}</span>
+                                            </h1>
 
+
+                                            <a class="slider-btn" href="{{ $row->link }}">
+                                                Shop collection
+                                            </a>
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <style data-shopify>
-                                @media(max-width: 767px) {
-                                    .slider-content .home-slider .slider-item-4f5c2dd7-3445-494c-9535-36efc312feda .slide-image img {
-                                        height: 400px;
-                                        object-fit: cover;
+                                <style data-shopify>
+                                    @media(max-width: 767px) {
+                                        .slider-content .home-slider .slider-item-4f5c2dd7-3445-494c-9535-36efc312feda .slide-image img {
+                                            height: 400px;
+                                            object-fit: cover;
+                                        }
                                     }
-                                }
-                            </style>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide slider-item-b4f1b1d6-da3f-436b-a651-63f35423932c">
-                        <div class="slide-image">
-                            <a href="/collections/desktop" class="slider-image">
-                                <img class="img-fluid desk-img"
-                                    src="//cdn.shopify.com/s/files/1/0641/3431/6288/files/slider-02_1.png?v=1650977324">
-
-                            </a>
-                            <div class="container">
-                                <div class="silder-content">
-                                    <div class="slider-text-info">
-
-                                        <span class="sub-title" style="color: #ffffff;">
-                                            <span>* Starting price</span>
-                                            <span class="color-text">$120.00</span>
-                                        </span>
-
-
-                                        <h1 style="color:#ffffff;">
-                                            <span>Smart</span>
-
-                                            <span>4K desk</span>
-
-                                        </h1>
-
-
-                                        <a class="slider-btn" href="/collections/desktop">
-                                            Shop collection
-                                        </a>
-
-                                    </div>
-                                </div>
+                                </style>
                             </div>
-                            <style data-shopify>
-                                @media(max-width: 767px) {
-                                    .slider-content .home-slider .slider-item-b4f1b1d6-da3f-436b-a651-63f35423932c .slide-image img {
-                                        height: 400px;
-                                        object-fit: cover;
-                                    }
-                                }
-                            </style>
                         </div>
-                    </div>
+                    @endforeach
 
                 </div>
             </div>

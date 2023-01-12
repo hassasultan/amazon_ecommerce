@@ -59,7 +59,7 @@
                                     <th style="width: 10px">#</th>
                                     <th>Title</th>
                                     <th>Description</th>
-                                    {{-- <th>Category</th> --}}
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -71,6 +71,14 @@
                                     {{-- <td>{{ $row->category->name }}</td> --}}
                                     <td>{{ $row->name }}</td>
                                     <td>{{ $row->description }}</td>
+                                    <td>
+                                        @if($row->status == 1)
+                                        Active
+                                        @else
+                                        De-Active
+                                        @endif
+                                    </td>
+
 
                                     <td style="width: 11rem">
                                     <a href="{{ route('section.edit', $row->id) }}" class="btn btn-info btn-sm"><i

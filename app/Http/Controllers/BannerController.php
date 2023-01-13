@@ -70,7 +70,7 @@ class BannerController extends Controller
             $banner->link   = $request->link;
             if ($request->has('banner'))
             {
-                $banner->banner = $this->BannerImage($request->logo);
+                $banner->banner = $this->BannerImage($request->banner);
             }
             $banner->status        = $request->status;
             $banner->save();

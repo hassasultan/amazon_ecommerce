@@ -757,6 +757,113 @@
                                     <i class="ri-menu-line"></i>
                                 </button>
                             </li>
+                            <li class="side-wrap wishlist-wrap"><a class="header-wishlist-btn" href="{{ route('wishlist') }}"
+                                title="Likes">
+                                <span class="wishlist-title">Likes</span>
+                                <span class="wishlist-icon"><i class="far fa-thumbs-up"></i></span>
+                                {{-- {{ dd(count(auth()->user()->wishlistCount->toArray())) }} --}}
+                                <span class="wishlist-counter1" id="like-count">
+                                    @if (auth()->check())
+                                        ({{ count(auth()->user()->wishlistCount->toArray()) }})
+                                    @else
+                                        (0)
+                                    @endif
+                                </span>
+                            </a>
+                            <style>
+                                a.header-wishlist-btn {
+                                    color: #929292;
+                                    display: flex;
+                                    align-items: center;
+                                    font-size: 22px;
+                                    font-weight: 500;
+                                    text-transform: uppercase
+                                }
+
+                                .is-sticky a.header-wishlist-btn {
+                                    color: #757375;
+                                }
+
+                                a.header-wishlist-btn:hover {
+                                    color: var(--font-color-primary);
+                                }
+
+                                a.header-wishlist-btn span.wishlist-icon i {
+                                    display: block;
+                                    line-height: 1;
+                                }
+
+                                a.header-wishlist-btn span.wishlist-title {
+                                    display: none;
+
+                                    margin-right: 10px;
+
+                                }
+
+                                a.header-wishlist-btn span.wishlist-counter {
+                                    position: relative;
+                                    font-size: 16px;
+                                    padding: 0px 7px;
+                                    line-height: 1;
+                                }
+
+                                a.header-wishlist-btn span.wishlist-counter:after {
+                                    font-size: 16px;
+                                    content: '(';
+                                    position: absolute;
+                                    bottom: 50%;
+                                    transform: translateY(50%);
+                                    left: 0px;
+                                }
+
+                                a.header-wishlist-btn span.wishlist-counter:before {
+                                    font-size: 16px;
+                                    content: ')';
+                                    position: absolute;
+                                    bottom: 50%;
+                                    transform: translateY(50%);
+                                    right: 0px;
+                                }
+
+                                @media (max-width: 1599px) {
+                                    a.header-wishlist-btn span.wishlist-title {
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                @media (max-width: 1199px) {
+                                    a.header-wishlist-btn {
+                                        font-size: 18px;
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-counter {
+                                        display: flex;
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-counter {
+                                        font-size: 14px;
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-counter:after {
+                                        font-size: 14px;
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-counter:before {
+                                        font-size: 14px;
+                                    }
+
+                                    a.header-wishlist-btn span.wishlist-title {
+                                        display: none;
+                                    }
+                                }
+
+                                @media (max-width: 479px) {
+                                    a.header-wishlist-btn span.wishlist-counter {
+                                        display: none;
+                                    }
+                                }
+                            </style>
+                        </li>
                             @if (auth()->check())
 
                             <li class="side-wrap user-wrap">
@@ -1014,113 +1121,7 @@
                             </li>
                             @endif
 
-                            <li class="side-wrap wishlist-wrap"><a class="header-wishlist-btn" href="{{ route('wishlist') }}"
-                                    title="Likes">
-                                    <span class="wishlist-title">Likes</span>
-                                    <span class="wishlist-icon"><i class="far fa-thumbs-up"></i></span>
-                                    {{-- {{ dd(count(auth()->user()->wishlistCount->toArray())) }} --}}
-                                    <span class="wishlist-counter1" id="like-count">
-                                        @if (auth()->check())
-                                            ({{ count(auth()->user()->wishlistCount->toArray()) }})
-                                        @else
-                                            (0)
-                                        @endif
-                                    </span>
-                                </a>
-                                <style>
-                                    a.header-wishlist-btn {
-                                        color: #929292;
-                                        display: flex;
-                                        align-items: center;
-                                        font-size: 22px;
-                                        font-weight: 500;
-                                        text-transform: uppercase
-                                    }
 
-                                    .is-sticky a.header-wishlist-btn {
-                                        color: #757375;
-                                    }
-
-                                    a.header-wishlist-btn:hover {
-                                        color: var(--font-color-primary);
-                                    }
-
-                                    a.header-wishlist-btn span.wishlist-icon i {
-                                        display: block;
-                                        line-height: 1;
-                                    }
-
-                                    a.header-wishlist-btn span.wishlist-title {
-                                        display: none;
-
-                                        margin-right: 10px;
-
-                                    }
-
-                                    a.header-wishlist-btn span.wishlist-counter {
-                                        position: relative;
-                                        font-size: 16px;
-                                        padding: 0px 7px;
-                                        line-height: 1;
-                                    }
-
-                                    a.header-wishlist-btn span.wishlist-counter:after {
-                                        font-size: 16px;
-                                        content: '(';
-                                        position: absolute;
-                                        bottom: 50%;
-                                        transform: translateY(50%);
-                                        left: 0px;
-                                    }
-
-                                    a.header-wishlist-btn span.wishlist-counter:before {
-                                        font-size: 16px;
-                                        content: ')';
-                                        position: absolute;
-                                        bottom: 50%;
-                                        transform: translateY(50%);
-                                        right: 0px;
-                                    }
-
-                                    @media (max-width: 1599px) {
-                                        a.header-wishlist-btn span.wishlist-title {
-                                            font-size: 14px;
-                                        }
-                                    }
-
-                                    @media (max-width: 1199px) {
-                                        a.header-wishlist-btn {
-                                            font-size: 18px;
-                                        }
-
-                                        a.header-wishlist-btn span.wishlist-counter {
-                                            display: flex;
-                                        }
-
-                                        a.header-wishlist-btn span.wishlist-counter {
-                                            font-size: 14px;
-                                        }
-
-                                        a.header-wishlist-btn span.wishlist-counter:after {
-                                            font-size: 14px;
-                                        }
-
-                                        a.header-wishlist-btn span.wishlist-counter:before {
-                                            font-size: 14px;
-                                        }
-
-                                        a.header-wishlist-btn span.wishlist-title {
-                                            display: none;
-                                        }
-                                    }
-
-                                    @media (max-width: 479px) {
-                                        a.header-wishlist-btn span.wishlist-counter {
-                                            display: none;
-                                        }
-                                    }
-                                </style>
-                            </li>
                         </ul>
                     </div>
                 </div>

@@ -113,10 +113,10 @@ class FrontendController extends Controller
     {
         $data['category'] = Category::with(['products'=>function($query) {
             return $query->limit(5);
-        }])->take(4)->latest()->get();
+        }])->where('status',1)->take(4)->latest()->get();
         $data['section'] = Section::with(['products'=>function($query) {
             return $query->where('status',1)->limit(5);
-        }])->take(4)->get();
+        }])->where('status',1)->take(4)->get();
         return $data;
     }
     public function wishlist()

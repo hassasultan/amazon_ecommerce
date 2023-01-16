@@ -231,35 +231,52 @@
                                                                             </div>
                                                                             <div class="product-info mt-3">
                                                                                 <div class="row">
-                                                                                    <div class="col-4 text-start ps-4">
+                                                                                    <div class="col-md-3 text-center p-1">
                                                                                         @if (auth()->check())
                                                                                             @if ($row->wishlist == null)
                                                                                                 <a href="javascript:void(0)"
                                                                                                     class="text-start ms-2"
                                                                                                     onclick="liked({{ $row->id }})"
-                                                                                                    alt="like" style="padding: 8px;"><i
+                                                                                                    alt="like"
+                                                                                                    style="padding: 8px;"><i
                                                                                                         class="far fa-thumbs-up  fs-5"
                                                                                                         id="thumb-icon-{{ $row->id }}"></i></a>
                                                                                             @else
                                                                                                 <a href="javascript:void(0)"
                                                                                                     class="text-start ms-2"
                                                                                                     onclick="liked({{ $row->id }})"
-                                                                                                    alt="Unlike"  style="padding: 8px;"><i
+                                                                                                    alt="Unlike"
+                                                                                                    style="padding: 8px;"><i
                                                                                                         class="fas fa-thumbs-up  fs-5"
                                                                                                         id="thumb-icon-{{ $row->id }}"
                                                                                                         style="color: #ed1c24;"></i></a>
                                                                                             @endif
                                                                                         @else
                                                                                             <a href="{{ route('login') }}"
-                                                                                                class="text-start ms-2"  style="padding: 8px;"><i
+                                                                                                class="text-start ms-2"
+                                                                                                style="padding: 8px;"><i
                                                                                                     class="far fa-thumbs-up  fs-5"></i></a>
                                                                                         @endif
                                                                                     </div>
-                                                                                    {{-- <div class="col-6 p-0">
-                                                                                    </div> --}}
-                                                                                    <div class="col-8 flat-social text-end">
+                                                                                    <div class="col-md-6 text-center p-1">
+                                                                                        @php
+                                                                                            $fdate = $row->coupon[0]->expiry;
+                                                                                            $tdate = \Carbon\Carbon::now();
+                                                                                            $datetime1 = new DateTime($fdate);
+                                                                                            $datetime2 = new DateTime($tdate);
+                                                                                            $interval = $datetime1->diff($datetime2);
+                                                                                            $days = $interval->format('%a');//now do whatever you like with $days
+                                                                                        @endphp
+                                                                                        <b>{{ $days }} days left</b>
+                                                                                    </div>
+                                                                                    <div class="col-md-3 flat-social text-center p-1">
+                                                                                        <i class="fas fa-share share_custom me-2"></i>
+
                                                                                         {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
 
+                                                                                    </div>
+                                                                                    <div class="col-12 full-fill text-center" style="color: #ed1c24">
+                                                                                        <b>Full fill by Amazon</b>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>

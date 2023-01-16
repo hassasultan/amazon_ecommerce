@@ -83,11 +83,11 @@
 
                                 <div class="col-md-12 mb-3">
                                     <label for="validationTooltipOldprice">Old Price</label>
-                                    <input type="number" class="form-control"  value="{{ old('old_price') }}" name="old_price" id="validationTooltipOldprice" required>
+                                    <input type="number" class="form-control"  value="{{ old('old_price') }}" name="old_price" id="validationTooltipOldprice" step="any" min=”0″  required>
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="validationTooltipnewprice">New Price</label>
-                                    <input type="number" class="form-control"  value="{{ old('new_price') }}" name="new_price" id="validationTooltipnewprice" required>
+                                    <input type="number" class="form-control"  value="{{ old('new_price') }}" name="new_price" id="validationTooltipnewprice" step="any" min=”0″ required>
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="validationTooltip0Link">Redirect Link</label>

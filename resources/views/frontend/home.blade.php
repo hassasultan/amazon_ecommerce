@@ -10,7 +10,7 @@
                             <div class="slide-image">
                                 <a href="{{ $row->link }}" class="slider-image w-100">
                                     <img class="img-fluid desk-img w-100"
-                                        src="{{ asset('public/storage/'.$row->banner) }}">
+                                        src="{{ asset('public/storage/' . $row->banner) }}">
 
                                 </a>
                                 <div class="container">
@@ -99,8 +99,9 @@
                                         <div class="swiper-slide">
                                             <div class="category-wrap">
                                                 <a href="/collections/earphone">
-                                                    <img src="{{ asset('public/storage/' . $row->icon) }}" class="img-fluid"
-                                                        alt="" width="249px" height="187px" style="width: 249px; height: 187px;">
+                                                    <img src="{{ asset('public/storage/' . $row->icon) }}"
+                                                        class="img-fluid" alt="" width="249px" height="187px"
+                                                        style="width: 249px; height: 187px;">
                                                     <span class="cat-title">{{ $row->name }}</span>
                                                 </a>
                                             </div>
@@ -108,6 +109,7 @@
                                     @endforeach
                                 </div>
                             </div>
+
                             <div class="swiper-buttons">
                                 <button class="button-prev-template--15924304773376__16506938940dc69a2a"><i
                                         class="fas fa-angle-double-left"></i></button>
@@ -122,7 +124,7 @@
 
         <script type="text/javascript">
             var swiper = new Swiper('#category-slider-template--15924304773376__16506938940dc69a2a', {
-                slidesPerColumn: 1,
+                slidesPerColumn: 2,
                 slidesPerView: 4,
                 spaceBetween: 30,
                 observer: true,
@@ -146,10 +148,12 @@
                         spaceBetween: 12
                     },
                     768: {
-                        slidesPerView: 3
+                        slidesPerView: 3,
+                        spaceBetween: 12
                     },
                     979: {
-                        slidesPerView: 3
+                        slidesPerView: 3,
+                        spaceBetween: 12
                     },
                     1199: {
                         slidesPerView: 3
@@ -314,12 +318,12 @@
                                                             href="{{ route('product.details', $row->slug) }}">
                                                             <img class="img-fluid img1"
                                                                 src="{{ asset('public/storage/' . $row->fea_img) }}"
-                                                                alt="Drone camera" width="297px" height="297px"
+                                                                alt="{{ $row->slug }}"
                                                                 style="width: 297px; height: 297px;">
 
                                                             <img class="img-fluid img2"
                                                                 src="@if ($row->singleImage != null) {{ asset('public/storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
-                                                                alt="Drone camera" width="297px" height="297px"
+                                                                alt="{{ $row->slug }}"
                                                                 style="width: 297px; height: 297px;">
 
                                                         </a>
@@ -354,35 +358,52 @@
                                                         </div>
                                                         <div class="product-info mt-3">
                                                             <div class="row">
-                                                                <div class="col-4 text-start ps-4">
+                                                                <div class="col-md-3 text-center p-1">
                                                                     @if (auth()->check())
                                                                         @if ($row->wishlist == null)
                                                                             <a href="javascript:void(0)"
                                                                                 class="text-start ms-2"
                                                                                 onclick="liked({{ $row->id }})"
-                                                                                alt="like" style="padding: 8px;"><i
+                                                                                alt="like"
+                                                                                style="padding: 8px;"><i
                                                                                     class="far fa-thumbs-up  fs-5"
                                                                                     id="thumb-icon-{{ $row->id }}"></i></a>
                                                                         @else
                                                                             <a href="javascript:void(0)"
                                                                                 class="text-start ms-2"
                                                                                 onclick="liked({{ $row->id }})"
-                                                                                alt="Unlike"  style="padding: 8px;"><i
+                                                                                alt="Unlike"
+                                                                                style="padding: 8px;"><i
                                                                                     class="fas fa-thumbs-up  fs-5"
                                                                                     id="thumb-icon-{{ $row->id }}"
                                                                                     style="color: #ed1c24;"></i></a>
                                                                         @endif
                                                                     @else
                                                                         <a href="{{ route('login') }}"
-                                                                            class="text-start ms-2"  style="padding: 8px;"><i
+                                                                            class="text-start ms-2"
+                                                                            style="padding: 8px;"><i
                                                                                 class="far fa-thumbs-up  fs-5"></i></a>
                                                                     @endif
                                                                 </div>
-                                                                {{-- <div class="col-6 p-0">
-                                                                </div> --}}
-                                                                <div class="col-8 flat-social text-end">
+                                                                <div class="col-md-6 text-center p-1">
+                                                                    @php
+                                                                        $fdate = $row->coupon[0]->expiry;
+                                                                        $tdate = \Carbon\Carbon::now();
+                                                                        $datetime1 = new DateTime($fdate);
+                                                                        $datetime2 = new DateTime($tdate);
+                                                                        $interval = $datetime1->diff($datetime2);
+                                                                        $days = $interval->format('%a');//now do whatever you like with $days
+                                                                    @endphp
+                                                                    <b>{{ $days }} days left</b>
+                                                                </div>
+                                                                <div class="col-md-3 flat-social text-center p-1">
+                                                                    <i class="fas fa-share share_custom me-2"></i>
+
                                                                     {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
 
+                                                                </div>
+                                                                <div class="col-12 full-fill text-center" style="color: #ed1c24">
+                                                                    <b>Full fill by Amazon</b>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -450,7 +471,8 @@
     </div>
 
     @foreach ($section as $item)
-        <div id="shopify-section-template--15924304773376__1650876933ae7882f4{{ $item->id }}" class="shopify-section">
+        <div id="shopify-section-template--15924304773376__1650876933ae7882f4{{ $item->id }}"
+            class="shopify-section">
             <section class="new-category collection-category-template--15924304773376__1650876933ae7882f4">
                 <div class="container">
                     <div class="row">
@@ -469,7 +491,7 @@
                                 <div class="swiper-container feture_pro_tab" id="new-product-{{ $item->id }}">
                                     <div class="swiper-wrapper">
                                         @foreach ($item->products as $row)
-                                            <div class="swiper-slide">
+                                            <div class="swiper-slide  change-div-mod">
                                                 <div class="swiper-slide">
                                                     <div class="single-product-wrap">
                                                         <div class="product-image">
@@ -517,35 +539,52 @@
                                                             </div>
                                                             <div class="product-info mt-3">
                                                                 <div class="row">
-                                                                    <div class="col-4 text-start ps-4">
+                                                                    <div class="col-md-3 text-center p-1">
                                                                         @if (auth()->check())
                                                                             @if ($row->wishlist == null)
                                                                                 <a href="javascript:void(0)"
                                                                                     class="text-start ms-2"
                                                                                     onclick="liked({{ $row->id }})"
-                                                                                    alt="like" style="padding: 8px;"><i
+                                                                                    alt="like"
+                                                                                    style="padding: 8px;"><i
                                                                                         class="far fa-thumbs-up  fs-5"
                                                                                         id="thumb-icon-{{ $row->id }}"></i></a>
                                                                             @else
                                                                                 <a href="javascript:void(0)"
                                                                                     class="text-start ms-2"
                                                                                     onclick="liked({{ $row->id }})"
-                                                                                    alt="Unlike"  style="padding: 8px;"><i
+                                                                                    alt="Unlike"
+                                                                                    style="padding: 8px;"><i
                                                                                         class="fas fa-thumbs-up  fs-5"
                                                                                         id="thumb-icon-{{ $row->id }}"
                                                                                         style="color: #ed1c24;"></i></a>
                                                                             @endif
                                                                         @else
                                                                             <a href="{{ route('login') }}"
-                                                                                class="text-start ms-2"  style="padding: 8px;"><i
+                                                                                class="text-start ms-2"
+                                                                                style="padding: 8px;"><i
                                                                                     class="far fa-thumbs-up  fs-5"></i></a>
                                                                         @endif
                                                                     </div>
-                                                                    {{-- <div class="col-6 p-0">
-                                                                    </div> --}}
-                                                                    <div class="col-8 flat-social text-end">
+                                                                    <div class="col-md-6 text-center p-1">
+                                                                        @php
+                                                                            $fdate = $row->coupon[0]->expiry;
+                                                                            $tdate = \Carbon\Carbon::now();
+                                                                            $datetime1 = new DateTime($fdate);
+                                                                            $datetime2 = new DateTime($tdate);
+                                                                            $interval = $datetime1->diff($datetime2);
+                                                                            $days = $interval->format('%a');//now do whatever you like with $days
+                                                                        @endphp
+                                                                        <b>{{ $days }} days left</b>
+                                                                    </div>
+                                                                    <div class="col-md-3 flat-social text-center p-1">
+                                                                        <i class="fas fa-share share_custom me-2"></i>
+
                                                                         {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
 
+                                                                    </div>
+                                                                    <div class="col-12 full-fill text-center" style="color: #ed1c24">
+                                                                        <b>Full fill by Amazon</b>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -683,35 +722,52 @@
                                                         </div>
                                                         <div class="product-info mt-3">
                                                             <div class="row">
-                                                                <div class="col-4 text-start ps-4">
+                                                                <div class="col-md-3 text-center p-1">
                                                                     @if (auth()->check())
                                                                         @if ($row->wishlist == null)
                                                                             <a href="javascript:void(0)"
                                                                                 class="text-start ms-2"
                                                                                 onclick="liked({{ $row->id }})"
-                                                                                alt="like" style="padding: 8px;"><i
+                                                                                alt="like"
+                                                                                style="padding: 8px;"><i
                                                                                     class="far fa-thumbs-up  fs-5"
                                                                                     id="thumb-icon-{{ $row->id }}"></i></a>
                                                                         @else
                                                                             <a href="javascript:void(0)"
                                                                                 class="text-start ms-2"
                                                                                 onclick="liked({{ $row->id }})"
-                                                                                alt="Unlike"  style="padding: 8px;"><i
+                                                                                alt="Unlike"
+                                                                                style="padding: 8px;"><i
                                                                                     class="fas fa-thumbs-up  fs-5"
                                                                                     id="thumb-icon-{{ $row->id }}"
                                                                                     style="color: #ed1c24;"></i></a>
                                                                         @endif
                                                                     @else
                                                                         <a href="{{ route('login') }}"
-                                                                            class="text-start ms-2"  style="padding: 8px;"><i
+                                                                            class="text-start ms-2"
+                                                                            style="padding: 8px;"><i
                                                                                 class="far fa-thumbs-up  fs-5"></i></a>
                                                                     @endif
                                                                 </div>
-                                                                {{-- <div class="col-6 p-0">
-                                                                </div> --}}
-                                                                <div class="col-8 flat-social text-end">
+                                                                <div class="col-md-6 text-center p-1">
+                                                                    @php
+                                                                        $fdate = $row->coupon[0]->expiry;
+                                                                        $tdate = \Carbon\Carbon::now();
+                                                                        $datetime1 = new DateTime($fdate);
+                                                                        $datetime2 = new DateTime($tdate);
+                                                                        $interval = $datetime1->diff($datetime2);
+                                                                        $days = $interval->format('%a');//now do whatever you like with $days
+                                                                    @endphp
+                                                                    <b>{{ $days }} days left</b>
+                                                                </div>
+                                                                <div class="col-md-3 flat-social text-center p-1">
+                                                                    <i class="fas fa-share share_custom me-2"></i>
+
                                                                     {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
 
+                                                                </div>
+                                                                <div class="col-12 full-fill text-center" style="color: #ed1c24">
+                                                                    <b>Full fill by Amazon</b>
                                                                 </div>
                                                             </div>
                                                         </div>

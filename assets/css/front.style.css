@@ -4020,7 +4020,7 @@ ul.pro_social_link li a i {
 /* swiper button css */
 .slider-category .category-area {
     position: relative;
-    display: flex;
+    display: block;
 }
 
 .slider-category .swiper-buttons button {
@@ -5056,7 +5056,7 @@ ul.breadcrumb-list li a {
     }
 }
 
-collection-sidebar css======================================*/
+/* collection-sidebar css======================================*/ */
 
 /* filter-sidebar close-button css */
 .shop-sidebar-inner .filter-sidebar .close-filter-sidebar {
@@ -5979,6 +5979,7 @@ ul.grid li .collection-content a:hover {
 .flat-social #social-links>ul>li>a>span
 {
     font-size: 1.25rem !important;
+    color: #ed1c24;
 }
 .pagination li {
     margin: 0 4px;
@@ -6026,3 +6027,29 @@ ul.grid li .collection-content a:hover {
     border-radius: 100%;
 }
 /*# sourceMappingURL=/s/files/1/0641/3431/6288/t/2/assets/style.css.map?v=101277586707833005891650976613 */
+
+
+.share_custom ~ #social-links {
+    transform: translateY(0);
+    position: absolute;
+    right: 5px;
+    opacity: 0;
+    transition: 0.4s;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+
+.share_custom ~ #social-links ul{
+    display: block !important;
+
+}
+.share_custom:hover ~ #social-links {
+    opacity: 1;
+    transform: translateY(-164px);
+}
+
+.share_custom ~ #social-links:hover {
+    opacity: 0.8;
+    transform: translateY(-164px);
+}

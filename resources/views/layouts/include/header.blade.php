@@ -1626,118 +1626,16 @@
 
 
                                                 <li class="menu-link parant">
-                                                    <a aria-current="page" href="/" class="link-title active">
+                                                    <a aria-current="page" href="{{ route('index') }}" class="link-title active">
                                                         <span class="sp-link-title">Home</span>
-                                                        <i class="fas fa-chevron-circle-down"></i>
+                                                        {{-- <i class="fas fa-chevron-circle-down"></i> --}}
                                                     </a>
-                                                    <a href="#main-collapse-home" data-bs-toggle="collapse"
+                                                    <a href="{{ route('index') }}" data-bs-toggle="collapse"
                                                         class="link-title link-title-lg">
                                                         <span class="sp-link-title">Home</span>
-                                                        <i class="fas fa-chevron-circle-down"></i>
+                                                        {{-- <i class="fas fa-chevron-circle-down"></i> --}}
                                                     </a>
-                                                    <ul class="dropdown-submenu collapse" id="main-collapse-home">
-                                                        <div class="container p-0 ul">
 
-
-
-
-
-
-                                                            <li class="submenu-li parant">
-                                                                <a href="https://electon-store.myshopify.com/"
-                                                                    class="sublink-title">
-                                                                    <span class="sp-link-title">Home 01</span>
-                                                                </a>
-                                                            </li>
-
-
-
-
-
-
-
-
-                                                            <li class="submenu-li parant">
-                                                                <a href="https://electon1-store.myshopify.com/"
-                                                                    class="sublink-title">
-                                                                    <span class="sp-link-title">Home 02</span>
-                                                                </a>
-                                                            </li>
-
-
-
-
-
-
-
-
-                                                            <li class="submenu-li parant">
-                                                                <a href="https://electon2-store.myshopify.com/"
-                                                                    class="sublink-title">
-                                                                    <span class="sp-link-title">Home 03</span>
-                                                                </a>
-                                                            </li>
-
-
-
-
-
-
-
-
-                                                            <li class="submenu-li parant">
-                                                                <a href="https://electon3-store.myshopify.com/"
-                                                                    class="sublink-title">
-                                                                    <span class="sp-link-title">Home 04</span>
-                                                                </a>
-                                                            </li>
-
-
-
-
-
-
-
-
-                                                            <li class="submenu-li parant">
-                                                                <a href="https://electon4-store.myshopify.com/"
-                                                                    class="sublink-title">
-                                                                    <span class="sp-link-title">Home 05</span>
-                                                                </a>
-                                                            </li>
-
-
-
-
-
-
-
-
-                                                            <li class="submenu-li parant">
-                                                                <a href="https://electon5-store.myshopify.com/"
-                                                                    class="sublink-title">
-                                                                    <span class="sp-link-title">Home 06</span>
-                                                                </a>
-                                                            </li>
-
-
-
-
-
-
-
-
-                                                            <li class="submenu-li parant">
-                                                                <a href="https://electon6-store.myshopify.com/"
-                                                                    class="sublink-title">
-                                                                    <span class="sp-link-title">Home 07</span>
-                                                                </a>
-                                                            </li>
-
-
-
-                                                        </div>
-                                                    </ul>
                                                 </li>
 
                                                 <script>
@@ -1752,16 +1650,16 @@
 
 
                                                 <li class="menu-link parant">
-                                                    <a href="/collections/all" class="link-title ">
+                                                    <a href="{{ route('collection.all',['type'=> "products",'slug'=>'all']) }}" class="link-title ">
                                                         <span class="sp-link-title">Shop</span>
                                                         <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
-                                                    <a href="#main-collapse-shop" data-bs-toggle="collapse"
+                                                    <a href="#main-collapse-shop-mob" data-bs-toggle="collapse"
                                                         class="link-title link-title-lg">
                                                         <span class="sp-link-title">Shop</span>
                                                         <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
-                                                    <ul class="dropdown-submenu collapse" id="main-collapse-shop">
+                                                    <ul class="dropdown-submenu collapse" id="main-collapse-shop-mob">
                                                         <div class="container p-0 ul">
 
 
@@ -2030,7 +1928,7 @@
 
 
                                                 <li class="menu-link parant">
-                                                    <a href="/collections" class="link-title ">
+                                                    <a href="{{ route('collection.view') }}" class="link-title ">
                                                         <span class="sp-link-title">Collection</span>
                                                         <i class="fas fa-chevron-circle-down"></i>
                                                     </a>
@@ -2122,14 +2020,14 @@
 
 
 
-                                                <li class="menu-link">
+                                                {{-- <li class="menu-link">
                                                     <a href="/blogs/news" class="link-title " href="/blogs/news">
                                                         <span class="sp-link-title">Blog</span>
                                                     </a>
                                                     <a href="/blogs/news" class="link-title link-title-lg">
                                                         <span class="sp-link-title">Blog</span>
                                                     </a>
-                                                </li>
+                                                </li> --}}
 
                                                 <script>
                                                     $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');
@@ -2142,7 +2040,7 @@
 
 
 
-                                                <li class="menu-link parant">
+                                                {{-- <li class="menu-link parant">
                                                     <a href="#" class="link-title ">
                                                         <span class="sp-link-title">Pages</span>
                                                         <i class="fas fa-chevron-circle-down"></i>
@@ -2238,7 +2136,7 @@
 
                                                         </div>
                                                     </ul>
-                                                </li>
+                                                </li> --}}
 
                                                 <script>
                                                     $('.megamenu-li').parent('.container').parent('ul').addClass('mega-menu');

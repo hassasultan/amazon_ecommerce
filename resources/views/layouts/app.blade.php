@@ -300,6 +300,7 @@
                     success: function (data) {
                         console.log(data);
                         $("#main-collapse-shop").html("");
+                        $("#main-collapse-shop-mob").html("");
                         var your_html = "<div class='container p-0 ul'>";
                             $.each(data['section'], function (key, val) {
                                 your_html += "<li class='megamenu-li parant'><h2 class='sublink-title'>"+val['name']+"</h2>";
@@ -308,9 +309,9 @@
                                 your_html +=        "<i class='fas fa-chevron-circle-down'></i>";
                                 your_html +=    "</a>";
                                 your_html +=    "<a data-bs-toggle='collapse' href='#main-collapse-"+val['slug']+"'";
-                                your_html +=        "class='sublink-title sublink-title-lg'>'";
-                                your_html +=        "<span class='spb-link-title'>"+val['name']+"</span>'";
-                                your_html +=        "<i class='fas fa-chevron-circle-down'></i>'";
+                                your_html +=        "class='sublink-title sublink-title-lg'>";
+                                your_html +=        "<span class='spb-link-title'>"+val['name']+"</span>";
+                                your_html +=        "<i class='fas fa-chevron-circle-down'></i>";
                                 your_html +=    "</a> <ul class='dropdown-supmenu collapse' id='main-collapse-"+val['slug']+"'>";
                                 $.each(val['products'], function (index, item) {
                                     var text = item['title'];
@@ -327,8 +328,10 @@
                             });
                             your_html += '</div>';
                         $("#main-collapse-shop").append(your_html); //// For Append
+                        $("#main-collapse-shop-mob").append(your_html); //// For Append
                         //collection
                         $("#main-collapse-collection").html("");
+                        $("#main-collapse-collection2").html("");
                         $("#collapse-find-categories").html("");
                         var html_collect = "<div class='container p-0 ul'>";
                         var footer_html = "";
@@ -340,7 +343,7 @@
                                 html_collect += "        <img src='{{ asset('public/storage/')}}/"+val['icon']+"'";
                                 html_collect += "            class='img-fluid' alt='"+val['name']+"'>";
                                 html_collect += "    </a>";
-                                html_collect += "    <a href='/collection/category/"+val['slug']+"'";
+                                html_collect += "    <a href='/collection/section/"+val['slug']+"'";
                                 html_collect += "        class='menu-banner-title'>";
                                 html_collect += "        <span>"+val['name']+"</span>";
                                 html_collect += "    </a>";
@@ -351,6 +354,7 @@
                         });
                         html_collect += "</div>";
                         $("#main-collapse-collection").append(html_collect); //// For Append
+                        $("#main-collapse-collection2").append(html_collect); //// For Append
                         $("#collapse-find-categories").append(footer_html); //// For Append
 
                     },

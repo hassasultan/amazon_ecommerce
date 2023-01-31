@@ -25,11 +25,11 @@
                     <div class="row pro_details_pos">
                         <div class="col-xl-5 col-lg-6 col-md-12 col-12 product_details">
                             <!-- product_Prev_images start -->
-                            <a class="next-prev-product prev" href="/products/smart-watch" title="Smart watch">
+                            <a class="next-prev-product prev" href="{{ route('product.details', $prev->slug) }}" title="{{ $prev->title }}">
                                 <span>Prev</span>
                             </a>
                             <!-- product_Next_images end -->
-                            <a class="next-prev-product next" href="/products/5g-smart-tablet" title="5G smart tablet">
+                            <a class="next-prev-product next" href="{{ route('product.details', $next->slug) }}" title="{{ $next->title }}">
                                 <span>Next</span>
                             </a>
 
@@ -702,13 +702,13 @@
                                             <a href="#pro-dec" class="active" data-bs-toggle="tab" role="tab"
                                                 aria-selected="true">Description</a>
                                         </li>
-                                        <li role="presentation">
+                                        {{-- <li role="presentation">
                                             <a href="#pro-add-info" data-bs-toggle="tab" role="tab"
                                                 aria-selected="false">Additional info</a>
                                         </li>
                                         <li role="presentation">
                                             <a href="#pro-review" data-bs-toggle="tab" role="tab"
-                                                aria-selected="false">Reviews</a>
+                                                aria-selected="false">Reviews</a> --}}
                                         </li>
                                     </ul>
                                 </div>
@@ -717,7 +717,8 @@
                                     <div class="tab-pane active" id="pro-dec" role="tabpanel">
                                         <div class="more-description">
                                             <h6>More Detail</h6>
-                                            <ul>
+                                            {!! $product->description !!}
+                                            {{-- <ul>
                                                 <li>Lorem Ipsum is simply dummy text of the printing and typesetting
                                                     industry</li>
                                                 <li>Lorem Ipsum has been the industry's standard dummy text ever since the
@@ -732,9 +733,9 @@
                                                 <li>Contrary to popular belief, Lorem Ipsum is not simply random text. It
                                                     has roots in a piece of classical Latin literature from 45 BC, making it
                                                     over 2000 years old</li>
-                                            </ul>
+                                            </ul> --}}
                                         </div>
-                                        <div class="more-description">
+                                        {{-- <div class="more-description">
                                             <h6>Key Specification</h6>
                                             <ul>
                                                 <li>It is a long established fact that a reader will be distracted by the
@@ -753,9 +754,9 @@
                                                 <li>If you are going to use a passage of Lorem Ipsum, you need to be sure
                                                     there isn't anything embarrassing hidden in the middle of text</li>
                                             </ul>
-                                        </div>
+                                        </div> --}}
                                     </div>
-                                    <div class="tab-pane" id="pro-add-info" role="tabpanel">
+                                    {{-- <div class="tab-pane" id="pro-add-info" role="tabpanel">
                                         <table>
                                             <tbody>
                                                 <tr class="product-info">
@@ -781,7 +782,7 @@
                                     </div>
                                     <div class="tab-pane" id="pro-review" role="tabpanel">
                                         <div id="shopify-product-reviews" data-id="7704599331072"></div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>

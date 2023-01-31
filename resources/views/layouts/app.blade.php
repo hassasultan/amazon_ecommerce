@@ -313,9 +313,12 @@
                                 your_html +=        "<i class='fas fa-chevron-circle-down'></i>'";
                                 your_html +=    "</a> <ul class='dropdown-supmenu collapse' id='main-collapse-"+val['slug']+"'>";
                                 $.each(val['products'], function (index, item) {
+                                    var text = item['title'];
+                                    var count = 15;
+                                    var result = text.slice(0, count) + (text.length > count ? "..." : "");
                                     your_html += "<li class='supmenu-li'>";
                                     your_html += "<a href='/product/"+item['slug']+"' class='suplink-title'>";
-                                    your_html += "<span class='spbp-link-title'>"+item['title']+"</span>";
+                                    your_html += "<span class='spbp-link-title'>"+result+"</span>";
                                     your_html += "</a>";
                                     your_html += "</li>";
                                 });

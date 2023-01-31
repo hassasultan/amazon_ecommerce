@@ -6,7 +6,7 @@
                     <div class="header-element logo"><a href="{{ route('index') }}" class="theme-logo">
                             <img style="max-width: 80px;" src="{{ asset('assets/images/Fainal_.png') }}" class="img-fluid"
                                 alt="electon6-store">
-                        </a><a href="https://electon6-store.myshopify.com" class="other-logo">
+                        </a><a href="{{ route('index') }}" class="other-logo">
                             <img style="max-width: 80px;" src="{{ asset('assets/images/Fainal_.png') }}"
                                 alt="electon6-store">
                         </a>

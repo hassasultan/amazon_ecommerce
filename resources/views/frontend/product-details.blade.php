@@ -674,8 +674,7 @@
                                                         Get Coupon
                                                     </button>
                                                 @else
-                                                    <a href="{{ route('login') }}" class="btn btn-outline-dark" data-bs-toggle="modal"
-                                                        data-bs-target="#staticBackdrop">
+                                                    <a href="{{ route('login') }}" class="btn btn-outline-dark">
                                                         Get Coupon
                                                     </a>
                                                 @endif
@@ -960,35 +959,36 @@
             </script>
         </div>
         <!-- Modal -->
-        @if ($product->coupon != "[]")
-
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content text-center">
-                        <div class="modal-header">
-                            <h5 class="modal-title text-center" id="staticBackdropLabel">Fullfilled by Amazon</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="col-12 text-center">
-                                <i class="fas fa-check-circle" style="font-size:5.9rem; color:#ed1c24;"></i>
-                                <h4 class="mt-2" style="color:#ed1c24;">You've saved
-                                    ${{ $product->old_price - $product->new_price }}</h4>
-                                <p>Coupon may expire at anytime. Use it now!</p>
-                                {{-- <b>{{ $product->coupon[0]->code }}</b> --}}
-                                <input id="para" disabled value="{{ $product->coupon[0]->code }}"
-                                    style="text-align:center;border: none; font-weight:bold; font-size:1.5rem; color:#000; padding:0;" />
+        @if (auth()->check())
+            @if ($product->coupon != "[]")
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content text-center">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-center" id="staticBackdropLabel">Fullfilled by Amazon</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="col-12 mt-3 mb-3">
-                                <a class="modalCopiedbtn" href="javascript:void(0);" onclick="copyToClipboard('para')">
-                                    Copy and Go to Amazon
-                                </a>
+                            <div class="modal-body">
+                                <div class="col-12 text-center">
+                                    <i class="fas fa-check-circle" style="font-size:5.9rem; color:#ed1c24;"></i>
+                                    <h4 class="mt-2" style="color:#ed1c24;">You've saved
+                                        ${{ $product->old_price - $product->new_price }}</h4>
+                                    <p>Coupon may expire at anytime. Use it now!</p>
+                                    {{-- <b>{{ $product->coupon[0]->code }}</b> --}}
+                                    <input id="para" disabled value="{{ $product->coupon[0]->code }}"
+                                        style="text-align:center;border: none; font-weight:bold; font-size:1.5rem; color:#000; padding:0;" />
+                                </div>
+                                <div class="col-12 mt-3 mb-3">
+                                    <a class="modalCopiedbtn" href="javascript:void(0);" onclick="copyToClipboard('para')">
+                                        Copy and Go to Amazon
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endif
         @endif
     </main>
     <script>

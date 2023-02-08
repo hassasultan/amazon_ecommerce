@@ -20,12 +20,12 @@
                         @method('PUT')
                         @csrf
                         <div class="form-row">
-                            {{-- <div class="col-md-4 mb-3">
-                                <label for="validationTooltip02">Title</label>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationTooltip02">Button Title</label>
                                 <input type="text" class="form-control" name="title" id="validationTooltip02"
                                     placeholder="Title" required value="{{ old('title',$banner->title) }}">
                             </div>
-                            <div class="col-md-4 mb-3">
+                            {{-- <div class="col-md-4 mb-3">
                                 <label for="validationTooltip02">Price Description</label>
                                 <input class="form-control" name="price_desc" id="exampleFormControlTextarea1" placeholder="Price Description" value="{{ old('price_desc',$banner->price_desc) }}">
                             </div> --}}

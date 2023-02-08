@@ -38,8 +38,8 @@
                                             </h1> --}}
 
 
-                                            <a class="slider-btn" href="{{ $row->link }}">
-                                                Shop collection
+                                            <a class="slider-btn w-20" href="{{ $row->link }}">
+                                                {{ $row->title }}
                                             </a>
 
                                         </div>

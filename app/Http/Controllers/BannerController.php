@@ -34,6 +34,10 @@ class BannerController extends Controller
             DB::beginTransaction();
             $banner = new Banner;
             // $banner->title = $request->title;
+            if ($request->has('title'))
+            {
+                $banner->title = $request->title;
+            }
             if ($request->has('price_desc')) {
                 $banner->price_desc   = $request->price_desc;
             }
@@ -71,6 +75,10 @@ class BannerController extends Controller
             if ($request->has('banner'))
             {
                 $banner->banner = $this->BannerImage($request->banner);
+            }
+            if ($request->has('title'))
+            {
+                $banner->title = $request->title;
             }
             $banner->status        = $request->status;
             $banner->save();

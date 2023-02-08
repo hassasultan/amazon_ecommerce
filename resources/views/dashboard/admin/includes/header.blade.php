@@ -18,7 +18,7 @@
                     </div> --}}
                 </div>
                 <div class="col-6 d-sm-none">
-                    <img src="{{ asset('images/logo.png') }}" alt="" class="img-fluid">
+                    <img src="{{ asset('assets/images/Fainal_.png') }}" alt="" class="img-fluid">
                 </div>
                 <div class="col-md-3 text-end align-self-center col-sm-2 col-6">
                     <ul class="d-flex justify-content-end">

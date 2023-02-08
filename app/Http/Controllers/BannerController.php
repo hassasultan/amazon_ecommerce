@@ -82,7 +82,11 @@ class BannerController extends Controller
             return back()->with('error', $ex->getMessage());
         }
     }
-    public function destroy()
+    public function delete($id)
     {
+        $banner = Banner::find($id);
+        $banner->delete();
+        return redirect()->back()->with('success', 'Record Updated successfully.');
+
     }
 }

@@ -50,7 +50,7 @@
 
                                     </select>
                                 </div>
-                                <div class="col-md-6 mb-3">
+                                {{-- <div class="col-md-6 mb-3">
                                     <label for="inputState">Brand</label>
                                     <select id="inputState" class="form-control select2-multiple" name="brand" required>
                                         <option value="" selected>Select Brand</option>
@@ -59,7 +59,7 @@
                                                 value="{{ $row->id }}">{{ $row->name }}</option>
                                         @endforeach
                                     </select>
-                                </div>
+                                </div> --}}
 
 
                                 <div class="col-md-6 mb-3">

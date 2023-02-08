@@ -119,4 +119,16 @@ class SectionController extends Controller
             return back()->with('error', $ex->getMessage());
         }
     }
+    public function delete($id)
+    {
+        $banner = Section::find($id);
+        $img = PivotSectionProduct::where('section_id',$banner->id)->get();
+        foreach($img as $row)
+        {
+            $row->delete();
+        }
+        $banner->delete();
+        return redirect()->back()->with('success', 'Record Deleted successfully.');
+
+    }
 }

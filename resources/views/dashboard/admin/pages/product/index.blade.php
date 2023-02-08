@@ -73,12 +73,11 @@
                             <td style="width: 11rem">
                             {{-- <a href="{{ route('product.details',$row->id) }}" class="btn btn-info btn-sm"><i
                                 class="fas fa-info mr-2"></i></a> --}}
-                            <a href="#" class="btn btn-info btn-sm"><i
+                            <a href="{{route('product.edit',$row->id) }}" class="btn btn-info btn-sm"><i
                                 class="fas fa-edit mr-2"></i> Edit</a>
 
-                            <a onclick="admindelete({{$row->id}})" class="btn btn-danger btn-sm"><i
-                                class="fa fa-trash mr-2"></i> Delete</a>
-                            </td>
+                                <a href="{{route('product.delete',$row->id) }}" onclick="return confirm('Are you sure You want to delete this Item?')" class="btn btn-danger btn-sm"><i
+                                    class="fa fa-trash mr-2"></i> Delete</a>
                         </tr>
                         @endforeach
                         @else

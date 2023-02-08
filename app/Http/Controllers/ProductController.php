@@ -95,50 +95,88 @@ class ProductController extends Controller
     }
     public function edit($id)
     {
+        $product = Product::find($id);
+        $productImg = ProductImage::where('product_id',$id)->get();
         $category = Category::where('status',1)->get();
-        $subcategory = SubCategory::find($id);
-        return view('dashboard.admin.pages.product.edit',compact('subcategory','category'));
+        $brand = Brand::where('status',1)->get();
+        $subcategory = SubCategory::where('status',1)->get();
+        return view('dashboard.admin.pages.product.edit',compact('category','brand','subcategory','product','productImg'));
     }
     public function update($id,Request $request)
     {
         $valid = $this->validate($request,[
-            'name'          => 'required|string|unique:sub_category,name,'.$id,
+            'name'          => 'required|string|unique:product,title,'.$id,
             'category_id'   => 'required|numeric|exists:category,id',
+            'subcategory'   => 'required|numeric|exists:sub_category,id',
             'description'   => 'string',
-            'icon'          => 'image|max:2048',
+            'IsFeature'     => 'required|numeric|In:0,1',
+            'old_price'     => 'required|gt:new_price',
+            'new_price'     => 'required|lt:old_price',
             'link'          => 'required',
         ]);
         $slug  = Str::slug($request->name);
         try
         {
+            // dd(((int)($request->old_price - $request->new_price)/(int)$request->new_price)*100);
             DB::beginTransaction();
-            $cat = SubCategory::find($id);
-            if($request->has('name'))
+            $product = Product::find($id);
+            $product->category_id  = $request->category_id;
+            $product->subcat_id  = $request->subcategory;
+            $product->title         = $request->name;
+            $product->IsFeature         = $request->IsFeature;
+            if($request->has('fea_img'))
             {
-                $cat->name  = $request->name;
-                $cat->slug          = $slug;
+                $product->fea_img   = $this->ProductFeaturedImage($request->fea_img);
             }
             if($request->has('description'))
             {
-                $cat->description   = $request->description;
+                $product->description   = $request->description;
             }
-            if($request->has('icon'))
+            $product->old_price         = $request->old_price;
+            $product->new_price         = $request->new_price;
+            $product->discount          = ((int)($request->old_price - $request->new_price)/(int)$request->old_price)*100;
+            $product->slug              = $slug;
+            $product->link              = $request->link;
+            $product->status            = 1;
+            $product->created_by        = auth()->user()->id;
+            $product->save();
+            if($request->has('image'))
             {
-                $cat->icon   = $this->CatImage($request->icon);
+                foreach($request->image as $row)
+                {
+                    $img = new ProductImage();
+                    $img->product_id = $product->id;
+                    $img->image = $this->ProductImage($row);
+                    $img->save();
+                }
             }
-            if($request->has('status'))
-            {
-                $cat->status = $request->status;
-            }
-            $cat->save();
 
             DB::commit();
 
-            return redirect()->route('product.index')->with('success', 'Record Updated successfully.');
+            return redirect()->route('product.index')->with('success', 'Record Update successfully.');
         }
         catch(Exception $ex)
         {
             return back()->with('error', $ex->getMessage());
         }
+    }
+    public function deleteImages($id)
+    {
+        $img = ProductImage::find($id);
+        $img->delete();
+        return redirect()->back()->with('success', 'Record Deleted successfully.');
+
+    }
+    public function delete($id)
+    {
+        $banner = Product::find($id);
+        $img = ProductImage::where('product_id',$banner->id)->get();
+        foreach($img as $row)
+        {
+            $row->delete();
+        }
+        $banner->delete();
+        return redirect()->back()->with('success', 'Record Deleted successfully.');
+
     }
 }

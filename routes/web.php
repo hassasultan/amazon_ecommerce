@@ -45,6 +45,11 @@ Route::prefix('/admin')->group(function (){
         Route::resource('/product',ProductController::class);
         Route::resource('/section',SectionController::class);
         Route::resource('/coupen',CoupenController::class);
+        Route::get('/banner/delete/{id}',[BannerController::class,'delete'])->name('banner.delete');
+        Route::get('/product/delete/{id}',[ProductController::class,'delete'])->name('product.delete');
+        Route::get('/product/image/delete/{id}',[ProductController::class,'deleteImages'])->name('product.image.delete');
+        Route::get('/section/delete/{id}',[SectionController::class,'delete'])->name('section.delete');
+
         Route::get('/assign/coupen/{id}',[AssignCoupenController::class,'edit'])->name('assign.coupen.edit');
         Route::post('/assign/coupen/store',[AssignCoupenController::class,'store'])->name('assign.coupen.store');
         Route::get('/subcategory/by/category',[ProductController::class,'subcat'])->name('subcat.by.cat');

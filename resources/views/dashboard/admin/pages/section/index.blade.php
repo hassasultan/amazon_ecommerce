@@ -84,8 +84,8 @@
                                     <a href="{{ route('section.edit', $row->id) }}" class="btn btn-info btn-sm"><i
                                         class="fas fa-edit mr-2"></i> Edit</a>
 
-                                    {{--<a onclick="admindelete({{$row->id}})" class="btn btn-danger btn-sm"><i
-                                        class="fa fa-trash mr-2"></i> Delete</a>--}}
+                                        <a href={{route('section.delete',$row->id) }} onclick="return confirm('Are you sure You want to delete this Item?')" class="btn btn-danger btn-sm"><i
+                                            class="fa fa-trash mr-2"></i> Delete</a>
                                     </td>
                                 </tr>
                                 @endforeach

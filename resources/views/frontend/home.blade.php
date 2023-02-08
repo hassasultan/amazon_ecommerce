@@ -1,6 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+<style data-shopify>
+    .img1 , .img2
+    {
+        height: 297px;
+    }
+    @media(max-width: 767px) {
+        .img1 , .img2{
+            height: 150px;
+        }
+    }
+</style>
     <div id="shopify-section-template--15924304773376__1646205661c30791db" class="shopify-section">
         <section class="slider-content">
             <div class="home-slider swiper-container" id="home-slider">
@@ -13,13 +24,12 @@
                                         src="{{ asset('public/storage/' . $row->banner) }}">
 
                                 </a>
-                                <div class="container">
+                                {{-- <div class="container">
                                     <div class="silder-content">
                                         <div class="slider-text-info">
 
                                             <span class="sub-title" style="color: #ffffff;">
                                                 <span>* {{ $row->price_desc }}</span>
-                                                {{-- <span class="color-text">$120.00</span> --}}
                                             </span>
 
 
@@ -34,7 +44,7 @@
 
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <style data-shopify>
                                     @media(max-width: 767px) {
                                         .slider-content .home-slider .slider-item-4f5c2dd7-3445-494c-9535-36efc312feda .slide-image img {
@@ -323,12 +333,12 @@
                                                             <img class="img-fluid img1"
                                                                 src="{{ asset('public/storage/' . $row->fea_img) }}"
                                                                 alt="{{ $row->slug }}"
-                                                                style="width: 297px; height: 297px;">
+                                                                >
 
                                                             <img class="img-fluid img2"
                                                                 src="@if ($row->singleImage != null) {{ asset('public/storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
                                                                 alt="{{ $row->slug }}"
-                                                                style="width: 297px; height: 297px;">
+                                                                >
 
                                                         </a>
                                                         <div class="product-label">
@@ -362,7 +372,7 @@
                                                         </div>
                                                         <div class="product-info mt-3">
                                                             <div class="row">
-                                                                <div class="col-md-3 text-center p-1">
+                                                                <div class="col-3 text-center p-1">
                                                                     @if (auth()->check())
                                                                         @if ($row->wishlist == null)
                                                                             <a href="javascript:void(0)"
@@ -389,7 +399,7 @@
                                                                                 class="far fa-thumbs-up  fs-5"></i></a>
                                                                     @endif
                                                                 </div>
-                                                                <div class="col-md-6 text-center p-1">
+                                                                <div class="col-6 text-center p-1">
                                                                     @php
                                                                         $fdate = $row->coupon[0]->expiry;
                                                                         $tdate = \Carbon\Carbon::now();
@@ -400,7 +410,7 @@
                                                                     @endphp
                                                                     <b>{{ $days }} days left</b>
                                                                 </div>
-                                                                <div class="col-md-3 flat-social text-center p-1">
+                                                                <div class="col-3 flat-social text-center p-1">
                                                                     <i class="fas fa-share share_custom me-2"></i>
 
                                                                     {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
@@ -503,13 +513,13 @@
                                                                 href="{{ route('product.details', $row->slug) }}">
                                                                 <img class="img-fluid img1"
                                                                     src="{{ asset('public/storage/' . $row->fea_img) }}"
-                                                                    alt="Drone camera" width="297px" height="297px"
-                                                                    style="width: 297px; height: 297px;">
+                                                                    alt="Drone camera"
+                                                                    >
 
                                                                 <img class="img-fluid img2"
                                                                     src="@if ($row->singleImage != null) {{ asset('public/storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
-                                                                    alt="Drone camera" width="297px" height="297px"
-                                                                    style="width: 297px; height: 297px;">
+                                                                    alt="Drone camera"
+                                                                    >
 
                                                             </a>
                                                             <div class="product-label">
@@ -543,7 +553,7 @@
                                                             </div>
                                                             <div class="product-info mt-3">
                                                                 <div class="row">
-                                                                    <div class="col-md-3 text-center p-1">
+                                                                    <div class="col-3 text-center p-1">
                                                                         @if (auth()->check())
                                                                             @if ($row->wishlist == null)
                                                                                 <a href="javascript:void(0)"
@@ -570,7 +580,7 @@
                                                                                     class="far fa-thumbs-up  fs-5"></i></a>
                                                                         @endif
                                                                     </div>
-                                                                    <div class="col-md-6 text-center p-1">
+                                                                    <div class="col-6 text-center p-1">
                                                                         @php
                                                                             $fdate = $row->coupon[0]->expiry;
                                                                             $tdate = \Carbon\Carbon::now();
@@ -581,7 +591,7 @@
                                                                         @endphp
                                                                         <b>{{ $days }} days left</b>
                                                                     </div>
-                                                                    <div class="col-md-3 flat-social text-center p-1">
+                                                                    <div class="col-3 flat-social text-center p-1">
                                                                         <i class="fas fa-share share_custom me-2"></i>
 
                                                                         {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
@@ -686,13 +696,13 @@
                                                             href="{{ route('product.details', $row->slug) }}">
                                                             <img class="img-fluid img1"
                                                                 src="{{ asset('public/storage/' . $row->fea_img) }}"
-                                                                alt="Drone camera" width="297px" height="297px"
-                                                                style="width: 297px; height: 297px;">
+                                                                alt="Drone camera"
+                                                                >
 
                                                             <img class="img-fluid img2"
                                                                 src="@if ($row->singleImage != null) {{ asset('public/storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
-                                                                alt="Drone camera" width="297px" height="297px"
-                                                                style="width: 297px; height: 297px;">
+                                                                alt="Drone camera"
+                                                                >
 
                                                         </a>
                                                         <div class="product-label">
@@ -726,7 +736,7 @@
                                                         </div>
                                                         <div class="product-info mt-3">
                                                             <div class="row">
-                                                                <div class="col-md-3 text-center p-1">
+                                                                <div class="col-3 text-center p-1">
                                                                     @if (auth()->check())
                                                                         @if ($row->wishlist == null)
                                                                             <a href="javascript:void(0)"
@@ -753,7 +763,7 @@
                                                                                 class="far fa-thumbs-up  fs-5"></i></a>
                                                                     @endif
                                                                 </div>
-                                                                <div class="col-md-6 text-center p-1">
+                                                                <div class="col-6 text-center p-1">
                                                                     @php
                                                                         $fdate = $row->coupon[0]->expiry;
                                                                         $tdate = \Carbon\Carbon::now();
@@ -764,7 +774,7 @@
                                                                     @endphp
                                                                     <b>{{ $days }} days left</b>
                                                                 </div>
-                                                                <div class="col-md-3 flat-social text-center p-1">
+                                                                <div class="col-3 flat-social text-center p-1">
                                                                     <i class="fas fa-share share_custom me-2"></i>
 
                                                                     {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}

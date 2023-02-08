@@ -4052,18 +4052,18 @@ ul.pro_social_link li a i {
     }
 
     .slider-category .swiper-buttons button.button-prev-template--15924304773376__16506938940dc69a2a {
-        left: -17px;
+        left: 0;
     }
 
     .slider-category .swiper-buttons button.button-next-template--15924304773376__16506938940dc69a2a {
-        right: -17px;
+        right: 0;
     }
 
 }
 
 @media (max-width: 767px) {
     .slider-category .swiper-buttons button {
-        display: none;
+        display: flex;
     }
 }
 

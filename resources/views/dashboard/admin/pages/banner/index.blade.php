@@ -57,8 +57,8 @@
                                 <thead>
                                 <tr>
                                     <th style="width: 10px">#</th>
-                                    <th>Title</th>
-                                    <th>Description</th>
+                                    {{-- <th>Title</th>
+                                    <th>Description</th> --}}
                                     <th>Link</th>
                                     <th>Banner</th>
                                     <th>Status</th>
@@ -70,8 +70,8 @@
                                 @foreach ($banner as $key=>$row)
                                 <tr>
                                     <td>{{ ++$key }}. </td>
-                                    <td>{{ $row->title }}</td>
-                                    <td>{{ $row->price_desc }}</td>
+                                    {{-- <td>{{ $row->title }}</td>
+                                    <td>{{ $row->price_desc }}</td> --}}
                                     <td>{{ $row->link }}</td>
                                     <td>
                                         <img src="{{ asset('public/storage/'.$row->banner) }}" style="width: 100px; height: 70px;"/>

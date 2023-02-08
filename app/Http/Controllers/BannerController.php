@@ -25,15 +25,15 @@ class BannerController extends Controller
     public function store(Request $request)
     {
         $valid = $this->validate($request, [
-            'title'          => 'required|string',
-            'price_desc'   => 'required|string',
+            // 'title'          => 'required|string',
+            // 'price_desc'   => 'required|string',
             'link'   => 'required|string',
             'banner'          => 'image|max:2048',
         ]);
         try {
             DB::beginTransaction();
             $banner = new Banner;
-            $banner->title = $request->title;
+            // $banner->title = $request->title;
             if ($request->has('price_desc')) {
                 $banner->price_desc   = $request->price_desc;
             }
@@ -57,8 +57,8 @@ class BannerController extends Controller
     public function update($id, Request $request)
     {
         $valid = $this->validate($request, [
-            'title'          => 'required|string',
-            'price_desc'   => 'required|string',
+            // 'title'          => 'required|string',
+            // 'price_desc'   => 'required|string',
             'link'   => 'required|string',
             'banner'          => 'image|max:2048',
             'status'         => 'required|in:0,1',
@@ -66,7 +66,7 @@ class BannerController extends Controller
         try {
             DB::beginTransaction();
             $banner = Banner::find($id);
-            $banner->price_desc   = $request->price_desc;
+            // $banner->price_desc   = $request->price_desc;
             $banner->link   = $request->link;
             if ($request->has('banner'))
             {

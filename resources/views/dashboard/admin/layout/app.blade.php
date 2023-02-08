@@ -56,9 +56,9 @@
             <div class="sidebar_container">
                 <div class="sidebar_dashboard h-100">
                     <i class="fa-solid fa-xmark side_bar_close d-lg-none"></i>
-                    <div class="text-center mb-5 mt-5">
-                        <a href="{{ route('home') }}"> <img src="{{ asset('user_dashboard/images/logo.png') }}"
-                                alt="" class="img-fluid"></a>
+                    <div class="text-center ">
+                        <a href="{{ route('home') }}"> <img src="{{ asset('assets/images/Fainal_.png') }}"
+                                alt="" class="img-fluid" style="width:100px; height: 120px;"></a>
                     </div>
                     <nav class="h-100">
                         @include('dashboard.admin.includes.sidebar')

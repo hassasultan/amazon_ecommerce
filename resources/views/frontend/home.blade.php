@@ -384,7 +384,7 @@
                                                                     @endphp
                                                                     <b>{{ $days }} days left</b>
                                                                 </div>
-                                                                <div class="col-3 flat-social text-center p-1">
+                                                                <div class="col-md-3 flat-social text-center p-1">
                                                                     <i class="fas fa-share share_custom me-2"></i>
 
                                                                     {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}
@@ -778,7 +778,7 @@
                                                                     @endphp
                                                                     <b>{{ $days }} days left</b>
                                                                 </div>
-                                                                <div class="col-3 flat-social text-center p-1">
+                                                                <div class="col-md-3 flat-social text-center p-1">
                                                                     <i class="fas fa-share share_custom me-2"></i>
 
                                                                     {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}

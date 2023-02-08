@@ -77,7 +77,7 @@
                                 <div class="col-md-12 mb-3">
                                     <label for="validationTooltip04">Default Image</label>
                                     <input type="file" class="form-control" name="fea_img" id="validationTooltip04" >
-                                    <img src="{{ asset('public/storage/' . $row->fea_img) }}" style="height: 150px; width: 150px"/>
+                                    <img src="{{ asset('public/storage/' . $product->fea_img) }}" style="height: 150px; width: 150px"/>
                                 </div>
 
                                 <div class="col-md-12 mb-3">

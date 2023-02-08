@@ -44,7 +44,7 @@
                         <div class="col-xl-9 col-lg-8 col-md-12 col-12 pro-grli-wrap">
                             <div class="collection-img-wrap">
                                 <h6 class="st-title">Products ({{ count($products) }})</h6>
-                                <div class="collection-info">
+                                {{-- <div class="collection-info">
                                     <div class="collection-image"><img class="img-fluid"
                                             src="//cdn.shopify.com/s/files/1/0641/3431/6288/files/collection-pages.jpg?v=1650968334">
                                     </div>
@@ -57,7 +57,7 @@
                                         </p>
 
                                     </div>
-                                </div>
+                                </div> --}}
                             </div><!-- shop-top-bar start -->
                             <div class="shop-top-bar">
                                 <div class="product-filter">
@@ -234,11 +234,7 @@
 
                                                                                 </div>
 
-                                                                                <p class="product-description">Lorem ipsum
-                                                                                    dolor sit amet, consectetur adipiscing
-                                                                                    elit.
-                                                                                    Nulla luctus metus nec ipsum sagittis
-                                                                                    dapibus. Suspendisse e...</p>
+                                                                                <p class="product-description">{{ \Illuminate\Support\Str::limit($row->title, 150, $end = '...') }}</p>
                                                                             </div>
                                                                             <div class="product-info mt-3">
                                                                                 <div class="row">

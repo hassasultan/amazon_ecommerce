@@ -148,7 +148,7 @@
 
 
                                                                             </div>
-                                                                            <div class="product-add-cart">
+                                                                            {{-- <div class="product-add-cart">
 
                                                                                 <a href="javascript:void(0);"
                                                                                     onclick="Shopify.addItem(42671428763904, 1); return false;"
@@ -197,7 +197,7 @@
                                                                                     </span>
                                                                                 </a>
 
-                                                                            </div>
+                                                                            </div> --}}
                                                                         </div>
                                                                         <div class="product-content">
                                                                             <div class="product-info">

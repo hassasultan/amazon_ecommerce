@@ -24,18 +24,18 @@
                                         src="{{ asset('public/storage/' . $row->banner) }}">
 
                                 </a>
-                                {{-- <div class="container">
+                                <div class="container">
                                     <div class="silder-content">
                                         <div class="slider-text-info">
 
-                                            <span class="sub-title" style="color: #ffffff;">
+                                            {{-- <span class="sub-title" style="color: #ffffff;">
                                                 <span>* {{ $row->price_desc }}</span>
                                             </span>
 
 
                                             <h1 style="color:#ffffff;">
                                                 <span>{{ $row->title }}</span>
-                                            </h1>
+                                            </h1> --}}
 
 
                                             <a class="slider-btn" href="{{ $row->link }}">
@@ -44,7 +44,7 @@
 
                                         </div>
                                     </div>
-                                </div> --}}
+                                </div>
                                 <style data-shopify>
                                     @media(max-width: 767px) {
                                         .slider-content .home-slider .slider-item-4f5c2dd7-3445-494c-9535-36efc312feda .slide-image img {

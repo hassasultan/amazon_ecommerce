@@ -18,6 +18,17 @@
             border: 1px solid var(--font-color-primary);
         }
     </style>
+    <style data-shopify>
+        .img1 , .img2
+        {
+            height: 297px;
+        }
+        @media(max-width: 767px) {
+            .img1 , .img2{
+                height: 150px;
+            }
+        }
+    </style>
     <main role="main">
         <div id="shopify-section-template--15924305166592__product-template" class="shopify-section">
             <section class="product-details-page">
@@ -817,13 +828,13 @@
                                                         href="{{ route('product.details', $row->slug) }}">
                                                         <img class="img-fluid img1"
                                                             src="{{ asset('public/storage/' . $row->fea_img) }}"
-                                                            alt="Drone camera" width="297px" height="297px"
-                                                            style="width: 297px; height: 297px;">
+                                                            alt="Drone camera"
+                                                            >
 
                                                         <img class="img-fluid img2"
                                                             src="@if ($row->singleImage != null) {{ asset('public/storage/' . $row->singleImage->image) }} @else {{ asset('public/storage/' . $row->fea_img) }} @endif"
-                                                            alt="Drone camera" width="297px" height="297px"
-                                                            style="width: 297px; height: 297px;">
+                                                            alt="Drone camera"
+                                                            >
 
                                                     </a>
                                                     <div class="product-label">
@@ -857,7 +868,7 @@
                                                     </div>
                                                     <div class="product-info mt-3">
                                                         <div class="row">
-                                                            <div class="col-md-3 text-center p-1">
+                                                            <div class="col-3 text-center p-1">
                                                                 @if (auth()->check())
                                                                     @if ($row->wishlist == null)
                                                                         <a href="javascript:void(0)"
@@ -884,7 +895,7 @@
                                                                             class="far fa-thumbs-up  fs-5"></i></a>
                                                                 @endif
                                                             </div>
-                                                            <div class="col-md-6 text-center p-1">
+                                                            <div class="col-6 text-center p-1">
                                                                 @php
                                                                     $fdate = $row->coupon[0]->expiry;
                                                                     $tdate = \Carbon\Carbon::now();
@@ -895,7 +906,7 @@
                                                                 @endphp
                                                                 <b>{{ $days }} days left</b>
                                                             </div>
-                                                            <div class="col-md-3 flat-social text-center p-1">
+                                                            <div class="col-3 flat-social text-center p-1">
                                                                 <i class="fas fa-share share_custom me-2"></i>
 
                                                                 {!! Share::page(route('product.details', $row->slug))->facebook()->twitter()->whatsapp()->linkedin() !!}

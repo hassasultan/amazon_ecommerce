@@ -10,11 +10,33 @@ use App\Models\Category;
 use App\Models\SubCategory;
 use Exception;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Banner;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon;
+
 
 class FrontendApiController extends Controller
 {
     //
+    public function home()
+    {
+        $data['category'] = Category::with('products')->where('status',1)->get();
+        $data['section'] = Section::with('products','products.coupon')->whereHas('products',function($query){
+            $query->where('status', 1);
+        })->whereHas('products.coupon',function($query){
+            $query->where('expiry', '>=', Carbon::today());
+        })->where('status',1)->get();
+        $data['trending'] = Product::with('coupon')->whereHas('coupon',function($query){
+            $query->where('expiry', '>=', Carbon::today());
+        })->where('status',1)->where('IsFeature',0)->get();
+        $data['featured'] = Product::with('coupon')->whereHas('coupon',function($query){
+            $query->where('expiry', '>=', Carbon::today());
+        })->where('status',1)->where('IsFeature',1)->get();
+        $data['banner'] = Banner::where('status',1)->get();
+
+        return $data;
+
+    }
     public function category()
     {
         $category = Category::with('products')->where('status',1)->get();

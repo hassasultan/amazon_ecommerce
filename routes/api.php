@@ -19,6 +19,7 @@ use App\Http\Controllers\FrontendApiController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/home',[FrontendApiController::class,'home']);
 Route::get('/category-listing',[FrontendApiController::class,'category']);
 Route::get('/category-details',[FrontendApiController::class,'categoryDetail']);
 Route::get('/subcategory-listing',[FrontendApiController::class,'subcategory']);

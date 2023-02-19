@@ -115,7 +115,7 @@
                                     @foreach ($category as $row)
                                         <div class="swiper-slide">
                                             <div class="category-wrap">
-                                                <a href="/collections/earphone">
+                                                <a href="{{ route('collection.all', ['type'=>'category','slug'=>$row->slug]) }}">
                                                     <img src="{{ asset('public/storage/' . $row->icon) }}"
                                                         class="img-fluid" alt="" width="249px" height="187px"
                                                         style="width: 249px; height: 187px;">

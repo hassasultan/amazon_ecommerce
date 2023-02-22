@@ -7,7 +7,7 @@
                     <li class="ftlink-li logo-info text-start text-lg-start width-ac6a89ac-0ecd-4a2d-a253-57e64cccee17">
                         <div class="footer-info">
 
-                            <a href="https://electon6-store.myshopify.com" class="footer-logo">
+                            <a href="{{ route('index') }}" class="footer-logo">
                                 <img style="max-width: 145px;"
                                     src="{{ asset('assets/images/Fainal_.png') }}"
                                     class="img-fluid" alt="electon6-store">

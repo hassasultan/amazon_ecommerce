@@ -20,16 +20,16 @@ class FrontendApiController extends Controller
     //
     public function home()
     {
-        $data['category'] = Category::with('products')->where('status',1)->get();
-        $data['section'] = Section::with('products','products.coupon')->whereHas('products',function($query){
+        $data['category'] = Category::with('products','products.images')->where('status',1)->get();
+        $data['section'] = Section::with('products','products.coupon','products.images')->whereHas('products',function($query){
             $query->where('status', 1);
         })->whereHas('products.coupon',function($query){
             $query->where('expiry', '>=', Carbon::today());
         })->where('status',1)->get();
-        $data['trending'] = Product::with('coupon')->whereHas('coupon',function($query){
+        $data['trending'] = Product::with('coupon','images')->whereHas('coupon',function($query){
             $query->where('expiry', '>=', Carbon::today());
         })->where('status',1)->where('IsFeature',0)->get();
-        $data['featured'] = Product::with('coupon')->whereHas('coupon',function($query){
+        $data['featured'] = Product::with('coupon','images')->whereHas('coupon',function($query){
             $query->where('expiry', '>=', Carbon::today());
         })->where('status',1)->where('IsFeature',1)->get();
         $data['banner'] = Banner::where('status',1)->get();
@@ -39,12 +39,12 @@ class FrontendApiController extends Controller
     }
     public function category()
     {
-        $category = Category::with('products')->where('status',1)->get();
+        $category = Category::with('products','products.images')->where('status',1)->get();
         return $category;
     }
     public function categoryDetail(Request $request)
     {
-        $category = Category::with('products')->where('status',1)->find($request->cat_id);
+        $category = Category::with('products','products.images')->where('status',1)->find($request->cat_id);
         return $category;
     }
     public function subcategory(Request $request)
@@ -54,12 +54,12 @@ class FrontendApiController extends Controller
     }
     public function sections()
     {
-        $section = Section::with('products')->where('status',1)->get();
+        $section = Section::with('products','products.images')->where('status',1)->get();
         return $section;
     }
     public function sectionDetail(Request $request)
     {
-        $section = Section::with('products')->where('status',1)->find($request->sec_id);
+        $section = Section::with('products','products.images')->where('status',1)->find($request->sec_id);
         return $section;
     }
     public function products()

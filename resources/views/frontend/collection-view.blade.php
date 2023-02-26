@@ -32,12 +32,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <div class="grid row" >
+                            <ul class="grid" style="position: relative; height: 1304px;">
                                 @foreach ($category as $row)
-                                    <div class="col-md-3">
+                                    <li>
                                         <div class="collection-img"
-                                            >
-                                            <img src="{{ asset("public/storage/".$row->icon) }}"/>
+                                            style="background-image: url('{{ asset("public/storage/".$row->icon) }}');">
                                             <span>{{ count($row->products) }}</span>
                                         </div>
                                         <div class="collection-content">
@@ -46,9 +45,9 @@
                                             </div>
                                             <a href="{{ route('collection.all',['type'=>'section','slug'=>$row->slug]) }}">Shop now</a>
                                         </div>
-                                    </div>
+                                    </li>
                                 @endforeach
-                            </div>
+                            </ul>
                         </div>
                     </div>
                 </div>

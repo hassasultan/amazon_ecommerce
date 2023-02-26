@@ -36,7 +36,8 @@
                                 @foreach ($category as $row)
                                     <div class="col-md-3">
                                         <div class="collection-img"
-                                            style="background-image: url('{{ asset("public/storage/".$row->icon) }}');">
+                                            >
+                                            <img src="{{ asset("public/storage/".$row->icon) }}"/>
                                             <span>{{ count($row->products) }}</span>
                                         </div>
                                         <div class="collection-content">

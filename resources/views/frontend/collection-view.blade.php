@@ -34,7 +34,7 @@
                         <div class="col">
                             <div class="grid row" >
                                 @foreach ($category as $row)
-                                    <div class="col-md-3" style="position: absolute;">
+                                    <div class="col-md-3">
                                         <div class="collection-img"
                                             style="background-image: url('{{ asset("public/storage/".$row->icon) }}');">
                                             <span>{{ count($row->products) }}</span>

@@ -32,9 +32,9 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <ul class="grid" style="position: relative; height: 1304px;">
+                            <ul class="grid" style="position: relative;">
                                 @foreach ($category as $row)
-                                    <li>
+                                    <li class="p-3">
                                         <div class="collection-img"
                                             style="background-image: url('{{ asset("public/storage/".$row->icon) }}');">
                                             <span>{{ count($row->products) }}</span>

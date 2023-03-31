@@ -36,13 +36,18 @@
                     <div class="row pro_details_pos">
                         <div class="col-xl-5 col-lg-6 col-md-12 col-12 product_details">
                             <!-- product_Prev_images start -->
-                            <a class="next-prev-product prev" href="{{ route('product.details', $prev->slug) }}" title="{{ $prev->title }}">
-                                <span>Prev</span>
-                            </a>
+                            @if ($prev != null)
+                                <a class="next-prev-product prev" href="{{ route('product.details', $prev->slug) }}" title="{{ $prev->title }}">
+                                    <span>Prev</span>
+                                </a>
+                            @endif
                             <!-- product_Next_images end -->
+                            @if ($next != null)
+
                             <a class="next-prev-product next" href="{{ route('product.details', $next->slug) }}" title="{{ $next->title }}">
                                 <span>Next</span>
                             </a>
+                            @endif
 
                             <div class="product_detail_img">
                                 <!-- product big image start -->

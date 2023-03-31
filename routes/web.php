@@ -38,6 +38,7 @@ Auth::routes();
 Route::prefix('/admin')->group(function (){
     Route::middleware(['checkadmin'])->group(function () {
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('admin.home');
+        Route::get('/customers', [App\Http\Controllers\UserController::class, 'index'])->name('admin.customers');
         Route::resource('/category',CategoryController::class);
         Route::resource('/subcategory',SubCategoryController::class);
         Route::resource('/brand',BrandController::class);

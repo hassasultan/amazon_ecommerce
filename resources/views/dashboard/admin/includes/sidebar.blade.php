@@ -2,6 +2,9 @@
     <li class="nav-item {{ Route::is('home') ? 'active active-item' : '' }}">
         <a href="{{route('home')}}"><img src="{{ asset('user_dashboard/images/dashboard.png') }}" alt="" class="me-3">Admin Dashboard</a>
     </li>
+    <li class="nav-item {{ Route::is('admin.customers') ? 'active active-item' : '' }}">
+        <a href="{{route('admin.customers')}}"><img src="{{ asset('user_dashboard/images/dashboard.png') }}" alt="" class="me-3">Customers Management</a>
+    </li>
     <li class="{{ Request::routeIs('banner.index') ? 'active active-item' : '' }}">
         <a href="{{route('banner.index')}}"><img src="{{ asset('user_dashboard/images/payment.png') }}" alt="" class="me-3"> Banner</a>
     </li>

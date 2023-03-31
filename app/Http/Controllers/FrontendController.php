@@ -43,9 +43,9 @@ class FrontendController extends Controller
     public function details($slug)
     {
         $product = Product::with('images','coupon')->where('slug',$slug)->first();
-        dd($product->toArray());
         $related = Product::with('singleImage')->where('category_id',$product->category_id)->where('status',1)->get();
         $next = Product::with('images','coupon')->where('id','>',$product->id)->where('status',1)->firstOrFail();
+        dd($next->toArray());
         $prev = Product::with('images','coupon')->where('id','<',$product->id)->where('status',1)->firstOrFail();
         return view('frontend.product-details',compact('product','related','prev','next'));
     }

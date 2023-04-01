@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('page_title', config('app.name', 'Koupon Deals'))
+@section('meta-image', asset('public/'.$banner[0]->banner))
+@section('description', "description")
 @section('content')
 <style data-shopify>
     .img1 , .img2

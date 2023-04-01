@@ -10,6 +10,8 @@ class Product extends Model
     use HasFactory;
     protected $table = "product";
     protected $Fillable = [
+        "meta_title",
+        "meta_description",
         "slug",
         "category_id",
         "subcat_id",

@@ -1,4 +1,8 @@
 @extends('layouts.app')
+@section('page_title', "Products Collections")
+@section('meta-image', asset('public/storage/image/banner/2023-01-12_.64_.webp'))
+@section('description', "Get All the Products from here... ")
+@section('content')
 @section('content')
     <section class="breadcrumb02-area">
         <div class="container">

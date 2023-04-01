@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('page_title', "All Products")
+@section('meta-image', asset('public/storage/image/banner/2023-01-12_.64_.webp'))
+@section('description', "Get All the Products from here... ")
 @section('content')
 <style data-shopify>
     .img1 , .img2

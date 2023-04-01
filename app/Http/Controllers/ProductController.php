@@ -61,6 +61,14 @@ class ProductController extends Controller
             $product->title         = $request->name;
             $product->IsFeature         = $request->IsFeature;
             $product->fea_img   = $this->ProductFeaturedImage($request->fea_img);
+            if($request->has('meta_title'))
+            {
+                $product->meta_title   = $request->meta_title;
+            }
+            if($request->has('meta_description'))
+            {
+                $product->meta_description   = $request->meta_description;
+            }
             if($request->has('description'))
             {
                 $product->description   = $request->description;
@@ -127,6 +135,14 @@ class ProductController extends Controller
             if($request->has('fea_img'))
             {
                 $product->fea_img   = $this->ProductFeaturedImage($request->fea_img);
+            }
+            if($request->has('meta_title'))
+            {
+                $product->meta_title   = $request->meta_title;
+            }
+            if($request->has('meta_description'))
+            {
+                $product->meta_description   = $request->meta_description;
             }
             if($request->has('description'))
             {

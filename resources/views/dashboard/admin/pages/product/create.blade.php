@@ -94,6 +94,14 @@
                                     <input type="url" class="form-control" name="link" id="validationTooltip0Link" required>
                                 </div>
                             </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="meta_title">Meta Title</label>
+                                <input type="text" class="form-control" name="meta_title" id="meta_title" placeholder="Enter Product Meta Title" value="{{ old('meta_title') }}" >
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="meta_description">Meta Description</label>
+                                <textarea class="form-control" name="meta_description" id="meta_description" rows="3" placeholder="Meta Description">{{ old('meta_description') }}</textarea>
+                            </div>
                             <div class="text-right" style="margin-bottom : 2%">
                                 <button type="button" onclick="addedudetails()" class="btn btn-primary">+ Add Image(s)</button>
                                 <br />

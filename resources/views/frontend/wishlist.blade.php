@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('page_title', "Wish List")
+@section('meta-image', asset('public/storage/image/banner/2023-01-12_.64_.webp'))
+@section('description', "Get All the Products from here... ")
 @section('content')
 <main role="main">
     <div id="shopify-section-template--15924305166592__related-product" class="shopify-section">

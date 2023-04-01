@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('page_title', $product->meta_title)
+@section('meta-image', asset('public/storage/'.$product->fea_img))
+@section('description', $product->meta_description)
 @section('content')
     <style>
         .modalCopiedbtn {

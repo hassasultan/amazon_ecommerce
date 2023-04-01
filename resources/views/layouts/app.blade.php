@@ -8,8 +8,16 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Koupon Deals') }}</title>
+    {{-- <title>{{ config('app.name', 'Koupon Deals') }}</title> --}}
+			<title>@yield('page_title')</title>
+	<meta name="description" content="@yield('description')">
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico') }}">
+    <meta property='og:title' content='@yield('page_title')'/>
+    <meta property='og:image' content='@yield('meta-image')'/>
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property='og:description' content='@yield('description')'/>
+    <meta property='og:url' content='{{ url()->current() }}'/>
 
     <!-- Scripts -->
     {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}

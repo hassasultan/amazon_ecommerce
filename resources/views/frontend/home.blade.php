@@ -376,8 +376,9 @@
                                                                     @endif
                                                                 </div>
                                                                 <div class="col-6 text-center p-1">
+                                                                    @if(isset($row->coupon[0]))
                                                                     @php
-                                                                        $fdate = $row->coupon[0]?->expiry;
+                                                                        $fdate = $row->coupon[0]->expiry;
                                                                         $tdate = \Carbon\Carbon::now();
                                                                         $datetime1 = new DateTime($fdate);
                                                                         $datetime2 = new DateTime($tdate);
@@ -385,6 +386,7 @@
                                                                         $days = $interval->format('%a');//now do whatever you like with $days
                                                                     @endphp
                                                                     <b>{{ $days }} days left</b>
+                                                                    @endif
                                                                 </div>
                                                                 <div class="col-md-3 flat-social text-center p-1">
                                                                     <i class="fas fa-share share_custom me-2"></i>

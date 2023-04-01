@@ -386,6 +386,9 @@
                                                                         $days = $interval->format('%a');//now do whatever you like with $days
                                                                     @endphp
                                                                     <b>{{ $days }} days left</b>
+                                                                    @else
+                                                                    <b>Expired</b>
+
                                                                     @endif
                                                                 </div>
                                                                 <div class="col-md-3 flat-social text-center p-1">

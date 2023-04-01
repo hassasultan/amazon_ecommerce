@@ -377,7 +377,7 @@
                                                                 </div>
                                                                 <div class="col-6 text-center p-1">
                                                                     @php
-                                                                        $fdate = $row->coupon[0]->expiry;
+                                                                        $fdate = $row->coupon[0]?->expiry;
                                                                         $tdate = \Carbon\Carbon::now();
                                                                         $datetime1 = new DateTime($fdate);
                                                                         $datetime2 = new DateTime($tdate);

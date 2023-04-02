@@ -1630,7 +1630,7 @@
                                                         <span class="sp-link-title">Home</span>
                                                         {{-- <i class="fas fa-chevron-circle-down"></i> --}}
                                                     </a>
-                                                    <a href="{{ route('index') }}" data-bs-toggle="collapse"
+                                                    <a href="{{ route('index') }}"
                                                         class="link-title link-title-lg">
                                                         <span class="sp-link-title">Home</span>
                                                         {{-- <i class="fas fa-chevron-circle-down"></i> --}}

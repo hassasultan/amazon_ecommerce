@@ -23,7 +23,7 @@
                             <div class="slide-image">
                                 <a href="{{ $row->link }}" class="slider-image w-100">
                                     <img class="img-fluid desk-img w-100"
-                                        src="{{ asset('public/storage/' . $row->banner) }}">
+                                        src="{{ asset('public/' . $row->banner) }}">
 
                                 </a>
                                 @if ($row->title != NULL)
@@ -57,6 +57,10 @@
                                             object-fit: cover;
                                         }
                                     }
+                                    .slider-content .home-slider .slider-item-4f5c2dd7-3445-494c-9535-36efc312feda .slide-image img {
+                                            height: 600px;
+                                            object-fit: cover;
+                                        }
                                 </style>
                             </div>
                         </div>

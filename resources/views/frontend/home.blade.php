@@ -57,10 +57,11 @@
                                             object-fit: cover;
                                         }
                                     }
-                                    .slider-content .home-slider .slider-item-4f5c2dd7-3445-494c-9535-36efc312feda .slide-image img {
-                                            height: 600px;
-                                            object-fit: cover;
-                                        }
+                                    @media(min-width: 992px) {
+                                        #home-slider {
+                                                height: 500px;
+                                            }
+                                    }
                                 </style>
                             </div>
                         </div>

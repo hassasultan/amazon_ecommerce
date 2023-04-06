@@ -78,7 +78,7 @@ class FrontendController extends Controller
             return redirect()->back()->with('error', $valid->errors());
         }
     }
-    public function collection($type,$slug)
+    public function collection(Request $request,$type,$slug)
     {
         $category = Category::with('products')->get();
         $products = Product::with('singleImage','coupon')->whereHas('coupon',function($query){
@@ -87,6 +87,11 @@ class FrontendController extends Controller
         $section = Section::with('products')->where('status',1)->get();
         if($type == "products" && $slug == "all")
         {
+            // dd($request->all());
+            if($request->has('q') && $request->q != null)
+            {
+                $products = $products->where('title', 'like', '%' . $request->q . '%');
+            }
             $products = $products->paginate(9);
         }
         elseif($type == "category")

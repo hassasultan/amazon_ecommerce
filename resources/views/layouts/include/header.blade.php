@@ -7,7 +7,7 @@
                             <img style="max-width: 80px;" src="{{ asset('assets/images/Fainal_.png') }}" class="img-fluid"
                                 alt="electon6-store">
                         </a><a href="{{ route('index') }}" class="other-logo">
-                            <img style="max-width: 80px;" src="{{ asset('assets/images/Fainal_.png') }}"
+                            <img style="max-width: 30px;" src="{{ asset('assets/images/Fainal_.png') }}"
                                 alt="electon6-store">
                         </a>
                         <style>
@@ -627,13 +627,13 @@
                                 <!-- /snippets/search-bar.liquid -->
 
                                 <div class="search-rap">
-                                    <form action="/search" method="get" class="search-bar" role="search">
+                                    <form action="{{ route('collection.all',['type'=> "products",'slug'=>'all']) }}" method="get" class="search-bar" role="search">
                                         <div class="form-search">
-                                            <input type="hidden" name="type" value="product">
+                                            {{-- <input type="hidden" name="type" value="product">
                                             <input type="hidden" name="options[unavailable_products]"
                                                 value="show">
-                                            <input type="hidden" name="options[prefix]" value="last">
-                                            <input type="search" name="q" value=""
+                                            <input type="hidden" name="options[prefix]" value="last"> --}}
+                                            <input type="search" name="q" value="@if(request()->get('q')) {{ request()->get('q') }} @endif"
                                                 placeholder="Find your search" id="search" class="input-text"
                                                 aria-label="Search our store" required>
                                             <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
@@ -1509,7 +1509,7 @@
                                     <div class="crap-search">
                                         <button type="button" class="pop-close" data-bs-dismiss="modal"
                                             aria-label="Close"><i class="ri-close-line"></i></button>
-                                        <form action="/search" method="get" class="search-bar" role="search">
+                                        {{-- <form action="/search" method="get" class="search-bar" role="search">
                                             <div class="form-search">
                                                 <input type="hidden" name="type" value="product">
                                                 <input type="hidden" name="options[unavailable_products]"
@@ -1520,6 +1520,18 @@
                                                     aria-label="Search our store" required>
                                                 <button class="search-btn" type="submit"><i
                                                         class="ri-search-line"></i></button>
+                                            </div>
+                                        </form> --}}
+                                        <form action="{{ route('collection.all',['type'=> "products",'slug'=>'all']) }}" method="get" class="search-bar" role="search">
+                                            <div class="form-search">
+                                                {{-- <input type="hidden" name="type" value="product">
+                                                <input type="hidden" name="options[unavailable_products]"
+                                                    value="show">
+                                                <input type="hidden" name="options[prefix]" value="last"> --}}
+                                                <input type="search" name="q" value="@if(request()->get('q')) {{ request()->get('q') }} @endif"
+                                                    placeholder="Find your search" id="search" class="input-text"
+                                                    aria-label="Search our store" required>
+                                                <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
                                             </div>
                                         </form>
                                     </div>

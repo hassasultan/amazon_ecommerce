@@ -272,6 +272,7 @@
     <script src="{{ asset('assets/js/slick.min.js') }}"></script>
 
         <script>
+
             function liked(id)
             {
                 var url = "{{ URL('/') }}";
@@ -301,6 +302,7 @@
                     }
                 });
             }
+
             $(document).ready(function() {
                 $.ajax({
                     type: "get",
@@ -312,15 +314,15 @@
                         $("#main-collapse-shop-mob").html("");
                         var your_html = "<div class='container p-0 ul'>";
                             $.each(data['section'], function (key, val) {
-                                your_html += "<li class='megamenu-li parant'><h2 class='sublink-title'>"+val['name']+"</h2>";
+                                your_html += "<li class='megamenu-li parant'><a href='/collection/section/"+val['slug']+"'><h2 class='sublink-title'>"+val['name']+"</h2></a>";
                                 your_html +=  "<a href='/collection/section/"+val['slug']+"' class='sublink-title'>";
                                 your_html +=        "<span class='sp-link-title'>"+val['name']+"</span>";
                                 your_html +=        "<i class='fas fa-chevron-circle-down'></i>";
                                 your_html +=    "</a>";
-                                your_html +=    "<a data-bs-toggle='collapse' href='#main-collapse-"+val['slug']+"'";
+                                your_html +=    "<a  href='/collection/section/"+val['slug']+"'";
                                 your_html +=        "class='sublink-title sublink-title-lg'>";
                                 your_html +=        "<span class='spb-link-title'>"+val['name']+"</span>";
-                                your_html +=        "<i class='fas fa-chevron-circle-down'></i>";
+                                your_html +=        "<button id='use-toggle' type='button' data-bs-toggle='collapse' data-bs-target='#main-collapse-"+val['slug']+"' aria-expanded='false' aria-controls='main-collapse-"+val['slug']+"'><i class='fas fa-chevron-circle-down'></i></button>";
                                 your_html +=    "</a> <ul class='dropdown-supmenu collapse' id='main-collapse-"+val['slug']+"'>";
                                 $.each(val['products'], function (index, item) {
                                     var text = item['title'];

@@ -11,6 +11,11 @@
                                 alt="electon6-store">
                         </a>
                         <style>
+                            @media(max-width: 767px) {
+                                .theme-logo{
+                                    display: none;
+                                }
+                            }
                             a.shop-name span {
                                 color: var(--font-color-header);
                                 font-size: 24px;

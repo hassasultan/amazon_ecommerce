@@ -331,6 +331,26 @@
                                                                 <span
                                                                     class="cust-check @if ($row->slug == $slug) cust-check2 @endif"></span>
                                                             </a>
+                                                            <div class="collapse filter-element ps-3" id="collapse-Categories2" style="margin-bottom: 20px;">
+                                                                <ul class="scrollbar">
+                                                                    @foreach ($row->subCategory as $item)
+                                                                    <li>
+                                                                        <input type="checkbox" class="cust-checkbox"
+                                                                        name="{{ $item->name }}"
+                                                                        @if ($row->slug == $slug) checked @endif>
+                                                                        <a
+                                                                        href="javascript:void(0);"
+                                                                        class="cust-checkbox-label" title="{{ $item->name }}">
+                                                                        <span class="filter-name">{{ $item->name }}</span>
+                                                                        <span
+                                                                            class="count-check">({{ count($item->products) }})</span>
+                                                                        <span
+                                                                            class="cust-check @if ($row->slug == $slug) cust-check2 @endif"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    @endforeach
+                                                                </ul>
+                                                            </div>
                                                         </li>
                                                     @endforeach
                                                 </ul>

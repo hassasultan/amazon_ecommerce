@@ -86,10 +86,10 @@
                 spaceBetween: 0,
                 observer: true,
                 loop: true,
-                autoplay:
-                {
-                delay: 2000,
-                },
+                // autoplay:
+                // {
+                // delay: 2000,
+                // },
                 observeParents: true,
                 navigation: {
                     prevEl: '.button-prev',

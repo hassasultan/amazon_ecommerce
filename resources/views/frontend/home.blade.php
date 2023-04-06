@@ -23,7 +23,7 @@
                             <div class="slide-image">
                                 <a href="{{ $row->link }}" class="slider-image w-100">
                                     <img class="img-fluid desk-img w-100"
-                                        src="{{ asset('public/' . $row->banner) }}">
+                                        src="{{ asset('public/storage/' . $row->banner) }}">
 
                                 </a>
                                 @if ($row->title != NULL)

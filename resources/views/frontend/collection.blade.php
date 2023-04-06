@@ -82,7 +82,7 @@
 
 
                                 <!-- product-short start -->
-                                <div class="product-short">
+                                {{-- <div class="product-short">
                                     <label for="SortBy">Sort by:</label>
                                     <select class="nice-select" name="sortby" id="SortBy">
                                         <option value="manual">Featured</option>
@@ -111,7 +111,7 @@
                                         <li><a href="?sort_by=created-descending">Date, new to old</a></li>
                                         <li><a href="?sort_by=created-ascending">Date, old to new</a></li>
                                     </ul>
-                                </div>
+                                </div> --}}
 
                                 <!-- product-short end -->
                             </div>

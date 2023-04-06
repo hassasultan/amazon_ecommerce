@@ -78,6 +78,8 @@
                                         <a href="{{ route('assign.coupen.edit', $row->id) }}">Assign/View</a>
                                     <a href="{{ route('coupen.edit', $row->id) }}" class="btn btn-info btn-sm"><i
                                         class="fas fa-edit mr-2"></i> Edit</a>
+                                    <a href="{{ route('coupen.delete', $row->id) }}" class="btn btn-info btn-sm" onclick="return confirm('Are you sure you want to delete this item?');"><i
+                                        class="fas fa-trash mr-2"></i> </a>
 
                                     {{--<a onclick="admindelete({{$row->id}})" class="btn btn-danger btn-sm"><i
                                         class="fa fa-trash mr-2"></i> Delete</a>--}}

@@ -46,6 +46,8 @@ Route::prefix('/admin')->group(function (){
         Route::resource('/product',ProductController::class);
         Route::resource('/section',SectionController::class);
         Route::resource('/coupen',CoupenController::class);
+        Route::get('/coupen/delete/{id}',[CoupenController::class,'delete'])->name('coupen.delete');
+
         Route::get('/banner/delete/{id}',[BannerController::class,'delete'])->name('banner.delete');
         Route::get('/product/delete/{id}',[ProductController::class,'delete'])->name('product.delete');
         Route::get('/product/image/delete/{id}',[ProductController::class,'deleteImages'])->name('product.image.delete');

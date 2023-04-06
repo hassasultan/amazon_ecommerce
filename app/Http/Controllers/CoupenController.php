@@ -94,4 +94,11 @@ class CoupenController extends Controller
             return back()->with('error', $ex->getMessage());
         }
     }
+    public function delete($id)
+    {
+        $coupen = Coupen::find($id);
+        $coupen->delete();
+        return redirect()->back()->with('success', 'Record deleted successfully.');
+
+    }
 }

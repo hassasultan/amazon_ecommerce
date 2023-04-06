@@ -12,8 +12,8 @@
                         </a>
                         <style>
                             @media(max-width: 767px) {
-                                .theme-logo{
-                                    display: none;
+                                .theme-logo img{
+                                    max-width: 30px !important;
                                 }
                             }
                             a.shop-name span {

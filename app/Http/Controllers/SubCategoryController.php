@@ -89,6 +89,10 @@ class SubCategoryController extends Controller
             {
                 $cat->description   = $request->description;
             }
+            if($request->has('category_id'))
+            {
+                $cat->category_id   = $request->category_id;
+            }
             if($request->has('icon'))
             {
                 $cat->icon   = $this->CatImage($request->icon);

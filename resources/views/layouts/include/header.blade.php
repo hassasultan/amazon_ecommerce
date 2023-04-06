@@ -1573,8 +1573,12 @@
                 display: flex;
                 align-items: center;
                 margin-top: 15px;
-            }
 
+            }
+            #seachmodal .crap-search .form-search input {
+                background-color: #cccccc;
+                padding: 10px !important;
+            }
             #seachmodal .crap-search .form-search input.input-text {
                 padding: 10px 0px;
                 width: 100%;
@@ -1588,7 +1592,7 @@
                 font-size: 16px;
                 position: absolute;
 
-                right: 0px;
+                right: 10px;
 
             }
 

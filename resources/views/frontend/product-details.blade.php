@@ -1018,8 +1018,8 @@
     <script>
         function copyToClipboard(elementId) {
             $("#para").select();
-            console.log($("#para").select());
-            // document.execCommand("Copy");
+            // console.log($("#para").select());
+            document.execCommand("Copy");
             window.open("{{ $product->link }}");
         }
     </script>

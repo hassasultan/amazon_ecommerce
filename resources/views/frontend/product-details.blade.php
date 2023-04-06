@@ -1000,7 +1000,7 @@
                                         ${{ $product->old_price - $product->new_price }}</h4>
                                     <p>Coupon may expire at anytime. Use it now!</p>
                                     {{-- <b>{{ $product->coupon[0]->code }}</b> --}}
-                                    <input id="para" disabled value="{{ $product->coupon[0]->code }}"
+                                    <input id="para" readonly value="{{ $product->coupon[0]->code }}"
                                         style="text-align:center;border: none; font-weight:bold; font-size:1.5rem; color:#000; padding:0;" />
                                 </div>
                                 <div class="col-12 mt-3 mb-3">
@@ -1018,7 +1018,8 @@
     <script>
         function copyToClipboard(elementId) {
             $("#para").select();
-            document.execCommand("Copy");
+            console.log($("#para").select());
+            // document.execCommand("Copy");
             window.open("{{ $product->link }}");
         }
     </script>

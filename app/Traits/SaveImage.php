@@ -81,8 +81,8 @@ trait SaveImage
         $numb = $number / 7 ;
         $extension      = $img->extension();
         $filenamenew    = date('Y-m-d')."_.".$numb."_.".$extension;
-        $filenamepath   = '/image/logo'.'/'.'img/'.$filenamenew;
-        $filename       = $img->move(public_path('/image/logo'.'/'.'img'),$filenamenew);
+        $filenamepath   = 'image/logo'.'/'.'img/'.$filenamenew;
+        $filename       = $img->move(public_path('storage/image/logo'.'/'.'img'),$filenamenew);
         return $filenamepath;
 
     }

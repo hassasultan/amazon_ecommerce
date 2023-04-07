@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SiteSetting;
+use App\Traits\SaveImage;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,6 +13,7 @@ class HomeController extends Controller
      *
      * @return void
      */
+    use SaveImage;
     public function __construct()
     {
         $this->middleware('auth');
@@ -38,5 +41,20 @@ class HomeController extends Controller
         {
             return view('dashboard.admin.pages.home');
         }
+    }
+    public function site_setting()
+    {
+        $site = SiteSetting::first();
+        return view('dashboard.admin.pages.site.index',compact('site'));
+    }
+    public function update_site_setting(Request $request)
+    {
+        $data = $request->except(['_token']);
+        if($request->has('logo'))
+        {
+            $data['logo'] = $this->siteLogo($request->logo);
+        }
+        $site = SiteSetting::first()->update($data);
+        return redirect()->back()->with('success', 'Record updated successfully.');
     }
 }

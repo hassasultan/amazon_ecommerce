@@ -3,13 +3,15 @@
         <div class="container">
             <div class="footer-list-wrap">
                 <ul class="footer-list">
-
+                    @php
+                        $site =  App\Models\SiteSetting::first();
+                    @endphp
                     <li class="ftlink-li logo-info text-start text-lg-start width-ac6a89ac-0ecd-4a2d-a253-57e64cccee17">
                         <div class="footer-info">
 
                             <a href="{{ route('index') }}" class="footer-logo">
                                 <img style="max-width: 145px;"
-                                    src="{{ asset('assets/images/Fainal_.png') }}"
+                                    src="{{ asset('public/storage/'.$site->logo) }}"
                                     class="img-fluid" alt="electon6-store">
                             </a>
                             <style>
@@ -20,61 +22,66 @@
 
                             <div class="rich-text store-info">
                                 <i class="ri-phone-line"></i>
-                                <p><a href="tel:(+63) 0123 456 789" title="tel:(+63) 0123 456 789">(+63) 0123 456
-                                        789</a></p>
+                                <p><a href="tel:{{ $site->phone }}" title="tel:{{ $site->phone }}">{{ $site->phone }}</a></p>
                             </div>
 
 
                             <div class="rich-text store-info">
                                 <i class="ri-map-pin-line"></i>
-                                <p>20 Princess road, london, greater london NW1, UK</p>
+                                <p>{{ $site->address }}</p>
                             </div>
 
 
                             <div class="rich-text store-info">
                                 <i class="ri-mail-line"></i>
-                                <p><a href="mailto:demo@demo.com" title="mailto:demo@demo.com">demo@demo.com</a></p>
+                                <p><a href="mailto:demo@demo.com" title="mailto:demo@demo.com">{{ $site->email }}</a></p>
                             </div>
 
 
                             <div class="footer-social">
                                 <ul class="social-icon">
+                                    @if ($site->fb != null)
+                                        <li class="facebook">
+                                            <a style="color: #ffffff" href="{{ $site->fb }}">
+                                                <i class="ri-facebook-fill"></i>
+                                            </a>
+                                        </li>
+                                    @endif
 
-                                    <li class="facebook">
-                                        <a style="color: #ffffff" href="https://www.facebook.com/profile.php?id=100089285282894">
-                                            <i class="ri-facebook-fill"></i>
-                                        </a>
-                                    </li>
+                                    @if ($site->twiter != null)
 
+                                        <li class="twitter">
+                                            <a style="color: #ffffff" href="{{ $site->twiter }}">
+                                                <i class="ri-twitter-fill"></i>
+                                            </a>
+                                        </li>
 
-
-                                    <li class="twitter">
-                                        <a style="color: #ffffff" href="https://twitter.com/Koupons_Deals">
-                                            <i class="ri-twitter-fill"></i>
-                                        </a>
-                                    </li>
-
-
-
-                                    <li class="gplus">
-                                        <a style="color: #ffffff" href="https://www.pinterest.com/koupondeals/">
-                                            <i class="ri-pinterest-fill"></i>
-                                        </a>
-                                    </li>
+                                    @endif
 
 
+                                    @if ($site->pintrest != null)
+                                        <li class="gplus">
+                                            <a style="color: #ffffff" href="{{ $site->pintrest }}">
+                                                <i class="ri-pinterest-fill"></i>
+                                            </a>
+                                        </li>
+                                    @endif
 
-                                    <li class="pinterest">
-                                        <a style="color: #ffffff" href="https://www.instagram.com/koupondeals">
-                                            <i class="ri-instagram-line"></i>
-                                        </a>
-                                    </li>
+                                    @if ($site->inst != null)
+                                        <li class="pinterest">
+                                            <a style="color: #ffffff" href="{{ $site->inst }}">
+                                                <i class="ri-instagram-line"></i>
+                                            </a>
+                                        </li>
+                                    @endif
 
-                                    <li class="pinterest">
-                                        <a style="color: #ffffff" href="https://youtube.com/@koupondeals">
-                                            <i class="ri-youtube-line"></i>
-                                        </a>
-                                    </li>
+                                    @if ($site->youtube != null)
+                                        <li class="pinterest">
+                                            <a style="color: #ffffff" href="{{ $site->youtube }}">
+                                                <i class="ri-youtube-line"></i>
+                                            </a>
+                                        </li>
+                                    @endif
 
                                     {{-- <li class="pinterest">
                                         <a style="color: #ffffff" href="https://www.tiktok.com/@koupondeals">

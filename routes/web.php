@@ -39,6 +39,8 @@ Route::prefix('/admin')->group(function (){
     Route::middleware(['checkadmin'])->group(function () {
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('admin.home');
         Route::get('/customers', [App\Http\Controllers\UserController::class, 'index'])->name('admin.customers');
+        Route::get('/site-setting', [App\Http\Controllers\HomeController::class, 'site_setting'])->name('site.setting');
+        Route::post('store/site-setting', [App\Http\Controllers\HomeController::class, 'update_site_setting'])->name('store.site.setting');
         Route::resource('/category',CategoryController::class);
         Route::resource('/subcategory',SubCategoryController::class);
         Route::resource('/brand',BrandController::class);

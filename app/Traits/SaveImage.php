@@ -74,4 +74,16 @@ trait SaveImage
         return $filenamepath;
 
     }
+    public function siteLogo($image)
+    {
+        $img = $image;
+        $number = rand(1,999);
+        $numb = $number / 7 ;
+        $extension      = $img->extension();
+        $filenamenew    = date('Y-m-d')."_.".$numb."_.".$extension;
+        $filenamepath   = 'logo/image'.'/'.'img/'.$filenamenew;
+        $filename       = $img->move(public_path('logo/image'.'/'.'img'),$filenamenew);
+        return $filenamepath;
+
+    }
 }

@@ -111,7 +111,7 @@
 
                         <div class="section-capture">
                             <div class="section-title">
-                                <h2>Top categories</h2>
+                                <h1>Top categories</h1>
                             </div>
                         </div>
 
